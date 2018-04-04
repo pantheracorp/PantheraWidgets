@@ -26,7 +26,6 @@ HTMLWidgets.widget({
                         x: "Time",
                           value: keys,
                     },
-                    //type: 'spline'
                     type: 'area-spline'
                 },
                 axis: {
@@ -36,7 +35,12 @@ HTMLWidgets.widget({
                             format: "%Y-%m-%d"
                         }
                     }
-                }
+                },
+              // display a subchart - this will be used for brushing in a later stage
+          		subchart: {
+          			show: true,
+                onbrush: debounce(function (domain) {Shiny.onInputChange(el.id, domain)},250)
+          		}
             });
       }
 
@@ -62,7 +66,25 @@ HTMLWidgets.widget({
         // set types
         types : x.types
       });
-    }
+    },
+    getChart: function(){
+        return chart;
+      }
    };
 
 }});
+
+function debounce(func, wait, immediate) {
+	var timeout;
+	return function() {
+		var context = this, args = arguments;
+		var later = function() {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		};
+		var callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+}
