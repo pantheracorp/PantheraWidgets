@@ -103,7 +103,7 @@ p3_slickR <- function(obj ,
     x,
     width = width,
     height = height,
-    package = 'p3_slickR',
+    package = 'PantheraWidgets',
     elementId = elementId
   )
 
@@ -128,7 +128,7 @@ p3_slickR <- function(obj ,
 #'
 #' @export
 p3_slickROutput <- function(outputId, width = '100%', height = '400px'){
-  htmlwidgets::shinyWidgetOutput(outputId, 'p3_slickR', width, height, package = 'p3_slickR')
+  htmlwidgets::shinyWidgetOutput(outputId, 'p3_slickR', width, height, package = 'PantheraWidgets')
 }
 
 #' @rdname p3_slickR-shiny
