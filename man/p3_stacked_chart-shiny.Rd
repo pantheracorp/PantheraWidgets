@@ -4,9 +4,6 @@
 \alias{p3_stacked_chart-shiny}
 \alias{p3_stacked_chartOutput}
 \alias{renderp3_stacked_chart}
-\alias{p3_stacked_chart-shiny}
-\alias{p3_stacked_chartOutput}
-\alias{renderp3_stacked_chart}
 \title{Shiny bindings for p3_stacked_chart}
 \usage{
 p3_stacked_chartOutput(outputId, width = "100\%", height = "400px")
@@ -50,4 +47,9 @@ applications and interactive Rmd documents.
 
 Output and render functions for using p3_stacked_chart within Shiny
 applications and interactive Rmd documents.
+}
+\details{
+<Add Title>
+
+<Add Description>
 }

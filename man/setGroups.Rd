@@ -15,5 +15,8 @@ setGroups(chartProxy, groups)
 PantheraWidgets proxy object
 }
 \description{
-Set chart groups
+<Add Title>
+}
+\details{
+<Add Description>
 }

@@ -15,5 +15,8 @@ transformTo(chartProxy, type)
 PantheraWidgets proxy object
 }
 \description{
-Set all chart types simulaneously
+<Add Title>
+}
+\details{
+<Add Description>
 }

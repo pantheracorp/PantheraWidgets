@@ -15,5 +15,8 @@ setColors(chartProxy, colors)
 PantheraWidgets proxy object
 }
 \description{
-Sets the colors of an existing PantheraWidgets chart
+<Add Title>
+}
+\details{
+<Add Description>
 }

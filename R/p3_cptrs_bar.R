@@ -5,8 +5,8 @@
 #' @import htmlwidgets
 #'
 #' @export
-p3_actvty_pttrns <- function(dataset, colors, width = NULL,
-                             height = NULL, elementId = NULL) {
+p3_cptrs_bar <- function(dataset, colors, width = NULL,
+                         height = NULL, elementId = NULL) {
 
   # forward options using x
   x = list(
@@ -16,7 +16,7 @@ p3_actvty_pttrns <- function(dataset, colors, width = NULL,
 
   # create widget
   htmlwidgets::createWidget(
-    name = 'p3_actvty_pttrns',
+    name = 'p3_cptrs_bar',
     x,
     width = width,
     height = height,
@@ -25,31 +25,30 @@ p3_actvty_pttrns <- function(dataset, colors, width = NULL,
   )
 }
 
-#' Shiny bindings for p3_actvty_pttrns
+#' Shiny bindings for p3_cptrs_bar
 #'
-#' Output and render functions for using p3_actvty_pttrns within Shiny
+#' Output and render functions for using p3_cptrs_bar within Shiny
 #' applications and interactive Rmd documents.
 #'
 #' @param outputId output variable to read from
 #' @param width,height Must be a valid CSS unit (like \code{'100\%'},
 #'   \code{'400px'}, \code{'auto'}) or a number, which will be coerced to a
 #'   string and have \code{'px'} appended.
-#' @param expr An expression that generates a p3_actvty_pttrns
+#' @param expr An expression that generates a p3_cptrs_bar
 #' @param env The environment in which to evaluate \code{expr}.
 #' @param quoted Is \code{expr} a quoted expression (with \code{quote()})? This
 #'   is useful if you want to save an expression in a variable.
 #'
-#' @name p3_actvty_pttrns-shiny
+#' @name p3_cptrs_bar-shiny
 #'
 #' @export
-p3_actvty_pttrnsOutput <- function(outputId, width = '100%', height = '400px'){
-  htmlwidgets::shinyWidgetOutput(outputId, 'p3_actvty_pttrns', width, height,
-                                 package = 'PantheraWidgets')
+p3_cptrs_barOutput <- function(outputId, width = '100%', height = '400px'){
+  htmlwidgets::shinyWidgetOutput(outputId, 'p3_cptrs_bar', width, height, package = 'PantheraWidgets')
 }
 
-#' @rdname p3_actvty_pttrns-shiny
+#' @rdname p3_cptrs_bar-shiny
 #' @export
-renderP3_actvty_pttrns <- function(expr, env = parent.frame(), quoted = FALSE) {
+renderp3_cptrs_bar <- function(expr, env = parent.frame(), quoted = FALSE) {
   if (!quoted) { expr <- substitute(expr) } # force quoted
-  htmlwidgets::shinyRenderWidget(expr, p3_actvty_pttrnsOutput, env, quoted = TRUE)
+  htmlwidgets::shinyRenderWidget(expr, p3_cptrs_barOutput, env, quoted = TRUE)
 }

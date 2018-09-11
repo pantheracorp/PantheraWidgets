@@ -4,8 +4,8 @@
 \alias{p3_pie}
 \title{<Add Title>}
 \usage{
-p3_pie(values, legendPosition = "bottom", width = NULL, height = NULL,
-  elementId = NULL)
+p3_pie(values, legendPosition = "bottom", width = NULL,
+  height = NULL, elementId = NULL)
 }
 \description{
 <Add Description>

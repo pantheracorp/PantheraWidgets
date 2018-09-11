@@ -15,5 +15,8 @@ setTypes(chartProxy, info)
 PantheraWidgets proxy object
 }
 \description{
-Set chart types
+<Add Title>
+}
+\details{
+<Add Description>
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/p3_stacked_chart.R
 \name{p3_stacked_chart}
 \alias{p3_stacked_chart}
-\title{p3_stacked_chart}
+\title{<Add Title>}
 \usage{
 p3_stacked_chart(dataset, colors, types = NULL, groups = NULL,
   subchart = FALSE, axis_type = "timeseries", categories = NULL,
@@ -28,5 +28,5 @@ p3_stacked_chart(dataset, colors, types = NULL, groups = NULL,
 \item{height}{chart height}
 }
 \description{
-p3_stacked_chart
+<Add Description>
 }

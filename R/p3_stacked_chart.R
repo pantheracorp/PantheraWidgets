@@ -1,4 +1,8 @@
-#' p3_stacked_chart
+#' <Add Title>
+#'
+#' <Add Description>
+#'
+#' @import htmlwidgets
 #'
 #' @param dataset todo
 #' @param colors named list given series colors e.g. list(data1 = "purple", data2 = "blue", data3 = "gray")
@@ -70,6 +74,10 @@
 
   #' Zooms an existing PantheraWidgetsChart from shiny
   #'
+  #' <Add Title>
+  #'
+  #' <Add Description>
+  #'
   #' @param chartProxy
   #' @param minX date start
   #' @param maxX date end
@@ -84,6 +92,10 @@
   }
 
   #' Sets the colors of an existing PantheraWidgets chart
+  #'
+  #' <Add Title>
+  #'
+  #' <Add Description>
   #'
   #' @param chartProxy PantheraWidgets chart proxy object
   #' @param colors named list with colors for the data series in the chart
@@ -101,6 +113,10 @@
 
   #' Set chart groups
   #'
+  #' <Add Title>
+  #'
+  #' <Add Description>
+  #'
   #' @param chartProxy PantheraWidgets chart proxy object
   #' @param groups vector containing groups used to stack the chart
   #' @return PantheraWidgets proxy object
@@ -116,6 +132,10 @@
 
   #' Set chart types
   #'
+  #' <Add Title>
+  #'
+  #' <Add Description>
+  #'
   #' @param chartProxy PantheraWidgets chart proxy object
   #' @param message list containing data series types
   #' @return PantheraWidgets proxy object
@@ -130,6 +150,10 @@
 
 
   #' Set all chart types simulaneously
+  #'
+  #' <Add Title>
+  #'
+  #' <Add Description>
   #'
   #' @param chartProxy PantheraWidgets chart proxy object
   #' @param message list containing data series type
@@ -147,6 +171,10 @@
 #'
 #' Output and render functions for using p3_stacked_chart within Shiny
 #' applications and interactive Rmd documents.
+#'
+#' <Add Title>
+#'
+#' <Add Description>
 #'
 #' @param outputId output variable to read from
 #' @param width,height Must be a valid CSS unit (like \code{'100\%'},

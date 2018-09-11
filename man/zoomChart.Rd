@@ -15,5 +15,8 @@ zoomChart(chartProxy, minX, maxX)
 PantheraWidgets proxy object
 }
 \description{
-Zooms an existing PantheraWidgetsChart from shiny
+<Add Title>
+}
+\details{
+<Add Description>
 }
