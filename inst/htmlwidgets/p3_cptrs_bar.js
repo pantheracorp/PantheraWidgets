@@ -64,10 +64,11 @@ HTMLWidgets.widget({
           			x: {
           			  //  x axis as timeseries
           				type: "category",
-          				// tick format x-asis
-          				//tick: {
-          				//	format: "%Y-%m-%d"
-          				//}
+          				tick: {
+          				  multiline: false,
+          				  centered: true
+          				}
+
           			},
 
           			y: {
