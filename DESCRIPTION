@@ -1,10 +1,11 @@
 Package: PantheraWidgets
-Title: What the Package Does (one line, title case)
-Version: 1.0
+Title: PantheraWidgets
+Version: 1.1
 Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Description: Set of graphical chart plots (widgets) developed based on c3.js library and htmlwidgets.
 Depends: R (>= 3.2.0)
-License: What license is it under?
+License: MIT 
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.0
+RoxygenNote: 6.1.1
+Imports: htmltools,htmlwidgets

@@ -30,17 +30,33 @@ HTMLWidgets.widget({
                 },
                 axis: {
                     x: {
+                        label :{
+                          text: Object.values(x.axis_labels)[0],
+                          position: Object.values(x.labels_pos)[0]
+                        },
                         type: "timeseries",
                         tick: {
                             format: "%Y-%m-%d"
                         }
+                    },
+                    y: {
+                      label:{
+                          text: Object.values(x.axis_labels)[1],
+                          position: Object.values(x.labels_pos)[1]
+                      }
                     }
                 },
               // display a subchart - this will be used for brushing in a later stage
           		subchart: {
-          			show: true,
+          			show: x.subchart,
                 onbrush: debounce(function (domain) {Shiny.onInputChange(el.id, domain)},250)
-          		}
+          		},
+          		zoom:{
+          		   enabled: x.zoom
+          		},
+          		point: {
+                  show: x.show_points
+              }
             });
       }
 

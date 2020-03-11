@@ -12,6 +12,8 @@ HTMLWidgets.widget({
     return {
 
       renderValue: function(x) {
+        console.log(Object.values(x.axis_labels)[0]);
+        console.log(x.subchart);
 
         // if the chart does not exist, create it via c3.generate
         if(chart===null){
@@ -28,14 +30,12 @@ HTMLWidgets.widget({
           			json: [],
           			keys: {
           			      // use Time for x-axis
-          			      x: "Time",
-
+          			   x: "Time",
           			  // use the remaining data for y-values
           				value: keys,
           			},
           			// set chart types
           			types: {
-
           		  	// default is line, we want totals to be displayed as bars
           				Total: 'bar'
           			},
@@ -44,27 +44,43 @@ HTMLWidgets.widget({
           				Total: 'y2'
           			},
         		  },
+        		  subchart: {
+          			show: x.subChart,
+          			onbrush: debounce(function (domain) {Shiny.onInputChange(el.id, domain)},250)
+          		},
+          		zoom: {
+                enabled: x.zoom
+              },
           		axis: {
           			x: {
           			  //  x axis as timeseries
           				type: "timeseries",
-
+          				label :{
+            				 text:   Object.values(x.axis_labels)[0],
+            				 position: Object.values(x.labels_pos)[0]
+          				},
           				// tick format x-asis
           				tick: {
           					format: "%Y-%m-%d"
           				}
           			},
+          			y:{
+          			  label: {
+            				 text:   Object.values(x.axis_labels)[1],
+            				 position: Object.values(x.labels_pos)[1]
+          				},
+          			},
           			y2: {
           			  // we want a second y-axis
-          				show: true
+          				show: x.show_y2
           			}
-          		},
+          		}
 
           		// display a subchart - this will be used for brushing in a later stage
-          		subchart: {
+          	/*	subchart: {
           			show: true,
                 onbrush: debounce(function (domain) {Shiny.onInputChange(el.id, domain)},250)
-          		}
+          		}*/
           	});
         }
 
@@ -78,8 +94,8 @@ HTMLWidgets.widget({
         chart.load({
           json  : x.dataset,
           colors: x.colors,
-
-          // unload data that we don't need anymore
+          axis_labels: x.axis_labels,
+          labels_pos: x.labels_pos,
           unload: diff
         });
       },

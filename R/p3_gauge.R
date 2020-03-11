@@ -1,6 +1,22 @@
-#' <Add Title>
+#' Gauge Chart
 #'
-#' <Add Description>
+#' Display as Gauge Chart for specific data value
+#'
+#' @param value A numeric value for the guage.
+#' @param width,height  Must be a valid CSS unit (like '100%','400px', 'auto')
+#'                      or a number, which will be coerced to a string and have
+#'                      'px' appended.The default is NULL, which results in
+#'                      intelligent automatic sizing based on the chart’s
+#'                      container.
+#' @param elementId 	  Use an explicit element ID for the widget Useful if you
+#'                      have other JavaScript that needs to explicitly discover
+#'                      and interact with a specific widget instance .In any
+#'                      other case leave as NULL which results in an
+#'                      automatically generated one.
+#' @examples
+#' p3_gauge(45)
+#' p3_gauge('45')
+#'
 #'
 #' @import htmlwidgets
 #'

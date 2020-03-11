@@ -2,11 +2,80 @@
 % Please edit documentation in R/p3_actvty_pttrns.R
 \name{p3_actvty_pttrns}
 \alias{p3_actvty_pttrns}
-\title{<Add Title>}
+\title{Activity Patterns Chart}
 \usage{
-p3_actvty_pttrns(dataset, colors, width = NULL, height = NULL,
-  elementId = NULL)
+p3_actvty_pttrns(dataset, colors = NULL, show_points = FALSE,
+  categories = NULL, axis_regions = NULL, axis_labels = NULL,
+  labels_pos = NULL, axis_rotate = FALSE, subchart = FALSE,
+  zoom = TRUE, width = NULL, height = NULL, elementId = NULL)
+}
+\arguments{
+\item{dataset}{List of numeric vectors containing the datasets to be
+plotted.}
+
+\item{colors}{Named list with colors for the data series in the chart.
+NULL results in an random automatically generated colors.}
+
+\item{show_points}{Boolean option to show data values on the chart plot.}
+
+\item{categories}{List of characters of prefered categories used to show
+ticks as categorized by each data.See examples for more
+details.}
+
+\item{axis_regions}{Named list of character list defining the properties
+of regions to be shadded.}
+
+\item{axis_labels}{Named list of characters defining the prefered chart
+axis labels.}
+
+\item{labels_pos}{Named list of characters defining the prefered position
+of the axis labels.
+e.g for x-axis ( inner-center, inner-left, outer-right,
+outer-center, outer-left, inner-right [default] )
+and  y-axis ( inner-middle, inner-bottom, outer-top,
+outer-middle, outer-bottom, inner-top [default] )}
+
+\item{axis_rotate}{Boolean value to determine axis rotation. Default is set
+to False.}
+
+\item{subchart}{Boolean option to show sub chart for zoom and selection
+range. The Default set to False.}
+
+\item{zoom}{Boolean option to Zoom by mouse wheel event and
+slide by drag. Default set to True.}
+
+\item{width, height}{Must be a valid CSS unit (like '100%', '400px', 'auto')
+or a number, which will be coerced to a string and have
+'px' appended.The default is NULL, which results in
+intelligent automatic sizing based on the chart’s
+container.}
+
+\item{elementId}{Use an explicit element ID for the widget Useful if you
+have other JavaScript that needs to explicitly discover
+and interact with a specific widget instance. in any
+other case leave as NULL which results in an
+automatically generated one.}
+}
+\value{
+Activity Patterns Chart.
 }
 \description{
-<Add Description>
+Plots the captured species activity during a 24 hr time period .
+}
+\examples{
+dataset <- list(
+data1=c(200, 130, 90, 240, 130, 220),
+data2=c(300, 200, 160, 400, 250, 250),
+data3=c(10, 20, 50, 40, 80, 65))
+
+axis_labels <- list(x_axis="Time",y_axis="Kernel Density")
+colors <- list(data1="orange",data2="green",data3="red")
+axis_regions <- list(list(axis='x',start= 1,end= 4,reg_class='regionX'),
+                       list(axis='x',start= 18,end= 24,reg_class='regionX'))
+labels_pos <- list(xpos="outer-center",ypos="outer-middle")
+categories <- list("0:00","01:00","02:00","03:00","04:00","05:00")
+p3_actvty_pttrns(dataset, colors,axis_regions=axis_regions)
+p3_actvty_pttrns(dataset, colors,TRUE,categories,axis_regions,axis_labels,
+                 labels_pos,subchart=TRUE)
+
 }

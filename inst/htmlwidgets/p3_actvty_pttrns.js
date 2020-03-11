@@ -25,31 +25,34 @@ HTMLWidgets.widget({
                 },
                 data: {
                     json: [],
-                    //keys: {
-                    //    x: "Time",
-                    //      value: keys,
-                    //},
                     type: 'area-spline'
                 },
-                zoom: {
-                  enabled: true
-                },
+                subchart: {
+          			show: x.subchart
+          		},
+          		zoom: {
+                enabled: x.zoom
+              },
                 axis: {
                     x: {
                         type: "category",
-                        categories: ["0:00","01:00","02:00","03:00","04:00","05:00","06:00","07:00","08:00","09:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00","22:00","23:00","24:00"],
-                        label: 'Time'
+                        categories: x.categories,
+                        label: {
+                          text: x.axis_labels.x_axis,
+                          position:  x.labels_pos.xpos
+                        }
                     },
                     y: {
-                      label: 'Kernel Density'
+                        label: {
+                          text: x.axis_labels.y_axis,
+                          position :  x.labels_pos.ypos
+                        }
                     }
                 },
-                regions: [
-                  {axis: 'x', start: 0, end: 6, class: 'regionX'},
-                  {axis: 'x', start: 18, end: 24, class: 'regionX'}
-                ],
+                regions: x.axis_regions,
+                //regions: [x.axis_regions],
                 point: {
-                  show: false
+                  show: x.show_points
                 }
             });
       }
@@ -64,15 +67,18 @@ HTMLWidgets.widget({
 
       // update the data
       chart.load({
-        // new data
         json  : x.dataset,
-
-        // new colors
         colors: x.colors,
-
+        show_points : x.show_points,
+        categories : x.categories,
+        axis_regions: x.axis_regions,
+        axis_labels : x.axis_labels,
+        labels_pos : x.labels_pos,
+        axis_rotate: x.axis_rotate,
+        subchart : x.subchart,
+        zoom : x.zoom,
         // remove data we no longer need (if any)
         unload: diff,
-
         // set types
         types : x.types
       });

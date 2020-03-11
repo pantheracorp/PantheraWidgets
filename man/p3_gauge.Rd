@@ -2,10 +2,31 @@
 % Please edit documentation in R/p3_gauge.R
 \name{p3_gauge}
 \alias{p3_gauge}
-\title{<Add Title>}
+\title{Gauge Chart}
 \usage{
 p3_gauge(value, width = NULL, height = NULL, elementId = NULL)
 }
+\arguments{
+\item{value}{A numeric value for the guage.}
+
+\item{width, height}{Must be a valid CSS unit (like '100%','400px', 'auto')
+or a number, which will be coerced to a string and have
+'px' appended.The default is NULL, which results in
+intelligent automatic sizing based on the chart’s
+container.}
+
+\item{elementId}{Use an explicit element ID for the widget Useful if you
+have other JavaScript that needs to explicitly discover
+and interact with a specific widget instance .In any
+other case leave as NULL which results in an
+automatically generated one.}
+}
 \description{
-<Add Description>
+Display as Gauge Chart for specific data value
+}
+\examples{
+p3_gauge(45)
+p3_gauge('45')
+
+
 }

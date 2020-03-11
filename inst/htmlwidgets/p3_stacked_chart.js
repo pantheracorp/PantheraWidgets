@@ -126,8 +126,6 @@ Shiny.addCustomMessageHandler('setTypes', function(message){
 
 });
 
-
-
 // Custom handler to change set the type of an existing C3 chart
 Shiny.addCustomMessageHandler('transformTo', function(message){
 

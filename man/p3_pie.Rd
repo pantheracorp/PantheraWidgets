@@ -2,11 +2,36 @@
 % Please edit documentation in R/p3_pie.R
 \name{p3_pie}
 \alias{p3_pie}
-\title{<Add Title>}
+\title{Pie Chart}
 \usage{
 p3_pie(values, legendPosition = "bottom", width = NULL,
   height = NULL, elementId = NULL)
 }
+\arguments{
+\item{values}{List of numeric vector values to display in the Chart}
+
+\item{legendPosition}{Character value specifying the legend positioning (bottom or right side).}
+
+\item{width, height}{Fixed width for widget (in css units).The default is NULL
+which results in intelligent automatic sizing based on the
+widget’s container.}
+
+\item{elementId}{Use an explicit element ID for the widget. Useful if you have
+other JavaScript that needs to explicitly discover and
+interact with a specific widget instance. Default NULL
+which results in an automatically generated one.}
+}
+\value{
+Pie Chart
+}
 \description{
-<Add Description>
+Display as Pie Chart based on the specified values.
+}
+\examples{
+
+values <- list(setosa=c(30, 20, 50, 40, 60, 50),versicolor=c(200, 130, 90, 240, 130, 220))
+
+p3_pie(values)
+p3_pie(values,legendPosition="right")
+
 }

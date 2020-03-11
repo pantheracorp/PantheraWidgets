@@ -16,7 +16,6 @@ HTMLWidgets.widget({
         // if the chart does not exist, create it via c3.generate
         if(chart === null){
 
-           // create a pie chart, see http://c3js.org/samples/chart_pie.html
              chart = c3.generate({
                 bindto: el,
                 data: {
@@ -25,7 +24,7 @@ HTMLWidgets.widget({
                     onclick:  function (d, element) { Shiny.onInputChange(el.id,d)}
                 },
                 donut: {
-                    title: "Title"
+                    title: x.title
                 }
             });
         }
@@ -40,7 +39,6 @@ HTMLWidgets.widget({
         chart.load({
           json:
             x.values,
-
             // unload data that we don't want anymore
             unload: diff
         });

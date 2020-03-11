@@ -2,10 +2,41 @@
 % Please edit documentation in R/p3_donut.R
 \name{p3_donut}
 \alias{p3_donut}
-\title{<Add Title>}
+\title{Donut Chart}
 \usage{
-p3_donut(values, width = NULL, height = NULL, elementId = NULL)
+p3_donut(values, colors = NULL, title = NULL, width = NULL,
+  height = NULL, elementId = NULL)
+}
+\arguments{
+\item{values}{List of numeric vectors containing the datasets to be plotted}
+
+\item{colors}{Named list with colors for the data series in the chart.
+NULL results in an random automatically generated colors.}
+
+\item{title}{Character Value for donut chart title. Default title is set to 'Title'}
+
+\item{width, height}{Fixed width for widget (in css units).The default is NULL
+which results in intelligent automatic sizing based on the
+widget’s container.}
+
+\item{elementId}{Use an explicit element ID for the widget. Useful if you have
+other JavaScript that needs to explicitly discover and
+interact with a specific widget instance. Default NULL
+which results in an automatically generated one.}
+}
+\value{
+Donut Chart
 }
 \description{
-<Add Description>
+Generates a Donut Chart for specified values
+}
+\examples{
+
+values <- list(
+setosa=c(30, 20, 50, 40, 60, 50),
+versicolor=c(200, 130, 90, 240, 130, 220))
+
+p3_donut(values)
+p3_donut(values,title = "Age")
+
 }

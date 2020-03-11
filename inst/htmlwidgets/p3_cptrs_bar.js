@@ -17,6 +17,9 @@ HTMLWidgets.widget({
         if(chart===null){
 
             keys = _.keys(x.dataset);
+            //console.log(x.plot_type);
+            //console.log("subChart: " + x.subChart);
+            // console.log("show_y2: " + x.show_y2);
 
           	chart = c3.generate({
 
@@ -29,37 +32,26 @@ HTMLWidgets.widget({
           			keys: {
           			      // use Species for x-axis
           			      x: "Species",
-
-          			  // use the remaining data for y-values
-          				value: keys,
+              			  // use the remaining data for y-values
+              				value: keys,
           			},
-          			// set chart types
-          			types: {
-
-          		  	// default is line, we want totals to be displayed as bars
-          				Captures: 'bar'
-          			},
-          			//axes: {
-          			//  // extra y-axis
-          			//	Total: 'y2'
-          			//},
-
+          			type: x.plot_type,
           			order: null,
-          			labels: true
+          			labels: x.show_values
 
         		  },
-
+        		  zoom: {
+        		    enabled: x.zoom
+        		  },
+        		  subchart: {
+        		    show : x.subchart,
+        		    onbrush: debounce(function (domain) {Shiny.onInputChange(el.id, domain)},250)
+        		  },
         		  legend: {
         		    show: false
         		  },
-
-        		  zoom: {
-        		    enabled: true
-        		  },
-
           		axis: {
-
-          		  rotated: true,
+          		  rotated: x.axis_rotate,
 
           			x: {
           			  //  x axis as timeseries
@@ -77,15 +69,16 @@ HTMLWidgets.widget({
 
           			y2: {
           			  // we want a second y-axis
-          				show: false
+          				show: x.show_y2
           			}
-          		},
+          		}
 
           		// display a subchart - this will be used for brushing in a later stage
-          		subchart: {
-          			show: false,
-                onbrush: debounce(function (domain) {Shiny.onInputChange(el.id, domain)},250)
-          		}
+          	//	subchart: {
+          	//		show: false,
+            //    onbrush: debounce(function (domain) {Shiny.onInputChange(el.id, domain)},250)
+          	//	}
+
           	});
         }
 
@@ -99,6 +92,7 @@ HTMLWidgets.widget({
         chart.load({
           json  : x.dataset,
           colors: x.colors,
+          subchart: x.subchart,
 
           // unload data that we don't need anymore
           unload: diff

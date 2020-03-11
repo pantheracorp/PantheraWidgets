@@ -24,9 +24,12 @@ HTMLWidgets.widget({
                     type : 'pie',
                     onclick:  function (d, element) { Shiny.onInputChange(el.id,d)}
                 },
-            legend: {
-                position: x.legendPosition
-              }
+                zoom: {
+                enabled: true
+              },
+                legend: {
+                    position: x.legendPosition
+                }
             });
         }
 
