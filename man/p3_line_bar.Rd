@@ -4,9 +4,18 @@
 \alias{p3_line_bar}
 \title{Line Bar Chart}
 \usage{
-p3_line_bar(dataset, colors = NULL, axis_labels = NULL,
-  labels_pos = NULL, show_y2 = TRUE, subChart = TRUE, zoom = TRUE,
-  width = NULL, height = NULL, elementId = NULL)
+p3_line_bar(
+  dataset,
+  colors = NULL,
+  axis_labels = NULL,
+  labels_pos = NULL,
+  show_y2 = TRUE,
+  subChart = TRUE,
+  zoom = TRUE,
+  width = NULL,
+  height = NULL,
+  elementId = NULL
+)
 }
 \arguments{
 \item{dataset}{Vector containing the datasets to be plotted.}

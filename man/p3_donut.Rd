@@ -4,8 +4,14 @@
 \alias{p3_donut}
 \title{Donut Chart}
 \usage{
-p3_donut(values, colors = NULL, title = NULL, width = NULL,
-  height = NULL, elementId = NULL)
+p3_donut(
+  values,
+  colors = NULL,
+  title = NULL,
+  width = NULL,
+  height = NULL,
+  elementId = NULL
+)
 }
 \arguments{
 \item{values}{List of numeric vectors containing the datasets to be plotted}

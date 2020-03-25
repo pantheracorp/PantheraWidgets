@@ -4,9 +4,18 @@
 \alias{p3_stacked_area}
 \title{Stacked Area Chart}
 \usage{
-p3_stacked_area(dataset, colors = NULL, show_points = FALSE,
-  axis_labels = NULL, labels_pos = NULL, subchart = TRUE,
-  zoom = TRUE, width = NULL, height = NULL, elementId = NULL)
+p3_stacked_area(
+  dataset,
+  colors = NULL,
+  show_points = FALSE,
+  axis_labels = NULL,
+  labels_pos = NULL,
+  subchart = TRUE,
+  zoom = TRUE,
+  width = NULL,
+  height = NULL,
+  elementId = NULL
+)
 }
 \arguments{
 \item{dataset}{List of numeric vectors containing the datasets to be plotted

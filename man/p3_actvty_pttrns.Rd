@@ -4,10 +4,21 @@
 \alias{p3_actvty_pttrns}
 \title{Activity Patterns Chart}
 \usage{
-p3_actvty_pttrns(dataset, colors = NULL, show_points = FALSE,
-  categories = NULL, axis_regions = NULL, axis_labels = NULL,
-  labels_pos = NULL, axis_rotate = FALSE, subchart = FALSE,
-  zoom = TRUE, width = NULL, height = NULL, elementId = NULL)
+p3_actvty_pttrns(
+  dataset,
+  colors = NULL,
+  show_points = FALSE,
+  categories = NULL,
+  axis_regions = NULL,
+  axis_labels = NULL,
+  labels_pos = NULL,
+  axis_rotate = FALSE,
+  subchart = FALSE,
+  zoom = TRUE,
+  width = NULL,
+  height = NULL,
+  elementId = NULL
+)
 }
 \arguments{
 \item{dataset}{List of numeric vectors containing the datasets to be

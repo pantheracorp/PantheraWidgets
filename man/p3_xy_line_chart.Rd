@@ -4,10 +4,20 @@
 \alias{p3_xy_line_chart}
 \title{Simple line chart}
 \usage{
-p3_xy_line_chart(dataset, colors = NULL, axis_regions = NULL,
-  show_points = FALSE, axis_labels = NULL, labels_pos = NULL,
-  axis_rotate = FALSE, subchart = FALSE, zoom = TRUE, width = NULL,
-  height = NULL, elementId = NULL)
+p3_xy_line_chart(
+  dataset,
+  colors = NULL,
+  axis_regions = NULL,
+  show_points = FALSE,
+  axis_labels = NULL,
+  labels_pos = NULL,
+  axis_rotate = FALSE,
+  subchart = FALSE,
+  zoom = TRUE,
+  width = NULL,
+  height = NULL,
+  elementId = NULL
+)
 }
 \arguments{
 \item{dataset}{List of numeric vectors containing the datasets to be plotted.

@@ -4,10 +4,20 @@
 \alias{p3_multiple_xy_chart}
 \title{Multiple XY Line Chart}
 \usage{
-p3_multiple_xy_chart(dataset, colors = NULL, show_points = FALSE,
-  axis_regions = NULL, axis_labels = NULL, labels_pos = NULL,
-  axis_rotate = FALSE, subchart = FALSE, zoom = TRUE, width = NULL,
-  height = NULL, elementId = NULL)
+p3_multiple_xy_chart(
+  dataset,
+  colors = NULL,
+  show_points = FALSE,
+  axis_regions = NULL,
+  axis_labels = NULL,
+  labels_pos = NULL,
+  axis_rotate = FALSE,
+  subchart = FALSE,
+  zoom = TRUE,
+  width = NULL,
+  height = NULL,
+  elementId = NULL
+)
 }
 \arguments{
 \item{dataset}{List of numeric vectors specifying the x-axis values and the corresponding

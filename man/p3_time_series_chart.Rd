@@ -4,10 +4,21 @@
 \alias{p3_time_series_chart}
 \title{TimeSeries Chart}
 \usage{
-p3_time_series_chart(dataset, colors = NULL, axis_regions = NULL,
-  show_points = FALSE, time_format = NULL, axis_labels = NULL,
-  labels_pos = NULL, subchart = FALSE, zoom = TRUE,
-  show_y2 = FALSE, width = NULL, height = NULL, elementId = NULL)
+p3_time_series_chart(
+  dataset,
+  colors = NULL,
+  axis_regions = NULL,
+  show_points = FALSE,
+  time_format = NULL,
+  axis_labels = NULL,
+  labels_pos = NULL,
+  subchart = FALSE,
+  zoom = TRUE,
+  show_y2 = FALSE,
+  width = NULL,
+  height = NULL,
+  elementId = NULL
+)
 }
 \arguments{
 \item{dataset}{List of numeric vectors containing the datasets to be plotted and a factor vector specifying the time category}

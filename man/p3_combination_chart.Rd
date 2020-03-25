@@ -4,11 +4,23 @@
 \alias{p3_combination_chart}
 \title{Combinational Chart}
 \usage{
-p3_combination_chart(dataset, type, chart_types, data_groups = NULL,
-  axis_regions = NULL, colors = NULL, show_points = FALSE,
-  axis_labels = NULL, labels_pos = NULL, axis_rotate = FALSE,
-  subchart = FALSE, zoom = TRUE, width = NULL, height = NULL,
-  elementId = NULL)
+p3_combination_chart(
+  dataset,
+  type,
+  chart_types,
+  data_groups = NULL,
+  axis_regions = NULL,
+  colors = NULL,
+  show_points = FALSE,
+  axis_labels = NULL,
+  labels_pos = NULL,
+  axis_rotate = FALSE,
+  subchart = FALSE,
+  zoom = TRUE,
+  width = NULL,
+  height = NULL,
+  elementId = NULL
+)
 }
 \arguments{
 \item{dataset}{List of numeric vectors containing the datasets to be plotted}
