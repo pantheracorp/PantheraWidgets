@@ -12,6 +12,7 @@ HTMLWidgets.widget({
     return {
 
       renderValue: function(x) {
+        console.log(Object.values(x.axis_labels)[0]);
 
         // if the chart does not exist, create it via c3.generate
         if(chart===null){
@@ -48,7 +49,7 @@ HTMLWidgets.widget({
         		    onbrush: debounce(function (domain) {Shiny.onInputChange(el.id, domain)},250)
         		  },
         		  legend: {
-        		    show: false
+        		    show: x.legend,
         		  },
           		axis: {
           		  rotated: x.axis_rotate,
@@ -56,16 +57,21 @@ HTMLWidgets.widget({
           			x: {
           			  //  x axis as timeseries
           				type: "category",
-          				tick: {
-          				  multiline: false,
-          				  centered: true
-          				}
-
+          				label: {
+            				 text:   Object.values(x.axis_labels)[0],
+            				 position: Object.values(x.labels_pos)[0]
+          				},
           			},
-
-          			y: {
-          			  label: 'Relative abundance index'
-          			},
+                y: {
+                  label:{
+                      text: 'Relative abundance index',
+                      position: Object.values(x.labels_pos)[1]
+                  }
+                },
+          			//	tick: {
+          			//	  multiline: false,
+          			//	  centered: true
+          			//	}
 
           			y2: {
           			  // we want a second y-axis
@@ -93,6 +99,9 @@ HTMLWidgets.widget({
           json  : x.dataset,
           colors: x.colors,
           subchart: x.subchart,
+          axis_labels: x.axis_labels,
+          labels_pos: x.labels_pos,
+          legend: x.legend,
 
           // unload data that we don't need anymore
           unload: diff

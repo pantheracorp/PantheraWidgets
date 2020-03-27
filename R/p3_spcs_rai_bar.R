@@ -18,8 +18,17 @@
 #'                to False.
 #' @param zoom    Boolean option to Zoom by mouse wheel event and
 #'                slide by drag. Default set to True.
+#' @param axis_labels   Named list of characters defining the prefered chart axis
+#'                      labels.
+#' @param labels_pos    Named list of characters defining the prefered position
+#'                      of the axis labels  e.g for x-axis ( inner-center,
+#'                      inner-left,outer-right, outer-center, outer-left,
+#'                      inner-right [default] ) and y-axis ( inner-middle,
+#'                      inner-bottom, outer-top, outer-middle, outer-bottom,
+#'                      inner-top [default] ).
 #' @param subchart  Boolean option to show sub chart for zoom and selection
 #'                      range.Default set to False.
+#' @param legend  Plot legend.
 #' @param width,height  Must be a valid CSS unit (like '100%', '400px', 'auto')
 #'                      or a number, which will be coerced to a string and have
 #'                      'px' appended.The default is NULL, which results in
@@ -44,8 +53,24 @@
 #'
 #' @export
 p3_spcs_rai_bar <- function(dataset,colors,show_values=TRUE,plot_type='bar',
-                         axis_rotate=TRUE,show_y2=FALSE,zoom=TRUE,
-                         subchart=FALSE,width=NULL,height=NULL,elementId=NULL) {
+                         axis_rotate=TRUE,show_y2=FALSE,zoom=TRUE, axis_labels=NULL,
+                         labels_pos=NULL, subchart=FALSE, legend=NULL,width=NULL,height=NULL,elementId=NULL) {
+
+
+  if(is.null(colors))
+  {
+    colors <- list()
+  }
+
+  if(is.null(axis_labels))
+  {
+    axis_labels <- list(x_axis="x",y_axis="y")
+  }
+
+  if(is.null(labels_pos))
+  {
+    labels_pos <- list(xs="outer-right",ys="outer-bottom")
+  }
 
 
   # forward options using x
@@ -57,7 +82,10 @@ p3_spcs_rai_bar <- function(dataset,colors,show_values=TRUE,plot_type='bar',
     axis_rotate = axis_rotate,
     show_y2 = show_y2,
     zoom = zoom,
-    subchart = subchart
+    axis_labels=axis_labels,
+    labels_pos=labels_pos,
+    subchart = subchart,
+    legend = legend
   )
 
   # create widget

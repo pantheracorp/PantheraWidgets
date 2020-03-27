@@ -12,7 +12,10 @@ p3_spcs_rai_bar(
   axis_rotate = TRUE,
   show_y2 = FALSE,
   zoom = TRUE,
+  axis_labels = NULL,
+  labels_pos = NULL,
   subchart = FALSE,
+  legend = NULL,
   width = NULL,
   height = NULL,
   elementId = NULL
@@ -41,8 +44,20 @@ to False.}
 \item{zoom}{Boolean option to Zoom by mouse wheel event and
 slide by drag. Default set to True.}
 
+\item{axis_labels}{Named list of characters defining the prefered chart axis
+labels.}
+
+\item{labels_pos}{Named list of characters defining the prefered position
+of the axis labels  e.g for x-axis ( inner-center,
+inner-left,outer-right, outer-center, outer-left,
+inner-right [default] ) and y-axis ( inner-middle,
+inner-bottom, outer-top, outer-middle, outer-bottom,
+inner-top [default] ).}
+
 \item{subchart}{Boolean option to show sub chart for zoom and selection
 range.Default set to False.}
+
+\item{legend}{Plot legend.}
 
 \item{width, height}{Must be a valid CSS unit (like '100%', '400px', 'auto')
 or a number, which will be coerced to a string and have
