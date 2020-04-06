@@ -3,6 +3,7 @@
 #' Plots a series of bar charts stacked according to specified data_groups
 #' @param dataset       List of numeric vectors specifying the datasets to be plotted.
 #' @param data_groups   List of character vectors defining different groupings for the chart.
+#' @param x_categories  Character vector of names for the x category (Show ticks as categorized by each data.)
 #' @param colors        Named list with colors for the data series in the chart.
 #'                      NULL results in an random automatically generated colors.
 #' @param axis_labels   Named list of characters defining the prefered chart axis labels
@@ -34,17 +35,18 @@
 #' data4=c(200, 130, 90, 240, 130, 220))
 #'
 #' data_groups <- list(grp1=c('data1','data3'),grp2=c('data2','data4'))
+#' x_categories <- c('one','two','three','four','five','six')
 #' colors <- list(data1="orange",data2="green",data3="red")
 #' axis_labels <- list(x_axis="species",y_axis="frequency")
 #' labels_pos <- list(xpos="outer-center",ypos="outer-middle")
 #'
-#' p3_stacked_bar_chart(dataset,data_groups,colors,labels_pos=labels_pos)
-#' p3_stacked_bar_chart (dataset,data_groups,colors,axis_labels,labels_pos,subchart=TRUE)
+#' p3_stacked_bar_chart(dataset,data_groups,x_categories,colors,labels_pos=labels_pos)
+#' p3_stacked_bar_chart (dataset,data_groups,x_categories,colors,axis_labels,labels_pos,subchart=TRUE)
 #'
 #' @import htmlwidgets
 #'
 #' @export
-p3_stacked_bar_chart <- function(dataset,data_groups,colors=NULL,axis_labels=NULL,
+p3_stacked_bar_chart <- function(dataset,data_groups,x_categories=NULL,colors=NULL,axis_labels=NULL,
                                  labels_pos=NULL,axis_rotate=FALSE,subchart=FALSE,zoom=TRUE,
                                  width=NULL, height=NULL, elementId=NULL) {
 
@@ -61,6 +63,7 @@ p3_stacked_bar_chart <- function(dataset,data_groups,colors=NULL,axis_labels=NUL
   x = list(
     dataset = dataset,
     data_groups  = data_groups,
+    x_categories = x_categories,
     colors = colors,
     axis_labels = axis_labels,
     labels_pos = labels_pos,

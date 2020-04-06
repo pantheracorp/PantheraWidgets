@@ -1,0 +1,22 @@
+# (uncomment to add a dependency)
+dependencies:
+- name: d3
+  version: 1.0
+  src: htmlwidgets
+  script: ./lib/d3.min.js
+- name: radarChart
+  version: 1.0
+  src: htmlwidgets
+  script: ./lib/radarChart.js
+- name: d3.v4
+  version: 1.0
+  src: htmlwidgets
+  script: ./lib/d3.v4.js
+- name: tiptool
+  version: 1.0
+  src: htmlwidgets
+  script: ./lib/d3-tip.js
+- name: jquery
+  version: 1.0
+  src: htmlwidgets
+  script: ./lib/jquery.min.js

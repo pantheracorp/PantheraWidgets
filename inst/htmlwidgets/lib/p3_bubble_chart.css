@@ -1,0 +1,17 @@
+.bubbles {
+  stroke-width: 1px;
+  stroke: black;
+  opacity: .8
+}
+.bubbles:hover {
+  stroke: black;
+}
+#tble_tooltip {
+margin-top: 2.5px;
+line-height: 1;
+padding: 6px;
+background: rgba(0, 0, 0, 0.7);
+color: #fff;
+  border-radius: 4px;
+font-size: 12px;
+}
