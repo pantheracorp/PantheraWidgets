@@ -12,7 +12,7 @@ HTMLWidgets.widget({
     return {
 
       renderValue: function(x) {
-
+        console.log(x.x_categories);
         keys = _.keys(x.dataset);
 
         if(chart === null)
@@ -40,14 +40,16 @@ HTMLWidgets.widget({
                 axis:{
                        rotated: x.axis_rotate,
                        x: {
+                           type: 'category',
+                           categories: x.x_categories,
                            label: {
                              text: x.axis_labels.x_axis,
                              position : Object.values(x.labels_pos)[0]
-                           },
-                           tick: {
+                           }
+                           /*,tick: {
                                fit: false,
                                format: d3.format('.2f')
-                           }
+                           }*/
                        },
                        y: {
                           label: {

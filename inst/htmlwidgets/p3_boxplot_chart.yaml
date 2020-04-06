@@ -1,0 +1,18 @@
+dependencies:
+- name: d3
+  version: 4.0
+  src: htmlwidgets
+  script: ./lib/d3.v4.js
+  stylesheet: p3_bubble_chart.css
+- name: d3-scale-chromatic
+  version: 1.0
+  src: htmlwidgets
+  script: ./lib/d3-scale-chromatic.v1.min.js
+- name: tiptool
+  version: 1.0
+  src: htmlwidgets
+  script: ./lib/d3-tip.js
+- name: jquery
+  version: 1.0
+  src: htmlwidgets
+  script: ./lib/jquery.min.js
