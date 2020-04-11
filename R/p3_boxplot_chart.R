@@ -51,6 +51,15 @@ p3_boxplot_chart <- function(dataset,axis_labels=NULL,show_points=TRUE,
 
   axis_rotate = FALSE
 
+  if(is.null(width)){
+
+    width = 960
+  }
+
+  if(is.null(height)){
+    height = 500
+  }
+
   if(is.null(axis_labels))
   {
     axis_labels <- list(x_axis="x",y_axis="y")
@@ -64,7 +73,9 @@ p3_boxplot_chart <- function(dataset,axis_labels=NULL,show_points=TRUE,
     #data_names = data_names,
     axis_labels = axis_labels,
     show_points = show_points,
-    axis_rotate = axis_rotate
+    axis_rotate = axis_rotate,
+    width = width,
+    height = height
   )
 
   # create widget

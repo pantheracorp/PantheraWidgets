@@ -43,6 +43,15 @@ p3_bubble_chart <- function(dataset,data_names=NULL,axis_labels=NULL,
                             width = NULL, height = NULL, elementId = NULL) {
 
 
+  if(is.null(width)){
+
+    width = 960
+  }
+
+  if(is.null(height)){
+    height = 500
+  }
+
   if(is.null(axis_labels))
   {
     axis_labels <- list(x_axis="x",y_axis="y",scaled="Scale")
@@ -56,7 +65,9 @@ p3_bubble_chart <- function(dataset,data_names=NULL,axis_labels=NULL,
     dataset = jsonlite::toJSON(dataset),
     groups = dataset$group,
     data_names = data_names,
-    axis_labels = axis_labels
+    axis_labels = axis_labels,
+    width = width,
+    height = height
 
   )
 

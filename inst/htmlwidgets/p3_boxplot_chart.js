@@ -12,13 +12,22 @@ HTMLWidgets.widget({
 
       renderValue: function(xinput) {
 
+        if($( "#"+el.id ).height() < 1){
+
+              xinput.height = 400;
+        }
+
+
         var margin = {top: 40, right: 150, bottom: 60, left: 30},
-            width = 850 - margin.left - margin.right,
-            height = 420 - margin.top - margin.bottom;
+            width = $( "#"+el.id ).width() - margin.left - margin.right,
+            height = xinput.height - margin.top - margin.bottom;
 
             // append the svg object to the body of the page
             var svg = d3.select("#"+el.id)
             .append("svg")
+                .call(d3.zoom().on("zoom", function () {
+                svg.attr("transform", d3.event.transform);
+                  }))
                 .attr("width", width + margin.left + margin.right)
                 .attr("height", height + margin.top + margin.bottom)
             .append("g")
@@ -73,9 +82,15 @@ HTMLWidgets.widget({
             var colorMap = d3.scaleOrdinal()
                 .domain(groups)
                 .range(d3.schemeCategory20c);
+            const xScale = d3.scaleBand()
+              .domain([...new Set(groups)])
+              .range([ 0, width ]);
+            //console.log("yx.bandwidth()/2 : " + xScale.bandwidth()/2);
+
+            var boxWidth = xScale.bandwidth()/2;
 
             if(xinput.axis_rotate === false){
-                var boxWidth = 40;
+                //var boxWidth = 40;
                 // Show the X scale
             var x = d3.scaleBand()
                 .range([ 0, width ])
@@ -89,7 +104,7 @@ HTMLWidgets.widget({
                 .selectAll(".tick text")
                 .call(wrap, boxWidth);
 
-            console.log("x.bandwidth() : " + parseInt(x.bandwidth()));
+            //console.log("x.bandwidth() : " + parseInt(x.bandwidth()));
          // Add X axis label:
 
           svg.append("text")
@@ -200,8 +215,8 @@ HTMLWidgets.widget({
                 .attr("text-anchor", "start")
 
 
-            console.log("yScale.bandwidth() : " + parseInt(y.bandwidth()) );
-            console.log("typeof : " + typeof y.bandwidth());
+            //console.log("yScale.bandwidth() : " + parseInt(y.bandwidth()) );
+            //console.log("typeof : " + typeof y.bandwidth());
             // Show the X scale
             var x = d3.scaleLinear()
                 .domain([yMinimum-1,yMaximum+1])
@@ -293,8 +308,7 @@ HTMLWidgets.widget({
                     y = text.attr("y"),
                     dy = parseFloat(text.attr("dy")),
                     tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
-                    console.log("y : " + y);
-                    console.log("dy : " + dy);
+
                     while (word = words.pop()) {
                     line.push(word);
                     //console.log("word : " + word);

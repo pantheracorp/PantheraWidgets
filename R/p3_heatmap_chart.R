@@ -49,6 +49,15 @@
 #' @export
 p3_heatmap_chart <- function(dataset,data_names=NULL, width = NULL, height = NULL, elementId = NULL) {
 
+  if(is.null(width)){
+
+    width = 960
+  }
+
+  if(is.null(height)){
+    height = 500
+  }
+
   if(is.null(data_names)){
     data_names <- c(groups="group",variables="variable",values="value")
   }
@@ -56,7 +65,9 @@ p3_heatmap_chart <- function(dataset,data_names=NULL, width = NULL, height = NUL
   xinput = list(
     allgroups = dataset$groups,
     dataset = jsonlite::toJSON(dataset),
-    data_names = data_names
+    data_names = data_names,
+    width = width,
+    height = height
   )
 
   # create widget

@@ -11,10 +11,18 @@ HTMLWidgets.widget({
     return {
 
       renderValue: function(xinput) {
+
+        if($( "#"+el.id ).height() < 400){
+
+              xinput.height = 400;
+        }
+
+
+
         // set the dimensions and margins of the graph
         var margin = {top: 40, right: 150, bottom: 60, left: 30},
-            width = 800 - margin.left - margin.right,
-            height = 420 - margin.top - margin.bottom;
+            width = $( "#"+el.id ).width() - margin.left - margin.right,
+            height = xinput.height - margin.top - margin.bottom;
 
         // append the svg object to the body of the page
         var svg = d3.select("#"+el.id)
