@@ -1,8 +1,9 @@
 
+ $.getScript("d3-tip.js", function() {});
 function RadarChart(id, data,allAxis,dataNames,options) {
-  $.getScript("d3-tip.js", function() {
-   //alert("Script loaded but not necessarily executed.");
 
+   //alert("Script loaded but not necessarily executed.");
+  console.log("In RadarChart");
   var cfg = {
 	 w: 400,				//Width of the circle
 	 h: 400,				//Height of the circle
@@ -273,9 +274,6 @@ function RadarChart(id, data,allAxis,dataNames,options) {
 		}
 	  });
 	}//wrap
-
-
-  });
 
 
 }//RadarChart

@@ -54,6 +54,15 @@
 p3_radar_chart <- function(dataset, axis_categories,data_names=NULL,colors=NULL,radar_levels=5,
                            width = NULL, height = NULL,elementId = NULL) {
 
+  if(is.null(width)){
+
+    width = 960
+  }
+
+  if(is.null(height)){
+    height = 500
+  }
+
   if(is.null(data_names)){
     data_names <- c(group="Species",axis="Time",values="Images")
   }
@@ -70,7 +79,9 @@ p3_radar_chart <- function(dataset, axis_categories,data_names=NULL,colors=NULL,
     dataset = dataset,
     axis_categories = axis_categories,
     colors = colors,
-    data_names = data_names
+    data_names = data_names,
+    width = width,
+    height = height
 
   )
 
