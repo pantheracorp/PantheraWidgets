@@ -134,11 +134,12 @@ class ViewerComponent {
     }
 
     sendDataToShinny(){
+      console.log("In  sendDataToShinny");
       let src = this.imgArray[this.currentIndex];
       let imgname = src.substring(src.lastIndexOf("/") + 1, src.length );
       //Shiny.setInputValue(this.moduleId+'_curr_img', imgname);
       console.log("Equal : " + "spcs_idntfctn_id_rf_1_curr_img" == this.moduleId+'_curr_img');
-      Shiny.onInputChange(this.moduleId+'_curr_img', imgname);
+      Shiny.onInputChange(""+this.moduleId+"_curr_img", imgname);
       console.log("id : " + this.moduleId+'_curr_img' + " : " + imgname);
     }
     
