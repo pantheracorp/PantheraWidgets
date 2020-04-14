@@ -1,7 +1,7 @@
  function setCanvas(targetID,imgSrc) {
   'use strict';
 
-  console.log("In main.js");
+  console.log("In main.js v1");
     // Target different element class here by differentiating the container class
 
   //$( '#'+targetClass ).append(" <img src="" alt="">" );
@@ -20,7 +20,7 @@
 
   var container = document.querySelector('#'+targetID);
   console.log(" container : " + container);
-  var image = container.getElementsByTagName('img').item(0);
+  var image = container.getElementsById('currnt-img').item(0);
   /*var download = document.getElementById('download');
   var actions = document.getElementById('actions');
   var dataX = document.getElementById('dataX');
