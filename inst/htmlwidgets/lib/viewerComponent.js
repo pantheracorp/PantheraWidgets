@@ -139,10 +139,12 @@ class ViewerComponent {
       let imgname = src.substring(src.lastIndexOf("/") + 1, src.length );
 
       if(this.moduleId == "spcs_idntfctn_id_rf_1"){
-        Shiny.onInputChange("spcs_idntfctn_id_rf_1_curr_img", imgname);
+        console.log("matched spcs_idntfctn_id_rf_1");
+        Shiny.setInputValue("spcs_idntfctn_id_rf_1_curr_img", imgname);
       }
       else if(this.moduleId == "spcs_idntfctn_id_rf_2"){
-        Shiny.onInputChange("spcs_idntfctn_id_rf_2_curr_img", imgname);
+        console.log("matched spcs_idntfctn_id_rf_2");
+        Shiny.setInputValue("spcs_idntfctn_id_rf_2_curr_img", imgname);
       }else{
         console.log("Conditions not met ");
       }
