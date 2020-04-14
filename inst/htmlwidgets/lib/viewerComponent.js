@@ -134,7 +134,7 @@ class ViewerComponent {
     }
 
     sendDataToShinny(){
-      console.log("In  sendDataToShinny");
+      console.log("In  sendDataToShiny ");
       let src = this.imgArray[this.currentIndex];
       let imgname = src.substring(src.lastIndexOf("/") + 1, src.length );
 
