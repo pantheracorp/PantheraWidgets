@@ -134,12 +134,26 @@ class ViewerComponent {
     }
 
     sendDataToShinny(){
+      console.log("In  sendDataToShiny ");
       let src = this.imgArray[this.currentIndex];
       let imgname = src.substring(src.lastIndexOf("/") + 1, src.length );
-      Shiny.setInputValue(this.moduleId+'_curr_img', imgname);
-      console.log("id : " + this.moduleId+'_curr_img' + imgname);
-    }
 
+      if(this.moduleId == "spcs_idntfctn_id_rf_1"){
+        console.log("matched spcs_idntfctn_id_rf_1");
+        Shiny.setInputValue("spcs_idntfctn_id_rf_1_curr_img", imgname);
+      }
+      else if(this.moduleId == "spcs_idntfctn_id_rf_2"){
+        console.log("matched spcs_idntfctn_id_rf_2");
+        Shiny.setInputValue("spcs_idntfctn_id_rf_2_curr_img", imgname);
+      }else{
+        console.log("Conditions not met ");
+      }
+      //Shiny.setInputValue(this.moduleId+'_curr_img', imgname);
+      //console.log("Equal : " + "spcs_idntfctn_id_rf_1_curr_img" == this.moduleId+'_curr_img');
+      //Shiny.onInputChange(""+this.moduleId+"_curr_img", imgname);
+     
+    }
+    
 
     resetHandlers(msg)
     {
