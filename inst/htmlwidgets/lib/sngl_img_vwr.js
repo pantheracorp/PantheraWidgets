@@ -182,10 +182,10 @@ console.log("In cp.js");
 
   var DEFAULTS = {
     // Define the view mode of the cropper
-    viewMode: 3,
+    viewMode: 0,
     // 0, 1, 2, 3
     // Define the dragging mode of the cropper
-    dragMode:  move,
+    dragMode:  DRAG_MODE_MOVE,
     // 'crop', 'move' or 'none'
     // Define the initial aspect ratio of the crop box
     initialAspectRatio: NaN,
@@ -198,19 +198,19 @@ console.log("In cp.js");
     // Re-render the cropper when resize the window
     responsive: true,
     // Restore the cropped area after resize the window
-    restore: false,
+    restore: true,
     // Check if the current image is a cross-origin image
     checkCrossOrigin: true,
     // Check the current image's Exif Orientation information
     checkOrientation: true,
     // Show the black modal
-    modal: false,
+    modal: true,
     // Show the dashed lines for guiding
-    guides: false,
+    guides: true,
     // Show the center indicator for guiding
     center: true,
     // Show the white modal to highlight the crop box
-    highlight: false,
+    highlight: true,
     // Show the grid background
     background: false,
     // Enable to crop the image automatically when initialize
@@ -232,9 +232,9 @@ console.log("In cp.js");
     // Define zoom ratio when zoom the image by wheeling mouse
     wheelZoomRatio: 0.1,
     // Enable to move the crop box
-    cropBoxMovable: false,
+    cropBoxMovable: true,
     // Enable to resize the crop box
-    cropBoxResizable: false,
+    cropBoxResizable: true,
     // Toggle drag mode between "crop" and "move" when click twice on the cropper
     toggleDragModeOnDblclick: false,
     // Size limitation
