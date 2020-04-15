@@ -182,10 +182,10 @@ console.log("In cp.js");
 
   var DEFAULTS = {
     // Define the view mode of the cropper
-    viewMode: 0,
+    viewMode: 3,
     // 0, 1, 2, 3
     // Define the dragging mode of the cropper
-    dragMode:  DRAG_MODE_MOVE,
+    dragMode:  move,
     // 'crop', 'move' or 'none'
     // Define the initial aspect ratio of the crop box
     initialAspectRatio: NaN,
@@ -198,19 +198,19 @@ console.log("In cp.js");
     // Re-render the cropper when resize the window
     responsive: true,
     // Restore the cropped area after resize the window
-    restore: true,
+    restore: false,
     // Check if the current image is a cross-origin image
     checkCrossOrigin: true,
     // Check the current image's Exif Orientation information
     checkOrientation: true,
     // Show the black modal
-    modal: true,
+    modal: false,
     // Show the dashed lines for guiding
-    guides: true,
+    guides: false,
     // Show the center indicator for guiding
     center: true,
     // Show the white modal to highlight the crop box
-    highlight: true,
+    highlight: false,
     // Show the grid background
     background: false,
     // Enable to crop the image automatically when initialize
@@ -232,9 +232,9 @@ console.log("In cp.js");
     // Define zoom ratio when zoom the image by wheeling mouse
     wheelZoomRatio: 0.1,
     // Enable to move the crop box
-    cropBoxMovable: true,
+    cropBoxMovable: false,
     // Enable to resize the crop box
-    cropBoxResizable: true,
+    cropBoxResizable: false,
     // Toggle drag mode between "crop" and "move" when click twice on the cropper
     toggleDragModeOnDblclick: false,
     // Size limitation
@@ -253,7 +253,32 @@ console.log("In cp.js");
     zoom: null
   };
 
-  var TEMPLATE = '<div class="cropper-container" touch-action="none">' + '<div class="cropper-wrap-box">' + '<div class="cropper-canvas"></div>' + '</div>' + '<div class="cropper-drag-box"></div>' + '<div class="cropper-crop-box">' + '<span class="cropper-view-box"></span>' + '<span class="cropper-dashed dashed-h"></span>' + '<span class="cropper-dashed dashed-v"></span>' + '<span class="cropper-center"></span>' + '<span class="cropper-face"></span>' + '<span class="cropper-line line-e" data-cropper-action="e"></span>' + '<span class="cropper-line line-n" data-cropper-action="n"></span>' + '<span class="cropper-line line-w" data-cropper-action="w"></span>' + '<span class="cropper-line line-s" data-cropper-action="s"></span>' + '<span class="cropper-point point-e" data-cropper-action="e"></span>' + '<span class="cropper-point point-n" data-cropper-action="n"></span>' + '<span class="cropper-point point-w" data-cropper-action="w"></span>' + '<span class="cropper-point point-s" data-cropper-action="s"></span>' + '<span class="cropper-point point-ne" data-cropper-action="ne"></span>' + '<span class="cropper-point point-nw" data-cropper-action="nw"></span>' + '<span class="cropper-point point-sw" data-cropper-action="sw"></span>' + '<span class="cropper-point point-se" data-cropper-action="se"></span>' + '</div>' + '</div>';
+  var TEMPLATE = 
+  '<div class="cropper-container" touch-action="none">' + 
+      '<div class="cropper-wrap-box">' + 
+              '<div class="cropper-canvas"></div>' + 
+      '</div>' + 
+      '<div class="cropper-drag-box"></div>' + 
+      '<div class="cropper-crop-box">' + 
+            '<span class="cropper-view-box"></span>' + 
+            '<span class="cropper-dashed dashed-h"></span>' +
+            '<span class="cropper-dashed dashed-v"></span>' + 
+            '<span class="cropper-center"></span>' + 
+            '<span class="cropper-face"></span>' + 
+            '<span class="cropper-line line-e" data-cropper-action="e"></span>' + 
+            '<span class="cropper-line line-n" data-cropper-action="n"></span>' + 
+            '<span class="cropper-line line-w" data-cropper-action="w"></span>' + 
+            '<span class="cropper-line line-s" data-cropper-action="s"></span>' + 
+            '<span class="cropper-point point-e" data-cropper-action="e"></span>' + 
+            '<span class="cropper-point point-n" data-cropper-action="n"></span>' + 
+            '<span class="cropper-point point-w" data-cropper-action="w"></span>' + 
+            '<span class="cropper-point point-s" data-cropper-action="s"></span>' + 
+            '<span class="cropper-point point-ne" data-cropper-action="ne"></span>' + 
+            '<span class="cropper-point point-nw" data-cropper-action="nw"></span>' + 
+            '<span class="cropper-point point-sw" data-cropper-action="sw"></span>' + 
+            '<span class="cropper-point point-se" data-cropper-action="se"></span>' + 
+      '</div>' + 
+  '</div>';
 
   /**
    * Check if the given value is not a number.
