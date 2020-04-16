@@ -79,9 +79,9 @@ class ViewerComponent {
       // $('div.event img').attr('src', '/anything');
       reset(){
          this.currentIndex = 0;
-         this.displayImage();
-         //this.sendDataToShinny();
-         //$('#'+this.moduleId+' img' ).attr('src', this.imgArray[this.currentIndex] );
+         //this.displayImage();
+         this.sendDataToShinny();
+         $('#'+this.moduleId+' img' ).attr('src', this.imgArray[this.currentIndex] );
 
       }
 
