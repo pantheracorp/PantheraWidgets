@@ -1,7 +1,7 @@
  function setCanvas(targetID,imgSrc) {
   'use strict';
 
-  console.log("In main.js");
+  //console.log("In main.js");
     // Target different element class here by differentiating the container class
 
   //$( '#'+targetClass ).append(" <img src="" alt="">" );
@@ -9,17 +9,17 @@
 
   var Cropper = window.Cropper;
   //var URL = window.URL || window.webkitURL;
-  console.log("Exist test : " + $('#'+targetID+' img' ).length );
+  //console.log("Exist test : " + $('#'+targetID+' img' ).length );
 
   if ( $('#'+targetID+' img' ).length ) {
      $('#'+targetID+' img' ).attr('src',imgSrc );
-    console.log("img exist : ");
+    //console.log("img exist : ");
   }else{
      $('#'+targetID).prepend($('<img>',{id:'currnt-img',src:imgSrc,alt:'camtrap'}));
   }
 
   var container = document.querySelector('#'+targetID);
-  console.log(" container : " + container);
+  //console.log(" container : " + container);
   var image = container.getElementsByTagName('img').item(0);
   /*var download = document.getElementById('download');
   var actions = document.getElementById('actions');
