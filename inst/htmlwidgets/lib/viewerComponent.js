@@ -34,6 +34,7 @@ class ViewerComponent {
       displayImage(){
 
         $.fn.cropper.noConflict();
+        Cropper.noConflict();
 
         console.log("first img exist : " + this.imgexist(this.imgArray[0]));
         if(this.imgexist(this.imgArray[0]) == false){
