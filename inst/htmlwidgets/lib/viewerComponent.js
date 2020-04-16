@@ -35,7 +35,12 @@ class ViewerComponent {
 
         //$.fn.cropper.noConflict();
         //Cropper.noConflict();
-
+        if (typeof  $.fn.cropper != "undefined") {
+          alert(" $.fn.cropper Exist");
+        }
+        else{
+          alert(" $.fn.cropper NOT Exist");
+        }
         console.log("first img exist : " + this.imgexist(this.imgArray[0]));
         if(this.imgexist(this.imgArray[0]) == false){
             this.imgArray[0] = this.errorImg;
