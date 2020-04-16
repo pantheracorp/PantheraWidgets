@@ -12,6 +12,15 @@ HTMLWidgets.widget({
 
       renderValue: function(x) {
 
+        console.log("sngl_img_viewer.js");
+        if (typeof  $.fn.cropper != "undefined") {
+          alert(" $.fn.cropper Exist");
+          $.fn.cropper.noConflict();
+        }
+        else{
+          console.log(" $.fn.cropper NOT Exist");
+        }
+
         //console.log(" x " + JSON.stringify(x));
         let spcs_idntfctns_scndry_img = new ViewerComponent("spcs_idntfctn_id_rf_2","img_idntfctn_scndry.csv"),
             spcs_idntfctns_prmry_img = new ViewerComponent("spcs_idntfctn_id_rf_1","img_idntfctn_prmry.csv");
@@ -22,7 +31,7 @@ HTMLWidgets.widget({
         Shiny.addCustomMessageHandler("spcs_idntfctn_extrt_id_button_rf_1",
                 function(mesg) {
                    //console.log("Handler spcs_idntfctn_extrt_id_button_rf_1");
-
+                   
                   //console.log("Data 1 : " + loadFile('img_idntfctn_prmry.csv'));
                   spcs_idntfctns_prmry_img.restart();
                   //spcs_idntfctns_prmry_img.
@@ -33,6 +42,7 @@ HTMLWidgets.widget({
 
          Shiny.addCustomMessageHandler("spcs_idntfctn_extrt_id_button_rf_2",
                 function(mesg) {
+
                   //console.log("Handler spcs_idntfctn_extrt_id_button_rf_2");
                   spcs_idntfctns_scndry_img.restart();
                    //onsole.log("Data 2 : " + loadFile('img_idntfctn_scndry.csv'));
