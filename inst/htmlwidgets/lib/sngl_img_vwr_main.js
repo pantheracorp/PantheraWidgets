@@ -55,8 +55,7 @@
       dataWidth.value = Math.round(data.width);
       dataRotate.value = typeof data.rotate !== 'undefined' ? data.rotate : '';
       dataScaleX.value = typeof data.scaleX !== 'undefined' ? data.scaleX : '';
-      dataScaleY.value = typeof data.scaleY !== 'undefined' ? data.scaleY : '';
-      */
+      dataScaleY.value = typeof data.scaleY !== 'undefined' ? data.scaleY : '';*/
     },
     zoom: function (e) {
      // console.log(e.type, e.detail.ratio);
