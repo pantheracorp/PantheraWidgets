@@ -3,20 +3,20 @@ dependencies:
 - name: wheelzoom
   version: 1.0.0
   src: htmlwidgets
-  script: ./lib/js/wheelzoom.js
+  script: ./lib/wheelzoom.js
 - name: viewerHelper
   version: 1.0.0
   src: htmlwidgets
-  script: ./lib/js/viewerHelper.js
+  script: ./lib/viewerHelper.js
 - name: viewerComponent
   version: 1.0.0
   src: htmlwidgets
-  script: ./lib/js/viewerComponent.js
+  script: ./lib/viewerComponent.js
 - name: jquery
   version: 0.4.10
   src: htmlwidgets
-  script: ./lib/js/jquery-3.4.1.slim.min.js
+  script: ./lib/jquery-3.4.1.slim.min.js
 - name: setImages
   version: 1.0.0
   src: htmlwidgets
-  script: ./lib/js/setImages.js
+  script: ./lib/setImages.js
