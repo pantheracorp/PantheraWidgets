@@ -1,26 +1,22 @@
+# (uncomment to add a dependency)
 dependencies:
-- name: cropper
-  version: 1.7.0
+- name: wheelzoom
+  version: 1.0.0
   src: htmlwidgets
-  script: ./lib/sngl_img_vwr.js
-  stylesheet: ./lib/cropper.css
-- name: main
-  version: 1.7.0
-  src: htmlwidgets
-  script: ./lib/sngl_img_vwr_main.js
+  script: ./lib/wheelzoom.js
 - name: viewerHelper
-  version: 1.7.0
+  version: 1.0.0
   src: htmlwidgets
   script: ./lib/viewerHelper.js
 - name: viewerComponent
-  version: 1.7.0
+  version: 1.0.0
   src: htmlwidgets
   script: ./lib/viewerComponent.js
 - name: jquery
   version: 0.4.10
   src: htmlwidgets
-  script: ./lib/jquery.min.js
-- name: bootstrap
-  version: 1.8.3
+  script: ./lib/jquery-3.4.1.slim.min.js
+- name: setImages
+  version: 1.0.0
   src: htmlwidgets
-  script: ./lib/js/bootstrap.bundle.min.js
+  script: ./lib/setImages.js
