@@ -1,3 +1,4 @@
+console.log("viewerClass.js");
 class viewerClass {
 
       constructor(moduleId,csvfile)
