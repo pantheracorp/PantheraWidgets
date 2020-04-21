@@ -15,10 +15,10 @@ HTMLWidgets.widget({
         // TODO: code to render the widget, e.g.
         console.log("new sngl_img_viewer.js");
 
-        let spcs_idntfctns_scndry_img = new ViewerComponent(
+        let spcs_idntfctns_scndry_img = new viewerClass(
                                             "spcs_idntfctn_id_rf_2",
                                             "img_idntfctn_scndry.csv"),
-            spcs_idntfctns_prmry_img = new ViewerComponent(
+            spcs_idntfctns_prmry_img = new viewerClass(
                                             "spcs_idntfctn_id_rf_1",
                                             "img_idntfctn_prmry.csv");
 

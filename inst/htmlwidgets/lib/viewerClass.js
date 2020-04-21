@@ -1,4 +1,4 @@
-class ViewerComponent {
+class viewerClass {
 
       constructor(moduleId,csvfile)
       {
