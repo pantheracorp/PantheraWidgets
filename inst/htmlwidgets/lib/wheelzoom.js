@@ -1,4 +1,4 @@
-console.log("wheelzoom.js  panwidgts");
+//console.log("wheelzoom.js  panwidgts");
 window.wheelzoom = (function(){
 	var defaults = {
 		zoom: 0.10,

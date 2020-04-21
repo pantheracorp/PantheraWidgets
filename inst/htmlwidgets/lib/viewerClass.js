@@ -1,4 +1,4 @@
-console.log("viewerClass.js panwidgts");
+//console.log("viewerClass.js panwidgts");
 class viewerClass {
 
       constructor(moduleId,csvfile)
