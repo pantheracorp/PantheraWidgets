@@ -15,7 +15,7 @@ class viewerClass {
       fetchServerData(file)
       {
         //console.log("In fetchServerData moduleId : " + this.moduleId);
-         loadFile(file).then(data => this.readServerData(data));
+         getFile(file).then(data => this.readServerData(data));
       }
 
 
