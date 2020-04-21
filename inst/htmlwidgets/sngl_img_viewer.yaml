@@ -1,4 +1,3 @@
-# (uncomment to add a dependency)
 dependencies:
 - name: wheelzoom
   version: 1.0.0
@@ -8,10 +7,10 @@ dependencies:
   version: 1.0.0
   src: htmlwidgets
   script: ./lib/viewerHelper.js
-- name: viewerComponent
-  version: 1.0.0
+- name: viewerClass
+  version: 1.0.1
   src: htmlwidgets
-  script: ./lib/viewerComponent.js
+  script: ./lib/viewerClass.js
 - name: jquery
   version: 0.4.10
   src: htmlwidgets

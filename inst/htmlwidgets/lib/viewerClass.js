@@ -1,4 +1,5 @@
-class ViewerComponent {
+//console.log("viewerClass.js panwidgts");
+class viewerClass {
 
       constructor(moduleId,csvfile)
       {
@@ -14,7 +15,7 @@ class ViewerComponent {
       fetchServerData(file)
       {
         //console.log("In fetchServerData moduleId : " + this.moduleId);
-         loadFile(file).then(data => this.readServerData(data));
+         getFile(file).then(data => this.readServerData(data));
       }
 
 
