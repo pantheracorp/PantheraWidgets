@@ -1,5 +1,5 @@
 
-console.log("new setCanvas");
+console.log("setImages.js  panwidgts");
 function setCanvas(targetID,imgSrc){
 let imgId = 'currnt-img_' + targetID.substring(14, targetID.length);
 if ( $('#'+targetID+' img' ).length ) {

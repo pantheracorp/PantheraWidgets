@@ -13,8 +13,8 @@ HTMLWidgets.widget({
       renderValue: function(x) {
 
         // TODO: code to render the widget, e.g.
-        console.log("new sngl_img_viewer.js");
-
+        console.log("sngl_img_viewer.js  panwidgts");
+        
         let spcs_idntfctns_scndry_img = new viewerClass(
                                             "spcs_idntfctn_id_rf_2",
                                             "img_idntfctn_scndry.csv"),

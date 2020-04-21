@@ -1,4 +1,4 @@
-
+console.log("viewerHelper.js  panwidgts");
 async function loadFile(filename) {
 
   let response = await fetch(filename,{cache: "no-cache"});
