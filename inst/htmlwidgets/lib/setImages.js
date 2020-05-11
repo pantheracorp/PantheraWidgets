@@ -19,16 +19,20 @@ function setCanvas(targetID,imgSrc){
     if ( $('#'+targetID+' img' ).length ) 
     {
         $('#'+targetID+' img' ).attr('src',imgSrc );
-        //console.log("img exist : ");
+       
     }else{
 
-        console.log('Image already exist');
+        //console.log('Image already exist');
+        if(targetID === 'pttrn_rcgntn_orgnl_imgs_1' || targetID === 'pttrn_rcgntn_orgnl_imgs_1'){
 
-        $('#'+targetID).prepend($('<img>',{id:imgId,src:imgSrc,alt:'camtrap',width:'100%',height:'500px'}));
+          $('#'+targetID).prepend($('<img>',{id:imgId,src:imgSrc,alt:'camtrap',width:'100%',height:'200px'}));
 
+        }else{
+          $('#'+targetID).prepend($('<img>',{id:imgId,src:imgSrc,alt:'camtrap',width:'100%',height:'500px'}));
+        }
 
-          wheelzoom(document.querySelector("#"+imgId));
-                //$("#"+imgId).imgViewer();
+        wheelzoom(document.querySelector("#"+imgId));
+    
 
       }
 }
