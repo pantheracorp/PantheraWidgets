@@ -32,6 +32,20 @@ class viewerClass {
           return tempArray;
       }
 
+      async getData() {
+
+        console.log(this.moduleId + ' getData');
+        let response = await fetch(this.csvfile,{cache: "no-cache"});
+          if(response.ok){
+            let data = await response.text();
+            this.readServerData((data.replace(/^\s*$[\n\r]{1,}/gm, '')));
+            //return (data.replace(/^\s*$[\n\r]{1,}/gm, ''));
+          }else{
+            console.log('failed');
+          }
+          //return 0;
+      }
+
       displayImage(){
 
         console.log("new displayImage " + this.moduleId);

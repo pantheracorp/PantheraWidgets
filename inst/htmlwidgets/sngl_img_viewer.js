@@ -51,8 +51,8 @@ HTMLWidgets.widget({
                         console.log('clicked pttrn_rcgntn_vw_orgnls_button');
                         pttrn_rcgntn_vw_orgnls_1.restart();
                         pttrn_rcgntn_vw_orgnls_2.restart();
-                        pttrn_rcgntn_vw_orgnls_1.fetchServerData("pttrn_rcgntn_fltrd_rslts_prmry.csv");
-                        pttrn_rcgntn_vw_orgnls_2.fetchServerData("pttrn_rcgntn_fltrd_rslts_prmry.csv");
+                        pttrn_rcgntn_vw_orgnls_1.getData();//fetchServerData("pttrn_rcgntn_fltrd_rslts_prmry.csv");
+                        pttrn_rcgntn_vw_orgnls_2.getData();//fetchServerData("pttrn_rcgntn_fltrd_rslts_prmry.csv");
 
                         //setTimeout(() => { 
                                 //console.log('fetching secondary');
