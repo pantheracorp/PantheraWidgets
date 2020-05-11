@@ -57,6 +57,12 @@ class viewerClass {
           setCanvas( this.moduleId,this.imgArray[0]);
           //console.log("ModuleID : " + $('.rf_2_container').attr('id'));
         }
+        if(this.moduleId === 'pttrn_rcgntn_orgnl_imgs_1'){
+          setCanvas( this.moduleId,this.imgArray[0]);
+        }
+        if(this.moduleId === 'pttrn_rcgntn_orgnl_imgs_2'){
+          setCanvas( this.moduleId,this.imgArray[0]);
+        }
 
         this.sendDataToShinny();
 
@@ -155,10 +161,16 @@ class viewerClass {
         //console.log("matched spcs_idntfctn_id_rf_1");
         Shiny.setInputValue("spcs_idntfctn_id_rf_1_curr_img", imgname);
       }
-      else if(this.moduleId == "spcs_idntfctn_id_rf_2"){
+      if(this.moduleId == "spcs_idntfctn_id_rf_2"){
         //console.log("matched spcs_idntfctn_id_rf_2");
         Shiny.setInputValue("spcs_idntfctn_id_rf_2_curr_img", imgname);
-      }else{
+      }
+      if(this.moduleId == "pttrn_rcgntn_orgnl_imgs_1"){
+        //console.log("Conditions not met ");
+        Shiny.setInputValue("pttrn_rcgntn_orgnl_imgs_1_curr_img", imgname);
+      }
+      if(this.moduleId == "pttrn_rcgntn_orgnl_imgs_2"){
+        Shiny.setInputValue("pttrn_rcgntn_orgnl_imgs_2_curr_img", imgname);
         //console.log("Conditions not met ");
       }
       //Shiny.setInputValue(this.moduleId+'_curr_img', imgname);

@@ -18,11 +18,17 @@ HTMLWidgets.widget({
         let spcs_idntfctns_scndry_img = new viewerClass(
                                             "spcs_idntfctn_id_rf_2",
                                             "img_idntfctn_scndry.csv"),
-            spcs_idntfctns_prmry_img = new viewerClass(
+                spcs_idntfctns_prmry_img = new viewerClass(
                                             "spcs_idntfctn_id_rf_1",
-                                            "img_idntfctn_prmry.csv");
+                                            "img_idntfctn_prmry.csv"),
+                pttrn_rcgntn_vw_orgnls_1 = new viewerClass(
+                                        "pttrn_rcgntn_orgnl_imgs_1",
+                                        "pttrn_rcgntn_fltrd_rslts_prmry.csv"),
+                pttrn_rcgntn_vw_orgnls_2 = new viewerClass(
+                                        "pttrn_rcgntn_orgnl_imgs_2",
+                                        "pttrn_rcgntn_fltrd_rslts_scndry.csv");
 
-
+        // Handle extract images buttons 
         Shiny.addCustomMessageHandler("spcs_idntfctn_extrt_id_button_rf_1",
                 function(mesg) {
 
@@ -38,6 +44,27 @@ HTMLWidgets.widget({
                 }
         );
 
+        /*/////////////////////////////////////////////////////////////////////////////*/
+        // original imgs vwers
+        Shiny.addCustomMessageHandler("pttrn_rcgntn_vw_orgnls_button",
+                function(mesg) {
+                        pttrn_rcgntn_vw_orgnls_1.restart();
+                        pttrn_rcgntn_vw_orgnls_2.restart();
+                        pttrn_rcgntn_vw_orgnls_1.fetchServerData("pttrn_rcgntn_fltrd_rslts_prmry.csv");
+                        pttrn_rcgntn_vw_orgnls_2.fetchServerData("pttrn_rcgntn_fltrd_rslts_scndry.csv");
+                }
+        );
+
+       /* Shiny.addCustomMessageHandler("pttrn_rcgntn_vw_orgnls_button",
+                function(mesg) {
+                        pttrn_rcgntn_vw_orgnls_2.restart();
+                        pttrn_rcgntn_vw_orgnls_2.fetchServerData("pttrn_rcgntn_fltrd_rslts_prmry.csv");
+                }
+        );*/
+        /*/////////////////////////////////////////////////////////////////////////////*/
+
+
+
         // Handle previous image buttons
         Shiny.addCustomMessageHandler("spcs_idntfctn_prev_button_rf_1",
                 function(mesg) {
@@ -49,6 +76,23 @@ HTMLWidgets.widget({
                     spcs_idntfctns_scndry_img.prev();
                 }
         );
+
+        /*/////////////////////////////////////////////////////////////////////////////*/
+
+        Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_prev_button_prmry",
+                function(mesg) {
+                        pttrn_rcgntn_vw_orgnls_1.prev();
+                }
+        );
+        Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_prev_button_scndry",
+                function(mesg) {
+                        pttrn_rcgntn_vw_orgnls_2.prev();
+                }
+        );
+
+        /*/////////////////////////////////////////////////////////////////////////////*/
+
+
 
         // Hanle reset buttons
         Shiny.addCustomMessageHandler("spcs_idntfctn_reset_button_rf_1",
@@ -64,6 +108,23 @@ HTMLWidgets.widget({
                 }
         );
 
+        /*/////////////////////////////////////////////////////////////////////////////*/
+
+        Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_reset_button_prmry",
+                function(mesg) {
+                        pttrn_rcgntn_vw_orgnls_1.reset();
+
+                }
+        );
+        Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_reset_button_scndry",
+                function(mesg) {
+                        pttrn_rcgntn_vw_orgnls_2.reset();
+
+                }
+        );
+
+        /*/////////////////////////////////////////////////////////////////////////////*/
+
         // Hamdle next image buttons
         Shiny.addCustomMessageHandler("spcs_idntfctn_next_button_rf_1",
                 function(mesg) {
@@ -77,6 +138,22 @@ HTMLWidgets.widget({
 
                 }
         );
+
+        /*/////////////////////////////////////////////////////////////////////////////*/
+
+        Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_next_button_prmry",
+                function(mesg) {
+                        pttrn_rcgntn_vw_orgnls_1.next();
+
+                }
+        );
+        Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_next_button_scndry",
+                function(mesg) {
+                        pttrn_rcgntn_vw_orgnls_2.next();
+
+                }
+        );
+        /*/////////////////////////////////////////////////////////////////////////////*/
 
       },
 
