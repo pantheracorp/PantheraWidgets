@@ -12,10 +12,12 @@ class viewerClass {
       }
       // fetchServerData
 
-      fetchServerData(file)
+      async fetchServerData(file)
       {
         console.log("In fetchServerData moduleId : " + this.moduleId);
-         getFile(file).then(data => this.readServerData(data));
+        await getFile(file).then(data => {
+          return this.readServerData(data);
+        });
       }
 
 
