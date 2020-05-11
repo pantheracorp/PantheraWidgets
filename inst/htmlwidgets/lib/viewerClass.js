@@ -46,13 +46,8 @@ class viewerClass {
         }
         console.log("first img exist : " + this.imgexist(this.imgArray[0]));*/
         if(this.imgexist(this.imgArray[0]) == false){
-            alert('image not found')
-            // if(this.moduleId === 'pttrn_rcgntn_orgnl_imgs_1' || this.moduleId === 'pttrn_rcgntn_orgnl_imgs_2'){
-
-            // }
-            //this.imgArray[0] = this.errorImg;
-           let  src = 'https://homepages.cae.wisc.edu/~ece533/images/airplane.png';
-           this.imgArray[0] = src;
+            alert('Alert img not exist');
+            this.imgArray[0] = this.errorImg;
         }
         if(this.moduleId === "spcs_idntfctn_id_rf_1"){
 
@@ -64,13 +59,11 @@ class viewerClass {
           //console.log("ModuleID : " + $('.rf_2_container').attr('id'));
         }
         if(this.moduleId === 'pttrn_rcgntn_orgnl_imgs_1'){
-          alert('case pttrn_rcgntn_orgnl_imgs_1');
-          console.log(this.moduleId + ' First image ' + this.imgArray[0]);
+          console.log('case pttrn_rcgntn_orgnl_imgs_1');
           setCanvas( this.moduleId,this.imgArray[0]);
         }
         if(this.moduleId === 'pttrn_rcgntn_orgnl_imgs_2'){
-          alert('case pttrn_rcgntn_orgnl_imgs_2');
-          console.log(this.moduleId + ' First image ' + this.imgArray[0]);
+          console.log('case pttrn_rcgntn_orgnl_imgs_2');
           setCanvas( this.moduleId,this.imgArray[0]);
         }
 
