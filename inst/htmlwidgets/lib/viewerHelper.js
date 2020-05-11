@@ -1,11 +1,11 @@
 console.log('viewerHelper.js');
-$(document).ready(function() {
-  consiole.log('in doc ready');
-  $("#pttrn_rcgntn_vw_orgnls_button").click(function() {
-    alert("pttrn_rcgntn_vw_orgnls_button");
+// $(document).ready(function() {
+//   consiole.log('in doc ready');
+//   $("#pttrn_rcgntn_vw_orgnls_button").click(function() {
+//     alert("pttrn_rcgntn_vw_orgnls_button");
 
-  });
-});
+//   });
+// });
 //console.log("viewerHelper.js  panwidgts");
 async function getFile(filename) {
   //console.log("getFile(filename)");
