@@ -2,14 +2,7 @@
 //console.log("setImages.js  panwidgts");
 function setCanvas(targetID,imgSrc){
     
-    /*let imgId ;
-
-    if(targetID === 'pttrn_rcgntn_orgnl_imgs_1' || targetID === 'pttrn_rcgntn_orgnl_imgs_1'){
-      imgId = 'currnt-img_' + targetID.substring(13, targetID.length);
-    }
-    else{
-      imgId = 'currnt-img_' + targetID.substring(14, targetID.length);
-    }*/
+    
     console.log('setCanvas ' + targetID);
     console.log('target id exist : ' + $('#'+targetID+' img' ).length);
 

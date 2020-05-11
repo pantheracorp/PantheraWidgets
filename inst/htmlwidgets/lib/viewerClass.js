@@ -15,12 +15,7 @@ class viewerClass {
       fetchServerData(file)
       {
         console.log("In fetchServerData moduleId : " + this.moduleId);
-          getFile(file).then(data => {
-          //return
-           this.readServerData(data);
-        }).catch(() =>{
-          alert.log('Failed to get data');
-        });
+         getFile(file).then(data => this.readServerData(data));
       }
 
 
@@ -39,7 +34,7 @@ class viewerClass {
 
       displayImage(){
 
-        console.log("new displayImage");
+        console.log("new displayImage " + this.moduleId);
 
         console.log("first img exist : " + this.imgexist(this.imgArray[0]));
         if(this.imgexist(this.imgArray[0]) == false){
@@ -77,7 +72,7 @@ class viewerClass {
 
       readServerData(response) {
         let respArray = [];
-        console.log("In readServerData response : " + response);
+        console.log('In readServerData ' + this.moduleId + 'response : ' + response);
         if(response === null )
         {
           console.log(" Error in reading your images.Please check if all requirements are provided.");
