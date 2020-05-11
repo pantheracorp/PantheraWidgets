@@ -52,11 +52,11 @@ HTMLWidgets.widget({
                         pttrn_rcgntn_vw_orgnls_1.restart();
                         pttrn_rcgntn_vw_orgnls_1.fetchServerData("pttrn_rcgntn_fltrd_rslts_prmry.csv");
 
-                        setTimeout(() => { 
-                                console.log('fetching secondary');
-                                pttrn_rcgntn_vw_orgnls_2.restart();
-                                pttrn_rcgntn_vw_orgnls_2.fetchServerData("pttrn_rcgntn_fltrd_rslts_scndry.csv");
-                        },15000)
+                        //setTimeout(() => { 
+                                //console.log('fetching secondary');
+                               // pttrn_rcgntn_vw_orgnls_2.restart();
+                                //pttrn_rcgntn_vw_orgnls_2.fetchServerData("pttrn_rcgntn_fltrd_rslts_scndry.csv");
+                        //},15000)
                         
                 }
         );
