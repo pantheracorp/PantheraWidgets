@@ -1,7 +1,7 @@
 
 //console.log("setImages.js  panwidgts");
 function setCanvas(targetID,imgSrc){
-    console.log('setCanvas');
+    console.log('setCanvas ' + targetID);
     let imgId ;
 
     if(targetID === 'pttrn_rcgntn_orgnl_imgs_1' || targetID === 'pttrn_rcgntn_orgnl_imgs_1'){
@@ -18,12 +18,15 @@ function setCanvas(targetID,imgSrc){
     // the target div already exist
     if ( $('#'+targetID+' img' ).length ) 
     {
+        console.log('div img exist');
         $('#'+targetID+' img' ).attr('src',imgSrc );
        
     }else{
 
-        //console.log('Image already exist');
-        if(targetID === 'pttrn_rcgntn_orgnl_imgs_1' || targetID === 'pttrn_rcgntn_orgnl_imgs_1'){
+        console.log('Image dont exist');
+
+        if(targetID === 'pttrn_rcgntn_orgnl_imgs_1' || targetID === 'pttrn_rcgntn_orgnl_imgs_2'){
+          console.log('In pttrn_rcgntn_orgnl_imgs_1 && pttrn_rcgntn_orgnl_imgs_2')
 
           $('#'+targetID).prepend($('<img>',{id:imgId,src:imgSrc,alt:'camtrap',width:'100%',height:'200px'}));
 
