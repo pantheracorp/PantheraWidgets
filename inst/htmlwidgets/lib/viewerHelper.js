@@ -1,5 +1,6 @@
-
+console.log('viewerHelper.js');
 $(document).ready(function() {
+  consiole.log('in doc ready');
   $("#pttrn_rcgntn_vw_orgnls_button").click(function() {
     alert("pttrn_rcgntn_vw_orgnls_button");
 
