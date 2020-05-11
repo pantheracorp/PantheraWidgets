@@ -58,9 +58,11 @@ class viewerClass {
           //console.log("ModuleID : " + $('.rf_2_container').attr('id'));
         }
         if(this.moduleId === 'pttrn_rcgntn_orgnl_imgs_1'){
+          console.log('case pttrn_rcgntn_orgnl_imgs_1');
           setCanvas( this.moduleId,this.imgArray[0]);
         }
         if(this.moduleId === 'pttrn_rcgntn_orgnl_imgs_2'){
+          console.log('case pttrn_rcgntn_orgnl_imgs_2');
           setCanvas( this.moduleId,this.imgArray[0]);
         }
 
@@ -77,7 +79,7 @@ class viewerClass {
 
       readServerData(response) {
         let respArray = [];
-        //console.log("In readServerData response : " + response);
+        console.log("In readServerData response : " + response);
         if(response === null )
         {
           console.log(" Error in reading your images.Please check if all requirements are provided.");
@@ -89,6 +91,7 @@ class viewerClass {
           respArray[0] = respArray[respArray.length - 1] + respArray[0];
           respArray.splice(respArray.length - 1, 1);
           this.imgArray =  this.processImgSrc(respArray);
+          console.log(this.moduleId + 'Total Imgs : ' + (this.imgArray.length));
           this.displayImage();
 
         }
