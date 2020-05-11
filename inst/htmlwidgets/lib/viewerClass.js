@@ -36,15 +36,7 @@ class viewerClass {
 
         console.log("new displayImage");
 
-        //$.fn.cropper.noConflict();
-        //Cropper.noConflict();
-        /*if (typeof  $.fn.cropper != "undefined") {
-          alert(" $.fn.cropper Exist");
-        }
-        else{
-          alert(" $.fn.cropper NOT Exist");
-        }
-        console.log("first img exist : " + this.imgexist(this.imgArray[0]));*/
+        console.log("first img exist : " + this.imgexist(this.imgArray[0]));
         if(this.imgexist(this.imgArray[0]) == false){
             alert('Alert img not exist');
             this.imgArray[0] = this.errorImg;
@@ -170,14 +162,14 @@ class viewerClass {
         //console.log("matched spcs_idntfctn_id_rf_2");
         Shiny.setInputValue("spcs_idntfctn_id_rf_2_curr_img", imgname);
       }
-      if(this.moduleId == "pttrn_rcgntn_orgnl_imgs_1"){
+      /*if(this.moduleId == "pttrn_rcgntn_orgnl_imgs_1"){
         //console.log("Conditions not met ");
         Shiny.setInputValue("pttrn_rcgntn_orgnl_imgs_1_curr_img", imgname);
       }
       if(this.moduleId == "pttrn_rcgntn_orgnl_imgs_2"){
         Shiny.setInputValue("pttrn_rcgntn_orgnl_imgs_2_curr_img", imgname);
         //console.log("Conditions not met ");
-      }
+      }*/
       //Shiny.setInputValue(this.moduleId+'_curr_img', imgname);
       //console.log("Equal : " + "spcs_idntfctn_id_rf_1_curr_img" == this.moduleId+'_curr_img');
       //Shiny.onInputChange(""+this.moduleId+"_curr_img", imgname);
