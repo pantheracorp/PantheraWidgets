@@ -14,7 +14,7 @@ class viewerClass {
 
       fetchServerData(file)
       {
-        //console.log("In fetchServerData moduleId : " + this.moduleId);
+        console.log("In fetchServerData moduleId : " + this.moduleId);
          getFile(file).then(data => this.readServerData(data));
       }
 
@@ -69,6 +69,7 @@ class viewerClass {
       }
 
       restart(){
+        console.log('restart');
         this.imgArray.length = 0;
         this.currentIndex = 0;
       }

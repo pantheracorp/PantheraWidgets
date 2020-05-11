@@ -48,6 +48,7 @@ HTMLWidgets.widget({
         // original imgs vwers
         Shiny.addCustomMessageHandler("pttrn_rcgntn_vw_orgnls_button",
                 function(mesg) {
+                        console.log('pttrn_rcgntn_vw_orgnls_button');
                         pttrn_rcgntn_vw_orgnls_1.restart();
                         pttrn_rcgntn_vw_orgnls_2.restart();
                         pttrn_rcgntn_vw_orgnls_1.fetchServerData("pttrn_rcgntn_fltrd_rslts_prmry.csv");
