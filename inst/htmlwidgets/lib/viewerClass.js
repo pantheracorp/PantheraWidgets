@@ -46,6 +46,7 @@ class viewerClass {
         }
         console.log("first img exist : " + this.imgexist(this.imgArray[0]));*/
         if(this.imgexist(this.imgArray[0]) == false){
+            alert('image not found')
             this.imgArray[0] = this.errorImg;
         }
         if(this.moduleId === "spcs_idntfctn_id_rf_1"){
@@ -58,11 +59,11 @@ class viewerClass {
           //console.log("ModuleID : " + $('.rf_2_container').attr('id'));
         }
         if(this.moduleId === 'pttrn_rcgntn_orgnl_imgs_1'){
-          console.log('case pttrn_rcgntn_orgnl_imgs_1');
+          alert('case pttrn_rcgntn_orgnl_imgs_1');
           setCanvas( this.moduleId,this.imgArray[0]);
         }
         if(this.moduleId === 'pttrn_rcgntn_orgnl_imgs_2'){
-          console.log('case pttrn_rcgntn_orgnl_imgs_2');
+          alert('case pttrn_rcgntn_orgnl_imgs_2');
           setCanvas( this.moduleId,this.imgArray[0]);
         }
 
