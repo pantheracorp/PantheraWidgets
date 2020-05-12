@@ -49,8 +49,9 @@ class viewerClass {
       displayImage(){
 
         console.log("new displayImage " + this.moduleId);
-
         console.log("first img exist : " + this.imgexist(this.imgArray[0]));
+        console.log((this.imgArray).toString);
+
         if(this.imgexist(this.imgArray[0]) == false){
             alert('Alert img not exist');
             this.imgArray[0] = this.errorImg;
@@ -124,12 +125,14 @@ class viewerClass {
         }
         else{
             //console.log("In Next Array : " + this.imgArray);
-           console.log("Before next : " + $('#'+this.moduleId+' img' ).attr('src'));
+           console.log("Before next 1 : " + $('#'+this.moduleId+' img' ).attr('src'));
+           console.log("Before next 2 : " + this.imgArray[this.currentIndex]);
            if(this.imgexist(this.imgArray[this.currentIndex+1]) == false){
              this.imgArray[this.currentIndex+1] = this.errorImg;
            }
            $('#'+this.moduleId+' img' ).attr('src', this.imgArray[this.currentIndex+1] );
-           console.log("After next : " + $('#'+this.moduleId+' img' ).attr('src'));
+           console.log("After next 1 : " + $('#'+this.moduleId+' img' ).attr('src'));
+           console.log("After next 2 : " + this.imgArray[this.currentIndex+1]);
            this.currentIndex++;
            this.sendDataToShinny();
         }
@@ -140,9 +143,11 @@ class viewerClass {
         if(this.currentIndex == 0){
           // first image
         }else{
-             console.log("Before prev : " + $('#'+this.moduleId+' img' ).attr('src'));
+             console.log("Before prev 1 : " + $('#'+this.moduleId+' img' ).attr('src'));
+             console.log("Before prev 2 : " + this.imgArray[this.currentIndex]);
              $('#'+this.moduleId+' img' ).attr('src', this.imgArray[this.currentIndex-1] );
-             console.log("After prev : " + $('#'+this.moduleId+' img' ).attr('src'));
+             console.log("After prev 1 : " + $('#'+this.moduleId+' img' ).attr('src'));
+             console.log("After prev 2 : " + this.imgArray[this.currentIndex-1]);
              this.currentIndex--;
              this.sendDataToShinny();
 
@@ -166,28 +171,20 @@ class viewerClass {
 
     sendDataToShinny(){
       //console.log("In  sendDataToShiny ");
-      let src = this.imgArray[this.currentIndex];
-      let imgname = src.substring(src.lastIndexOf("/") + 1, src.length );
+      if(this.moduleId == "spcs_idntfctn_id_rf_2" || this.moduleId == "spcs_idntfctn_id_rf_1"){
+        let src = this.imgArray[this.currentIndex];
+        let imgname = src.substring(src.lastIndexOf("/") + 1, src.length );
+  
+        if(this.moduleId == "spcs_idntfctn_id_rf_1"){
+          //console.log("matched spcs_idntfctn_id_rf_1");
+          Shiny.setInputValue("spcs_idntfctn_id_rf_1_curr_img", imgname);
+        }
+        if(this.moduleId == "spcs_idntfctn_id_rf_2"){
+          //console.log("matched spcs_idntfctn_id_rf_2");
+          Shiny.setInputValue("spcs_idntfctn_id_rf_2_curr_img", imgname);
+        }
 
-      if(this.moduleId == "spcs_idntfctn_id_rf_1"){
-        //console.log("matched spcs_idntfctn_id_rf_1");
-        Shiny.setInputValue("spcs_idntfctn_id_rf_1_curr_img", imgname);
       }
-      if(this.moduleId == "spcs_idntfctn_id_rf_2"){
-        //console.log("matched spcs_idntfctn_id_rf_2");
-        Shiny.setInputValue("spcs_idntfctn_id_rf_2_curr_img", imgname);
-      }
-      /*if(this.moduleId == "pttrn_rcgntn_orgnl_imgs_1"){
-        //console.log("Conditions not met ");
-        Shiny.setInputValue("pttrn_rcgntn_orgnl_imgs_1_curr_img", imgname);
-      }
-      if(this.moduleId == "pttrn_rcgntn_orgnl_imgs_2"){
-        Shiny.setInputValue("pttrn_rcgntn_orgnl_imgs_2_curr_img", imgname);
-        //console.log("Conditions not met ");
-      }*/
-      //Shiny.setInputValue(this.moduleId+'_curr_img', imgname);
-      //console.log("Equal : " + "spcs_idntfctn_id_rf_1_curr_img" == this.moduleId+'_curr_img');
-      //Shiny.onInputChange(""+this.moduleId+"_curr_img", imgname);
 
     }
 
