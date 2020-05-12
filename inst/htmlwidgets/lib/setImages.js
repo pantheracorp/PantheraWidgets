@@ -5,7 +5,7 @@ function setCanvas(targetID,imgSrc){
 
     let imgId = '';
     
-    if(targetID === 'pttrn_rcgntn_orgnl_imgs_1' || targetID === 'pttrn_rcgntn_orgnl_imgs_1'){
+    if(targetID === 'pttrn_rcgntn_orgnl_imgs_1' || targetID === 'pttrn_rcgntn_orgnl_imgs_2'){
        imgId = 'currnt-img_' + targetID.substring(13, targetID.length);
     }
     else{
@@ -23,7 +23,7 @@ function setCanvas(targetID,imgSrc){
         //console.log("img exist : ");
     }else{
 
-      if(targetID === 'pttrn_rcgntn_orgnl_imgs_1' || targetID === 'pttrn_rcgntn_orgnl_imgs_1'){
+      if(targetID === 'pttrn_rcgntn_orgnl_imgs_1' || targetID === 'pttrn_rcgntn_orgnl_imgs_2'){
 
         $('#'+targetID).prepend($('<img>',{id:imgId,src:imgSrc,alt:'camtrap',width:'100%',height:'200px'}));
       }
