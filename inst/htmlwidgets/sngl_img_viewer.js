@@ -13,7 +13,7 @@ HTMLWidgets.widget({
       renderValue: function(x) {
 
         // TODO: code to render the widget, e.g.
-        console.log("sngl_img_viewer.js  11-05-20 12:44");
+        console.log("sngl_img_viewer.js  11-05-20 12:49");
         
         let spcs_idntfctns_scndry_img = new viewerClass(
                                             "spcs_idntfctn_id_rf_2",
@@ -23,10 +23,10 @@ HTMLWidgets.widget({
                                             "img_idntfctn_prmry.csv"),
                 pttrn_rcgntn_vw_orgnls_1 = new viewerClass(
                                         "pttrn_rcgntn_orgnl_imgs_1",
-                                        "pttrn_rcgntn_fltrd_rslts_prmry.csv");
-                /*pttrn_rcgntn_vw_orgnls_2 = new viewerClass(
+                                        "pttrn_rcgntn_fltrd_rslts_prmry.csv"),
+                pttrn_rcgntn_vw_orgnls_2 = new viewerClass(
                                         "pttrn_rcgntn_orgnl_imgs_2",
-                                        "pttrn_rcgntn_fltrd_rslts_scndry.csv");*/
+                                        "pttrn_rcgntn_fltrd_rslts_scndry.csv");
 
         // Handle extract images buttons 
         Shiny.addCustomMessageHandler("spcs_idntfctn_extrt_id_button_rf_1",
