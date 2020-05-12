@@ -102,7 +102,7 @@ class viewerClass {
           respArray[0] = respArray[0].replace("Source", "");
           respArray[0] = respArray[respArray.length - 1] + respArray[0];
           respArray.splice(respArray.length - 1, 1);
-          this.imgArray =  this.processImgSrc(respArray);
+          this.imgArray =  [...(this.processImgSrc(respArray))];
           console.log(this.moduleId + 'Total Imgs : ' + (this.imgArray.length));
           this.displayImage();
 
