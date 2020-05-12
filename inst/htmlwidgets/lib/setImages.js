@@ -1,7 +1,7 @@
 
 //console.log("setImages.js  panwidgts");
 function setCanvas(targetID,imgSrc){
-    console.log('setCanvas');
+    console.log('setCanvas new');
 
     let imgId = '';
     
@@ -28,7 +28,7 @@ function setCanvas(targetID,imgSrc){
         $('#'+targetID).prepend($('<img>',{id:imgId,src:imgSrc,alt:'camtrap',width:'100%',height:'200px'}));
       }
       else{
-        
+
         $('#'+targetID).prepend($('<img>',{id:imgId,src:imgSrc,alt:'camtrap',width:'100%',height:'500px'}));
       }
 
