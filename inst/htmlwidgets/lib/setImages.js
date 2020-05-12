@@ -3,11 +3,13 @@
 function setCanvas(targetID,imgSrc){
     console.log('setCanvas');
 
+    let imgId = '';
+    
     if(targetID === 'pttrn_rcgntn_orgnl_imgs_1' || targetID === 'pttrn_rcgntn_orgnl_imgs_1'){
-      let imgId = 'currnt-img_' + targetID.substring(13, targetID.length);
+       imgId = 'currnt-img_' + targetID.substring(13, targetID.length);
     }
     else{
-      let imgId = 'currnt-img_' + targetID.substring(14, targetID.length);
+      imgId = 'currnt-img_' + targetID.substring(14, targetID.length);
     }
    
 
