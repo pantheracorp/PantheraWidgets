@@ -104,7 +104,9 @@ HTMLWidgets.widget({
         Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_next_button",
                 function(mesg) {
                         console.log('pttrn_rcgntn_orgnl_imgs_next_button');
+                        console.log('pttrn_rcgntn_vw_orgnls_1 '+ pttrn_rcgntn_vw_orgnls_1.imgArray);
                         pttrn_rcgntn_vw_orgnls_1.next();
+                        console.log('pttrn_rcgntn_vw_orgnls_2 '+ pttrn_rcgntn_vw_orgnls_2.imgArray);
                         pttrn_rcgntn_vw_orgnls_2.next();
 
                 }
