@@ -17,18 +17,22 @@ function setCanvas(targetID,imgSrc){
     console.log('target id exist : ' + $('#'+targetID+' img' ).length);
 
     // the target div already exist
-    if ( $('#'+targetID+' img' ).length ) 
+    if ( $('#'+targetID+' img' ).length )
     {
         $('#'+targetID+' img' ).attr('src',imgSrc );
         //console.log("img exist : ");
     }else{
 
-        console.log('Image already exist');
+      if(targetID === 'pttrn_rcgntn_orgnl_imgs_1' || targetID === 'pttrn_rcgntn_orgnl_imgs_1'){
 
+        $('#'+targetID).prepend($('<img>',{id:imgId,src:imgSrc,alt:'camtrap',width:'100%',height:'200px'}));
+      }
+      else{
+        
         $('#'+targetID).prepend($('<img>',{id:imgId,src:imgSrc,alt:'camtrap',width:'100%',height:'500px'}));
+      }
 
-
-          wheelzoom(document.querySelector("#"+imgId));
+      wheelzoom(document.querySelector("#"+imgId));
                 //$("#"+imgId).imgViewer();
 
       }
