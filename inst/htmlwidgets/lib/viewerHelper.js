@@ -1,4 +1,4 @@
-console.log('- viewerHelper.js');
+console.log('viewerHelper.js');
 
 //console.log("viewerHelper.js  panwidgts");
 async function getFile(filename) {

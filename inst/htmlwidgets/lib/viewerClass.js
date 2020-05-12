@@ -50,7 +50,9 @@ class viewerClass {
 
         console.log("new displayImage " + this.moduleId);
         console.log("first img exist : " + this.imgexist(this.imgArray[0]));
-        console.log((this.imgArray));
+        //console.log((this.imgArray));
+
+        console.log('Start of Display imgs : '  + this.moduleId + '  ' + (this.imgArray).length);
 
         if(this.imgexist(this.imgArray[0]) == false){
             alert('Alert img not exist');
@@ -73,6 +75,7 @@ class viewerClass {
           console.log('case pttrn_rcgntn_orgnl_imgs_2');
           setCanvas( this.moduleId,this.imgArray[0]);
         }
+        console.log('End of Display imgs : '  + this.moduleId + '  ' + (this.imgArray).length);
 
         this.sendDataToShinny();
 
@@ -88,6 +91,7 @@ class viewerClass {
       readServerData(response) {
         let respArray = [];
         //console.log('In readServerData ' + this.moduleId + 'response : ' + response);
+        console.log('Start of readServerData imgs : '  + this.moduleId + ' array size :' + (this.imgArray).length);
         if(response === null )
         {
           console.log(" Error in reading your images.Please check if all requirements are provided.");
@@ -103,21 +107,33 @@ class viewerClass {
           this.displayImage();
 
         }
+
+        console.log('End of readServerData imgs : '  + this.moduleId + ' array size :' + (this.imgArray).length);
+
         //this.imgloop(this.displayImages(this.imgNumb,0));
       }
 
       // $('div.event img').attr('src', '/anything');
       reset(){
         console.log('reset');
+        console.log('Start of reset imgs : '  + this.moduleId + ' array size :' + (this.imgArray).length);
+
          this.currentIndex = 0;
          //this.displayImage();
          this.sendDataToShinny();
          console.log(this.imgArray);
          $('#'+this.moduleId+' img' ).attr('src', this.imgArray[this.currentIndex] );
 
+         console.log('End of reset imgs : '  + this.moduleId + ' array size :' + (this.imgArray).length);
+
+         
+
       }
 
       next() {
+
+        console.log('Start of next imgs : '  + this.moduleId + ' array size :' + (this.imgArray).length);
+
 
         if(this.currentIndex == this.imgArray.length-1){
 
@@ -129,9 +145,11 @@ class viewerClass {
            console.log("Before next 1 : " + $('#'+this.moduleId+' img' ).attr('src'));
            console.log(this.imgArray);
            console.log("Before next 2 : " + this.imgArray[this.currentIndex]);
+
            if(this.imgexist(this.imgArray[this.currentIndex+1]) == false){
              this.imgArray[this.currentIndex+1] = this.errorImg;
            }
+
            $('#'+this.moduleId+' img' ).attr('src', this.imgArray[this.currentIndex+1] );
            console.log("After next 1 : " + $('#'+this.moduleId+' img' ).attr('src'));
            console.log("After next 2 : " + this.imgArray[this.currentIndex+1]);
@@ -139,9 +157,15 @@ class viewerClass {
            this.sendDataToShinny();
         }
 
+        console.log('End of next imgs : '  + this.moduleId + ' array size :' + (this.imgArray).length);
+
+
     }
 
     prev() {
+
+      console.log('Start of prev imgs : '  + this.moduleId + ' array size :' + (this.imgArray).length);
+
         if(this.currentIndex == 0){
           // first image
         }else{
@@ -155,6 +179,9 @@ class viewerClass {
              this.sendDataToShinny();
 
         }
+
+        console.log('End of prev imgs : '  + this.moduleId + ' array size :' + (this.imgArray).length);
+
 
     }
 
@@ -174,6 +201,8 @@ class viewerClass {
 
     sendDataToShinny(){
       //console.log("In  sendDataToShiny ");
+      console.log('Start of sendDataToShinny imgs : '  + this.moduleId + ' array size :' + (this.imgArray).length);
+
       if(this.moduleId == "spcs_idntfctn_id_rf_2" || this.moduleId == "spcs_idntfctn_id_rf_1"){
         let src = this.imgArray[this.currentIndex];
         let imgname = src.substring(src.lastIndexOf("/") + 1, src.length );
@@ -188,6 +217,8 @@ class viewerClass {
         }
 
       }
+
+      console.log('End of sendDataToShinny imgs : '  + this.moduleId + ' array size :' + (this.imgArray).length);
 
     }
 

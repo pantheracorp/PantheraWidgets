@@ -28,6 +28,8 @@ HTMLWidgets.widget({
                                         "pttrn_rcgntn_orgnl_imgs_2",
                                         "pttrn_rcgntn_fltrd_rslts_scndry.csv");
 
+        /*/////////////////////////////////////////////////////////////////////////////*/
+
         // Handle extract images buttons 
         Shiny.addCustomMessageHandler("spcs_idntfctn_extrt_id_button_rf_1",
                 function(mesg) {
@@ -44,34 +46,6 @@ HTMLWidgets.widget({
                 }
         );
 
-        /*/////////////////////////////////////////////////////////////////////////////*/
-        // original imgs vwers
-        Shiny.addCustomMessageHandler("pttrn_rcgntn_vw_orgnls_button",
-                function(mesg) {
-                        console.log('clicked pttrn_rcgntn_vw_orgnls_button');
-                        pttrn_rcgntn_vw_orgnls_1.restart();
-                        pttrn_rcgntn_vw_orgnls_2.restart();
-                        pttrn_rcgntn_vw_orgnls_1.getData();//fetchServerData("pttrn_rcgntn_fltrd_rslts_prmry.csv");
-                        pttrn_rcgntn_vw_orgnls_2.getData();//fetchServerData("pttrn_rcgntn_fltrd_rslts_prmry.csv");
-
-                        //setTimeout(() => { 
-                                //console.log('fetching secondary');
-                               // pttrn_rcgntn_vw_orgnls_2.restart();
-                                //pttrn_rcgntn_vw_orgnls_2.fetchServerData("pttrn_rcgntn_fltrd_rslts_scndry.csv");
-                        //},15000)
-                        
-                }
-        );
-
-       /* Shiny.addCustomMessageHandler("pttrn_rcgntn_vw_orgnls_button",
-                function(mesg) {
-                        pttrn_rcgntn_vw_orgnls_2.restart();
-                        pttrn_rcgntn_vw_orgnls_2.fetchServerData("pttrn_rcgntn_fltrd_rslts_prmry.csv");
-                }
-        );*/
-        /*/////////////////////////////////////////////////////////////////////////////*/
-
-
 
         // Handle previous image buttons
         Shiny.addCustomMessageHandler("spcs_idntfctn_prev_button_rf_1",
@@ -84,26 +58,6 @@ HTMLWidgets.widget({
                     spcs_idntfctns_scndry_img.prev();
                 }
         );
-
-        /*/////////////////////////////////////////////////////////////////////////////*/
-
-        Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_prev_button",
-                function(mesg) {
-                        console.log('pttrn_rcgntn_orgnl_imgs_prev_button');
-                        pttrn_rcgntn_vw_orgnls_1.prev();
-                        pttrn_rcgntn_vw_orgnls_2.prev();
-                }
-        );
-        // Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_prev_button_scndry",
-        //         function(mesg) {
-        //                 console.log('pttrn_rcgntn_orgnl_imgs_prev_button_scndry');
-        //                 pttrn_rcgntn_vw_orgnls_2.prev();
-        //         }
-        // );
-
-        /*/////////////////////////////////////////////////////////////////////////////*/
-
-
 
         // Hanle reset buttons
         Shiny.addCustomMessageHandler("spcs_idntfctn_reset_button_rf_1",
@@ -118,26 +72,6 @@ HTMLWidgets.widget({
 
                 }
         );
-
-        /*/////////////////////////////////////////////////////////////////////////////*/
-
-        Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_reset_button",
-                function(mesg) {
-                        console.log('pttrn_rcgntn_orgnl_imgs_reset_button');
-                        pttrn_rcgntn_vw_orgnls_1.reset();
-                        pttrn_rcgntn_vw_orgnls_2.reset();
-
-                }
-        );
-        // Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_reset_button_scndry",
-        //         function(mesg) {
-        //                 console.log('pttrn_rcgntn_orgnl_imgs_reset_button_scndry');
-        //                 pttrn_rcgntn_vw_orgnls_2.reset();
-
-        //         }
-        // );
-
-        /*/////////////////////////////////////////////////////////////////////////////*/
 
         // Hamdle next image buttons
         Shiny.addCustomMessageHandler("spcs_idntfctn_next_button_rf_1",
@@ -155,6 +89,18 @@ HTMLWidgets.widget({
 
         /*/////////////////////////////////////////////////////////////////////////////*/
 
+
+        Shiny.addCustomMessageHandler("pttrn_rcgntn_vw_orgnls_button",
+                function(mesg) {
+                        console.log('clicked pttrn_rcgntn_vw_orgnls_button');
+                        pttrn_rcgntn_vw_orgnls_1.restart();
+                        pttrn_rcgntn_vw_orgnls_2.restart();
+                        pttrn_rcgntn_vw_orgnls_1.getData();
+                        pttrn_rcgntn_vw_orgnls_2.getData();
+                        
+                }
+        );
+
         Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_next_button",
                 function(mesg) {
                         console.log('pttrn_rcgntn_orgnl_imgs_next_button');
@@ -163,13 +109,24 @@ HTMLWidgets.widget({
 
                 }
         );
-        // Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_next_button_scndry",
-        //         function(mesg) {
-        //                 console.log('pttrn_rcgntn_orgnl_imgs_next_button_scndry');
-        //                 pttrn_rcgntn_vw_orgnls_2.next();
 
-        //         }
-        // );
+        Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_prev_button",
+                function(mesg) {
+                        console.log('pttrn_rcgntn_orgnl_imgs_prev_button');
+                        pttrn_rcgntn_vw_orgnls_1.prev();
+                        pttrn_rcgntn_vw_orgnls_2.prev();
+                }
+        );
+
+        Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_reset_button",
+                function(mesg) {
+                        console.log('pttrn_rcgntn_orgnl_imgs_reset_button');
+                        pttrn_rcgntn_vw_orgnls_1.reset();
+                        pttrn_rcgntn_vw_orgnls_2.reset();
+
+                }
+        );
+
         /*/////////////////////////////////////////////////////////////////////////////*/
 
       },
