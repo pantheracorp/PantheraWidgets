@@ -13,7 +13,7 @@ HTMLWidgets.widget({
       renderValue: function(x) {
 
         // TODO: code to render the widget, e.g.
-        console.log("sngl_img_viewer.js  11-05-20");
+        console.log("sngl_img_viewer.js  11-05-20 11:56");
         
         let spcs_idntfctns_scndry_img = new viewerClass(
                                             "spcs_idntfctn_id_rf_2",
@@ -23,7 +23,7 @@ HTMLWidgets.widget({
                                             "img_idntfctn_prmry.csv"),
                 pttrn_rcgntn_vw_orgnls_1 = new viewerClass(
                                         "pttrn_rcgntn_orgnl_imgs_1",
-                                        "pttrn_rcgntn_fltrd_rslts_prmry.csv"),
+                                        "pttrn_rcgntn_fltrd_rslts_prmry.csv");
                 /*pttrn_rcgntn_vw_orgnls_2 = new viewerClass(
                                         "pttrn_rcgntn_orgnl_imgs_2",
                                         "pttrn_rcgntn_fltrd_rslts_scndry.csv");*/
