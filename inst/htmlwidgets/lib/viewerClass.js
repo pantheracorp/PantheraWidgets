@@ -126,7 +126,7 @@ class viewerClass {
         }
         console.log("In Next Array : " + (this.imgArray).length);
         console.log("After next : " +  this.imgArray[this.currentIndex]);
-
+        
     }
 
     prev() {
