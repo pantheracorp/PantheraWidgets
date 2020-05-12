@@ -3,6 +3,7 @@ class viewerClass {
 
       constructor(moduleId,csvfile)
       {
+        this.imgscpy = [];
         this.csvfile = csvfile;
         this.moduleId =moduleId;
         this.imgArray = [];
@@ -59,7 +60,7 @@ class viewerClass {
             this.imgArray[0] = this.errorImg;
         }
 
-        setCanvas( this.moduleId,this.imgArray[0]);
+         setCanvas( this.moduleId,this.imgArray[0]);
         /*if(this.moduleId === "spcs_idntfctn_id_rf_1"){
 
           setCanvas( this.moduleId,this.imgArray[0]);
@@ -92,6 +93,7 @@ class viewerClass {
 
       readServerData(response) {
         let respArray = [];
+        this.imgscpy.length = 0;
         //console.log('In readServerData ' + this.moduleId + 'response : ' + response);
         console.log('Start of readServerData imgs : '  + this.moduleId + ' array size :' + (this.imgArray).length);
         if(response === null )
@@ -105,6 +107,7 @@ class viewerClass {
           respArray[0] = respArray[respArray.length - 1] + respArray[0];
           respArray.splice(respArray.length - 1, 1);
           this.imgArray =  [...(this.processImgSrc(respArray))];
+          this.imgscpy = [...respArray];
           console.log(this.moduleId + 'Total Imgs : ' + (this.imgArray.length));
           this.displayImage();
 
@@ -134,10 +137,10 @@ class viewerClass {
 
       next() {
 
-        console.log('Start of next imgs : '  + this.moduleId + ' array size :' + (this.imgArray).length);
+        console.log('Start of next imgs : '  + this.moduleId + ' array size :' + (this.imgscpy).length);
 
 
-        if(this.currentIndex == this.imgArray.length-1){
+        if(this.currentIndex == this.imgscpy.length-1){
 
           // last image
 
@@ -145,21 +148,21 @@ class viewerClass {
         else{
             //console.log("In Next Array : " + this.imgArray);
            console.log("Before next 1 : " + $('#'+this.moduleId+' img' ).attr('src'));
-           console.log(this.imgArray);
-           console.log("Before next 2 : " + this.imgArray[this.currentIndex]);
+           console.log(this.imgscpy);
+           console.log("Before next 2 : " + this.imgscpy[this.currentIndex]);
 
-           if(this.imgexist(this.imgArray[this.currentIndex+1]) == false){
-             this.imgArray[this.currentIndex+1] = this.errorImg;
+           if(this.imgexist(this.imgscpy[this.currentIndex+1]) == false){
+             this.imgscpy[this.currentIndex+1] = this.errorImg;
            }
 
-           $('#'+this.moduleId+' img' ).attr('src', this.imgArray[this.currentIndex+1] );
+           $('#'+this.moduleId+' img' ).attr('src', this.imgscpy[this.currentIndex+1] );
            console.log("After next 1 : " + $('#'+this.moduleId+' img' ).attr('src'));
-           console.log("After next 2 : " + this.imgArray[this.currentIndex+1]);
+           console.log("After next 2 : " + this.imgscpy[this.currentIndex+1]);
            this.currentIndex++;
            this.sendDataToShinny();
         }
 
-        console.log('End of next imgs : '  + this.moduleId + ' array size :' + (this.imgArray).length);
+        console.log('End of next imgs : '  + this.moduleId + ' array size :' + (this.imgscpy).length);
 
 
     }

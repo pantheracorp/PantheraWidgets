@@ -33,7 +33,6 @@ HTMLWidgets.widget({
         // Handle extract images buttons 
         Shiny.addCustomMessageHandler("spcs_idntfctn_extrt_id_button_rf_1",
                 function(mesg) {
-
                   spcs_idntfctns_prmry_img.restart();
                   spcs_idntfctns_prmry_img.fetchServerData("img_idntfctn_prmry.csv");
                 }
@@ -111,9 +110,9 @@ HTMLWidgets.widget({
         Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_next_button",
                 function(mesg) {
                         console.log('pttrn_rcgntn_orgnl_imgs_next_button clicked');
-                        alert('pttrn_rcgntn_vw_orgnls_1 '+ pttrn_rcgntn_vw_orgnls_1.imgArray);
+                        //alert('pttrn_rcgntn_vw_orgnls_1 '+ pttrn_rcgntn_vw_orgnls_1.imgArray);
                         pttrn_rcgntn_vw_orgnls_1.next();
-                        alert('pttrn_rcgntn_vw_orgnls_2 '+ pttrn_rcgntn_vw_orgnls_2.imgArray);
+                        //alert('pttrn_rcgntn_vw_orgnls_2 '+ pttrn_rcgntn_vw_orgnls_2.imgArray);
                         pttrn_rcgntn_vw_orgnls_2.next();
 
                 }
