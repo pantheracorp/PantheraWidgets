@@ -110,26 +110,30 @@ class viewerClass {
 
       next() {
 
+        console.log("In Next Array : " + (this.imgArray).length);
+        console.log("Before next : " +  this.imgArray[this.currentIndex]);
         if(this.currentIndex == this.imgArray.length-1){
-
-          // last image
-
         }
         else{
-            //console.log("In Next Array : " + this.imgArray);
-           //console.log("Before next : " + $('#'+this.moduleId+' img' ).attr('src'));
+           
+           
            if(this.imgexist(this.imgArray[this.currentIndex+1]) == false){
              this.imgArray[this.currentIndex+1] = this.errorImg;
            }
            $('#'+this.moduleId+' img' ).attr('src', this.imgArray[this.currentIndex+1] );
-           //console.log("After next : " + $('#'+this.moduleId+' img' ).attr('src'));
            this.currentIndex++;
            this.sendDataToShinny();
         }
+        console.log("In Next Array : " + (this.imgArray).length);
+        console.log("After next : " +  this.imgArray[this.currentIndex]);
 
     }
 
     prev() {
+
+      console.log("In Prev Array : " + (this.imgArray).length);
+      console.log("Before Prev : " +  this.imgArray[this.currentIndex]);
+
         if(this.currentIndex == 0){
           // first image
         }else{
@@ -140,6 +144,8 @@ class viewerClass {
              this.sendDataToShinny();
 
         }
+        console.log("In Prev Array : " + (this.imgArray).length);
+        console.log("After Prev : " +  this.imgArray[this.currentIndex]);
 
     }
 
