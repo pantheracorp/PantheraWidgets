@@ -58,7 +58,9 @@ class viewerClass {
             alert('Alert img not exist');
             this.imgArray[0] = this.errorImg;
         }
-        if(this.moduleId === "spcs_idntfctn_id_rf_1"){
+
+        setCanvas( this.moduleId,this.imgArray[0]);
+        /*if(this.moduleId === "spcs_idntfctn_id_rf_1"){
 
           setCanvas( this.moduleId,this.imgArray[0]);
           //console.log("ModuleID : " + $('.rf_1_container').attr('id'));
@@ -74,7 +76,7 @@ class viewerClass {
         if(this.moduleId === 'pttrn_rcgntn_orgnl_imgs_2'){
           console.log('case pttrn_rcgntn_orgnl_imgs_2');
           setCanvas( this.moduleId,this.imgArray[0]);
-        }
+        }*/
         console.log('End of Display imgs : '  + this.moduleId + '  ' + (this.imgArray).length);
 
         this.sendDataToShinny();
