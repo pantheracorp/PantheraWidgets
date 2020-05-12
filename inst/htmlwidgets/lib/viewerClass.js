@@ -107,6 +107,7 @@ class viewerClass {
 
       // $('div.event img').attr('src', '/anything');
       reset(){
+        console.log('reset');
          this.currentIndex = 0;
          //this.displayImage();
          this.sendDataToShinny();
@@ -123,12 +124,12 @@ class viewerClass {
         }
         else{
             //console.log("In Next Array : " + this.imgArray);
-           //console.log("Before next : " + $('#'+this.moduleId+' img' ).attr('src'));
+           console.log("Before next : " + $('#'+this.moduleId+' img' ).attr('src'));
            if(this.imgexist(this.imgArray[this.currentIndex+1]) == false){
              this.imgArray[this.currentIndex+1] = this.errorImg;
            }
            $('#'+this.moduleId+' img' ).attr('src', this.imgArray[this.currentIndex+1] );
-           //console.log("After next : " + $('#'+this.moduleId+' img' ).attr('src'));
+           console.log("After next : " + $('#'+this.moduleId+' img' ).attr('src'));
            this.currentIndex++;
            this.sendDataToShinny();
         }
@@ -139,9 +140,9 @@ class viewerClass {
         if(this.currentIndex == 0){
           // first image
         }else{
-             //console.log("Before prev : " + $('#'+this.moduleId+' img' ).attr('src'));
+             console.log("Before prev : " + $('#'+this.moduleId+' img' ).attr('src'));
              $('#'+this.moduleId+' img' ).attr('src', this.imgArray[this.currentIndex-1] );
-             //console.log("After prev : " + $('#'+this.moduleId+' img' ).attr('src'));
+             console.log("After prev : " + $('#'+this.moduleId+' img' ).attr('src'));
              this.currentIndex--;
              this.sendDataToShinny();
 
