@@ -50,7 +50,7 @@ class viewerClass {
 
         console.log("new displayImage " + this.moduleId);
         console.log("first img exist : " + this.imgexist(this.imgArray[0]));
-        console.log((this.imgArray).toString);
+        console.log((this.imgArray));
 
         if(this.imgexist(this.imgArray[0]) == false){
             alert('Alert img not exist');
@@ -87,7 +87,7 @@ class viewerClass {
 
       readServerData(response) {
         let respArray = [];
-        console.log('In readServerData ' + this.moduleId + 'response : ' + response);
+        //console.log('In readServerData ' + this.moduleId + 'response : ' + response);
         if(response === null )
         {
           console.log(" Error in reading your images.Please check if all requirements are provided.");
@@ -112,6 +112,7 @@ class viewerClass {
          this.currentIndex = 0;
          //this.displayImage();
          this.sendDataToShinny();
+         console.log(this.imgArray);
          $('#'+this.moduleId+' img' ).attr('src', this.imgArray[this.currentIndex] );
 
       }
@@ -126,6 +127,7 @@ class viewerClass {
         else{
             //console.log("In Next Array : " + this.imgArray);
            console.log("Before next 1 : " + $('#'+this.moduleId+' img' ).attr('src'));
+           console.log(this.imgArray);
            console.log("Before next 2 : " + this.imgArray[this.currentIndex]);
            if(this.imgexist(this.imgArray[this.currentIndex+1]) == false){
              this.imgArray[this.currentIndex+1] = this.errorImg;
@@ -144,6 +146,7 @@ class viewerClass {
           // first image
         }else{
              console.log("Before prev 1 : " + $('#'+this.moduleId+' img' ).attr('src'));
+             console.log(this.imgArray);
              console.log("Before prev 2 : " + this.imgArray[this.currentIndex]);
              $('#'+this.moduleId+' img' ).attr('src', this.imgArray[this.currentIndex-1] );
              console.log("After prev 1 : " + $('#'+this.moduleId+' img' ).attr('src'));
