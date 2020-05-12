@@ -52,11 +52,11 @@ HTMLWidgets.widget({
                         pttrn_rcgntn_vw_orgnls_1.restart();
                         pttrn_rcgntn_vw_orgnls_1.fetchServerData("pttrn_rcgntn_fltrd_rslts_prmry.csv");
 
-                        setTimeout(() => {
+                        //setTimeout(() => {
                                 pttrn_rcgntn_vw_orgnls_2.restart();
                                 pttrn_rcgntn_vw_orgnls_2.fetchServerData("pttrn_rcgntn_fltrd_rslts_scndry.csv");
-                        }, 1000);
-                        console.log('fetching secondary');
+                        //}, 1000);
+                        //console.log('fetching secondary');
                         
                     
                         
@@ -85,9 +85,9 @@ HTMLWidgets.widget({
         Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_prev_button",
                 function(mesg) {
                         pttrn_rcgntn_vw_orgnls_1.prev();
-                        setTimeout(() => {
+                       // setTimeout(() => {
                                 pttrn_rcgntn_vw_orgnls_2.prev();  
-                        }, 1000);
+                        //}, 1000);
                        // 
                 }
         );
@@ -116,9 +116,9 @@ HTMLWidgets.widget({
         Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_reset_button",
                 function(mesg) {
                         pttrn_rcgntn_vw_orgnls_1.reset();
-                        setTimeout(() => {
+                        //setTimeout(() => {
                                 pttrn_rcgntn_vw_orgnls_2.reset();
-                        }, 1000);
+                        //}, 1000);
                        //
 
                 }
@@ -146,9 +146,9 @@ HTMLWidgets.widget({
         Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_next_button",
                 function(mesg) {
                         pttrn_rcgntn_vw_orgnls_1.next();
-                        setTimeout(() => {
+                        //setTimeout(() => {
                                 pttrn_rcgntn_vw_orgnls_2.next();
-                        }, 1000);
+                       // }, 1000);
                        
 
                 }
