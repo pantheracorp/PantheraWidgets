@@ -13,20 +13,21 @@ HTMLWidgets.widget({
       renderValue: function(x) {
 
         // TODO: code to render the widget, e.g.
-        console.log("sngl_img_viewer.js  11-05-20");
+        console.log("sngl_img_viewer.js  12-05-20");
         
         let spcs_idntfctns_scndry_img = new viewerClass(
                                             "spcs_idntfctn_id_rf_2",
                                             "img_idntfctn_scndry.csv"),
                 spcs_idntfctns_prmry_img = new viewerClass(
                                             "spcs_idntfctn_id_rf_1",
-                                            "img_idntfctn_prmry.csv"),
-                pttrn_rcgntn_vw_orgnls_1 = new viewerClass(
-                                        "pttrn_rcgntn_orgnl_imgs_1",
-                                        "pttrn_rcgntn_fltrd_rslts_prmry.csv"),
-                pttrn_rcgntn_vw_orgnls_2 = new viewerClass(
-                                        "pttrn_rcgntn_orgnl_imgs_2",
-                                        "pttrn_rcgntn_fltrd_rslts_scndry.csv");
+                                            "img_idntfctn_prmry.csv");
+
+        var pttrn_rcgntn_vw_orgnls_1 = new viewerClass(
+                "pttrn_rcgntn_orgnl_imgs_1",
+                "pttrn_rcgntn_fltrd_rslts_prmry.csv");
+        var pttrn_rcgntn_vw_orgnls_2 = new viewerClass(
+                "pttrn_rcgntn_orgnl_imgs_2",
+                "pttrn_rcgntn_fltrd_rslts_scndry.csv")
 
         /*/////////////////////////////////////////////////////////////////////////////*/
 
@@ -97,11 +98,11 @@ HTMLWidgets.widget({
                         
                         pttrn_rcgntn_vw_orgnls_1.fetchServerData('pttrn_rcgntn_fltrd_rslts_prmry.csv');
 
-                        setTimeout(() => {
+                        //setTimeout(() => {
                                 pttrn_rcgntn_vw_orgnls_2.restart();
                                 pttrn_rcgntn_vw_orgnls_2.fetchServerData('pttrn_rcgntn_fltrd_rslts_scndry.csv');//getData();
  
-                        }, 3000);
+                       // }, 3000);
                         //getData();
                         
                 }
