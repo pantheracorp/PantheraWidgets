@@ -4,9 +4,16 @@
 \alias{p3_radar_chart}
 \title{Radar Chart}
 \usage{
-p3_radar_chart(dataset, axis_categories, data_names = NULL,
-  colors = NULL, radar_levels = 5, width = NULL, height = NULL,
-  elementId = NULL)
+p3_radar_chart(
+  dataset,
+  axis_categories,
+  data_names = NULL,
+  colors = NULL,
+  radar_levels = 5,
+  width = NULL,
+  height = NULL,
+  elementId = NULL
+)
 }
 \arguments{
 \item{dataset}{List of numeric vectors containing the datasets to be

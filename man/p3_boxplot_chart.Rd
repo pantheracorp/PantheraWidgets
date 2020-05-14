@@ -4,9 +4,15 @@
 \alias{p3_boxplot_chart}
 \title{BoxPlot Chart}
 \usage{
-p3_boxplot_chart(dataset, axis_labels = NULL, show_points = TRUE,
-  axis_rotate = FALSE, width = NULL, height = NULL,
-  elementId = NULL)
+p3_boxplot_chart(
+  dataset,
+  axis_labels = NULL,
+  show_points = TRUE,
+  axis_rotate = FALSE,
+  width = NULL,
+  height = NULL,
+  elementId = NULL
+)
 }
 \arguments{
 \item{dataset}{List of numeric vectors containing the datasets to be

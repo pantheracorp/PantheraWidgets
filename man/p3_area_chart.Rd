@@ -4,10 +4,21 @@
 \alias{p3_area_chart}
 \title{Area Chart}
 \usage{
-p3_area_chart(dataset, colors, chart_type = "area",
-  axis_regions = NULL, axis_labels = NULL, labels_pos = NULL,
-  show_points = FALSE, show_y2 = FALSE, zoom = TRUE,
-  subchart = FALSE, width = NULL, height = NULL, elementId = NULL)
+p3_area_chart(
+  dataset,
+  colors,
+  chart_type = "area",
+  axis_regions = NULL,
+  axis_labels = NULL,
+  labels_pos = NULL,
+  show_points = FALSE,
+  show_y2 = FALSE,
+  zoom = TRUE,
+  subchart = FALSE,
+  width = NULL,
+  height = NULL,
+  elementId = NULL
+)
 }
 \arguments{
 \item{dataset}{List of numeric vectors specifying the datasets to be plotted.}

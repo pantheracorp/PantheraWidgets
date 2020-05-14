@@ -4,10 +4,20 @@
 \alias{p3_step_chart}
 \title{Step Chart}
 \usage{
-p3_step_chart(dataset, chart_types = NULL, show_points = FALSE,
-  colors = NULL, axis_labels = NULL, labels_pos = NULL,
-  axis_rotate = FALSE, subchart = FALSE, zoom = TRUE, width = NULL,
-  height = NULL, elementId = NULL)
+p3_step_chart(
+  dataset,
+  chart_types = NULL,
+  show_points = FALSE,
+  colors = NULL,
+  axis_labels = NULL,
+  labels_pos = NULL,
+  axis_rotate = FALSE,
+  subchart = FALSE,
+  zoom = TRUE,
+  width = NULL,
+  height = NULL,
+  elementId = NULL
+)
 }
 \arguments{
 \item{dataset}{List of numeric vectors specifying the datasets to be

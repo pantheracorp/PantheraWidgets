@@ -4,8 +4,13 @@
 \alias{p3_pie}
 \title{Pie Chart}
 \usage{
-p3_pie(values, legendPosition = "bottom", width = NULL,
-  height = NULL, elementId = NULL)
+p3_pie(
+  values,
+  legendPosition = "bottom",
+  width = NULL,
+  height = NULL,
+  elementId = NULL
+)
 }
 \arguments{
 \item{values}{List of numeric vector values to display in the Chart}

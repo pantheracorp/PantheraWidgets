@@ -4,9 +4,18 @@
 \alias{p3_scatter_chart}
 \title{Scatter Chart}
 \usage{
-p3_scatter_chart(dataset, colors = NULL, axis_labels = NULL,
-  labels_pos = NULL, axis_regions = NULL, subchart = FALSE,
-  zoom = TRUE, width = NULL, height = NULL, elementId = NULL)
+p3_scatter_chart(
+  dataset,
+  colors = NULL,
+  axis_labels = NULL,
+  labels_pos = NULL,
+  axis_regions = NULL,
+  subchart = FALSE,
+  zoom = TRUE,
+  width = NULL,
+  height = NULL,
+  elementId = NULL
+)
 }
 \arguments{
 \item{dataset}{List of numeric vectors containing the datasets to be plotted}

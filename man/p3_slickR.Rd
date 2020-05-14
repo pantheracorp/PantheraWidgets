@@ -4,11 +4,20 @@
 \alias{p3_slickR}
 \title{slick.js image carousel htmlwidget}
 \usage{
-p3_slickR(obj, slideId = "baseDiv", slideIdx = list(1:length(obj)),
-  objLinks = c(1:length(obj)), slideType = c("img"),
-  slickOpts = list(dots = TRUE), synchSlides = NULL,
-  padding = rep("1\%", length(obj)), dotObj = NULL, width = NULL,
-  height = NULL, elementId = NULL)
+p3_slickR(
+  obj,
+  slideId = "baseDiv",
+  slideIdx = list(1:length(obj)),
+  objLinks = c(1:length(obj)),
+  slideType = c("img"),
+  slickOpts = list(dots = TRUE),
+  synchSlides = NULL,
+  padding = rep("1\%", length(obj)),
+  dotObj = NULL,
+  width = NULL,
+  height = NULL,
+  elementId = NULL
+)
 }
 \arguments{
 \item{obj}{character, vector of path or url to images}

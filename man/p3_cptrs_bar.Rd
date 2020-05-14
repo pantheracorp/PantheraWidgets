@@ -4,9 +4,19 @@
 \alias{p3_cptrs_bar}
 \title{p3_cptrs_bar}
 \usage{
-p3_cptrs_bar(dataset, colors, show_values = TRUE, plot_type = "bar",
-  axis_rotate = TRUE, show_y2 = FALSE, zoom = TRUE,
-  subchart = FALSE, width = NULL, height = NULL, elementId = NULL)
+p3_cptrs_bar(
+  dataset,
+  colors,
+  show_values = TRUE,
+  plot_type = "bar",
+  axis_rotate = TRUE,
+  show_y2 = FALSE,
+  zoom = TRUE,
+  subchart = FALSE,
+  width = NULL,
+  height = NULL,
+  elementId = NULL
+)
 }
 \arguments{
 \item{dataset}{List of numeric vectors specifying the x-axis values and the
