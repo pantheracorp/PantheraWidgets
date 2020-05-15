@@ -214,7 +214,7 @@
 
   class viewerClass{
     
-    constructor(csvfile,moduleId){
+    constructor(moduleId,csvfile){
         this.csvfile = csvfile;
         this.moduleId =moduleId;
         this.currentIndex = 0;
