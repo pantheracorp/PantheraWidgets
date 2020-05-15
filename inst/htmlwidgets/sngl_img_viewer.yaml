@@ -7,6 +7,10 @@ dependencies:
   version: 1.0.1
   src: htmlwidgets
   script: ./lib/viewerClass.js
+- name: viewerClass2
+  version: 1.0.0
+  src: htmlwidgets
+  script: ./lib/viewerClass2.js
 - name: viewerHelper
   version: 1.0.0
   src: htmlwidgets

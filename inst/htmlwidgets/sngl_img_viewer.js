@@ -20,14 +20,19 @@ HTMLWidgets.widget({
         spcs_idntfctns_prmry_img = new viewerClass(
                                         "spcs_idntfctn_id_rf_1",
                                         "img_idntfctn_prmry.csv");
-        let pttrn_rcgntn_orgnl_imgs_1 = new viewerClass(
-                                        "pttrn_rcgntn_orgnl_imgs_1",
-                                        "pttrn_rcgntn_fltrd_rslts_prmry.csv");
+        let pttrn_rcgntn_orgnl_imgs_1 = new viewerClass2(
+                                        moduleId = 'pttrn_rcgntn_orgnl_imgs_1',
+                                        csvfile = 'pttrn_rcgntn_fltrd_rslts_scndry.csv',
+                                        result = [],
+                                        currentIndex = 0);
 
-        let pttrn_rcgntn_orgnl_imgs_2 = new viewerClass(
-                "pttrn_rcgntn_orgnl_imgs_2",
-                "pttrn_rcgntn_fltrd_rslts_scndry.csv");
+        let pttrn_rcgntn_orgnl_imgs_2 = new viewerClass2(
+                                        moduleId = 'pttrn_rcgntn_orgnl_imgs_2',
+                                        csvfile = 'pttrn_rcgntn_fltrd_rslts_scndry.csv',
+                                        result = [],
+                                        currentIndex = 0);
 
+        // constructor(moduleId,csvfile,result,currentIndex)
         // Handle extract images buttons 
         Shiny.addCustomMessageHandler("spcs_idntfctn_extrt_id_button_rf_1",
                 function(mesg) {
@@ -83,39 +88,18 @@ HTMLWidgets.widget({
         /*/////////////////////////////////////////////////////////////////////////////*/
         // original imgs vwers
         Shiny.addCustomMessageHandler("pttrn_rcgntn_vw_orgnls_button",
-        function(mesg) {
-        console.log("1 "+ pttrn_rcgntn_orgnl_imgs_1);
-        console.log('clicked pttrn_rcgntn_vw_orgnls_button');
-        console.log(pttrn_rcgntn_orgnl_imgs_1.moduleId + ' array size 1 : ' +
-        pttrn_rcgntn_orgnl_imgs_1.result);
-        pttrn_rcgntn_orgnl_imgs_1.restart();
-        pttrn_rcgntn_orgnl_imgs_1.fetchServerData("pttrn_rcgntn_fltrd_rslts_prmry.csv");
+                function(mesg) {
+                        console.log("1 "+ pttrn_rcgntn_orgnl_imgs_1);
+                        console.log('clicked pttrn_rcgntn_vw_orgnls_button');
+                        console.log(pttrn_rcgntn_orgnl_imgs_1.moduleId + ' array size 1 : ' +
+                        pttrn_rcgntn_orgnl_imgs_1.result);
+                        pttrn_rcgntn_orgnl_imgs_1.restart();
+                        pttrn_rcgntn_orgnl_imgs_1.fetchServerData("pttrn_rcgntn_fltrd_rslts_prmry.csv");
 
-        console.log(pttrn_rcgntn_orgnl_imgs_1.moduleId + ' array size 2 : ' +
-        pttrn_rcgntn_orgnl_imgs_1.result);
-
-        // pttrn_rcgntn_orgnl_imgs_2.restart();
-
-        // console.log(pttrn_rcgntn_orgnl_imgs_2.moduleId + ' array size 1 : ' +
-        // pttrn_rcgntn_orgnl_imgs_2.result);
-
-        // pttrn_rcgntn_orgnl_imgs_2.fetchServerDataTest("pttrn_rcgntn_fltrd_rslts_scndry.csv");
-
-        // console.log(pttrn_rcgntn_orgnl_imgs_2.moduleId + ' array size 1 : ' +
-        // pttrn_rcgntn_orgnl_imgs_2.result);
-
-
-
-        }
+                        console.log(pttrn_rcgntn_orgnl_imgs_1.moduleId + ' array size 2 : ' +
+                        pttrn_rcgntn_orgnl_imgs_1.result);
+                }
         );
-
-        //pttrn_rcgntn_orgnl_imgs_prev_button_prmry
-        //pttrn_rcgntn_orgnl_imgs_reset_button_prmry
-        //pttrn_rcgntn_orgnl_imgs_next_button_prmry
-
-        // pttrn_rcgntn_orgnl_imgs_prev_button
-        //pttrn_rcgntn_orgnl_imgs_reset_button
-        //pttrn_rcgntn_orgnl_imgs_next_button
 
         Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_prev_button",
                 function(mesg) {
@@ -128,8 +112,8 @@ HTMLWidgets.widget({
 
         Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_reset_button",
                 function(mesg) {
-                        pttrn_rcgntn_orgnl_imgs_1.result =  getRecoImgs('pttrn_rcgntn_orgnl_imgs_1');
-                        console.log("3 "+ (pttrn_rcgntn_orgnl_imgs_1.result.length));
+                        //pttrn_rcgntn_orgnl_imgs_1.result =  getRecoImgs('pttrn_rcgntn_orgnl_imgs_1');
+                        console.log("3 "+ ((pttrn_rcgntn_orgnl_imgs_1.result).length));
                         pttrn_rcgntn_orgnl_imgs_1.reset();
                         //pttrn_rcgntn_orgnl_imgs_2.reset();
                 }
@@ -137,8 +121,8 @@ HTMLWidgets.widget({
 
         Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_next_button",
                 function(mesg) {
-                        pttrn_rcgntn_orgnl_imgs_1.result =  getRecoImgs('pttrn_rcgntn_orgnl_imgs_1');
                         console.log("4 "+ (pttrn_rcgntn_orgnl_imgs_1.result).toString());
+                        //pttrn_rcgntn_orgnl_imgs_1.result =  getRecoImgs('pttrn_rcgntn_orgnl_imgs_1');
                         pttrn_rcgntn_orgnl_imgs_1.next();
                         //pttrn_rcgntn_orgnl_imgs_2.next();
                 }
