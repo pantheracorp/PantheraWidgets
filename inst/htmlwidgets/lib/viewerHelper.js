@@ -1,36 +1,45 @@
-console.log('viewerHelper.js 15-05-20 16:54');
+console.log('viewerHelper.js 15-05-20 18:00');
 
  // TODO: code to render the widget, e.g.
  $( document ).ready(function() {
 
       $('#spcs_idntfctn_id_rf_1').on('keydown', function(event) {
       
+        console.log('arrows');
         switch(event.keyCode){
           
           case 37:
             $('#spcs_idntfctn_prev_button_rf_1').click();  //Left key is pressed
+            console.log('left arrow');
             break;
           case 39:
             $('#spcs_idntfctn_next_button_rf_1').click(); //disp('Right key is pressed') // right
+            console.log('right arrow');
             break;
           case 82:
             $('#spcs_idntfctn_reset_button_rf_1').click();
+            console.log('R');
+            break;
           
         }
     });
 
     $('#spcs_idntfctn_id_rf_2').on('keydown', function(event) {
       
+      console.log('arrows');
       switch(event.keyCode){
         
         case 37:
           $('#spcs_idntfctn_prev_button_rf_2').click();  //Left key is pressed
+          console.log('left arrow');
           break;
         case 39:
           $('#spcs_idntfctn_next_button_rf_2').click(); //disp('Right key is pressed') // right
+          console.log('right arrow');
           break;
         case 82:
           $('#spcs_idntfctn_reset_button_rf_2').click();
+          console.log('R');
         
       }
     });
