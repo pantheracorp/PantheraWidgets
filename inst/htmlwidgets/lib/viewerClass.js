@@ -31,7 +31,8 @@ class viewerClass {
 
       displayImage(){
 
-        console.log("new displayImage");
+        console.log("new displayImage + " + this.moduleId);
+        console.log(this.result)
 
         if(this.imgexist(this.result[0]) == false){
             alert('Alert img not exist');
@@ -58,7 +59,7 @@ class viewerClass {
       }
 
       restart(){
-        console.log('restart');
+        console.log('restart : ' + this.moduleId);
         this.result.length = 0;
         this.currentIndex = 0;
       }
@@ -66,7 +67,7 @@ class viewerClass {
 
       readServerData(response) {
         let respArray = [];
-        console.log("In readServerData response : " + response);
+        console.log("In readServerData response : " + this.moduleId + ' ' + response);
         if(response === null )
         {
           console.log(" Error in reading your images.Please check if all requirements are provided.");
@@ -93,6 +94,7 @@ class viewerClass {
 
       next() {
 
+        showLog("In Next Array : " + (this.result).length)
         console.log("In Next Array : " + (this.result).length);
         console.log("Before next : " +  this.result[this.currentIndex]);
         if(this.currentIndex == this.result.length-1){

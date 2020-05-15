@@ -7,16 +7,16 @@ console.log('viewerHelper.js');
 //   });
 // });
 
-$(function() {
-  $( "#pttrn_rcgntn_vw_orgnls_button" ).click(function() {
-    alert( "Handler for pttrn_rcgntn_vw_orgnls_button called." );
-  });
-});
+// $(function() {
+//   $( "#pttrn_rcgntn_vw_orgnls_button" ).click(function() {
+//     alert( "Handler for pttrn_rcgntn_vw_orgnls_button called." );
+//   });
+// });
 
 
 //console.log("viewerHelper.js  panwidgts");
 async function getFile(filename) {
-  //console.log("getFile(filename)");
+  console.log("getFile(filename)");
   let response = await fetch(filename,{cache: "no-cache"});
             //proceed once the first promise is resolved.
     if(response.ok){

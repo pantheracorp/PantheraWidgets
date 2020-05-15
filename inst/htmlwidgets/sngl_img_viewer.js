@@ -49,22 +49,22 @@ HTMLWidgets.widget({
         Shiny.addCustomMessageHandler("pttrn_rcgntn_vw_orgnls_button",
                 function(mesg) {
                         console.log('clicked pttrn_rcgntn_vw_orgnls_button');
-                        console.log(pttrn_rcgntn_vw_orgnls_1.moduleId + ' array size 1 : ' +
+                        console.log(pttrn_rcgntn_vw_orgnls_1.moduleId + ' b4 fsd array size  : ' +
                                         pttrn_rcgntn_vw_orgnls_1.result);
                         pttrn_rcgntn_vw_orgnls_1.restart();
                         pttrn_rcgntn_vw_orgnls_1.fetchServerData("pttrn_rcgntn_fltrd_rslts_prmry.csv");
 
-                        console.log(pttrn_rcgntn_vw_orgnls_1.moduleId + ' array size 2 : ' +
+                        console.log(pttrn_rcgntn_vw_orgnls_1.moduleId + ' aftr fsd array size  : ' +
                                         pttrn_rcgntn_vw_orgnls_1.result);
+
+                        console.log(pttrn_rcgntn_vw_orgnls_2.moduleId + ' b4 fsd array size  : ' +
+                        pttrn_rcgntn_vw_orgnls_2.result);
 
                         pttrn_rcgntn_vw_orgnls_2.restart();
 
-                        console.log(pttrn_rcgntn_vw_orgnls_2.moduleId + ' array size 1 : ' +
-                        pttrn_rcgntn_vw_orgnls_2.result);
-
                         pttrn_rcgntn_vw_orgnls_2.fetchServerData("pttrn_rcgntn_fltrd_rslts_scndry.csv");
 
-                        console.log(pttrn_rcgntn_vw_orgnls_2.moduleId + ' array size 1 : ' +
+                        console.log(pttrn_rcgntn_vw_orgnls_2.moduleId + ' aftr fsd array size  : ' +
                         pttrn_rcgntn_vw_orgnls_2.result);
                         
                     
