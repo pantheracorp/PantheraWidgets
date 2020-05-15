@@ -18,6 +18,13 @@ class viewerClass {
          getFile(file).then(data => this.readServerData(data));
       }
 
+      fetchServerDataTest(file)
+      {
+        //alert(fetchServerData);
+        console.log("In fetchServerData moduleId : " + this.moduleId);
+         getFileTest(file).then(data => this.readServerData(data));
+      }
+
       processImgSrc(arry){
           //alert('processImgSrc : ' + this.moduleId);
           console.log(arry);
@@ -92,7 +99,7 @@ class viewerClass {
       }
 
       reset(){
-        console.log('reset ' + this.reset);
+        console.log('reset ' + this.moduleId);
          this.currentIndex = 0;
          this.sendDataToShinny();
          $('#'+this.moduleId+' img' ).attr('src', this.result[this.currentIndex] );
@@ -149,7 +156,7 @@ class viewerClass {
             return true;
           }
           return false;
-      console.log('End of imgexist : ' + this.moduleId);
+      
     }
 
     sendDataToShinny(){
@@ -170,7 +177,6 @@ class viewerClass {
 
     }
 
-
     resetHandlers(msg)
     {
       if(msg === 'noImages'){
@@ -180,7 +186,5 @@ class viewerClass {
         Shiny.setInputValue('mssng_srv_imgs', null);
       }
     }
-
-
 
   }

@@ -13,7 +13,7 @@ HTMLWidgets.widget({
       renderValue: function(x) {
 
         // TODO: code to render the widget, e.g.
-        console.log("sngl_img_viewer.js  15-05-20 08:50");
+        console.log("sngl_img_viewer.js  15-05-20 10:35");
         
         let spcs_idntfctns_scndry_img = new viewerClass(
                                             "spcs_idntfctn_id_rf_2",
@@ -84,6 +84,7 @@ HTMLWidgets.widget({
         // original imgs vwers
         Shiny.addCustomMessageHandler("pttrn_rcgntn_vw_orgnls_button",
                 function(mesg) {
+
                         console.log('clicked pttrn_rcgntn_vw_orgnls_button');
                         console.log(pttrn_rcgntn_vw_orgnls_1.moduleId + ' array size 1 : ' +
                                         pttrn_rcgntn_vw_orgnls_1.result);
@@ -93,12 +94,12 @@ HTMLWidgets.widget({
                         console.log(pttrn_rcgntn_vw_orgnls_1.moduleId + ' array size 2 : ' +
                                         pttrn_rcgntn_vw_orgnls_1.result);
 
-                        pttrn_rcgntn_vw_orgnls_2.restart();
+                       // pttrn_rcgntn_vw_orgnls_2.restart();
 
                         console.log(pttrn_rcgntn_vw_orgnls_2.moduleId + ' array size 1 : ' +
                         pttrn_rcgntn_vw_orgnls_2.result);
 
-                        pttrn_rcgntn_vw_orgnls_2.fetchServerData("pttrn_rcgntn_fltrd_rslts_scndry.csv");
+                        pttrn_rcgntn_vw_orgnls_2.fetchServerDataTest("pttrn_rcgntn_fltrd_rslts_scndry.csv");
 
                         console.log(pttrn_rcgntn_vw_orgnls_2.moduleId + ' array size 1 : ' +
                         pttrn_rcgntn_vw_orgnls_2.result);
@@ -115,7 +116,7 @@ HTMLWidgets.widget({
       // pttrn_rcgntn_orgnl_imgs_prev_button
       //pttrn_rcgntn_orgnl_imgs_reset_button
       //pttrn_rcgntn_orgnl_imgs_next_button
-      
+
         Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_prev_button",
                 function(mesg) {
                         pttrn_rcgntn_vw_orgnls_1.prev();
