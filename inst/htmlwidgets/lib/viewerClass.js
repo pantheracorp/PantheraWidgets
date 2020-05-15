@@ -13,21 +13,21 @@ class viewerClass {
 
       fetchServerData(file)
       {
-        //alert(fetchServerData);
-        console.log("In fetchServerData moduleId : " + this.moduleId);
+        console.log('fetchServerData');
+        //console.log("In fetchServerData moduleId : " + this.moduleId);
          getFile(file).then(data => this.readServerData(data));
       }
 
       fetchServerDataTest(file)
       {
-        //alert(fetchServerData);
-        console.log("In fetchServerData moduleId : " + this.moduleId);
+        console.log('fetchServerData');
+        //console.log("In fetchServerData moduleId : " + this.moduleId);
          getFileTest(file).then(data => this.readServerData(data));
       }
 
       processImgSrc(arry){
           //alert('processImgSrc : ' + this.moduleId);
-          console.log(arry);
+          console.log('processImgSrc');
           let tempArray = [];
           arry.forEach(function(item){
             let src  = ((item.trim()).replace(/['"]+/g, '')).replace(/(\r\n|\n|\r)/gm,"");
@@ -40,7 +40,7 @@ class viewerClass {
 
       displayImage(){
 
-        console.log(" start displayImage : " + this.moduleId);
+        console.log('displayImage');
 
         if(this.imgexist(this.result[0]) == false){
             //alert('Alert img not exist');
@@ -64,12 +64,12 @@ class viewerClass {
 
         this.sendDataToShinny();
         //console.log('');
-        console.log(" end displayImage : " + this.moduleId + ' arry size ' +  (this.result).length);
+        //console.log(" end displayImage : " + this.moduleId + ' arry size ' +  (this.result).length);
 
       }
 
       restart(){
-        console.log('restart ' + this.moduleId);
+        console.log('restart');
         this.result.length = 0;
         this.currentIndex = 0;
       }
@@ -77,7 +77,7 @@ class viewerClass {
 
       readServerData(response) {
         //alert('readServerData ' + this.moduleId);
-        console.log("In readServerData response : " + response);
+        console.log('readServerData');
 
         let respArray = [];
         if(response === null )
@@ -95,20 +95,21 @@ class viewerClass {
           this.displayImage();
 
         }
-        console.log('result array : ' + (this.result).length);
-        console.log('End of readServerData ' + this.moduleId);
+        //console.log('result array : ' + (this.result).length);
+        //console.log('End of readServerData ' + this.moduleId);
       }
 
       reset(){
-        console.log('reset ' + this.moduleId);
+        console.log('reset');
          this.currentIndex = 0;
          this.sendDataToShinny();
          $('#'+this.moduleId+' img' ).attr('src', this.result[this.currentIndex] );
       }
 
       next() {
+        console.log('next');
           // readServerData
-        getFile(this.csvfile).then(data => this.readServerData(data));
+        // getFile(this.csvfile).then(data => this.readServerData(data));
         console.log('next : ' + this.moduleId);
         console.log("In Next Array : " + (this.result).length);
         console.log("Before next : " +  this.result[this.currentIndex]);
@@ -133,9 +134,9 @@ class viewerClass {
     }
 
     prev() {
-      console.log('prev : ' + this.moduleId);
-      console.log("In Prev Array : " + (this.result).length);
-      console.log("Before Prev : " +  this.result[this.currentIndex]);
+      console.log('prev');
+      //console.log("In Prev Array : " + (this.result).length);
+      //console.log("Before Prev : " +  this.result[this.currentIndex]);
 
         if(this.currentIndex == 0){
           // first image
@@ -145,13 +146,14 @@ class viewerClass {
              this.sendDataToShinny();
 
         }
-        console.log("In Prev Array : " + (this.result).length);
-        console.log("After Prev : " +  this.result[this.currentIndex]);
-        console.log('End of prev : ' + this.moduleId);
+        //console.log("In Prev Array : " + (this.result).length);
+        //console.log("After Prev : " +  this.result[this.currentIndex]);
+        //console.log('End of prev : ' + this.moduleId);
     }
 
     imgexist(image_url){
-      console.log('Start of imgexist : ' + this.moduleId);
+      console.log('imgexist');
+      //console.log('Start of imgexist : ' + this.moduleId);
           let xmlhttp = new XMLHttpRequest();
           xmlhttp.open("GET", image_url, false);
           xmlhttp.send();
@@ -163,9 +165,9 @@ class viewerClass {
     }
 
     sendDataToShinny(){
-    
-      console.log("In  sendDataToShiny ");
-      console.log('Array length : ' + (this.result).length);
+      console.log('sendDataToShinny');
+      //console.log("In  sendDataToShiny ");
+      //console.log('Array length : ' + (this.result).length);
 
       if(this.moduleId == "spcs_idntfctn_id_rf_1" || this.moduleId == "spcs_idntfctn_id_rf_2" ){
 
@@ -181,12 +183,13 @@ class viewerClass {
           }
       }
 
-      console.log("End of sendDataToShiny");
+      //console.log("End of sendDataToShiny");
 
     }
 
     resetHandlers(msg)
     {
+      console.log('resetHandlers');
       if(msg === 'noImages'){
         Shiny.setInputValue('no_srv_imgs', null);
       }

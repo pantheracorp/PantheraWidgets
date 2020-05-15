@@ -84,7 +84,7 @@ HTMLWidgets.widget({
         // original imgs vwers
         Shiny.addCustomMessageHandler("pttrn_rcgntn_vw_orgnls_button",
                 function(mesg) {
-
+                        console.log("1 "+ pttrn_rcgntn_vw_orgnls_1);
                         console.log('clicked pttrn_rcgntn_vw_orgnls_button');
                         console.log(pttrn_rcgntn_vw_orgnls_1.moduleId + ' array size 1 : ' +
                                         pttrn_rcgntn_vw_orgnls_1.result);
@@ -119,6 +119,7 @@ HTMLWidgets.widget({
 
         Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_prev_button",
                 function(mesg) {
+                        console.log("2 "+pttrn_rcgntn_vw_orgnls_1);
                         pttrn_rcgntn_vw_orgnls_1.prev();
                         //pttrn_rcgntn_vw_orgnls_2.prev();  
                 }
@@ -126,6 +127,7 @@ HTMLWidgets.widget({
 
         Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_reset_button",
                 function(mesg) {
+                        console.log("3 "+pttrn_rcgntn_vw_orgnls_1);
                         pttrn_rcgntn_vw_orgnls_1.reset();
                         //pttrn_rcgntn_vw_orgnls_2.reset();
                 }
@@ -133,9 +135,8 @@ HTMLWidgets.widget({
 
         Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_next_button",
                 function(mesg) {
-                        console.log(pttrn_rcgntn_vw_orgnls_1);
+                        console.log("4 "+pttrn_rcgntn_vw_orgnls_1);
                         pttrn_rcgntn_vw_orgnls_1.next();
-                        console.log(pttrn_rcgntn_vw_orgnls_1);
                         //pttrn_rcgntn_vw_orgnls_2.next();
                 }
         );
