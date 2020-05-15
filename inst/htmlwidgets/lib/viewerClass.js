@@ -63,7 +63,8 @@ class viewerClass {
         }
 
         this.sendDataToShinny();
-        console.log(" end displayImage : " + this.moduleId);
+        //console.log('');
+        console.log(" end displayImage : " + this.moduleId + ' arry size ' +  (this.result).length);
 
       }
 
@@ -103,7 +104,6 @@ class viewerClass {
          this.currentIndex = 0;
          this.sendDataToShinny();
          $('#'+this.moduleId+' img' ).attr('src', this.result[this.currentIndex] );
-
       }
 
       next() {
@@ -111,7 +111,7 @@ class viewerClass {
         console.log('next : ' + this.moduleId);
         console.log("In Next Array : " + (this.result).length);
         console.log("Before next : " +  this.result[this.currentIndex]);
-        if(this.currentIndex == this.result.length-1){
+        if(this.currentIndex == (this.result).length-1){
         }
         else{
            
@@ -121,7 +121,9 @@ class viewerClass {
            }
            $('#'+this.moduleId+' img' ).attr('src', this.result[this.currentIndex+1] );
            this.currentIndex++;
-           this.sendDataToShinny();
+           console.log();
+
+           //this.sendDataToShinny();
         }
         console.log("In Next Array : " + (this.result).length);
         console.log("After next : " +  this.result[this.currentIndex]);
@@ -160,7 +162,10 @@ class viewerClass {
     }
 
     sendDataToShinny(){
+    
       console.log("In  sendDataToShiny ");
+      console.log('Array length : ' + (this.result).length);
+
       if(this.moduleId == "spcs_idntfctn_id_rf_1" || this.moduleId == "spcs_idntfctn_id_rf_2" ){
 
           console.log(this.result);
@@ -174,6 +179,8 @@ class viewerClass {
             Shiny.setInputValue("spcs_idntfctn_id_rf_2_curr_img", imgname);
           }
       }
+
+      console.log("End of sendDataToShiny ");
 
     }
 
