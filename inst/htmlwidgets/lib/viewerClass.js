@@ -17,6 +17,12 @@ class viewerClass {
          getFile(file).then(data => this.readServerData(data));
       }
 
+      fetchServerDataTest(file)
+      {
+        console.log("In fetchServerData moduleId : " + this.moduleId);
+         getFileTest(file).then(data => this.readServerData(data));
+      }
+
 
       processImgSrc(arry){
 

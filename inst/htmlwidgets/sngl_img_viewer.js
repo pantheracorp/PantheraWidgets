@@ -20,13 +20,7 @@ HTMLWidgets.widget({
                                             "img_idntfctn_scndry.csv"),
                 spcs_idntfctns_prmry_img = new viewerClass(
                                             "spcs_idntfctn_id_rf_1",
-                                            "img_idntfctn_prmry.csv"),
-                pttrn_rcgntn_vw_orgnls_1 = new viewerClass(
-                                        "pttrn_rcgntn_orgnl_imgs_1",
-                                        "pttrn_rcgntn_fltrd_rslts_prmry.csv"),
-                pttrn_rcgntn_vw_orgnls_2 = new viewerClass(
-                                        "pttrn_rcgntn_orgnl_imgs_2",
-                                        "pttrn_rcgntn_fltrd_rslts_scndry.csv");
+                                            "img_idntfctn_prmry.csv");
 
         // Handle extract images buttons 
         Shiny.addCustomMessageHandler("spcs_idntfctn_extrt_id_button_rf_1",
@@ -45,33 +39,7 @@ HTMLWidgets.widget({
         );
 
         /*/////////////////////////////////////////////////////////////////////////////*/
-        // original imgs vwers
-        Shiny.addCustomMessageHandler("pttrn_rcgntn_vw_orgnls_button",
-                function(mesg) {
-                        console.log('clicked pttrn_rcgntn_vw_orgnls_button');
-                        console.log(pttrn_rcgntn_vw_orgnls_1.moduleId + ' b4 fsd array size  : ' +
-                                        pttrn_rcgntn_vw_orgnls_1.result);
-                        pttrn_rcgntn_vw_orgnls_1.restart();
-                        pttrn_rcgntn_vw_orgnls_1.fetchServerData("pttrn_rcgntn_fltrd_rslts_prmry.csv");
-
-                        console.log(pttrn_rcgntn_vw_orgnls_1.moduleId + ' aftr fsd array size  : ' +
-                                        pttrn_rcgntn_vw_orgnls_1.result);
-
-                        console.log(pttrn_rcgntn_vw_orgnls_2.moduleId + ' b4 fsd array size  : ' +
-                        pttrn_rcgntn_vw_orgnls_2.result);
-
-                        pttrn_rcgntn_vw_orgnls_2.restart();
-
-                        pttrn_rcgntn_vw_orgnls_2.fetchServerData("pttrn_rcgntn_fltrd_rslts_scndry.csv");
-
-                        console.log(pttrn_rcgntn_vw_orgnls_2.moduleId + ' aftr fsd array size  : ' +
-                        pttrn_rcgntn_vw_orgnls_2.result);
-                        
-                    
-                        
-                }
-        );
-
+        
       
         /*/////////////////////////////////////////////////////////////////////////////*/
 
@@ -91,15 +59,8 @@ HTMLWidgets.widget({
 
         /*/////////////////////////////////////////////////////////////////////////////*/
 
-        Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_prev_button",
-                function(mesg) {
-                        pttrn_rcgntn_vw_orgnls_1.prev();
-                       // setTimeout(() => {
-                                pttrn_rcgntn_vw_orgnls_2.prev();  
-                        //}, 1000);
-                       // 
-                }
-        );
+        
+
        
 
         /*/////////////////////////////////////////////////////////////////////////////*/
@@ -122,15 +83,6 @@ HTMLWidgets.widget({
 
         /*/////////////////////////////////////////////////////////////////////////////*/
 
-        Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_reset_button",
-                function(mesg) {
-                        pttrn_rcgntn_vw_orgnls_1.reset();
-                                pttrn_rcgntn_vw_orgnls_2.reset();
-
-                }
-        );
-        
-
         /*/////////////////////////////////////////////////////////////////////////////*/
 
         // Hamdle next image buttons
@@ -149,14 +101,7 @@ HTMLWidgets.widget({
 
         /*/////////////////////////////////////////////////////////////////////////////*/
 
-        Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_next_button",
-                function(mesg) {
-                        pttrn_rcgntn_vw_orgnls_1.next();
-                        pttrn_rcgntn_vw_orgnls_2.next();
-                       
-
-                }
-        );
+       
        
         /*/////////////////////////////////////////////////////////////////////////////*/
 
