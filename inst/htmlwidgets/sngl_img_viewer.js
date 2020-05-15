@@ -108,6 +108,13 @@ HTMLWidgets.widget({
                 }
         );
 
+      //pttrn_rcgntn_orgnl_imgs_prev_button_prmry
+      //pttrn_rcgntn_orgnl_imgs_reset_button_prmry
+      //pttrn_rcgntn_orgnl_imgs_next_button_prmry
+
+      // pttrn_rcgntn_orgnl_imgs_prev_button
+      //pttrn_rcgntn_orgnl_imgs_reset_button
+      //pttrn_rcgntn_orgnl_imgs_next_button
       
         Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_prev_button",
                 function(mesg) {
