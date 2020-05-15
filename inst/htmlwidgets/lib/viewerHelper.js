@@ -9,8 +9,17 @@ console.log('viewerHelper.js 15-05-20 15:17');
  //console.log("sngl_img_viewer.js  15-05-20 15:17");
 
  let reco1Arry =[],
-     reco2Arry = [];
+     reco2Arry = [],
+     imgIndex = 0;
 
+
+function setImgIndex(){
+
+}
+
+function getIndex(){
+  return ;
+}
 function setRecoImgs(id,arry){
   if(id === 'pttrn_rcgntn_orgnl_imgs_1'){
     reco1Arry.length = 0;
@@ -33,10 +42,10 @@ function setRecoImgs(id,arry){
 
 function getRecoImgs(id){
   if(id === 'pttrn_rcgntn_orgnl_imgs_1'){
-    return reco1Arry;
+    return [reco1Arry,imgIndex];
   }
   if(id === 'pttrn_rcgntn_orgnl_imgs_1'){
-    return reco2Arry;
+    return [reco2Arry,imgIndex];
   }
 }
 

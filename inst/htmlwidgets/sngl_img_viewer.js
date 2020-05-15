@@ -25,8 +25,8 @@ HTMLWidgets.widget({
                                         "pttrn_rcgntn_fltrd_rslts_prmry.csv");
 
         let pttrn_rcgntn_orgnl_imgs_2 = new viewerClass(
-                                        "pttrn_rcgntn_orgnl_imgs_2",
-                                        "pttrn_rcgntn_fltrd_rslts_scndry.csv");
+                "pttrn_rcgntn_orgnl_imgs_2",
+                "pttrn_rcgntn_fltrd_rslts_scndry.csv");
 
         // Handle extract images buttons 
         Shiny.addCustomMessageHandler("spcs_idntfctn_extrt_id_button_rf_1",

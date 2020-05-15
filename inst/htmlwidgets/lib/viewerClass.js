@@ -4,7 +4,6 @@ class viewerClass {
       {
         this.csvfile = csvfile;
         this.moduleId =moduleId;
-        //this.result = [];
         this.currentIndex = 0;
         this.result = [];
         this.errorImg = '/srv/shiny-server/www/PantheraIDS_image_not_found_2.jpg';
@@ -91,10 +90,6 @@ class viewerClass {
           respArray[0] = respArray[respArray.length - 1] + respArray[0];
           respArray.splice(respArray.length - 1, 1);
           this.result =  this.processImgSrc(respArray);
-          if(this.moduleId === 'pttrn_rcgntn_orgnl_imgs_1' || this.moduleId === 'pttrn_rcgntn_orgnl_imgs_2')
-          {
-            setRecoImgs(this.moduleId,this.result);
-          }
           console.log(this.moduleId + 'Total Imgs : ' + (this.result.length));
           this.displayImage();
 
@@ -104,12 +99,7 @@ class viewerClass {
       }
 
       reset(){
-
         console.log('reset');
-        if(this.moduleId === 'pttrn_rcgntn_orgnl_imgs_1' || this.moduleId === 'pttrn_rcgntn_orgnl_imgs_2')
-        {
-          getRecoImgs(this.moduleId);
-        }
          this.currentIndex = 0;
          this.sendDataToShinny();
          $('#'+this.moduleId+' img' ).attr('src', this.result[this.currentIndex] );
@@ -119,10 +109,6 @@ class viewerClass {
         console.log('next');
           // readServerData
         // getFile(this.csvfile).then(data => this.readServerData(data));
-        if(this.moduleId === 'pttrn_rcgntn_orgnl_imgs_1' || this.moduleId === 'pttrn_rcgntn_orgnl_imgs_2')
-        {
-          getRecoImgs(this.moduleId);
-        }
         console.log('next : ' + this.moduleId);
         console.log("In Next Array : " + (this.result).length);
         console.log("Before next : " +  this.result[this.currentIndex]);
@@ -150,10 +136,6 @@ class viewerClass {
       console.log('prev');
       //console.log("In Prev Array : " + (this.result).length);
       //console.log("Before Prev : " +  this.result[this.currentIndex]);
-      if(this.moduleId === 'pttrn_rcgntn_orgnl_imgs_1' || this.moduleId === 'pttrn_rcgntn_orgnl_imgs_2')
-      {
-          getRecoImgs(this.moduleId);
-      }
 
         if(this.currentIndex == 0){
           // first image
