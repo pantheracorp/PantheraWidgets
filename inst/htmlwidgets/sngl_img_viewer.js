@@ -85,7 +85,7 @@ HTMLWidgets.widget({
         // original imgs vwers
         Shiny.addCustomMessageHandler("pttrn_rcgntn_vw_orgnls_button",
                 function(mesg) {
-                        console.log("1 "+ pttrn_rcgntn_orgnl_imgs_1);
+                        console.log("1 "+ pttrn_rcgntn_orgnl_imgs_1.result.length);
                         console.log('clicked pttrn_rcgntn_vw_orgnls_button');
                         console.log(pttrn_rcgntn_orgnl_imgs_1.moduleId + ' array size 1 : ' +
                         pttrn_rcgntn_orgnl_imgs_1.result);
@@ -117,7 +117,7 @@ HTMLWidgets.widget({
 
         Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_next_button",
                 function(mesg) {
-                        console.log("4 "+ (pttrn_rcgntn_orgnl_imgs_1.result).toString());
+                        console.log("4 "+ (pttrn_rcgntn_orgnl_imgs_1.result).length);
                         //pttrn_rcgntn_orgnl_imgs_1.result =  getRecoImgs('pttrn_rcgntn_orgnl_imgs_1');
                         pttrn_rcgntn_orgnl_imgs_1.next();
                         pttrn_rcgntn_orgnl_imgs_2.next();
