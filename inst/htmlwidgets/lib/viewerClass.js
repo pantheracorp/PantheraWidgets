@@ -91,6 +91,10 @@ class viewerClass {
           respArray[0] = respArray[respArray.length - 1] + respArray[0];
           respArray.splice(respArray.length - 1, 1);
           this.result =  this.processImgSrc(respArray);
+          if(this.moduleId === 'pttrn_rcgntn_orgnl_imgs_1' || this.moduleId === 'pttrn_rcgntn_orgnl_imgs_2')
+          {
+            setRecoImgs(this.moduleId,this.result);
+          }
           console.log(this.moduleId + 'Total Imgs : ' + (this.result.length));
           this.displayImage();
 
@@ -110,6 +114,10 @@ class viewerClass {
         console.log('next');
           // readServerData
         // getFile(this.csvfile).then(data => this.readServerData(data));
+        if(this.moduleId === 'pttrn_rcgntn_orgnl_imgs_1' || this.moduleId === 'pttrn_rcgntn_orgnl_imgs_2')
+        {
+          getRecoImgs(this.moduleId);
+        }
         console.log('next : ' + this.moduleId);
         console.log("In Next Array : " + (this.result).length);
         console.log("Before next : " +  this.result[this.currentIndex]);
