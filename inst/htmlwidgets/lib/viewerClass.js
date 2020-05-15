@@ -107,7 +107,8 @@ class viewerClass {
       }
 
       next() {
-
+          // readServerData
+        getFile(this.csvfile).then(data => this.readServerData(data));
         console.log('next : ' + this.moduleId);
         console.log("In Next Array : " + (this.result).length);
         console.log("Before next : " +  this.result[this.currentIndex]);
