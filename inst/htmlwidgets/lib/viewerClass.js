@@ -104,7 +104,12 @@ class viewerClass {
       }
 
       reset(){
+
         console.log('reset');
+        if(this.moduleId === 'pttrn_rcgntn_orgnl_imgs_1' || this.moduleId === 'pttrn_rcgntn_orgnl_imgs_2')
+        {
+          getRecoImgs(this.moduleId);
+        }
          this.currentIndex = 0;
          this.sendDataToShinny();
          $('#'+this.moduleId+' img' ).attr('src', this.result[this.currentIndex] );
@@ -145,6 +150,10 @@ class viewerClass {
       console.log('prev');
       //console.log("In Prev Array : " + (this.result).length);
       //console.log("Before Prev : " +  this.result[this.currentIndex]);
+      if(this.moduleId === 'pttrn_rcgntn_orgnl_imgs_1' || this.moduleId === 'pttrn_rcgntn_orgnl_imgs_2')
+      {
+          getRecoImgs(this.moduleId);
+      }
 
         if(this.currentIndex == 0){
           // first image
