@@ -6,6 +6,14 @@ console.log('viewerHelper.js');
 
 //   });
 // });
+
+$(function() {
+  $( "#pttrn_rcgntn_vw_orgnls_button" ).click(function() {
+    alert( "Handler for pttrn_rcgntn_vw_orgnls_button called." );
+  });
+});
+
+
 //console.log("viewerHelper.js  panwidgts");
 async function getFile(filename) {
   //console.log("getFile(filename)");

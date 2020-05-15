@@ -40,6 +40,9 @@ HTMLWidgets.widget({
           onbrush : debounce(function (domain) {if(typeof Shiny !== 'undefined' && typeof(Shiny.onInputChange) == 'function')
                             {Shiny.onInputChange(el.id, domain)}},Data.debounce)*/
         },
+        zoom: {
+        enabled: true
+       },
         transition: {
           duration: Data.transition
         },
