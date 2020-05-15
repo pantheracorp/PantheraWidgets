@@ -20,17 +20,13 @@ HTMLWidgets.widget({
         spcs_idntfctns_prmry_img = new viewerClass(
                                         "spcs_idntfctn_id_rf_1",
                                         "img_idntfctn_prmry.csv");
-        let pttrn_rcgntn_orgnl_imgs_1 = new viewerClass2(
+        let pttrn_rcgntn_orgnl_imgs_1 = new viewerClass(
                                         moduleId = 'pttrn_rcgntn_orgnl_imgs_1',
-                                        csvfile = 'pttrn_rcgntn_fltrd_rslts_scndry.csv',
-                                        result = [],
-                                        currentIndex = 0);
+                                        csvfile = 'pttrn_rcgntn_fltrd_rslts_scndry.csv');
 
-        let pttrn_rcgntn_orgnl_imgs_2 = new viewerClass2(
+        let pttrn_rcgntn_orgnl_imgs_2 = new viewerClass(
                                         moduleId = 'pttrn_rcgntn_orgnl_imgs_2',
-                                        csvfile = 'pttrn_rcgntn_fltrd_rslts_scndry.csv',
-                                        result = [],
-                                        currentIndex = 0);
+                                        csvfile = 'pttrn_rcgntn_fltrd_rslts_scndry.csv');
 
         // constructor(moduleId,csvfile,result,currentIndex)
         // Handle extract images buttons 

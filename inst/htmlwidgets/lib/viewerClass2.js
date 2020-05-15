@@ -6,6 +6,7 @@ class viewerClass2 {
         this.moduleId =moduleId;
         this.currentIndex = currentIndex ;
         this.result = result;
+        
         this.errorImg = '/srv/shiny-server/www/PantheraIDS_image_not_found_2.jpg';
       }
 
