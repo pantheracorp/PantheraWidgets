@@ -1,4 +1,4 @@
-console.log('viewerHelper.js 15-05-20 15:17');
+console.log('viewerHelper.js 15-05-20 16:54');
 /*$(function() {
   $( "#pttrn_rcgntn_vw_orgnls_button" ).click(function() {
     alert( "Handler for pttrn_rcgntn_vw_orgnls_button called." );

@@ -12,7 +12,7 @@ HTMLWidgets.widget({
 
       renderValue: function(x) {
 
-       console.log('sngl_img_viewer non-empty');
+       console.log('sngl_img_viewer 16:53');
 
        let spcs_idntfctns_scndry_img = new viewerClass(
                                         "spcs_idntfctn_id_rf_2",
@@ -106,7 +106,7 @@ HTMLWidgets.widget({
                         console.log("2 "+(pttrn_rcgntn_orgnl_imgs_1.result).length);
                         pttrn_rcgntn_orgnl_imgs_1.prev();
                         pttrn_rcgntn_orgnl_imgs_1.result =  getRecoImgs('pttrn_rcgntn_orgnl_imgs_1');
-                        //pttrn_rcgntn_orgnl_imgs_2.prev();  
+                        pttrn_rcgntn_orgnl_imgs_2.prev();  
                 }
         );
 
@@ -115,7 +115,7 @@ HTMLWidgets.widget({
                         //pttrn_rcgntn_orgnl_imgs_1.result =  getRecoImgs('pttrn_rcgntn_orgnl_imgs_1');
                         console.log("3 "+ ((pttrn_rcgntn_orgnl_imgs_1.result).length));
                         pttrn_rcgntn_orgnl_imgs_1.reset();
-                        //pttrn_rcgntn_orgnl_imgs_2.reset();
+                        pttrn_rcgntn_orgnl_imgs_2.reset();
                 }
         );
 
@@ -124,7 +124,7 @@ HTMLWidgets.widget({
                         console.log("4 "+ (pttrn_rcgntn_orgnl_imgs_1.result).toString());
                         //pttrn_rcgntn_orgnl_imgs_1.result =  getRecoImgs('pttrn_rcgntn_orgnl_imgs_1');
                         pttrn_rcgntn_orgnl_imgs_1.next();
-                        //pttrn_rcgntn_orgnl_imgs_2.next();
+                        pttrn_rcgntn_orgnl_imgs_2.next();
                 }
         );
 
