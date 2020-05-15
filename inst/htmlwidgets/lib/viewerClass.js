@@ -180,7 +180,7 @@ class viewerClass {
           }
       }
 
-      console.log("End of sendDataToShiny ");
+      console.log("End of sendDataToShiny");
 
     }
 
