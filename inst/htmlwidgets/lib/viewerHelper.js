@@ -1,5 +1,72 @@
 console.log('viewerHelper.js 15-05-20 18:00');
 alert('viewerHelper.js');
+
+function fetchData(csvfile){
+  return getFile(file).then(data => readServerData(data));
+}
+
+function readServerData(response){
+  // console.log('readServerData');
+  //   console.log(this.result.length);
+
+    let respArray = [];
+    if(response === null)
+    {
+      console.log(" Error in reading your images.Please check if all requirements are provided.");
+
+    }
+    else{
+      respArray = response.split(',');
+      respArray.splice(0, 1);
+      respArray[0] = respArray[0].replace("Source", "");
+      respArray[0] = respArray[respArray.length - 1] + respArray[0];
+      respArray.splice(respArray.length - 1, 1);
+      //console.log(this.moduleId + 'Total Imgs : ' + (this.result.length));
+      return (processImgSrc(respArray));
+      //this.displayImage();
+
+    }
+}
+
+function processImgSrc(arry){
+      //('processImgSrc : ' + this.moduleId);
+      console.log('processImgSrc');
+      //console.log(this.result.length);
+      let tempArray = [];
+      arry.forEach(function(item){
+        let src  = ((item.trim()).replace(/['"]+/g, '')).replace(/(\r\n|\n|\r)/gm,"");
+          tempArray.push(src);
+      });
+      console.log('viewer class line 30 : ' + tempArray.length);
+      console.log('End processImgSrc');
+      return tempArray;
+}
+
+async function getFile(filename) {
+  //alert(getFile);
+  console.log("getFile() + " + filename);
+  let response = await fetch(filename,{cache: "no-cache"});
+            //proceed once the first promise is resolved.
+    if(response.ok){
+      let data = await response.text();
+      //console.log("In new getFile : " + data);
+      return (data.replace(/^\s*$[\n\r]{1,}/gm, ''));
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*************************************************************** */
 /*$('#spcs_idntfctn_id_rf_1').on('keydown', function(event) {
       
   console.log('arrows');
@@ -90,18 +157,18 @@ function getRecoImgs(id){
 */
 
 
-async function getFile(filename) {
-  //alert(getFile);
-  console.log("getFile() + " + filename);
-  let response = await fetch(filename,{cache: "no-cache"});
-            //proceed once the first promise is resolved.
-    if(response.ok){
-      let data = await response.text();
-      //console.log("In new getFile : " + data);
-      return (data.replace(/^\s*$[\n\r]{1,}/gm, ''));
-    }
-    return 0;
-}
+// async function getFile(filename) {
+//   //alert(getFile);
+//   console.log("getFile() + " + filename);
+//   let response = await fetch(filename,{cache: "no-cache"});
+//             //proceed once the first promise is resolved.
+//     if(response.ok){
+//       let data = await response.text();
+//       //console.log("In new getFile : " + data);
+//       return (data.replace(/^\s*$[\n\r]{1,}/gm, ''));
+//     }
+//     return 0;
+// }
 
 /*async function getFileTest(filename) {
   //alert(getFile);

@@ -89,11 +89,12 @@ HTMLWidgets.widget({
                         console.log('clicked pttrn_rcgntn_vw_orgnls_button');
                         console.log(pttrn_rcgntn_orgnl_imgs_1.moduleId + ' array size 1 : ' +
                         pttrn_rcgntn_orgnl_imgs_1.result);
-                        pttrn_rcgntn_orgnl_imgs_1.restart();
-                        pttrn_rcgntn_orgnl_imgs_1.fetchServerData("pttrn_rcgntn_fltrd_rslts_prmry.csv");
+                        //pttrn_rcgntn_orgnl_imgs_1.restart();
+                        pttrn_rcgntn_orgnl_imgs_1.displayImage();
+                        //fetchServerData("pttrn_rcgntn_fltrd_rslts_prmry.csv");
 
                         console.log(pttrn_rcgntn_orgnl_imgs_1.moduleId + ' array size 2 : ' +
-                        pttrn_rcgntn_orgnl_imgs_1.result);
+                        pttrn_rcgntn_orgnl_imgs_1.result.length);
                 }
         );
 
@@ -101,7 +102,7 @@ HTMLWidgets.widget({
                 function(mesg) {
                         console.log("2 "+(pttrn_rcgntn_orgnl_imgs_1.result).length);
                         pttrn_rcgntn_orgnl_imgs_1.prev();
-                        pttrn_rcgntn_orgnl_imgs_1.result =  getRecoImgs('pttrn_rcgntn_orgnl_imgs_1');
+                       // pttrn_rcgntn_orgnl_imgs_1.result =  getRecoImgs('pttrn_rcgntn_orgnl_imgs_1');
                         pttrn_rcgntn_orgnl_imgs_2.prev();  
                 }
         );
