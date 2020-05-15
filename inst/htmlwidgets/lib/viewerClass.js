@@ -13,13 +13,13 @@ class viewerClass {
 
       fetchServerData(file)
       {
-        alert(fetchServerData);
+        //alert(fetchServerData);
         console.log("In fetchServerData moduleId : " + this.moduleId);
          getFile(file).then(data => this.readServerData(data));
       }
 
       processImgSrc(arry){
-          alert('processImgSrc : ' + this.moduleId);
+          //alert('processImgSrc : ' + this.moduleId);
           console.log(arry);
           let tempArray = [];
           arry.forEach(function(item){
@@ -36,7 +36,7 @@ class viewerClass {
         console.log(" start displayImage : " + this.moduleId);
 
         if(this.imgexist(this.result[0]) == false){
-            alert('Alert img not exist');
+            //alert('Alert img not exist');
             this.result[0] = this.errorImg;
         }
         if(this.moduleId === "spcs_idntfctn_id_rf_1"){
@@ -68,7 +68,7 @@ class viewerClass {
 
 
       readServerData(response) {
-        alert('readServerData ' + this.moduleId);
+        //alert('readServerData ' + this.moduleId);
         console.log("In readServerData response : " + response);
 
         let respArray = [];

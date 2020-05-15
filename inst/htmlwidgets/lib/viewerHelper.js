@@ -1,4 +1,4 @@
-console.log('viewerHelper.js');
+console.log('viewerHelper.js 15-05-20 08:50');
 // $(document).ready(function() {
 //   consiole.log('in doc ready');
 //   $("#pttrn_rcgntn_vw_orgnls_button").click(function() {
@@ -16,7 +16,7 @@ console.log('viewerHelper.js');
 
 //console.log("viewerHelper.js  panwidgts");
 async function getFile(filename) {
-  alert(getFile);
+  //alert(getFile);
   console.log("getFile() + " + filename);
   let response = await fetch(filename,{cache: "no-cache"});
             //proceed once the first promise is resolved.

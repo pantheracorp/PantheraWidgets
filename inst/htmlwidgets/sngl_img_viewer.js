@@ -13,7 +13,7 @@ HTMLWidgets.widget({
       renderValue: function(x) {
 
         // TODO: code to render the widget, e.g.
-        console.log("sngl_img_viewer.js  11-05-20 14:25");
+        console.log("sngl_img_viewer.js  15-05-20 08:50");
         
         let spcs_idntfctns_scndry_img = new viewerClass(
                                             "spcs_idntfctn_id_rf_2",
@@ -40,6 +40,43 @@ HTMLWidgets.widget({
                 function(mesg) {
                   spcs_idntfctns_scndry_img.restart();
                   spcs_idntfctns_scndry_img.fetchServerData("img_idntfctn_scndry.csv");
+                }
+        );
+
+        Shiny.addCustomMessageHandler("spcs_idntfctn_reset_button_rf_1",
+                function(mesg) {
+                spcs_idntfctns_prmry_img.reset();
+
+                }
+        );
+        Shiny.addCustomMessageHandler("spcs_idntfctn_reset_button_rf_2",
+                function(mesg) {
+                spcs_idntfctns_scndry_img.reset();
+                }
+        );
+
+        Shiny.addCustomMessageHandler("spcs_idntfctn_prev_button_rf_1",
+                function(mesg) {
+                spcs_idntfctns_prmry_img.prev();
+                }
+        );
+
+        Shiny.addCustomMessageHandler("spcs_idntfctn_prev_button_rf_2",
+                function(mesg) {
+                spcs_idntfctns_scndry_img.prev();
+                }
+        );
+
+        Shiny.addCustomMessageHandler("spcs_idntfctn_next_button_rf_1",
+                function(mesg) {
+                   spcs_idntfctns_prmry_img.next();
+
+                }
+        );
+        Shiny.addCustomMessageHandler("spcs_idntfctn_next_button_rf_2",
+                function(mesg) {
+                   spcs_idntfctns_scndry_img.next();
+
                 }
         );
 
@@ -72,92 +109,27 @@ HTMLWidgets.widget({
         );
 
       
-        /*/////////////////////////////////////////////////////////////////////////////*/
-
-
-
-        // Handle previous image buttons
-        Shiny.addCustomMessageHandler("spcs_idntfctn_prev_button_rf_1",
-                function(mesg) {
-                   spcs_idntfctns_prmry_img.prev();
-                }
-        );
-        Shiny.addCustomMessageHandler("spcs_idntfctn_prev_button_rf_2",
-                function(mesg) {
-                    spcs_idntfctns_scndry_img.prev();
-                }
-        );
-
-        /*/////////////////////////////////////////////////////////////////////////////*/
-
         Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_prev_button",
                 function(mesg) {
                         pttrn_rcgntn_vw_orgnls_1.prev();
-                       // setTimeout(() => {
-                                pttrn_rcgntn_vw_orgnls_2.prev();  
-                        //}, 1000);
-                       // 
+                        pttrn_rcgntn_vw_orgnls_2.prev();  
                 }
         );
-       
-
-        /*/////////////////////////////////////////////////////////////////////////////*/
-
-
-
-        // Hanle reset buttons
-        Shiny.addCustomMessageHandler("spcs_idntfctn_reset_button_rf_1",
-                function(mesg) {
-                   spcs_idntfctns_prmry_img.reset();
-
-                }
-        );
-        Shiny.addCustomMessageHandler("spcs_idntfctn_reset_button_rf_2",
-                function(mesg) {
-                     spcs_idntfctns_scndry_img.reset();
-
-                }
-        );
-
-        /*/////////////////////////////////////////////////////////////////////////////*/
 
         Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_reset_button",
                 function(mesg) {
                         pttrn_rcgntn_vw_orgnls_1.reset();
-                                pttrn_rcgntn_vw_orgnls_2.reset();
-
+                        pttrn_rcgntn_vw_orgnls_2.reset();
                 }
         );
-        
-
-        /*/////////////////////////////////////////////////////////////////////////////*/
-
-        // Hamdle next image buttons
-        Shiny.addCustomMessageHandler("spcs_idntfctn_next_button_rf_1",
-                function(mesg) {
-                   spcs_idntfctns_prmry_img.next();
-
-                }
-        );
-        Shiny.addCustomMessageHandler("spcs_idntfctn_next_button_rf_2",
-                function(mesg) {
-                   spcs_idntfctns_scndry_img.next();
-
-                }
-        );
-
-        /*/////////////////////////////////////////////////////////////////////////////*/
 
         Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_next_button",
                 function(mesg) {
                         pttrn_rcgntn_vw_orgnls_1.next();
                         pttrn_rcgntn_vw_orgnls_2.next();
-                       
-
                 }
         );
        
-        /*/////////////////////////////////////////////////////////////////////////////*/
 
       },
 
