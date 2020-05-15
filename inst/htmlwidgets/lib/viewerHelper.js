@@ -1,4 +1,4 @@
-console.log('viewerHelper.js 15-05-20 08:50');
+console.log('viewerHelper.js 15-05-20 10:52');
 // $(document).ready(function() {
 //   consiole.log('in doc ready');
 //   $("#pttrn_rcgntn_vw_orgnls_button").click(function() {
