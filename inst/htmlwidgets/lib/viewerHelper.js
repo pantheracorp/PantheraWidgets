@@ -25,13 +25,13 @@ $(function() {
     Shiny.addCustomMessageHandler("pttrn_rcgntn_vw_orgnls_button",
         function(mesg) {
                 console.log('clicked pttrn_rcgntn_vw_orgnls_button');
-                console.log(pttrn_rcgntn_vw_orgnls_1.moduleId + ' b4 fsd array size  : ' +
+                /*console.log(pttrn_rcgntn_vw_orgnls_1.moduleId + ' b4 fsd array size  : ' +
                                 pttrn_rcgntn_vw_orgnls_1.result);
                 pttrn_rcgntn_vw_orgnls_1.restart();
                 pttrn_rcgntn_vw_orgnls_1.fetchServerData("pttrn_rcgntn_fltrd_rslts_prmry.csv");
 
                 console.log(pttrn_rcgntn_vw_orgnls_1.moduleId + ' aftr fsd array size  : ' +
-                                pttrn_rcgntn_vw_orgnls_1.result);
+                                pttrn_rcgntn_vw_orgnls_1.result);*/
 
                 console.log(pttrn_rcgntn_vw_orgnls_2.moduleId + ' b4 fsd array size  : ' +
                 pttrn_rcgntn_vw_orgnls_2.result);
@@ -44,25 +44,54 @@ $(function() {
                 pttrn_rcgntn_vw_orgnls_2.result);    
         }
     );
+    
+    Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_next_button_prmry",
+        function(mesg) {
+                pttrn_rcgntn_vw_orgnls_1.prev();
+              // setTimeout(() => {
+                        //pttrn_rcgntn_vw_orgnls_2.prev();  
+                //}, 1000);
+              // 
+        }
+    );
 
-    Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_prev_button",
-                    function(mesg) {
-                            pttrn_rcgntn_vw_orgnls_1.prev();
-                          // setTimeout(() => {
-                                    pttrn_rcgntn_vw_orgnls_2.prev();  
-                            //}, 1000);
-                          // 
-                    }
-            );
+    
+    Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_prev_button_prmry",
+        function(mesg) {
+                pttrn_rcgntn_vw_orgnls_1.prev();
+              // setTimeout(() => {
+                       // pttrn_rcgntn_vw_orgnls_2.prev();  
+                //}, 1000);
+              // 
+        }
+    );
+
+    /*Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_prev_button",
+        function(mesg) {
+                pttrn_rcgntn_vw_orgnls_1.prev();
+              // setTimeout(() => {
+                        pttrn_rcgntn_vw_orgnls_2.prev();  
+                //}, 1000);
+              // 
+        }
+    );*/ 
 
 
-      Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_reset_button",
-                    function(mesg) {
-                            pttrn_rcgntn_vw_orgnls_1.reset();
-                                    pttrn_rcgntn_vw_orgnls_2.reset();
+      Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_reset_button_prmry",
+          function(mesg) {
+              pttrn_rcgntn_vw_orgnls_1.reset();
+              pttrn_rcgntn_vw_orgnls_2.reset();
 
-                    }
-            );
+          }
+      );
+
+      /*Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_reset_button",
+          function(mesg) {
+              pttrn_rcgntn_vw_orgnls_1.reset();
+              pttrn_rcgntn_vw_orgnls_2.reset();
+
+          }
+      );
       Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_next_button",
                     function(mesg) {
                             pttrn_rcgntn_vw_orgnls_1.next();
@@ -70,7 +99,7 @@ $(function() {
                     
 
                     }
-            );
+            );*/
 
 
 
