@@ -1,7 +1,7 @@
-console.log('viewerHelper.js 15-05-20 23:19');
+console.log('viewerHelper.js 15-05-20 23:34');
 alert('viewerHelper.js');
 
-function fetchData(csvfile){
+function fetchData(file){
   return getFile(file).then(data => readServerData(data));
 }
 

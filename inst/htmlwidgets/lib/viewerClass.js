@@ -204,14 +204,7 @@
 
   }*/
 
-   
-
-
-
-
-
-
-
+  
   class viewerClass{
     
     constructor(moduleId,csvfile){

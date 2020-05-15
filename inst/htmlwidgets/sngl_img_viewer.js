@@ -12,7 +12,7 @@ HTMLWidgets.widget({
 
       renderValue: function(x) {
 
-       console.log('sngl_img_viewer 15-05-20 23:19');
+       console.log('sngl_img_viewer 15-05-20 23:34');
 
        let spcs_idntfctns_scndry_img = new viewerClass(
                                         "spcs_idntfctn_id_rf_2",
@@ -22,7 +22,7 @@ HTMLWidgets.widget({
                                         "img_idntfctn_prmry.csv");
         let pttrn_rcgntn_orgnl_imgs_1 = new viewerClass(
                                         moduleId = 'pttrn_rcgntn_orgnl_imgs_1',
-                                        csvfile = 'pttrn_rcgntn_fltrd_rslts_scndry.csv');
+                                        csvfile = 'pttrn_rcgntn_fltrd_rslts_prmry.csv');
 
         let pttrn_rcgntn_orgnl_imgs_2 = new viewerClass(
                                         moduleId = 'pttrn_rcgntn_orgnl_imgs_2',
