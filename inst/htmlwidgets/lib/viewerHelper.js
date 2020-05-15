@@ -1,6 +1,6 @@
 console.log('viewerHelper.js 15-05-20 18:00');
 alert('viewerHelper.js');
-$('#spcs_idntfctn_id_rf_1').on('keydown', function(event) {
+/*$('#spcs_idntfctn_id_rf_1').on('keydown', function(event) {
       
   console.log('arrows');
   switch(event.keyCode){
@@ -39,7 +39,7 @@ switch(event.keyCode){
     console.log('R');
   
 }
-});
+});*/
  // TODO: code to render the widget, e.g.
 //  $( document ).ready(function() {
 
