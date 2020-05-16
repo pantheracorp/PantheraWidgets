@@ -1,13 +1,33 @@
-alert('09:19');
+alert('10:46');
 console.log('viewerHelper.js');
-// $(document).ready(function() {
-//   consiole.log('in doc ready');
-//   $("#pttrn_rcgntn_vw_orgnls_button").click(function() {
-//     alert("pttrn_rcgntn_vw_orgnls_button");
 
-//   });
+// $(function() {
+//   $('#mydiv').focus();
 // });
-//console.log("viewerHelper.js  panwidgts");
+
+function arrowControls(targetid,nextid,resetid,previd){
+  $('#'+targetid).on('keydown', function(event) {
+  
+    switch (event.keyCode) {
+        case 37:
+            alert('left');
+            $('#'+previd).click();
+            break;
+        case 39:
+            alert('right');
+            $('#'+nextid).click();
+            break;
+        case 82:
+          alert('Reset');
+          $('#'+resetid).click();
+          break;
+    }
+ });
+
+}
+
+
+
 async function getFile(filename) {
   console.log("getFile(filename)");
   let response = await fetch(filename,{cache: "no-cache"});
