@@ -104,6 +104,13 @@ HTMLWidgets.widget({
                 }
         );
 
+        Shiny.addCustomMessageHandler("view_orignls",
+                function(mesg) {
+                        alert('clicked');
+                }
+        );
+
+
         Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_prev_button",
                 function(mesg) {
                         console.log("2 "+(pttrn_rcgntn_vw_orgnls_1.result).length);
