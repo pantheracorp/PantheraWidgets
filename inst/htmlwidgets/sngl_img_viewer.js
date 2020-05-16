@@ -99,7 +99,7 @@ HTMLWidgets.widget({
                          console.log(pttrn_rcgntn_vw_orgnls_2.moduleId + ' array size 1 : ' +
                                 pttrn_rcgntn_vw_orgnls_2.result);
 
-                        pttrn_rcgntn_vw_orgnls_2.fetchServerDataTest("pttrn_rcgntn_fltrd_rslts_scndry.csv");
+                        pttrn_rcgntn_vw_orgnls_2.fetchServerData("pttrn_rcgntn_fltrd_rslts_scndry.csv");
                         
                 }
         );

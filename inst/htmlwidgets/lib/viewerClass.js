@@ -96,31 +96,29 @@ class viewerClass {
           this.displayImage();
 
         }
-        //console.log('result array : ' + (this.result).length);
-        //console.log('End of readServerData ' + this.moduleId);
       }
 
       reset(){
         console.log('reset');
+        console.log('curr index : ' + this.currentIndex);
         console.log(this.result.length);
          this.currentIndex = 0;
          this.sendDataToShinny();
          $('#'+this.moduleId+' img' ).attr('src', this.result[this.currentIndex] );
+         
+         console.log('curr index : ' + this.currentIndex);
+         console.log('end reset');
       }
 
       next() {
-        console.log('next');
-        console.log(this.result.length);
-          // readServerData
-        // getFile(this.csvfile).then(data => this.readServerData(data));
         console.log('next : ' + this.moduleId);
-        console.log("In Next Array : " + (this.result).length);
+        console.log('arr size : ' + this.result.length);
+        console.log('curr index : ' + this.currentIndex);
         console.log("Before next : " +  this.result[this.currentIndex]);
+        
         if(this.currentIndex == (this.result).length-1){
         }
         else{
-           
-           
            if(this.imgexist(this.result[this.currentIndex+1]) == false){
              this.result[this.currentIndex+1] = this.errorImg;
            }
@@ -130,26 +128,26 @@ class viewerClass {
 
            //this.sendDataToShinny();
         }
-        console.log("In Next Array : " + (this.result).length);
-        console.log("After next : " +  this.result[this.currentIndex]);
+        
+        console.log("After next cur index : " +  this.result[this.currentIndex]);
+        console.log('curr index : ' + this.currentIndex);
         console.log('End of next : ' + this.moduleId);
         
     }
 
     prev() {
       console.log('prev');
+      console.log('curr index : ' + this.currentIndex);
       console.log(this.result.length);
-      //console.log("In Prev Array : " + (this.result).length);
-      //console.log("Before Prev : " +  this.result[this.currentIndex]);
 
         if(this.currentIndex == 0){
-          // first image
         }else{
              $('#'+this.moduleId+' img' ).attr('src', this.result[this.currentIndex-1] );
              this.currentIndex--;
              this.sendDataToShinny();
-
         }
+        console.log('End of prev : ' + this.moduleId);
+        console.log('curr index : ' + this.currentIndex);
     }
 
     imgexist(image_url){
