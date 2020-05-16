@@ -1,4 +1,4 @@
-alert('08:03');
+alert('08:25');
 console.log('viewerHelper.js');
 // $(document).ready(function() {
 //   consiole.log('in doc ready');
