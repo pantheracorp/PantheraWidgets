@@ -31,26 +31,27 @@ HTMLWidgets.widget({
         // Handle extract images buttons 
         Shiny.addCustomMessageHandler("spcs_idntfctn_extrt_id_button_rf_1",
                 function(mesg) {
+                  spcs_idntfctns_prmry_img.restart();
+                  spcs_idntfctns_prmry_img.fetchServerData("img_idntfctn_prmry.csv");
                   $('#'+spcs_idntfctns_prmry_img.moduleId).focus();
                   arrowControls('spcs_idntfctn_id_rf_1',
                                 'spcs_idntfctn_next_button_rf_1',
                                 'spcs_idntfctn_reset_button_rf_1',
                                 'spcs_idntfctn_prev_button_rf_1');
-                  spcs_idntfctns_prmry_img.restart();
-                  spcs_idntfctns_prmry_img.fetchServerData("img_idntfctn_prmry.csv");
                 }
         );
 
          Shiny.addCustomMessageHandler("spcs_idntfctn_extrt_id_button_rf_2",
                 function(mesg) {
+                  spcs_idntfctns_scndry_img.restart();
+                  spcs_idntfctns_scndry_img.fetchServerData("img_idntfctn_scndry.csv");
                   $('#'+spcs_idntfctns_scndry_img.moduleId).focus();
                   arrowControls(
                         'spcs_idntfctn_id_rf_2',
                         'spcs_idntfctn_next_button_rf_2',
                         'spcs_idntfctn_reset_button_rf_2',
                         'spcs_idntfctn_prev_button_rf_2');
-                  spcs_idntfctns_scndry_img.restart();
-                  spcs_idntfctns_scndry_img.fetchServerData("img_idntfctn_scndry.csv");
+                  
                 }
         );
 
@@ -96,14 +97,18 @@ HTMLWidgets.widget({
         Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_dsply_button",
                 function(mesg) {
                       
+                        pttrn_rcgntn_vw_orgnls_1.restart();
+                        pttrn_rcgntn_vw_orgnls_1.fetchServerData("pttrn_rcgntn_fltrd_rslts_prmry.csv");
+                        pttrn_rcgntn_vw_orgnls_2.restart();
+                        pttrn_rcgntn_vw_orgnls_2.fetchServerData("pttrn_rcgntn_fltrd_rslts_scndry.csv");
+
+                        // key controllers init
                         $('#'+pttrn_rcgntn_vw_orgnls_1.moduleId).focus();
                         arrowControls(
                                 'pttrn_rcgntn_orgnl_imgs_1',
                                 'pttrn_rcgntn_orgnl_imgs_next_button',
                                 'pttrn_rcgntn_orgnl_imgs_dsply_button',
                                 'pttrn_rcgntn_orgnl_imgs_prev_button');
-                        pttrn_rcgntn_vw_orgnls_1.restart();
-                        pttrn_rcgntn_vw_orgnls_1.fetchServerData("pttrn_rcgntn_fltrd_rslts_prmry.csv");
                         
                         $('#'+pttrn_rcgntn_vw_orgnls_2.moduleId).focus();
                         arrowControls(
@@ -111,8 +116,6 @@ HTMLWidgets.widget({
                                 'pttrn_rcgntn_orgnl_imgs_next_button',
                                 'pttrn_rcgntn_orgnl_imgs_dsply_button',
                                 'pttrn_rcgntn_orgnl_imgs_prev_button');
-                        pttrn_rcgntn_vw_orgnls_2.restart();
-                        pttrn_rcgntn_vw_orgnls_2.fetchServerData("pttrn_rcgntn_fltrd_rslts_scndry.csv");
                         
                 }
         );
