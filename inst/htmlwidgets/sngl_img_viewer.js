@@ -120,7 +120,7 @@ HTMLWidgets.widget({
                 }
         );
 
-        Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_next_button",
+        Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_next_buttonn",
                 function(mesg) {
                         console.log("4 "+ (pttrn_rcgntn_vw_orgnls_1.result).length);
                         pttrn_rcgntn_vw_orgnls_1.next();
