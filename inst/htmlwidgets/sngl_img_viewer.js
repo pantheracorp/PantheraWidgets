@@ -91,11 +91,13 @@ HTMLWidgets.widget({
 
                         if($('#pttrn_rcgntn_orgnl_imgs_1').length){
                                 alert('Exist');
+                                $('#pttrn_rcgntn_orgnl_imgs_1').focus();
                         }
-                        $(document).keypress(function(event){
+                        $(document).onkeydown(function(event){
 
                                 alert('target : ' + event.target.id);
-                                if(event.target.id === 'shiny-modal'){
+                                let id = event.target.id;
+                                if(id === 'shiny-modal' || id === 'pttrn_rcgntn_orgnl_imgs_1' || id === 'pttrn_rcgntn_orgnl_imgs_2'){
 
                                         switch (event.keyCode) {
                                                 case 37:
@@ -109,6 +111,9 @@ HTMLWidgets.widget({
                                                     break;
                                                 case 40:
                                                     alert('down');
+                                                    break;
+                                                case 82:
+                                                    alert('R');
                                                     break;
                                             }
 
