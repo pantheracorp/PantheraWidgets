@@ -1,5 +1,36 @@
-alert('16:05');
+alert('17:45');
 console.log('viewerHelper.js');
+$(document).ready(function(){
+
+  $('#rf_2_container').on
+
+});
+
+$(document).ready(function(){
+
+  $('#spcs_idntfctn_id_rf_1').click(function() {
+    alert('clicked spcs_idntfctn_id_rf_1');
+    $('#spcs_idntfctn_id_rf_1').focus();
+  });
+
+  $('#spcs_idntfctn_id_rf_2').click(function() {
+    alert('clicked spcs_idntfctn_id_rf_2');
+    $('#spcs_idntfctn_id_rf_2').focus();
+  });
+
+  $('#pttrn_rcgntn_orgnl_imgs_2').click(function() {
+    alert('clicked pttrn_rcgntn_orgnl_imgs_2');
+    $('#pttrn_rcgntn_orgnl_imgs_2').focus();
+  });
+
+  $('#pttrn_rcgntn_orgnl_imgs_1').click(function() {
+    alert('clicked pttrn_rcgntn_orgnl_imgs_1');
+    $('#pttrn_rcgntn_orgnl_imgs_1').focus();
+  });
+
+ });
+
+
 // maps vwrs contl bttns
 function mapBttn(id){
   console.log('mapBttn');

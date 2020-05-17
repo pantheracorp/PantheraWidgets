@@ -13,7 +13,7 @@ HTMLWidgets.widget({
       renderValue: function(x) {
 
         // TODO: code to render the widget, e.g.
-        console.log("sngl_img_viewer.js  17-05-20 13:32");
+        console.log("sngl_img_viewer.js  17-05-20 17:45");
         
         let spcs_idntfctns_scndry_img = new viewerClass(
                                             "spcs_idntfctn_id_rf_2",
@@ -65,7 +65,7 @@ HTMLWidgets.widget({
                   $('#spcs_idntfctn_id_rf_2').focus();
 
                   $('#spcs_idntfctn_id_rf_2').keydown(function(event){
-                          
+
                         alert('clicked');
                         var keycode = (event.keyCode ? event.keyCode : event.which);
                         if(keycode == '37'){
