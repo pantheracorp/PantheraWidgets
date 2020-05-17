@@ -1,4 +1,4 @@
-alert('10:46');
+alert('02:04');
 console.log('viewerHelper.js');
 
 // $(function() {
@@ -6,6 +6,8 @@ console.log('viewerHelper.js');
 // });
 
 function arrowControls(targetid,nextid,resetid,previd){
+  console.log('in arrowControls');
+  $('#'+targetid).focus();
   $('#'+targetid).on('keydown', function(event) {
   
     switch (event.keyCode) {
