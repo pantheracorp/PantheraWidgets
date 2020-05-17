@@ -1,30 +1,25 @@
-alert('17:45');
+alert('18:06');
 console.log('viewerHelper.js');
-$(document).ready(function(){
-
-  $('#rf_2_container').on
-
-});
 
 $(document).ready(function(){
 
   $('#spcs_idntfctn_id_rf_1').click(function() {
-    alert('clicked spcs_idntfctn_id_rf_1');
+    //alert('clicked spcs_idntfctn_id_rf_1');
     $('#spcs_idntfctn_id_rf_1').focus();
   });
 
   $('#spcs_idntfctn_id_rf_2').click(function() {
-    alert('clicked spcs_idntfctn_id_rf_2');
+    //alert('clicked spcs_idntfctn_id_rf_2');
     $('#spcs_idntfctn_id_rf_2').focus();
   });
 
   $('#pttrn_rcgntn_orgnl_imgs_2').click(function() {
-    alert('clicked pttrn_rcgntn_orgnl_imgs_2');
+    //alert('clicked pttrn_rcgntn_orgnl_imgs_2');
     $('#pttrn_rcgntn_orgnl_imgs_2').focus();
   });
 
   $('#pttrn_rcgntn_orgnl_imgs_1').click(function() {
-    alert('clicked pttrn_rcgntn_orgnl_imgs_1');
+    //alert('clicked pttrn_rcgntn_orgnl_imgs_1');
     $('#pttrn_rcgntn_orgnl_imgs_1').focus();
   });
 
