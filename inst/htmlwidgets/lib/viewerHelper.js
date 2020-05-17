@@ -1,4 +1,4 @@
-alert('18:23');
+console.log('18:58');
 console.log('viewerHelper.js');
 
 $(document).ready(function(){

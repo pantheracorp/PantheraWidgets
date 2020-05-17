@@ -34,28 +34,28 @@ HTMLWidgets.widget({
                   spcs_idntfctns_prmry_img.restart();
                   spcs_idntfctns_prmry_img.fetchServerData("img_idntfctn_prmry.csv");
                   $('#spcs_idntfctn_id_rf_1').css({'outline': '0px solid transparent'});
-                  //height:500px; outline: 0px solid transparent;
                   $('#spcs_idntfctn_id_rf_1').attr('tabindex', '0');
                   $('#spcs_idntfctn_id_rf_1').focus();
-                  /*$('#spcs_idntfctn_id_rf_1').keydown(function(event){
+                  // Arrow controls
+                  $('#spcs_idntfctn_id_rf_1').keydown(function(event){
                         
-                        //alert('clicked');
+                        alert('clicked');
                         var keycode = (event.keyCode ? event.keyCode : event.which);
-                        //alert(keycode);
+                        alert(keycode);
                         if(keycode == '37'){
-                                //alert('You pressed left ');
+                                alert('You pressed left ');
                                 spcs_idntfctns_prmry_img.prev();
                         }
                         if(keycode == '39'){
-                                //alert('You pressed left ');
+                                alert('You pressed left ');
                                 spcs_idntfctns_prmry_img.next();
                         }
                         if(keycode == '82'){
-                                //alert('Reset');
+                                alert('Reset');
                                 spcs_idntfctns_prmry_img.reset();
                         }
                         event.stopPropagation();
-                    });*/
+                    });
                 }
         );
 
@@ -66,25 +66,25 @@ HTMLWidgets.widget({
                   $('#spcs_idntfctn_id_rf_2').css({'outline': '0px solid transparent'});
                   $('#spcs_idntfctn_id_rf_2').attr('tabindex', '0');
                   $('#spcs_idntfctn_id_rf_2').focus();
+                  // Arrow controls
+                  $('#spcs_idntfctn_id_rf_2').keydown(function(event){
 
-                  /*$('#spcs_idntfctn_id_rf_2').keydown(function(event){
-
-                        //alert('clicked');
+                        alert('clicked');
                         var keycode = (event.keyCode ? event.keyCode : event.which);
                         if(keycode == '37'){
-                                //alert('You pressed left ');
+                                alert('You pressed left ');
                                 spcs_idntfctns_scndry_img.prev();
                         }
                         if(keycode == '39'){
-                                //alert('You pressed left ');
+                                alert('You pressed left ');
                                 spcs_idntfctns_scndry_img.next();
                         }
                         if(keycode == '82'){
-                                ///alert('Reset');
+                                alert('Reset');
                                 spcs_idntfctns_scndry_img.reset();
                         }
                         event.stopPropagation();
-                    });*/
+                    });
                 }
         );
 
@@ -137,58 +137,46 @@ HTMLWidgets.widget({
                         if($('#pttrn_rcgntn_orgnl_imgs_1').length){
                                 alert('Exist');
                                 $('#pttrn_rcgntn_orgnl_imgs_1').keydown(function(event){
-                                        alert('clicked');
+                                        alert('pttrn_rcgntn_orgnl_imgs_1');
+                                
                                         var keycode = (event.keyCode ? event.keyCode : event.which);
                                         if(keycode == '37'){
-                                        alert('You pressed left ');  
+                                                alert('You pressed left ');
+                                                pttrn_rcgntn_vw_orgnls_1.prev();
+                                                pttrn_rcgntn_vw_orgnls_2.prev(); 
                                         }
                                         if(keycode == '39'){
-                                        alert('You pressed left ');
+                                                pttrn_rcgntn_vw_orgnls_1.next();
+                                                pttrn_rcgntn_vw_orgnls_2.next(); 
+                                        }
+                                        if(keycode == '82'){
+                                                alert('Reset');
+                                                pttrn_rcgntn_vw_orgnls_1.reset();
+                                                pttrn_rcgntn_vw_orgnls_2.reset(); 
                                         }
                                         event.stopPropagation();
                                     });
 
                                 $('#pttrn_rcgntn_orgnl_imgs_2').keydown(function(event){
-                                        alert('clicked');
+                                        alert('pttrn_rcgntn_orgnl_imgs_2');
                                         var keycode = (event.keyCode ? event.keyCode : event.which);
                                         if(keycode == '37'){
-                                        alert('You pressed left ');  
+                                                alert('You pressed left ');
+                                                pttrn_rcgntn_vw_orgnls_1.prev();
+                                                pttrn_rcgntn_vw_orgnls_2.prev(); 
                                         }
                                         if(keycode == '39'){
-                                        alert('You pressed left ');
+                                                pttrn_rcgntn_vw_orgnls_1.next();
+                                                pttrn_rcgntn_vw_orgnls_2.next(); 
+                                        }
+                                        if(keycode == '82'){
+                                                alert('Reset');
+                                                pttrn_rcgntn_vw_orgnls_1.reset();
+                                                pttrn_rcgntn_vw_orgnls_2.reset(); 
                                         }
                                         event.stopPropagation();
                                     });
                         }
-                       /* $(document).onkeydown(function(event){
-
-                                alert('target : ' + event.target.id);
-                                let id = event.target.id;
-                                if(id === 'shiny-modal' || id === 'pttrn_rcgntn_orgnl_imgs_1' || id === 'pttrn_rcgntn_orgnl_imgs_2'){
-
-                                        switch (event.keyCode) {
-                                                case 37:
-                                                    alert('left');
-                                                    break;
-                                                case 38:
-                                                    alert('up');
-                                                    break;
-                                                case 39:
-                                                    alert('right');
-                                                    break;
-                                                case 40:
-                                                    alert('down');
-                                                    break;
-                                                case 82:
-                                                    alert('R');
-                                                    break;
-                                            }
-
-                                }
-                        });*/
-
-                      
-
                 }
         );
 
