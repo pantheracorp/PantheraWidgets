@@ -103,8 +103,26 @@ HTMLWidgets.widget({
                         pttrn_rcgntn_vw_orgnls_2.fetchServerData("pttrn_rcgntn_fltrd_rslts_scndry.csv");
 
                         // key controllers init
+
+                        $('#pttrn_rcgntn_orgnl_imgs_1').on('keydown', function(event) {
+  
+                                switch (event.keyCode) {
+                                    case 37:
+                                        alert('left');
+                                        //$('#'+previd).click();
+                                        break;
+                                    case 39:
+                                        alert('right');
+                                        //$('#'+nextid).click();
+                                        break;
+                                    case 82:
+                                      alert('Reset');
+                                      //$('#'+resetid).click();
+                                      break;
+                                }
+                             });
                         
-                        arrowControls(
+                        /*arrowControls(
                                 'pttrn_rcgntn_orgnl_imgs_1',
                                 'pttrn_rcgntn_orgnl_imgs_next_button',
                                 'pttrn_rcgntn_orgnl_imgs_dsply_button',
@@ -115,7 +133,7 @@ HTMLWidgets.widget({
                                 'pttrn_rcgntn_orgnl_imgs_2',
                                 'pttrn_rcgntn_orgnl_imgs_next_button',
                                 'pttrn_rcgntn_orgnl_imgs_dsply_button',
-                                'pttrn_rcgntn_orgnl_imgs_prev_button');
+                                'pttrn_rcgntn_orgnl_imgs_prev_button');*/
                         
                 }
         );
