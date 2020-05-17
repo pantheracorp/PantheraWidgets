@@ -34,16 +34,23 @@ HTMLWidgets.widget({
                   spcs_idntfctns_prmry_img.restart();
                   spcs_idntfctns_prmry_img.fetchServerData("img_idntfctn_prmry.csv");
                   $('#spcs_idntfctn_id_rf_1').attr('tabindex', '0');
+                  $('#spcs_idntfctn_id_rf_1').focus();
                   $('#spcs_idntfctn_id_rf_1').keydown(function(event){
                         
                         alert('clicked');
                         var keycode = (event.keyCode ? event.keyCode : event.which);
-                        alert(keycode);
+                        //alert(keycode);
                         if(keycode == '37'){
-                        alert('You pressed left ');  
+                                alert('You pressed left ');
+                                spcs_idntfctns_prmry_img.prev();
                         }
                         if(keycode == '39'){
-                        alert('You pressed left ');
+                                alert('You pressed left ');
+                                spcs_idntfctns_prmry_img.next();
+                        }
+                        if(keycode == '82'){
+                                alert('Reset');
+                                spcs_idntfctns_prmry_img.reset();
                         }
                         event.stopPropagation();
                     });
@@ -55,15 +62,23 @@ HTMLWidgets.widget({
                   spcs_idntfctns_scndry_img.restart();
                   spcs_idntfctns_scndry_img.fetchServerData("img_idntfctn_scndry.csv");
                   $('#spcs_idntfctn_id_rf_2').attr('tabindex', '0');
+                  $('#spcs_idntfctn_id_rf_2').focus();
 
                   $('#spcs_idntfctn_id_rf_2').keydown(function(event){
+                          
                         alert('clicked');
                         var keycode = (event.keyCode ? event.keyCode : event.which);
                         if(keycode == '37'){
-                        alert('You pressed left ');  
+                                alert('You pressed left ');
+                                spcs_idntfctns_scndry_img.prev();
                         }
                         if(keycode == '39'){
-                        alert('You pressed left ');
+                                alert('You pressed left ');
+                                spcs_idntfctns_scndry_img.next();
+                        }
+                        if(keycode == '82'){
+                                alert('Reset');
+                                spcs_idntfctns_scndry_img.reset();
                         }
                         event.stopPropagation();
                     });

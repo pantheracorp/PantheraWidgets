@@ -1,4 +1,4 @@
-alert('15:52');
+alert('16:05');
 console.log('viewerHelper.js');
 // maps vwrs contl bttns
 function mapBttn(id){
