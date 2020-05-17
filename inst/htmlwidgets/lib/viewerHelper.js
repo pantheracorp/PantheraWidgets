@@ -1,4 +1,4 @@
-console.log('18:58');
+console.log('21:03');
 console.log('viewerHelper.js');
 
 $(document).ready(function(){
@@ -13,12 +13,12 @@ $(document).ready(function(){
     $('#spcs_idntfctn_id_rf_2').focus();
   });
 
-  $('#pttrn_rcgntn_orgnl_imgs_2').click(function() {
+  $('#currnt-img_orgnl_imgs_2').click(function() {
     //alert('clicked pttrn_rcgntn_orgnl_imgs_2');
-    $('#pttrn_rcgntn_orgnl_imgs_2').focus();
+    $('#pttrn_rcgntn_orgnl_imgs_1').focus();
   });
 
-  $('#pttrn_rcgntn_orgnl_imgs_1').click(function() {
+  $('#currnt-img_orgnl_imgs_1').click(function() {
     //alert('clicked pttrn_rcgntn_orgnl_imgs_1');
     $('#pttrn_rcgntn_orgnl_imgs_1').focus();
   });

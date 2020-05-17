@@ -39,19 +39,19 @@ HTMLWidgets.widget({
                   // Arrow controls
                   $('#spcs_idntfctn_id_rf_1').keydown(function(event){
                         
-                        alert('clicked');
+                        //alert('clicked');
                         var keycode = (event.keyCode ? event.keyCode : event.which);
-                        alert(keycode);
+                        //alert(keycode);
                         if(keycode == '37'){
-                                alert('You pressed left ');
+                                //alert('You pressed left ');
                                 spcs_idntfctns_prmry_img.prev();
                         }
                         if(keycode == '39'){
-                                alert('You pressed left ');
+                                //alert('You pressed left ');
                                 spcs_idntfctns_prmry_img.next();
                         }
                         if(keycode == '82'){
-                                alert('Reset');
+                                //alert('Reset');
                                 spcs_idntfctns_prmry_img.reset();
                         }
                         event.stopPropagation();
@@ -69,18 +69,18 @@ HTMLWidgets.widget({
                   // Arrow controls
                   $('#spcs_idntfctn_id_rf_2').keydown(function(event){
 
-                        alert('clicked');
+                        //alert('clicked');
                         var keycode = (event.keyCode ? event.keyCode : event.which);
                         if(keycode == '37'){
-                                alert('You pressed left ');
+                                //alert('You pressed left ');
                                 spcs_idntfctns_scndry_img.prev();
                         }
                         if(keycode == '39'){
-                                alert('You pressed left ');
+                                //alert('You pressed left ');
                                 spcs_idntfctns_scndry_img.next();
                         }
                         if(keycode == '82'){
-                                alert('Reset');
+                                //alert('Reset');
                                 spcs_idntfctns_scndry_img.reset();
                         }
                         event.stopPropagation();
@@ -134,14 +134,22 @@ HTMLWidgets.widget({
                         pttrn_rcgntn_vw_orgnls_2.restart();
                         pttrn_rcgntn_vw_orgnls_2.fetchServerData("pttrn_rcgntn_fltrd_rslts_scndry.csv");
 
+                        
+                        $('#pttrn_rcgntn_orgnl_imgs_1').attr('tabindex', '0');
+                        $('#pttrn_rcgntn_orgnl_imgs_1').css({'outline': '0px solid transparent'});
+                        $('#pttrn_rcgntn_orgnl_imgs_1').focus();
+                        $('#pttrn_rcgntn_orgnl_imgs_2').attr('tabindex', '0');
+                        $('#pttrn_rcgntn_orgnl_imgs_2').css({'outline': '0px solid transparent'});
+                        $('#pttrn_rcgntn_orgnl_imgs_2').focus();
+
                         if($('#pttrn_rcgntn_orgnl_imgs_1').length){
-                                alert('Exist');
+                                //alert('Exist');
                                 $('#pttrn_rcgntn_orgnl_imgs_1').keydown(function(event){
-                                        alert('pttrn_rcgntn_orgnl_imgs_1');
+                                        //alert('pttrn_rcgntn_orgnl_imgs_1');
                                 
                                         var keycode = (event.keyCode ? event.keyCode : event.which);
                                         if(keycode == '37'){
-                                                alert('You pressed left ');
+                                                //alert('You pressed left ');
                                                 pttrn_rcgntn_vw_orgnls_1.prev();
                                                 pttrn_rcgntn_vw_orgnls_2.prev(); 
                                         }
@@ -150,7 +158,7 @@ HTMLWidgets.widget({
                                                 pttrn_rcgntn_vw_orgnls_2.next(); 
                                         }
                                         if(keycode == '82'){
-                                                alert('Reset');
+                                                //alert('Reset');
                                                 pttrn_rcgntn_vw_orgnls_1.reset();
                                                 pttrn_rcgntn_vw_orgnls_2.reset(); 
                                         }
@@ -158,10 +166,10 @@ HTMLWidgets.widget({
                                     });
 
                                 $('#pttrn_rcgntn_orgnl_imgs_2').keydown(function(event){
-                                        alert('pttrn_rcgntn_orgnl_imgs_2');
+                                        //alert('pttrn_rcgntn_orgnl_imgs_2');
                                         var keycode = (event.keyCode ? event.keyCode : event.which);
                                         if(keycode == '37'){
-                                                alert('You pressed left ');
+                                                //alert('You pressed left ');
                                                 pttrn_rcgntn_vw_orgnls_1.prev();
                                                 pttrn_rcgntn_vw_orgnls_2.prev(); 
                                         }
@@ -170,7 +178,7 @@ HTMLWidgets.widget({
                                                 pttrn_rcgntn_vw_orgnls_2.next(); 
                                         }
                                         if(keycode == '82'){
-                                                alert('Reset');
+                                                //alert('Reset');
                                                 pttrn_rcgntn_vw_orgnls_1.reset();
                                                 pttrn_rcgntn_vw_orgnls_2.reset(); 
                                         }
