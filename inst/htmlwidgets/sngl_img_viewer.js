@@ -13,7 +13,7 @@ HTMLWidgets.widget({
       renderValue: function(x) {
 
         // TODO: code to render the widget, e.g.
-        console.log("sngl_img_viewer.js  16-05-20 07:52");
+        console.log("sngl_img_viewer.js  16-05-20 08:35");
         
         let spcs_idntfctns_scndry_img = new viewerClass(
                                             "spcs_idntfctn_id_rf_2",
@@ -34,11 +34,11 @@ HTMLWidgets.widget({
                   spcs_idntfctns_prmry_img.restart();
                   spcs_idntfctns_prmry_img.fetchServerData("img_idntfctn_prmry.csv");
                  
-                  arrowControls('spcs_idntfctn_id_rf_1',
+                 /* arrowControls('spcs_idntfctn_id_rf_1',
                                 'spcs_idntfctn_next_button_rf_1',
                                 'spcs_idntfctn_reset_button_rf_1',
                                 'spcs_idntfctn_prev_button_rf_1');
-                }
+                }*/
         );
 
          Shiny.addCustomMessageHandler("spcs_idntfctn_extrt_id_button_rf_2",
@@ -46,13 +46,13 @@ HTMLWidgets.widget({
                   spcs_idntfctns_scndry_img.restart();
                   spcs_idntfctns_scndry_img.fetchServerData("img_idntfctn_scndry.csv");
                   
-                  arrowControls(
+                  /*arrowControls(
                         'spcs_idntfctn_id_rf_2',
                         'spcs_idntfctn_next_button_rf_2',
                         'spcs_idntfctn_reset_button_rf_2',
                         'spcs_idntfctn_prev_button_rf_2');
                   
-                }
+                }*/
         );
 
         Shiny.addCustomMessageHandler("spcs_idntfctn_reset_button_rf_1",
@@ -103,10 +103,10 @@ HTMLWidgets.widget({
                         pttrn_rcgntn_vw_orgnls_2.fetchServerData("pttrn_rcgntn_fltrd_rslts_scndry.csv");
 
                         // key controllers init
-                        $('#pttrn_rcgntn_orgnl_imgs_1').focus();
-                        $('#pttrn_rcgntn_orgnl_imgs_2').focus();
+                        //$('#pttrn_rcgntn_orgnl_imgs_1').focus();
+                       // $('#pttrn_rcgntn_orgnl_imgs_2').focus();
 
-                        $('#pttrn_rcgntn_orgnl_imgs_1').on('keydown', function(event) {
+                        /*$('#pttrn_rcgntn_orgnl_imgs_1').on('keydown', function(event) {
                                 alert(event.keyCode);
                                 switch (event.keyCode) {
                                     case 37:
@@ -122,7 +122,7 @@ HTMLWidgets.widget({
                                       //$('#'+resetid).click();
                                       break;
                                 }
-                             });
+                             });*/
                         
                         /*arrowControls(
                                 'pttrn_rcgntn_orgnl_imgs_1',
