@@ -13,7 +13,7 @@ HTMLWidgets.widget({
       renderValue: function(x) {
 
         // TODO: code to render the widget, e.g.
-        console.log("sngl_img_viewer.js  17-05-20 13:13");
+        console.log("sngl_img_viewer.js  17-05-20 13:32");
         
         let spcs_idntfctns_scndry_img = new viewerClass(
                                             "spcs_idntfctn_id_rf_2",
@@ -93,22 +93,29 @@ HTMLWidgets.widget({
                                 alert('Exist');
                         }
                         $(document).keypress(function(event){
+
                                 alert('target : ' + event.target.id);
-                                var keycode = (event.keyCode ? event.keyCode : event.which);
-                                if(keycode == '37'){
-                                    alert('You pressed a "left arrow" key in on image'); 
-                                    pttrn_rcgntn_vw_orgnls_1.prev();   
+                                if(event.target.id === 'shiny-modal'){
+
+                                        switch (event.keyCode) {
+                                                case 37:
+                                                    alert('left');
+                                                    break;
+                                                case 38:
+                                                    alert('up');
+                                                    break;
+                                                case 39:
+                                                    alert('right');
+                                                    break;
+                                                case 40:
+                                                    alert('down');
+                                                    break;
+                                            }
+
                                 }
                         });
 
-                        $(document).keypress(function(event){
-                                alert('target : ' + event.target.id);
-                                var keycode = (event.keyCode ? event.keyCode : event.which);
-                                if(keycode == '39'){
-                                    alert('You pressed a "right arrow" key in on image');  
-                                    pttrn_rcgntn_vw_orgnls_2.reset();  
-                                }
-                        });
+                      
 
                 }
         );

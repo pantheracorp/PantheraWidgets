@@ -1,5 +1,5 @@
 
-console.log("setImages.js  panwidgts 17-05-20 13:13");
+console.log("setImages.js  panwidgts 17-05-20 13:32");
 function setCanvas(targetID,imgSrc){
     console.log('setCanvas : ' + targetID);
 
