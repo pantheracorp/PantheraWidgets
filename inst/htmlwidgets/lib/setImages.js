@@ -1,5 +1,5 @@
 
-console.log("setImages.js  panwidgts 17-05-20 13:32");
+//console.log("setImages.js  panwidgts 17-05-20 13:32");
 function setCanvas(targetID,imgSrc){
     console.log('setCanvas : ' + targetID);
 
@@ -13,8 +13,8 @@ function setCanvas(targetID,imgSrc){
     }
    
 
-    console.log('imgId ' + imgId);
-    console.log('target id exist : ' + $('#'+targetID+' img' ).length);
+    // console.log('imgId ' + imgId);
+    // console.log('target id exist : ' + $('#'+targetID+' img' ).length);
 
     // the target div already exist
     if ( $('#'+targetID+' img' ).length )

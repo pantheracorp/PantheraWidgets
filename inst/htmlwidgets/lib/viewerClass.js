@@ -12,7 +12,7 @@ class viewerClass {
 
       fetchServerData(file)
       {
-        console.log('fetchServerData');
+        //console.log('fetchServerData');
         //console.log("In fetchServerData moduleId : " + this.moduleId);
          getFile(file).then(data => this.readServerData(data));
       }
@@ -20,7 +20,7 @@ class viewerClass {
       fetchServerDataTest(file)
       {
         //console.log('fetchServerData');
-        console.log("In fetchServerData moduleId : " + this.moduleId);
+        //console.log("In fetchServerData moduleId : " + this.moduleId);
          getFileTest(file).then(data => this.readServerData(data));
       }
 
@@ -32,8 +32,8 @@ class viewerClass {
             let src  = ((item.trim()).replace(/['"]+/g, '')).replace(/(\r\n|\n|\r)/gm,"");
               tempArray.push(src);
           });
-          console.log('viewer class line 30 : ' + tempArray.length);
-          console.log('End processImgSrc');
+          // console.log('viewer class line 30 : ' + tempArray.length);
+          // console.log('End processImgSrc');
           return tempArray;
       }
 
@@ -54,22 +54,22 @@ class viewerClass {
           setCanvas( this.moduleId,this.result[0]);
         }
         if(this.moduleId === 'pttrn_rcgntn_orgnl_imgs_1'){
-          console.log('case pttrn_rcgntn_orgnl_imgs_1');
+          //console.log('case pttrn_rcgntn_orgnl_imgs_1');
           setCanvas( this.moduleId,this.result[0]);
         }
         if(this.moduleId === 'pttrn_rcgntn_orgnl_imgs_2'){
-          console.log('case pttrn_rcgntn_orgnl_imgs_2');
+          //console.log('case pttrn_rcgntn_orgnl_imgs_2');
           setCanvas( this.moduleId,this.result[0]);
         }
 
         this.sendDataToShinny();
-        console.log('displayImage end');
-        console.log(" end displayImage : " + this.moduleId + ' arry size ' +  (this.result).length);
+        // console.log('displayImage end');
+        // console.log(" end displayImage : " + this.moduleId + ' arry size ' +  (this.result).length);
 
       }
 
       restart(){
-        console.log('restart');
+        //console.log('restart');
         this.result.length = 0;
         this.currentIndex = 0;
       }
@@ -77,8 +77,8 @@ class viewerClass {
 
       readServerData(response) {
         //alert('readServerData ' + this.moduleId);
-        console.log('readServerData');
-        console.log(this.result.length);
+        // console.log('readServerData');
+        // console.log(this.result.length);
 
         let respArray = [];
         if(response === null )
@@ -99,22 +99,22 @@ class viewerClass {
       }
 
       reset(){
-        console.log('reset');
-        console.log('curr index : ' + this.currentIndex);
-        console.log(this.result.length);
+        // console.log('reset');
+        // console.log('curr index : ' + this.currentIndex);
+        // console.log(this.result.length);
          this.currentIndex = 0;
          this.sendDataToShinny();
          $('#'+this.moduleId+' img' ).attr('src', this.result[this.currentIndex] );
          
-         console.log('curr index : ' + this.currentIndex);
-         console.log('end reset');
+         //console.log('curr index : ' + this.currentIndex);
+         //console.log('end reset');
       }
 
       next() {
-        console.log('next : ' + this.moduleId);
-        console.log('arr size : ' + this.result.length);
-        console.log('curr index : ' + this.currentIndex);
-        console.log("Before next : " +  this.result[this.currentIndex]);
+        // console.log('next : ' + this.moduleId);
+        // console.log('arr size : ' + this.result.length);
+        // console.log('curr index : ' + this.currentIndex);
+        // console.log("Before next : " +  this.result[this.currentIndex]);
         
         if(this.currentIndex == (this.result).length-1){
         }
@@ -124,21 +124,21 @@ class viewerClass {
            }
            $('#'+this.moduleId+' img' ).attr('src', this.result[this.currentIndex+1] );
            this.currentIndex++;
-           console.log();
+           //console.log();
 
-           //this.sendDataToShinny();
+           this.sendDataToShinny();
         }
         
-        console.log("After next cur index : " +  this.result[this.currentIndex]);
-        console.log('curr index : ' + this.currentIndex);
-        console.log('End of next : ' + this.moduleId);
+        // console.log("After next cur index : " +  this.result[this.currentIndex]);
+        // console.log('curr index : ' + this.currentIndex);
+        // console.log('End of next : ' + this.moduleId);
         
     }
 
     prev() {
-      console.log('prev');
-      console.log('curr index : ' + this.currentIndex);
-      console.log(this.result.length);
+      // console.log('prev');
+      // console.log('curr index : ' + this.currentIndex);
+      // console.log(this.result.length);
 
         if(this.currentIndex == 0){
         }else{
@@ -146,12 +146,12 @@ class viewerClass {
              this.currentIndex--;
              this.sendDataToShinny();
         }
-        console.log('End of prev : ' + this.moduleId);
-        console.log('curr index : ' + this.currentIndex);
+        // console.log('End of prev : ' + this.moduleId);
+        // console.log('curr index : ' + this.currentIndex);
     }
 
     imgexist(image_url){
-      console.log('imgexist');
+      //console.log('imgexist');
       //console.log('Start of imgexist : ' + this.moduleId);
           let xmlhttp = new XMLHttpRequest();
           xmlhttp.open("GET", image_url, false);
@@ -164,13 +164,13 @@ class viewerClass {
     }
 
     sendDataToShinny(){
-      console.log('sendDataToShinny');
+      //console.log('sendDataToShinny');
       //console.log("In  sendDataToShiny ");
       //console.log('Array length : ' + (this.result).length);
 
       if(this.moduleId == "spcs_idntfctn_id_rf_1" || this.moduleId == "spcs_idntfctn_id_rf_2" ){
 
-          console.log(this.result);
+          //console.log(this.result);
           let src = this.result[this.currentIndex];
           let imgname = src.substring(src.lastIndexOf("/") + 1, src.length );
     
