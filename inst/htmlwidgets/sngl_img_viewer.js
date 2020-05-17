@@ -33,6 +33,18 @@ HTMLWidgets.widget({
                 function(mesg) {
                   spcs_idntfctns_prmry_img.restart();
                   spcs_idntfctns_prmry_img.fetchServerData("img_idntfctn_prmry.csv");
+                  $('#pttrn_rcgntn_orgnl_imgs_1').keydown(function(event){
+                        alert('clicked');
+                        var keycode = (event.keyCode ? event.keyCode : event.which);
+                        alert(keycode);
+                        if(keycode == '37'){
+                        alert('You pressed left ');  
+                        }
+                        if(keycode == '39'){
+                        alert('You pressed left ');
+                        }
+                        event.stopPropagation();
+                    });
                 }
         );
 
@@ -40,6 +52,18 @@ HTMLWidgets.widget({
                 function(mesg) {
                   spcs_idntfctns_scndry_img.restart();
                   spcs_idntfctns_scndry_img.fetchServerData("img_idntfctn_scndry.csv");
+
+                  $('#pttrn_rcgntn_orgnl_imgs_2').keydown(function(event){
+                        alert('clicked');
+                        var keycode = (event.keyCode ? event.keyCode : event.which);
+                        if(keycode == '37'){
+                        alert('You pressed left ');  
+                        }
+                        if(keycode == '39'){
+                        alert('You pressed left ');
+                        }
+                        event.stopPropagation();
+                    });
                 }
         );
 
