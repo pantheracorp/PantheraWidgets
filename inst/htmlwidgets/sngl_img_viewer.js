@@ -13,7 +13,7 @@ HTMLWidgets.widget({
       renderValue: function(x) {
 
         // TODO: code to render the widget, e.g.
-        console.log("sngl_img_viewer.js  16-05-20 05:41");
+        console.log("sngl_img_viewer.js  16-05-20 07:52");
         
         let spcs_idntfctns_scndry_img = new viewerClass(
                                             "spcs_idntfctn_id_rf_2",
@@ -103,9 +103,11 @@ HTMLWidgets.widget({
                         pttrn_rcgntn_vw_orgnls_2.fetchServerData("pttrn_rcgntn_fltrd_rslts_scndry.csv");
 
                         // key controllers init
+                        $('#pttrn_rcgntn_orgnl_imgs_1').focus();
+                        $('#pttrn_rcgntn_orgnl_imgs_2').focus();
 
                         $('#pttrn_rcgntn_orgnl_imgs_1').on('keydown', function(event) {
-  
+                                alert(event.keyCode);
                                 switch (event.keyCode) {
                                     case 37:
                                         alert('left');

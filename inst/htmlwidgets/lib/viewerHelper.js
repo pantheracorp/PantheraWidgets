@@ -1,11 +1,11 @@
-alert('07:28');
+alert('07:53');
 console.log('viewerHelper.js');
 
 function arrowControls(targetid,nextid,resetid,previd){
   console.log('in arrowControls');
   $('#'+targetid).focus();
   $('#'+targetid).on('keydown', function(event) {
-  
+    alert(event.keyCode);
     switch (event.keyCode) {
         case 37:
             alert('left');
