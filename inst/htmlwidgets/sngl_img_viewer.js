@@ -13,7 +13,7 @@ HTMLWidgets.widget({
       renderValue: function(x) {
 
         // TODO: code to render the widget, e.g.
-        console.log("sngl_img_viewer.js  17-05-20 12:39");
+        console.log("sngl_img_viewer.js  17-05-20 13:13");
         
         let spcs_idntfctns_scndry_img = new viewerClass(
                                             "spcs_idntfctn_id_rf_2",
@@ -89,7 +89,11 @@ HTMLWidgets.widget({
                         pttrn_rcgntn_vw_orgnls_2.restart();
                         pttrn_rcgntn_vw_orgnls_2.fetchServerData("pttrn_rcgntn_fltrd_rslts_scndry.csv");
 
-                        $('#pttrn_rcgntn_orgnl_imgs_1').keypress(function(event){
+                        if($('#pttrn_rcgntn_orgnl_imgs_1').length){
+                                alert('Exist');
+                        }
+                        $(document).keypress(function(event){
+                                alert('target : ' + event.target.id);
                                 var keycode = (event.keyCode ? event.keyCode : event.which);
                                 if(keycode == '37'){
                                     alert('You pressed a "left arrow" key in on image'); 
@@ -97,7 +101,8 @@ HTMLWidgets.widget({
                                 }
                         });
 
-                        $('#pttrn_rcgntn_orgnl_imgs_2').keypress(function(event){
+                        $(document).keypress(function(event){
+                                alert('target : ' + event.target.id);
                                 var keycode = (event.keyCode ? event.keyCode : event.which);
                                 if(keycode == '39'){
                                     alert('You pressed a "right arrow" key in on image');  
