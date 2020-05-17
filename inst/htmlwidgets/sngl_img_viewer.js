@@ -13,7 +13,7 @@ HTMLWidgets.widget({
       renderValue: function(x) {
 
         // TODO: code to render the widget, e.g.
-        console.log("sngl_img_viewer.js  16-05-20 08:50");
+        console.log("sngl_img_viewer.js  17-05-20 12:09");
         
         let spcs_idntfctns_scndry_img = new viewerClass(
                                             "spcs_idntfctn_id_rf_2",
@@ -33,12 +33,7 @@ HTMLWidgets.widget({
                 function(mesg) {
                   spcs_idntfctns_prmry_img.restart();
                   spcs_idntfctns_prmry_img.fetchServerData("img_idntfctn_prmry.csv");
-                 
-                 /* arrowControls('spcs_idntfctn_id_rf_1',
-                                'spcs_idntfctn_next_button_rf_1',
-                                'spcs_idntfctn_reset_button_rf_1',
-                                'spcs_idntfctn_prev_button_rf_1');
-                }*/
+                }
         );
 
          Shiny.addCustomMessageHandler("spcs_idntfctn_extrt_id_button_rf_2",
@@ -81,7 +76,6 @@ HTMLWidgets.widget({
         Shiny.addCustomMessageHandler("spcs_idntfctn_next_button_rf_2",
                 function(mesg) {
                    spcs_idntfctns_scndry_img.next();
-
                 }
         );
 
@@ -115,7 +109,6 @@ HTMLWidgets.widget({
 
         Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_next_buttonn",
                 function(mesg) {
-                       
                         pttrn_rcgntn_vw_orgnls_1.next();
                         pttrn_rcgntn_vw_orgnls_2.next();
                 }
