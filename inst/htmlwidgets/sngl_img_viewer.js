@@ -13,7 +13,7 @@ HTMLWidgets.widget({
       renderValue: function(x) {
 
         // TODO: code to render the widget, e.g.
-        console.log("sngl_img_viewer.js  16-05-20 08:35");
+        console.log("sngl_img_viewer.js  16-05-20 08:50");
         
         let spcs_idntfctns_scndry_img = new viewerClass(
                                             "spcs_idntfctn_id_rf_2",
@@ -45,14 +45,7 @@ HTMLWidgets.widget({
                 function(mesg) {
                   spcs_idntfctns_scndry_img.restart();
                   spcs_idntfctns_scndry_img.fetchServerData("img_idntfctn_scndry.csv");
-                  
-                  /*arrowControls(
-                        'spcs_idntfctn_id_rf_2',
-                        'spcs_idntfctn_next_button_rf_2',
-                        'spcs_idntfctn_reset_button_rf_2',
-                        'spcs_idntfctn_prev_button_rf_2');
-                  
-                }*/
+                }
         );
 
         Shiny.addCustomMessageHandler("spcs_idntfctn_reset_button_rf_1",
@@ -101,42 +94,6 @@ HTMLWidgets.widget({
                         pttrn_rcgntn_vw_orgnls_1.fetchServerData("pttrn_rcgntn_fltrd_rslts_prmry.csv");
                         pttrn_rcgntn_vw_orgnls_2.restart();
                         pttrn_rcgntn_vw_orgnls_2.fetchServerData("pttrn_rcgntn_fltrd_rslts_scndry.csv");
-
-                        // key controllers init
-                        //$('#pttrn_rcgntn_orgnl_imgs_1').focus();
-                       // $('#pttrn_rcgntn_orgnl_imgs_2').focus();
-
-                        /*$('#pttrn_rcgntn_orgnl_imgs_1').on('keydown', function(event) {
-                                alert(event.keyCode);
-                                switch (event.keyCode) {
-                                    case 37:
-                                        alert('left');
-                                        //$('#'+previd).click();
-                                        break;
-                                    case 39:
-                                        alert('right');
-                                        //$('#'+nextid).click();
-                                        break;
-                                    case 82:
-                                      alert('Reset');
-                                      //$('#'+resetid).click();
-                                      break;
-                                }
-                             });*/
-                        
-                        /*arrowControls(
-                                'pttrn_rcgntn_orgnl_imgs_1',
-                                'pttrn_rcgntn_orgnl_imgs_next_button',
-                                'pttrn_rcgntn_orgnl_imgs_dsply_button',
-                                'pttrn_rcgntn_orgnl_imgs_prev_button');
-                        
-                        
-                        arrowControls(
-                                'pttrn_rcgntn_orgnl_imgs_2',
-                                'pttrn_rcgntn_orgnl_imgs_next_button',
-                                'pttrn_rcgntn_orgnl_imgs_dsply_button',
-                                'pttrn_rcgntn_orgnl_imgs_prev_button');*/
-                        
                 }
         );
 

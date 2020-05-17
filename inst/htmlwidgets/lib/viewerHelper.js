@@ -1,7 +1,5 @@
-alert('08:35');
+alert('08:50');
 console.log('viewerHelper.js');
-
-
 // maps vwrs contl bttns
 function mapBttn(id){
   console.log('mapBttn');
@@ -45,31 +43,6 @@ function keyControls(event){
   }
   
 }
-
-/*function arrowControls(targetid,nextid,resetid,previd){
-  console.log('in arrowControls');
-  $('#'+targetid).focus();
-  $('#'+targetid).on('keydown', function(event) {
-    alert(event.keyCode);
-    switch (event.keyCode) {
-        case 37:
-            alert('left');
-            $('#'+previd).click();
-            break;
-        case 39:
-            alert('right');
-            $('#'+nextid).click();
-            break;
-        case 82:
-          alert('Reset');
-          $('#'+resetid).click();
-          break;
-    }
- });
-
-}*/
-
-
 
 async function getFile(filename) {
   console.log("getFile(filename)");
