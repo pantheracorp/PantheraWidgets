@@ -1,4 +1,4 @@
-alert('18:06');
+alert('18:23');
 console.log('viewerHelper.js');
 
 $(document).ready(function(){
@@ -52,18 +52,18 @@ function keyControls(event){
   let cntlids = mapBttn(event.target.id);
   console.log('id : ' + event.target.id);
   console.log('code : ' + event.keyCode);
-  console.log('prev : ' +  cntlids[0] + ' rst ' + cntlids[1] + ' nxt ' + cntlids[2] );
+  console.log(cntlids[0] + ' rst ' + cntlids[1] + ' nxt ' + cntlids[2] );
   switch (event.keyCode) {
     case 37:
-        alert('left');
+        //alert('left');
         $('#'+cntlids[0]).click();
         break;
     case 39:
-        alert('right');
+        //alert('right');
         $('#'+cntlids[2]).click();
         break;
     case 82:
-      alert('Reset');
+      //alert('Reset');
       $('#'+cntlids[1]).click();
       break;
   }
