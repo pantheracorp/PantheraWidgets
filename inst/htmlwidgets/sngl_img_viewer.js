@@ -91,9 +91,31 @@ HTMLWidgets.widget({
 
                         if($('#pttrn_rcgntn_orgnl_imgs_1').length){
                                 alert('Exist');
-                                $('#pttrn_rcgntn_orgnl_imgs_1').focus();
+                                $('#pttrn_rcgntn_orgnl_imgs_1').keydown(function(event){
+                                        alert('clicked');
+                                        var keycode = (event.keyCode ? event.keyCode : event.which);
+                                        if(keycode == '37'){
+                                        alert('You pressed left ');  
+                                        }
+                                        if(keycode == '39'){
+                                        alert('You pressed left ');
+                                        }
+                                        event.stopPropagation();
+                                    });
+
+                                $('#pttrn_rcgntn_orgnl_imgs_2').keydown(function(event){
+                                        alert('clicked');
+                                        var keycode = (event.keyCode ? event.keyCode : event.which);
+                                        if(keycode == '37'){
+                                        alert('You pressed left ');  
+                                        }
+                                        if(keycode == '39'){
+                                        alert('You pressed left ');
+                                        }
+                                        event.stopPropagation();
+                                    });
                         }
-                        $(document).onkeydown(function(event){
+                       /* $(document).onkeydown(function(event){
 
                                 alert('target : ' + event.target.id);
                                 let id = event.target.id;
@@ -118,7 +140,7 @@ HTMLWidgets.widget({
                                             }
 
                                 }
-                        });
+                        });*/
 
                       
 
