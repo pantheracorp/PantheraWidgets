@@ -1,4 +1,4 @@
-console.log('09:01');
+console.log('09:22');
 console.log('viewerHelper.js');
 
 /*$(document).ready(function(){
@@ -71,16 +71,16 @@ function keyControls(event){
   console.log(cntlids[0] + ' rst ' + cntlids[1] + ' nxt ' + cntlids[2] );
   switch (event.keyCode) {
     case 37:
-        //alert('left');
         $('#'+cntlids[0]).click();
+        console.log('keyControls case 37');
         break;
     case 39:
-        //alert('right');
         $('#'+cntlids[2]).click();
+        console.log('keyControls case 39');
         break;
     case 82:
-      //alert('Reset');
       $('#'+cntlids[1]).click();
+      console.log('keyControls case 82');
       break;
   }
   
