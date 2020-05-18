@@ -13,7 +13,7 @@ HTMLWidgets.widget({
       renderValue: function(x) {
 
         // TODO: code to render the widget, e.g.
-        console.log("sngl_img_viewer.js  18-05-20 09:38");
+        console.log("sngl_img_viewer.js  18-05-20 15:29");
         
         let spcs_idntfctns_scndry_img = new viewerClass(
                                             "spcs_idntfctn_id_rf_2",
@@ -131,19 +131,19 @@ HTMLWidgets.widget({
                       
                         pttrn_rcgntn_vw_orgnls_1.restart();
                         pttrn_rcgntn_vw_orgnls_1.fetchServerData("pttrn_rcgntn_fltrd_rslts_prmry.csv");
-                        $('#pttrn_rcgntn_orgnl_imgs_1').attr('tabindex', '0');
-                        $('#pttrn_rcgntn_orgnl_imgs_1').css({'outline': '0px solid transparent'});
+                        //$('#pttrn_rcgntn_orgnl_imgs_1').attr('tabindex', '0');
+                        //$('#pttrn_rcgntn_orgnl_imgs_1').css({'outline': '0px solid transparent'});
                         //$('#pttrn_rcgntn_orgnl_imgs_1').focus();
                         
                         pttrn_rcgntn_vw_orgnls_2.restart();
                         pttrn_rcgntn_vw_orgnls_2.fetchServerData("pttrn_rcgntn_fltrd_rslts_scndry.csv");
-                        $('#pttrn_rcgntn_orgnl_imgs_2').attr('tabindex', '0');
+                        /*$('#pttrn_rcgntn_orgnl_imgs_2').attr('tabindex', '0');
                         $('#pttrn_rcgntn_orgnl_imgs_2').css({'outline': '0px solid transparent'});
                         $('#pttrn_rcgntn_orgnl_imgs_2').focus();
 
                         if($('#pttrn_rcgntn_orgnl_imgs_2').length){
                 
-                                /*$('#pttrn_rcgntn_orgnl_imgs_1').keydown(function(event){
+                                $('#pttrn_rcgntn_orgnl_imgs_1').keydown(function(event){
                                         console.log('keydown pttrn_rcgntn_orgnl_imgs_1');
                                         var keycode = (event.keyCode ? event.keyCode : event.which);
                                         if(keycode == '37'){
@@ -159,7 +159,7 @@ HTMLWidgets.widget({
                                                 pttrn_rcgntn_vw_orgnls_2.reset(); 
                                         }
                                         event.stopPropagation();
-                                    });*/
+                                    });
 
                                 $('#pttrn_rcgntn_orgnl_imgs_2').keydown(function(event){
                                         console.log('keydown pttrn_rcgntn_orgnl_imgs_2');
@@ -181,7 +181,7 @@ HTMLWidgets.widget({
                                         }
                                         event.stopPropagation();
                                     });
-                        }
+                        }*/
                 }
         );
 

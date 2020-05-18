@@ -21,14 +21,14 @@ function setCanvas(targetID,imgSrc){
 
       if(targetID === 'pttrn_rcgntn_orgnl_imgs_1' || targetID === 'pttrn_rcgntn_orgnl_imgs_2'){
 
-        $('#'+targetID).prepend($('<img>',{id:imgId,src:imgSrc,alt:'camtrap',width:'100%',height:'200px'}));
+        $('#'+targetID).prepend($('<img>',{id:imgId,src:imgSrc,alt:'camtrap',width:'100%',height:'100%'}));
         
-        $('#currnt-img_orgnl_imgs_2').click(function() {
+         /*$('#currnt-img_orgnl_imgs_2').click(function() {
           console.log('clicked currnt-img_orgnl_imgs_2');
           $('#pttrn_rcgntn_orgnl_imgs_2').focus();
         });
         
-        /*$('#currnt-img_orgnl_imgs_1').click(function() {
+       $('#currnt-img_orgnl_imgs_1').click(function() {
           console.log('clicked currnt-img_orgnl_imgs_1');
           $('#pttrn_rcgntn_orgnl_imgs_1').focus();
         });*/
