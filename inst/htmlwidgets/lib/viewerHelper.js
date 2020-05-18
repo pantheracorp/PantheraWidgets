@@ -1,4 +1,4 @@
-console.log('09:22');
+console.log('09:38');
 console.log('viewerHelper.js');
 
 /*$(document).ready(function(){

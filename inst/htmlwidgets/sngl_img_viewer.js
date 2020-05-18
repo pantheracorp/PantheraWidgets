@@ -13,7 +13,7 @@ HTMLWidgets.widget({
       renderValue: function(x) {
 
         // TODO: code to render the widget, e.g.
-        console.log("sngl_img_viewer.js  18-05-20 09:22");
+        console.log("sngl_img_viewer.js  18-05-20 09:38");
         
         let spcs_idntfctns_scndry_img = new viewerClass(
                                             "spcs_idntfctn_id_rf_2",
@@ -133,9 +133,7 @@ HTMLWidgets.widget({
                         pttrn_rcgntn_vw_orgnls_1.fetchServerData("pttrn_rcgntn_fltrd_rslts_prmry.csv");
                         $('#pttrn_rcgntn_orgnl_imgs_1').attr('tabindex', '0');
                         $('#pttrn_rcgntn_orgnl_imgs_1').css({'outline': '0px solid transparent'});
-                        $('#pttrn_rcgntn_orgnl_imgs_1').focus();
-                        
-                        
+                        //$('#pttrn_rcgntn_orgnl_imgs_1').focus();
                         
                         pttrn_rcgntn_vw_orgnls_2.restart();
                         pttrn_rcgntn_vw_orgnls_2.fetchServerData("pttrn_rcgntn_fltrd_rslts_scndry.csv");
@@ -143,9 +141,9 @@ HTMLWidgets.widget({
                         $('#pttrn_rcgntn_orgnl_imgs_2').css({'outline': '0px solid transparent'});
                         $('#pttrn_rcgntn_orgnl_imgs_2').focus();
 
-                        if($('#pttrn_rcgntn_orgnl_imgs_1').length){
+                        if($('#pttrn_rcgntn_orgnl_imgs_2').length){
                 
-                                $('#pttrn_rcgntn_orgnl_imgs_1').keydown(function(event){
+                                /*$('#pttrn_rcgntn_orgnl_imgs_1').keydown(function(event){
                                         console.log('keydown pttrn_rcgntn_orgnl_imgs_1');
                                         var keycode = (event.keyCode ? event.keyCode : event.which);
                                         if(keycode == '37'){
@@ -161,20 +159,23 @@ HTMLWidgets.widget({
                                                 pttrn_rcgntn_vw_orgnls_2.reset(); 
                                         }
                                         event.stopPropagation();
-                                    });
+                                    });*/
 
                                 $('#pttrn_rcgntn_orgnl_imgs_2').keydown(function(event){
                                         console.log('keydown pttrn_rcgntn_orgnl_imgs_2');
                                         var keycode = (event.keyCode ? event.keyCode : event.which);
                                         if(keycode == '37'){
+                                                console.log('prev');
                                                 pttrn_rcgntn_vw_orgnls_1.prev();
                                                 pttrn_rcgntn_vw_orgnls_2.prev(); 
                                         }
                                         if(keycode == '39'){
+                                                console.log('nxt');
                                                 pttrn_rcgntn_vw_orgnls_1.next();
                                                 pttrn_rcgntn_vw_orgnls_2.next(); 
                                         }
                                         if(keycode == '82'){
+                                                console.log('rst');
                                                 pttrn_rcgntn_vw_orgnls_1.reset();
                                                 pttrn_rcgntn_vw_orgnls_2.reset(); 
                                         }
