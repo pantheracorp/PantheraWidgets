@@ -1,15 +1,16 @@
-console.log('21:03');
+console.log('08:11');
 console.log('viewerHelper.js');
 
-$(document).ready(function(){
+/*$(document).ready(function(){
 
-  $('#spcs_idntfctn_id_rf_1').click(function() {
+  $('#currnt-img_id_rf_1').click(function() {
     //alert('clicked spcs_idntfctn_id_rf_1');
+    console.log('clicked img_id_rf_1');
     $('#spcs_idntfctn_id_rf_1').focus();
   });
 
-  $('#spcs_idntfctn_id_rf_2').click(function() {
-    //alert('clicked spcs_idntfctn_id_rf_2');
+  $('#currnt-img_id_rf_2').click(function() {
+    console.log('clicked currnt-img_id_rf_2');
     $('#spcs_idntfctn_id_rf_2').focus();
   });
 
@@ -23,7 +24,29 @@ $(document).ready(function(){
     $('#pttrn_rcgntn_orgnl_imgs_1').focus();
   });
 
- });
+ });*/
+
+
+$('#currnt-img_id_rf_1').click(function() {
+  //alert('clicked spcs_idntfctn_id_rf_1');
+  console.log('clicked img_id_rf_1');
+  $('#spcs_idntfctn_id_rf_1').focus();
+});
+
+$('#currnt-img_id_rf_2').click(function() {
+  console.log('clicked currnt-img_id_rf_2');
+  $('#spcs_idntfctn_id_rf_2').focus();
+});
+
+$('#currnt-img_orgnl_imgs_2').click(function() {
+  console.log('clicked currnt-img_orgnl_imgs_2');
+  $('#pttrn_rcgntn_orgnl_imgs_1').focus();
+});
+
+$('#currnt-img_orgnl_imgs_1').click(function() {
+  console.log('clicked currnt-img_orgnl_imgs_1');
+  $('#pttrn_rcgntn_orgnl_imgs_1').focus();
+});
 
 
 // maps vwrs contl bttns
