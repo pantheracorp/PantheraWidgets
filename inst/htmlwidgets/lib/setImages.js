@@ -11,10 +11,6 @@ function setCanvas(targetID,imgSrc){
     else{
       imgId = 'currnt-img_' + targetID.substring(14, targetID.length);
     }
-   
-
-    // console.log('imgId ' + imgId);
-    // console.log('target id exist : ' + $('#'+targetID+' img' ).length);
 
     // the target div already exist
     if ( $('#'+targetID+' img' ).length )
@@ -26,10 +22,31 @@ function setCanvas(targetID,imgSrc){
       if(targetID === 'pttrn_rcgntn_orgnl_imgs_1' || targetID === 'pttrn_rcgntn_orgnl_imgs_2'){
 
         $('#'+targetID).prepend($('<img>',{id:imgId,src:imgSrc,alt:'camtrap',width:'100%',height:'200px'}));
+        
+        $('#currnt-img_orgnl_imgs_2').click(function() {
+          console.log('clicked currnt-img_orgnl_imgs_2');
+          $('#pttrn_rcgntn_orgnl_imgs_1').focus();
+        });
+        
+        $('#currnt-img_orgnl_imgs_1').click(function() {
+          console.log('clicked currnt-img_orgnl_imgs_1');
+          $('#pttrn_rcgntn_orgnl_imgs_1').focus();
+        });
+        
       }
       else{
 
         $('#'+targetID).prepend($('<img>',{id:imgId,src:imgSrc,alt:'camtrap',width:'100%',height:'500px'}));
+        
+        $('#currnt-img_id_rf_2').click(function() {
+          console.log('clicked currnt-img_id_rf_2');
+          $('#spcs_idntfctn_id_rf_2').focus();
+        });
+
+        $('#currnt-img_id_rf_1').click(function() {
+              console.log('clicked img_id_rf_1');
+              $('#spcs_idntfctn_id_rf_1').focus();
+        });
       }
 
       wheelzoom(document.querySelector("#"+imgId));

@@ -1,4 +1,4 @@
-console.log('08:40');
+console.log('09:01');
 console.log('viewerHelper.js');
 
 /*$(document).ready(function(){
@@ -40,15 +40,6 @@ $('#currnt-img_id_rf_2').click(function() {
 
 */
 
-$('#currnt-img_orgnl_imgs_2').click(function() {
-  console.log('clicked currnt-img_orgnl_imgs_2');
-  $('#pttrn_rcgntn_orgnl_imgs_1').focus();
-});
-
-$('#currnt-img_orgnl_imgs_1').click(function() {
-  console.log('clicked currnt-img_orgnl_imgs_1');
-  $('#pttrn_rcgntn_orgnl_imgs_1').focus();
-});
 
 
 // maps vwrs contl bttns
