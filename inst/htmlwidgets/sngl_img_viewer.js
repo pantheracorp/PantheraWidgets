@@ -13,7 +13,7 @@ HTMLWidgets.widget({
       renderValue: function(x) {
 
         // TODO: code to render the widget, e.g.
-        console.log("sngl_img_viewer.js  18-05-20 08:11");
+        console.log("sngl_img_viewer.js  18-05-20 08:40");
         
         let spcs_idntfctns_scndry_img = new viewerClass(
                                             "spcs_idntfctn_id_rf_2",
@@ -37,6 +37,12 @@ HTMLWidgets.widget({
                   $('#spcs_idntfctn_id_rf_1').attr('tabindex', '0');
                   $('#spcs_idntfctn_id_rf_1').focus();
                   // Arrow controls
+                  $('#currnt-img_id_rf_1').click(function() {
+                        console.log('clicked img_id_rf_1');
+                        $('#spcs_idntfctn_id_rf_1').focus();
+                   });
+
+
                   $('#spcs_idntfctn_id_rf_1').keydown(function(event){
                         
                         //alert('clicked');
@@ -67,6 +73,10 @@ HTMLWidgets.widget({
                   $('#spcs_idntfctn_id_rf_2').attr('tabindex', '0');
                   $('#spcs_idntfctn_id_rf_2').focus();
                   // Arrow controls
+                  $('#currnt-img_id_rf_2').click(function() {
+                        console.log('clicked currnt-img_id_rf_2');
+                        $('#spcs_idntfctn_id_rf_2').focus();
+                  });
                   $('#spcs_idntfctn_id_rf_2').keydown(function(event){
 
                         //alert('clicked');
