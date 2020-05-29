@@ -13,7 +13,7 @@ HTMLWidgets.widget({
       renderValue: function(x) {
 
         // TODO: code to render the widget, e.g.
-        console.log("sngl_img_viewer.js  29-05-2020 15:48");
+        console.log("sngl_img_viewer.js 29-05-2020 16:58");
         
         let spcs_idntfctns_scndry_img = new viewerClass(
                                             "spcs_idntfctn_id_rf_2",
@@ -42,9 +42,9 @@ HTMLWidgets.widget({
 
                   $('#spcs_idntfctn_id_rf_1').keydown(function(event){
                         
-                        //alert('clicked');
-                        var keycode = (event.keyCode ? event.keyCode : event.which);
                        
+                        var keycode = (event.keyCode ? event.keyCode : event.which);
+                        console.log(' spcs_idntfctn_id_rf_1 clicked ' + keycode);
                         if(keycode == '37'){
                                
                                 spcs_idntfctns_prmry_img.prev();
@@ -74,6 +74,7 @@ HTMLWidgets.widget({
                   $('#spcs_idntfctn_id_rf_2').keydown(function(event){
 
                         var keycode = (event.keyCode ? event.keyCode : event.which);
+                        console.log(' spcs_idntfctn_id_rf_1 clicked : ' + keycode);
                         if(keycode == '37'){
                                 spcs_idntfctns_scndry_img.prev();
                         }

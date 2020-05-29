@@ -99,7 +99,7 @@ class viewerClass {
       }
 
       reset(){
-        // console.log('reset');
+         console.log('reset ' + this.moduleId + 'indx ' + this.currentIndex);
         // console.log('curr index : ' + this.currentIndex);
         // console.log(this.result.length);
          this.currentIndex = 0;
@@ -111,7 +111,7 @@ class viewerClass {
       }
 
       next() {
-        // console.log('next : ' + this.moduleId);
+         console.log('next : ' + this.moduleId + 'indx ' + this.currentIndex);
         // console.log('arr size : ' + this.result.length);
         // console.log('curr index : ' + this.currentIndex);
         // console.log("Before next : " +  this.result[this.currentIndex]);
@@ -136,7 +136,7 @@ class viewerClass {
     }
 
     prev() {
-      // console.log('prev');
+       console.log('prev ' + this.moduleId + 'indx ' + this.currentIndex);
       // console.log('curr index : ' + this.currentIndex);
       // console.log(this.result.length);
 
