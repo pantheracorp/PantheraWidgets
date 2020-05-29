@@ -35,8 +35,9 @@ function setCanvas(targetID,imgSrc){
         
       }
       else{
-
-        $('#'+targetID).prepend($('<img>',{id:imgId,src:imgSrc,alt:'camtrap',width:'100%',height:'500px'}));
+        $('#spcs_idntfctn_id_rf_1').css("text-align: center");
+        $('#spcs_idntfctn_id_rf_2').css("text-align: center");
+        $('#'+targetID).prepend($('<img>',{id:imgId,src:imgSrc,alt:'camtrap',width:'auto',height:'auto','max-height':'500px'}));
         
         $('#currnt-img_id_rf_2').click(function() {
           console.log('clicked currnt-img_id_rf_2');
