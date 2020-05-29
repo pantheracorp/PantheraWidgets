@@ -1,7 +1,7 @@
 
 //console.log("setImages.js  panwidgts 17-05-20 13:32");
 function setCanvas(targetID,imgSrc){
-    console.log('setCanvas : ' + targetID);
+    console.log('setCanvas : ' + targetID + '29-05-2020');
 
     let imgId = '';
     
@@ -37,7 +37,7 @@ function setCanvas(targetID,imgSrc){
       else{
         $('#spcs_idntfctn_id_rf_1').css("text-align: center");
         $('#spcs_idntfctn_id_rf_2').css("text-align: center");
-        $('#'+targetID).prepend($('<img>',{id:imgId,src:imgSrc,alt:'camtrap',width:'auto',height:'auto','max-height':'500px'}));
+        $('#'+targetID).prepend($('<img>',{id:imgId,src:imgSrc,alt:'camtrap',width:'auto', 'max-width':'100%',height:'auto','max-height':'500px'}));
         
         $('#currnt-img_id_rf_2').click(function() {
           console.log('clicked currnt-img_id_rf_2');
