@@ -1,4 +1,4 @@
-console.log('29-05-2020 16:58');
+console.log('29-05-2020 17:20');
 console.log('viewerHelper.js');
 
 /*$(document).ready(function(){

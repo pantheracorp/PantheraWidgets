@@ -13,7 +13,7 @@ HTMLWidgets.widget({
       renderValue: function(x) {
 
         // TODO: code to render the widget, e.g.
-        console.log("sngl_img_viewer.js 29-05-2020 16:58");
+        console.log("sngl_img_viewer.js 29-05-2020 17:20");
         
         let spcs_idntfctns_scndry_img = new viewerClass(
                                             "spcs_idntfctn_id_rf_2",
@@ -40,7 +40,7 @@ HTMLWidgets.widget({
                   
 
 
-                  $('#spcs_idntfctn_id_rf_1').keydown(function(event){
+                  /*$('#spcs_idntfctn_id_rf_1').keydown(function(event){
                         
                        
                         var keycode = (event.keyCode ? event.keyCode : event.which);
@@ -58,7 +58,7 @@ HTMLWidgets.widget({
                                 spcs_idntfctns_prmry_img.reset();
                         }
                         event.stopPropagation();
-                    });
+                    });*/
                 }
         );
 
@@ -71,7 +71,7 @@ HTMLWidgets.widget({
                   $('#spcs_idntfctn_id_rf_2').focus();
                   // Arrow controls
                   
-                  $('#spcs_idntfctn_id_rf_2').keydown(function(event){
+                  /*$('#spcs_idntfctn_id_rf_2').keydown(function(event){
 
                         var keycode = (event.keyCode ? event.keyCode : event.which);
                         console.log(' spcs_idntfctn_id_rf_1 clicked : ' + keycode);
@@ -85,7 +85,7 @@ HTMLWidgets.widget({
                                 spcs_idntfctns_scndry_img.reset();
                         }
                         event.stopPropagation();
-                    });
+                    });*/
                 }
         );
 
