@@ -35,8 +35,8 @@ function setCanvas(targetID,imgSrc){
         
       }
       else{
-        $('#spcs_idntfctn_id_rf_1').css("text-align: center");
-        $('#spcs_idntfctn_id_rf_2').css("text-align: center");
+        $('#spcs_idntfctn_id_rf_1').css('text-align','center');
+        $('#spcs_idntfctn_id_rf_2').css('text-align','center');
         $('#'+targetID).prepend($('<img>',{id:imgId,src:imgSrc,alt:'camtrap',width:'auto',height:'auto',}));
         $('#'+imgId).css({
           'maxHeight':'500px',
