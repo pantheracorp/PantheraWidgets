@@ -1,7 +1,7 @@
 
 //console.log("setImages.js  panwidgts 17-05-20 13:32");
 function setCanvas(targetID,imgSrc){
-    console.log('setCanvas : ' + targetID + '29-05-2020');
+    console.log('setCanvas : ' + targetID + '29-05-2020 15:48');
 
     let imgId = '';
     
@@ -21,7 +21,14 @@ function setCanvas(targetID,imgSrc){
 
       if(targetID === 'pttrn_rcgntn_orgnl_imgs_1' || targetID === 'pttrn_rcgntn_orgnl_imgs_2'){
 
-        $('#'+targetID).prepend($('<img>',{id:imgId,src:imgSrc,alt:'camtrap',width:'100%',height:'100%'}));
+        $('#'+targetID).css('text-align','center');
+        //$('#spcs_idntfctn_id_rf_2').css('text-align','center');
+
+        $('#'+targetID).prepend($('<img>',{id:imgId,src:imgSrc,alt:'camtrap',width:'100%',height:'auto'}));
+        $('#'+imgId).css({
+          'maxHeight':'100%',
+          'maxWidth':'100%'
+        });
         
          /*$('#currnt-img_orgnl_imgs_2').click(function() {
           console.log('clicked currnt-img_orgnl_imgs_2');
@@ -35,9 +42,9 @@ function setCanvas(targetID,imgSrc){
         
       }
       else{
-        $('#spcs_idntfctn_id_rf_1').css('text-align','center');
-        $('#spcs_idntfctn_id_rf_2').css('text-align','center');
-        $('#'+targetID).prepend($('<img>',{id:imgId,src:imgSrc,alt:'camtrap',width:'auto',height:'auto',}));
+        $('#'+targetID).css('text-align','center');
+        //$('#spcs_idntfctn_id_rf_2').css('text-align','center');
+        $('#'+targetID).prepend($('<img>',{id:imgId,src:imgSrc,alt:'camtrap',width:'100%',height:'auto'}));
         $('#'+imgId).css({
           'maxHeight':'500px',
           'maxWidth':'100%'
