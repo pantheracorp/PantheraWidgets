@@ -10,7 +10,7 @@ HTMLWidgets.widget({
 
       renderValue: function(x) {
 
-        console.log("sngl_img_viewer.js 03-06-2020 16:30");
+        console.log("sngl_img_viewer.js 03-06-2020 16:54");
         
         let spcs_idntfctns_scndry_img = new viewerClass(
                                             "spcs_idntfctn_id_rf_2",
@@ -34,6 +34,11 @@ HTMLWidgets.widget({
                   $('#spcs_idntfctn_id_rf_1').css({'outline': '0px solid transparent'});
                   $('#spcs_idntfctn_id_rf_1').attr('tabindex', '0');
                   $('#spcs_idntfctn_id_rf_1').focus();
+
+                  $('#currnt-img_id_rf_1').click(function() {
+                        console.log('clicked currnt-img_id_rf_1');
+                        $('#spcs_idntfctn_id_rf_1').focus();
+                });
                 }
         );
 
@@ -44,6 +49,11 @@ HTMLWidgets.widget({
                   $('#spcs_idntfctn_id_rf_2').css({'outline': '0px solid transparent'});
                   $('#spcs_idntfctn_id_rf_2').attr('tabindex', '0');
                   $('#spcs_idntfctn_id_rf_2').focus();
+
+                  $('#currnt-img_id_rf_2').click(function() {
+                        console.log('clicked currnt-img_id_rf_2');
+                        $('#spcs_idntfctn_id_rf_2').focus();
+                 });
                 }
         );
 
@@ -97,6 +107,16 @@ HTMLWidgets.widget({
                         $('#pttrn_rcgntn_orgnl_imgs_2').attr('tabindex', '0');
                         $('#pttrn_rcgntn_orgnl_imgs_2').css({'outline': '0px solid transparent'});
                         $('#pttrn_rcgntn_orgnl_imgs_2').focus();
+
+                        $('#currnt-img_orgnl_imgs_2').click(function() {
+                                console.log('clicked pttrn_rcgntn_orgnl_imgs_2');
+                                $('#pttrn_rcgntn_orgnl_imgs_1').focus();
+                        });
+                        
+                        $('#currnt-img_orgnl_imgs_1').click(function() {
+                                console.log('clicked pttrn_rcgntn_orgnl_imgs_1');
+                                $('#pttrn_rcgntn_orgnl_imgs_1').focus();
+                        });
                 }
         );
 
