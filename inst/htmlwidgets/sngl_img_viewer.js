@@ -13,7 +13,7 @@ HTMLWidgets.widget({
       renderValue: function(x) {
 
         // TODO: code to render the widget, e.g.
-        console.log("sngl_img_viewer.js 29-05-2020 17:20");
+        console.log("sngl_img_viewer.js 03-06-2020 14:20");
         
         let spcs_idntfctns_scndry_img = new viewerClass(
                                             "spcs_idntfctn_id_rf_2",
@@ -32,7 +32,6 @@ HTMLWidgets.widget({
         Shiny.addCustomMessageHandler("spcs_idntfctn_extrt_id_button_rf_1",
                 function(mesg) {
                   spcs_idntfctn_extrt_id_button_rf_1
-                  displayImagesEvent('spcs_idntfctns_prmry_img','spcs_idntfctn_id_rf_1');
                   spcs_idntfctns_prmry_img.restart();
                   spcs_idntfctns_prmry_img.fetchServerData("img_idntfctn_prmry.csv");
                   $('#spcs_idntfctn_id_rf_1').css({'outline': '0px solid transparent'});
