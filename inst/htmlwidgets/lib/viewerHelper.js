@@ -1,11 +1,10 @@
-    console.log('03-06-2020 14:20');
+    console.log('03-06-2020 14:25');
     console.log('viewerHelper.js');
 
     $(document).ready(function(){
 
       $('#currnt-img_id_rf_1').click(function() {
-        console.log('clicked spcs_idntfctn_id_rf_1');
-        console.log('clicked img_id_rf_1');
+        console.log('clicked currnt-img_id_rf_1');
         $('#spcs_idntfctn_id_rf_1').focus();
       });
 
@@ -28,18 +27,21 @@
 
     // maps vwrs contl bttns
     function mapBttn(id){
-      console.log('mapBttn');
+      console.log('mapBttn : ' + id);
       if(id === 'pttrn_rcgntn_orgnl_imgs_2' || 'pttrn_rcgntn_orgnl_imgs_1'){
+        console.log('pttrn_rcgntn_orgnl_imgs');
         return ['pttrn_rcgntn_orgnl_imgs_prev_button',
                 'pttrn_rcgntn_orgnl_imgs_dsply_button',
                 'pttrn_rcgntn_orgnl_imgs_next_button'];
       }
       if(id === 'spcs_idntfctn_id_rf_2'){
+        console.log('spcs_idntfctn_id_rf_2');
         return ['spcs_idntfctn_prev_button_rf_2',
                 'spcs_idntfctn_reset_button_rf_2',
                 'spcs_idntfctn_next_button_rf_2'];
       }
       if(id === 'spcs_idntfctn_id_rf_1'){
+        console.log('spcs_idntfctn_prev_button_rf_1');
         return ['spcs_idntfctn_prev_button_rf_1',
                 'spcs_idntfctn_reset_button_rf_1',
                 'spcs_idntfctn_next_button_rf_1'];
