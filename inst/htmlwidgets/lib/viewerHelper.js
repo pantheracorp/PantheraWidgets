@@ -28,7 +28,7 @@
     // maps vwrs contl bttns
     function mapBttn(id){
       console.log('mapBttn : ' + id);
-      if(id === 'pttrn_rcgntn_orgnl_imgs_2' || 'pttrn_rcgntn_orgnl_imgs_1'){
+      if(id === 'pttrn_rcgntn_orgnl_imgs_2' || id === 'pttrn_rcgntn_orgnl_imgs_1'){
         console.log('pttrn_rcgntn_orgnl_imgs');
         return ['pttrn_rcgntn_orgnl_imgs_prev_button',
                 'pttrn_rcgntn_orgnl_imgs_dsply_button',
