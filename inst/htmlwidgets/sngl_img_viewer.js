@@ -31,6 +31,8 @@ HTMLWidgets.widget({
         // Handle extract images buttons 
         Shiny.addCustomMessageHandler("spcs_idntfctn_extrt_id_button_rf_1",
                 function(mesg) {
+                  spcs_idntfctn_extrt_id_button_rf_1
+                  displayImagesEvent('spcs_idntfctns_prmry_img','spcs_idntfctn_id_rf_1');
                   spcs_idntfctns_prmry_img.restart();
                   spcs_idntfctns_prmry_img.fetchServerData("img_idntfctn_prmry.csv");
                   $('#spcs_idntfctn_id_rf_1').css({'outline': '0px solid transparent'});
@@ -41,7 +43,6 @@ HTMLWidgets.widget({
 
 
                   /*$('#spcs_idntfctn_id_rf_1').keydown(function(event){
-                        
                        
                         var keycode = (event.keyCode ? event.keyCode : event.which);
                         console.log(' spcs_idntfctn_id_rf_1 clicked ' + keycode);
