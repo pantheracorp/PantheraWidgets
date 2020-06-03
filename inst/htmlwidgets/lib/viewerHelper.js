@@ -1,7 +1,7 @@
-    console.log('03-06-2020 16:20');
+    console.log('03-06-2020 16:30');
     console.log('viewerHelper.js');
 
-    /*$(document).ready(function(){
+    $(document).ready(function(){
 
       $('#currnt-img_id_rf_1').click(function() {
         console.log('clicked currnt-img_id_rf_1');
@@ -23,7 +23,7 @@
         $('#pttrn_rcgntn_orgnl_imgs_1').focus();
       });
 
-    });*/
+    });
 
     // maps vwrs contl bttns
     function mapBttn(id){
