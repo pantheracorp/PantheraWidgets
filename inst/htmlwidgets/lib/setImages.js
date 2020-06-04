@@ -1,7 +1,7 @@
 
 //console.log("setImages.js  panwidgts 17-05-20 13:32");
 function setCanvas(targetID,imgSrc){
-    console.log('setCanvas : ' + targetID + '29-05-2020 17:20');
+    console.log('setCanvas : ' + targetID + '04-06-2020 09:29');
 
     let imgId = '';
     
@@ -50,12 +50,12 @@ function setCanvas(targetID,imgSrc){
           'maxWidth':'100%'
         });
         $('#currnt-img_id_rf_2').click(function() {
-          console.log('clicked currnt-img_id_rf_2');
+          //console.log('clicked currnt-img_id_rf_2');
           $('#spcs_idntfctn_id_rf_2').focus();
         });
 
         $('#currnt-img_id_rf_1').click(function() {
-              console.log('clicked img_id_rf_1');
+              //console.log('clicked img_id_rf_1');
               $('#spcs_idntfctn_id_rf_1').focus();
         });
       }
