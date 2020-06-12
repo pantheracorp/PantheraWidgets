@@ -23,7 +23,7 @@ class viewerClass {
 
       processImgSrc(arry){
           //alert('processImgSrc : ' + this.moduleId);
-          console.log('processImgSrc');
+          //console.log('processImgSrc');
           let tempArray = [];
           arry.forEach(function(item){
             let src  = ((item.trim()).replace(/['"]+/g, '')).replace(/(\r\n|\n|\r)/gm,"");
@@ -76,13 +76,29 @@ class viewerClass {
           console.log(" Error in reading your images.Please check if all requirements are provided.");
         }
         else{
-          respArray = response.split(',');
-          respArray.splice(0, 1);
-          respArray[0] = respArray[0].replace("Source", "");
-          respArray[0] = respArray[respArray.length - 1] + respArray[0];
-          respArray.splice(respArray.length - 1, 1);
-          this.result =  this.processImgSrc(respArray);
+          //respArray = response.split(',');
+          respArray = response.split("\n");
+          //respArray.splice(0, 1);
+          respArray.shift();
+          console.log("Resp Array : " + respArray);
+          //respArray[0] = respArray[0].replace("Source", "");
+
+          if(respArray[respArray.length-1]==""){
+            console.log('pop');
+            respArray.pop();
+          }
+
+          for(let i = 0 ; i < respArray.length; i++ ){
+            respArray[i].replace(',','');
+            let src = respArray[i].substring(respArray[i].indexOf('/'),respArray[i].lastIndexOf('/'))+'/'+respArray[i].substring(0,respArray[i].indexOf('/'));
+            this.result.push(src);
+           }
+          //console.log("respArray[0] : " + respArray[0]);
+          // respArray[0] = respArray[respArray.length - 1] + respArray[0];
+          // respArray.splice(respArray.length - 1, 1);
+          // this.result =  this.processImgSrc(respArray);
           console.log(this.moduleId + 'Total Imgs : ' + (this.result.length));
+          console.log(this.result)
           this.displayImage();
 
         }
@@ -90,7 +106,9 @@ class viewerClass {
 
       reset(){
          console.log('reset ' + this.moduleId + 'indx ' + this.currentIndex);
+         
          this.currentIndex = 0;
+         console.log('img : ' + this.result[this.currentIndex]);
          this.sendDataToShinny();
          $('#'+this.moduleId+' img' ).attr('src', this.result[this.currentIndex] );
 
@@ -98,6 +116,7 @@ class viewerClass {
 
       next() {
          console.log('next : ' + this.moduleId + 'indx ' + this.currentIndex);
+         
         
         if(this.currentIndex == (this.result).length-1){
         }
@@ -107,6 +126,7 @@ class viewerClass {
            }
            $('#'+this.moduleId+' img' ).attr('src', this.result[this.currentIndex+1] );
            this.currentIndex++;
+           console.log('img : ' + this.result[this.currentIndex]);
            this.sendDataToShinny();
         }
         
@@ -114,10 +134,12 @@ class viewerClass {
 
     prev() {
        console.log('prev ' + this.moduleId + 'indx ' + this.currentIndex);
+       
         if(this.currentIndex == 0){
         }else{
              $('#'+this.moduleId+' img' ).attr('src', this.result[this.currentIndex-1] );
              this.currentIndex--;
+             console.log('img : ' + this.result[this.currentIndex]);
              this.sendDataToShinny();
         }
        
