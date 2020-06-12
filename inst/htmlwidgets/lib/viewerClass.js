@@ -70,21 +70,26 @@ class viewerClass {
 
       readServerData(response) {
         let respArray = [];
-        //console.log("In readServerData response : " + response);
+        console.log("readServerData response : " + response);
         if(response === null )
         {
           console.log(" Error in reading your images.Please check if all requirements are provided.");
         }
         else{
           respArray = response.split(',');
+          console.log("server response : " + respArray);
           respArray.splice(0, 1);
           respArray[0] = respArray[0].replace("Source", "");
           respArray[0] = respArray[respArray.length - 1] + respArray[0];
           respArray.splice(respArray.length - 1, 1);
           this.imgArray =  this.processImgSrc(respArray);
+          console.log(this.imgArray);
+          console.log((this.imgArray).toString());
           this.displayImage();
+          
 
         }
+        console.log("End of readServerData response");
         //this.imgloop(this.displayImages(this.imgNumb,0));
       }
 
@@ -99,12 +104,16 @@ class viewerClass {
 
       next() {
 
+        console.log("next");
+       
+
         if(this.currentIndex == this.imgArray.length-1){
 
           // last image
 
         }
         else{
+          console.log(this.imgArray[this.currentIndex+1]);
             //console.log("In Next Array : " + this.imgArray);
            //console.log("Before next : " + $('#'+this.moduleId+' img' ).attr('src'));
            if(this.imgexist(this.imgArray[this.currentIndex+1]) == false){
@@ -116,19 +125,24 @@ class viewerClass {
            this.sendDataToShinny();
         }
 
+        console.log("end of next");
+
     }
 
     prev() {
+      console.log("next");
         if(this.currentIndex == 0){
           // first image
         }else{
              //console.log("Before prev : " + $('#'+this.moduleId+' img' ).attr('src'));
+             console.log(this.imgArray[this.currentIndex-1]);
              $('#'+this.moduleId+' img' ).attr('src', this.imgArray[this.currentIndex-1] );
              //console.log("After prev : " + $('#'+this.moduleId+' img' ).attr('src'));
              this.currentIndex--;
              this.sendDataToShinny();
 
         }
+        console.log("end of next");
 
     }
 
