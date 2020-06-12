@@ -89,8 +89,10 @@ class viewerClass {
           }
 
           for(let i = 0 ; i < respArray.length; i++ ){
-            respArray[i].replace(',','');
+            //respArray[i].replace(',','');
             let src = respArray[i].substring(respArray[i].indexOf('/'),respArray[i].lastIndexOf('/'))+'/'+respArray[i].substring(0,respArray[i].indexOf('/'));
+            src.replace(',','');
+            console.log(src);
             this.result.push(src);
            }
           //console.log("respArray[0] : " + respArray[0]);
