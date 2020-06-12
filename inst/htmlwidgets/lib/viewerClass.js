@@ -36,7 +36,7 @@ class viewerClass {
       displayImage(){
 
         console.log('displayImage');
-        console.log(this.result.length);
+        //console.log(this.result.length);
 
         if(this.imgexist(this.result[0]) == false){
             //alert('Alert img not exist');
@@ -77,11 +77,10 @@ class viewerClass {
         }
         else{
           //respArray = response.split(',');
+              //respArray.splice(0, 1);
           respArray = response.split("\n");
-          //respArray.splice(0, 1);
           respArray.shift();
-          console.log("Resp Array : " + respArray);
-          //respArray[0] = respArray[0].replace("Source", "");
+          
 
           if(respArray[respArray.length-1]==""){
             //console.log('pop');
@@ -92,7 +91,7 @@ class viewerClass {
             //respArray[i].replace(',','');
             let src = respArray[i].substring(respArray[i].indexOf('/'),respArray[i].lastIndexOf('/'))+'/'+respArray[i].substring(0,respArray[i].indexOf('/'));
             //src.replace(',','');
-            console.log(src);
+            //console.log(src);
             this.result.push(src.replace(',',''));
            }
           //console.log("respArray[0] : " + respArray[0]);
@@ -100,7 +99,7 @@ class viewerClass {
           // respArray.splice(respArray.length - 1, 1);
           // this.result =  this.processImgSrc(respArray);
           console.log(this.moduleId + 'Total Imgs : ' + (this.result.length));
-          console.log(this.result)
+          //console.log(this.result)
           this.displayImage();
 
         }
@@ -135,13 +134,13 @@ class viewerClass {
     }
 
     prev() {
-       console.log('prev ' + this.moduleId + 'indx ' + this.currentIndex);
+       //console.log('prev ' + this.moduleId + 'indx ' + this.currentIndex);
        
         if(this.currentIndex == 0){
         }else{
              $('#'+this.moduleId+' img' ).attr('src', this.result[this.currentIndex-1] );
              this.currentIndex--;
-             console.log('img : ' + this.result[this.currentIndex]);
+             //console.log('img : ' + this.result[this.currentIndex]);
              this.sendDataToShinny();
         }
        
