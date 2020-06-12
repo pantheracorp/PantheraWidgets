@@ -4,8 +4,13 @@
 \alias{p3_heatmap_chart}
 \title{heatmap chart}
 \usage{
-p3_heatmap_chart(dataset, data_names = NULL, width = NULL,
-  height = NULL, elementId = NULL)
+p3_heatmap_chart(
+  dataset,
+  data_names = NULL,
+  width = NULL,
+  height = NULL,
+  elementId = NULL
+)
 }
 \arguments{
 \item{dataset}{List of vectors containing the datasets to be

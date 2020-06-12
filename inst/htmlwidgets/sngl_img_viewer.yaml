@@ -3,14 +3,14 @@ dependencies:
   version: 1.0.0
   src: htmlwidgets
   script: ./lib/wheelzoom.js
-- name: viewerHelper
-  version: 1.0.0
-  src: htmlwidgets
-  script: ./lib/viewerHelper.js
 - name: viewerClass
   version: 1.0.1
   src: htmlwidgets
   script: ./lib/viewerClass.js
+- name: viewerHelper
+  version: 1.0.0
+  src: htmlwidgets
+  script: ./lib/viewerHelper.js
 - name: jquery
   version: 0.4.10
   src: htmlwidgets

@@ -4,8 +4,14 @@
 \alias{p3_bubble_chart}
 \title{Bubble Chart Plot}
 \usage{
-p3_bubble_chart(dataset, data_names = NULL, axis_labels = NULL,
-  width = NULL, height = NULL, elementId = NULL)
+p3_bubble_chart(
+  dataset,
+  data_names = NULL,
+  axis_labels = NULL,
+  width = NULL,
+  height = NULL,
+  elementId = NULL
+)
 }
 \arguments{
 \item{dataset}{List of numeric vectors containing the datasets to be

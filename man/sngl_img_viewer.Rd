@@ -4,8 +4,7 @@
 \alias{sngl_img_viewer}
 \title{Single Image Viewer}
 \usage{
-sngl_img_viewer(filename, width = NULL, height = NULL,
-  elementId = NULL)
+sngl_img_viewer(filename, width = NULL, height = NULL, elementId = NULL)
 }
 \arguments{
 \item{width, height}{Should be set to 0. The targeted element width and height
