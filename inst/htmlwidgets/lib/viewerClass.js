@@ -84,16 +84,16 @@ class viewerClass {
           //respArray[0] = respArray[0].replace("Source", "");
 
           if(respArray[respArray.length-1]==""){
-            console.log('pop');
+            //console.log('pop');
             respArray.pop();
           }
 
           for(let i = 0 ; i < respArray.length; i++ ){
             //respArray[i].replace(',','');
             let src = respArray[i].substring(respArray[i].indexOf('/'),respArray[i].lastIndexOf('/'))+'/'+respArray[i].substring(0,respArray[i].indexOf('/'));
-            src.replace(',','');
+            //src.replace(',','');
             console.log(src);
-            this.result.push(src);
+            this.result.push(src.replace(',',''));
            }
           //console.log("respArray[0] : " + respArray[0]);
           // respArray[0] = respArray[respArray.length - 1] + respArray[0];
