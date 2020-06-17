@@ -19,6 +19,9 @@ HTMLWidgets.widget({
 
       var chart = c3.generate({
         bindto: '#' + el.id,
+        title: {
+          text: Data.title
+        },
         data: {
           x : Data.data.x,
           columns:

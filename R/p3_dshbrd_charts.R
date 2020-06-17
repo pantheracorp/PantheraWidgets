@@ -184,7 +184,7 @@ renderP3_dshbrd_guage_chart <- function(expr, env = parent.frame(), quoted = FAL
 #' @import htmlwidgets
 #'
 #' @export
-p3_dshbrd_line_bar_chart <- function(timeData,counts,lineData,color,showSubChart=FALSE,timeFormat='%Y-%m-%d',debounce=250,width='100%',height='400px',transition=250,yLabel1='y-label',yLabel2='y-label2',xLabel='x-label'){
+p3_dshbrd_line_bar_chart <- function(timeData,counts,lineData,color,title,showSubChart=FALSE,timeFormat='%Y-%m-%d',debounce=250,width='100%',height='400px',transition=250,yLabel1='y-label',yLabel2='y-label2',xLabel='x-label'){
 
   names(timeData) <- 'x'
   data <- data.frame(timeData,counts,lineData,stringsAsFactors=FALSE)
@@ -219,6 +219,7 @@ p3_dshbrd_line_bar_chart <- function(timeData,counts,lineData,color,showSubChart
                          y2=list(show=TRUE,label=list(text=yLabel2,position='outer-middle')),
                          x=list(type='timeseries',label=xLabel,tick=list(format=timeFormat))),
                color=list(pattern=color),
+               title=title,
                subchart=list(show=showSubChart),
                debounce=debounce,
                height=height,
