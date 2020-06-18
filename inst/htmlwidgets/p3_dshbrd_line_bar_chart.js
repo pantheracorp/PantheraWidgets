@@ -6,6 +6,14 @@ HTMLWidgets.widget({
 
    // initialization
   initialize: function(el, width, height) {
+          console.log('Testing');
+          let prnt = document.getElementById("dshbrd_line_bar");
+          prnt.style.textAlign = "center";
+          let elChild =  document.createElement("h4");
+          elChild.innerText = "PantheraIDS Active Logins Line Bar Chart.";
+          prnt.insertBefore(elChild, prnt.firstChild);
+          console.log('Target ID v1 : ' + el.id );
+
       return{replace: false, width: width, height: height};
   },
 
@@ -54,17 +62,7 @@ HTMLWidgets.widget({
         size: {
           height: Data.height
 
-        },
-        onrendered: function () {
-          console.log('Testing');
-          let prnt = document.getElementById("dshbrd_line_bar");
-          prnt.style.textAlign = "center";
-          let elChild =  document.createElement("h4");
-          elChild.innerText = "PantheraIDS Active Logins Line Bar Chart.";
-          prnt.insertBefore(elChild, prnt.firstChild);
-          console.log('Target ID v1 : ' + el.id );
-
-        },
+        }
       });
 
       instance.chart = chart;
