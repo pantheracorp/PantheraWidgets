@@ -9,8 +9,8 @@ HTMLWidgets.widget({
 
           let prnt = document.getElementById("dshbrd_line_bar");
           prnt.style.textAlign = "center";
-          prnt.style.paddingTop = "50px";
-          prnt.style.paddingBottom = "50px";
+          prnt.style.paddingTop = "20px";
+          prnt.style.paddingBottom = "20px";
           let elChild =  document.createElement("h4");
           elChild.innerText = "PantheraIDS Active Logins Line Bar Chart";
           prnt.insertBefore(elChild, prnt.firstChild);
