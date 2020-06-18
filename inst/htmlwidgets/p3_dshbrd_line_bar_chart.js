@@ -6,19 +6,22 @@ HTMLWidgets.widget({
 
    // initialization
   initialize: function(el, width, height) {
-          console.log('Testing');
+
           let prnt = document.getElementById("dshbrd_line_bar");
           prnt.style.textAlign = "center";
+          prnt.style.paddingTop = "50px";
+          prnt.style.paddingBottom = "50px";
           let elChild =  document.createElement("h4");
-          elChild.innerText = "PantheraIDS Active Logins Line Bar Chart.";
+          elChild.innerText = "PantheraIDS Active Logins Line Bar Chart";
           prnt.insertBefore(elChild, prnt.firstChild);
-          console.log('Target ID v1 : ' + el.id );
 
-      return{replace: false, width: width, height: height};
+      return{
+        replace: false, width: width, height: height
+
+      };
   },
 
     renderValue: function(el, x, instance) {
-     console.log('Target ID v2 : ' + el.id );
        var Data = x;
 
     if(typeof(instance.chart) != 'undefined'){
@@ -84,13 +87,4 @@ HTMLWidgets.widget({
 
 
 });
-
-/*alert('Testing');
-let prnt = document.getElementById("usg_dshbrd-lineBarChart");
-prnt.style.textAlign = "center";
-let elChild =  document.createElement("h4");                 // Create a <p> element
-elChild.innerText = "PantheraIDS Active Logins Line Bar Chart.";
-prnt.insertBefore(elChild, prnt.firstChild);*/
-// Insert text
-
 
