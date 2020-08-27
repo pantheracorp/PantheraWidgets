@@ -58,7 +58,7 @@ class viewerClass {
 
     // PoaccherCam Images
 
-    if ((this.moduleId).includes("cmngmnt_id_rf")) {
+    if ((this.moduleId).includes("pchrcm_alrts_id_")) {
       console.log("case poachercams : " + this.moduleId);
       console.log("image name : " + this.result[0]);
       let src = (this.result[0]).substring((this.result[0]).lastIndexOf("/") + 1, (this.result[0]).length);
