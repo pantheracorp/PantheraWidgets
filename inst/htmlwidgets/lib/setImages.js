@@ -45,7 +45,7 @@ function setCanvas(targetID, imgSrc) {
 
     } else if (targetID.substring(0, 16) === "pchrcm_alrts_id_") {
       $('#' + targetID).css('text-align', 'center');
-      console.log('Ok Inside pchrcm_alrts_id_');
+      console.log('case pchrcm_alrts_id_');
       //$('#spcs_idntfctn_id_rf_2').css('text-align','center');
       $('#' + targetID).prepend($('<img>', {
         id: imgId,
@@ -55,6 +55,7 @@ function setCanvas(targetID, imgSrc) {
         height: 'auto'
       }));
       $('#' + imgId).css({
+        'object-fit': 'cover',
         'maxWidth': '100%',
         'max-height': '100%'
       });

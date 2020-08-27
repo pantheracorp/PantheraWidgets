@@ -36,10 +36,10 @@ class viewerClass {
     console.log('displayImage');
     //console.log(this.result.length);
 
-    /*if (this.imgexist(this.result[0]) == false) {
-      //alert('Alert img not exist');
+    if (this.imgexist(this.result[0]) == false) {
+      console.log('img does not exist');
       this.result[0] = this.errorImg;
-    }*/
+    }
     if (this.moduleId === "spcs_idntfctn_id_rf_1") {
 
       setCanvas(this.moduleId, this.result[0]);
@@ -61,9 +61,10 @@ class viewerClass {
     if ((this.moduleId).includes("pchrcm_alrts_id_")) {
       console.log("case poachercams : " + this.moduleId);
       console.log("image name : " + this.result[0]);
-      let src = (this.result[0]).substring((this.result[0]).lastIndexOf("/") + 1, (this.result[0]).length);
-      console.log("src : " + src);
-      setCanvas(this.moduleId, src);
+      //let src = (this.result[0]).substring((this.result[0]).lastIndexOf("/") + 1, (this.result[0]).length);
+      //console.log("src : " + src);
+      //setCanvas(this.moduleId, src);
+      setCanvas(this.moduleId, this.result[0]);
     }
 
     this.sendDataToShinny();

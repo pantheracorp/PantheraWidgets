@@ -10,7 +10,7 @@ HTMLWidgets.widget({
 
                         renderValue: function (x) {
 
-                                console.log("sngl_img_viewer.js 12-06-2020 16:23");
+                                console.log("sngl_img_viewer.js 27-08-2020 13:39");
 
                                 let spcs_idntfctns_scndry_img = new viewerClass(
                                                 "spcs_idntfctn_id_rf_2",
