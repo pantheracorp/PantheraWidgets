@@ -28,7 +28,7 @@ HTMLWidgets.widget({
 
                                 // Poacher Cam Viewer
 
-                                Shiny.addCustomMessageHandler("cmngmnt_pchrcm_extrt_button",
+                                Shiny.addCustomMessageHandler("pchrcm_alrts_ld_bttn",
                                         function (mesg) {
 
                                                 let num = parseInt(mesg);
@@ -36,8 +36,8 @@ HTMLWidgets.widget({
 
                                                 for (let i = 1; i <= num; i++) {
                                                         console.log("extracted " + i);
-                                                        let id = "cmngmnt_id_rf_" + i;
-                                                        let csvfile = "csv_file_" + i + ".csv";
+                                                        let id = "pchrcm_alrts_id_" + i;
+                                                        let csvfile = "pchrcm_alrts_" + i + ".csv";
                                                         let obj = new viewerClass(id, csvfile);
                                                         obj.restart();
                                                         obj.fetchServerData(csvfile);
