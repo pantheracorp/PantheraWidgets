@@ -10,7 +10,7 @@ HTMLWidgets.widget({
 
                         renderValue: function (x) {
 
-                                console.log("sngl_img_viewer.js 28-08-2020 10:07");
+                                console.log("sngl_img_viewer.js 28-08-2020 11:01");
 
                                 let spcs_idntfctns_scndry_img = new viewerClass(
                                                 "spcs_idntfctn_id_rf_2",
@@ -29,7 +29,6 @@ HTMLWidgets.widget({
                                 // Poacher Cam Viewer pchrcm_alrts_ld_bttn
                                 Shiny.addCustomMessageHandler("pchrcm_alrts_ld_bttn",
                                         function (mesg) {
-
                                                 let num = parseInt(mesg);
                                                 console.log("num : " + num);
 
@@ -41,7 +40,6 @@ HTMLWidgets.widget({
                                                         obj.restart();
                                                         obj.fetchServerData(csvfile);
                                                 }
-
                                         }
                                 );
 
