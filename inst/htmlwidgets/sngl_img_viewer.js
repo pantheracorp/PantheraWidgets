@@ -10,7 +10,7 @@ HTMLWidgets.widget({
 
                         renderValue: function (x) {
 
-                                console.log("sngl_img_viewer.js 28-08-2020 09:14");
+                                console.log("sngl_img_viewer.js 28-08-2020 10:07");
 
                                 let spcs_idntfctns_scndry_img = new viewerClass(
                                                 "spcs_idntfctn_id_rf_2",
@@ -26,23 +26,7 @@ HTMLWidgets.widget({
                                                 "pttrn_rcgntn_fltrd_rslts_scndry.csv");
 
 
-                                // Poacher Cam Viewer 
-                                Shiny.addCustomMessageHandler("pchrcm_bttn_",
-                                        function (mesg) {
-                                                let num = parseInt(mesg);
-                                                console.log("num : " + num);
-
-                                                for (let i = 1; i <= num; i++) {
-                                                        console.log("extracted " + i);
-                                                        let id = "pchrcm_alrts_id_" + i;
-                                                        let csvfile = "pchrcm_alrts_" + i + ".csv";
-                                                        let obj = new viewerClass(id, csvfile);
-                                                        obj.restart();
-                                                        obj.fetchServerData(csvfile);
-                                                }
-                                        }
-                                );
-
+                                // Poacher Cam Viewer pchrcm_alrts_ld_bttn
                                 Shiny.addCustomMessageHandler("pchrcm_alrts_ld_bttn",
                                         function (mesg) {
 
@@ -57,6 +41,7 @@ HTMLWidgets.widget({
                                                         obj.restart();
                                                         obj.fetchServerData(csvfile);
                                                 }
+
                                         }
                                 );
 
