@@ -10,21 +10,7 @@ HTMLWidgets.widget({
 
                         renderValue: function (x) {
 
-                                console.log("sngl_img_viewer.js 27-08-2020 13:39");
-
-                                let spcs_idntfctns_scndry_img = new viewerClass(
-                                                "spcs_idntfctn_id_rf_2",
-                                                "img_idntfctn_scndry.csv"),
-                                        spcs_idntfctns_prmry_img = new viewerClass(
-                                                "spcs_idntfctn_id_rf_1",
-                                                "img_idntfctn_prmry.csv"),
-                                        pttrn_rcgntn_vw_orgnls_1 = new viewerClass(
-                                                "pttrn_rcgntn_orgnl_imgs_1",
-                                                "pttrn_rcgntn_fltrd_rslts_prmry.csv"),
-                                        pttrn_rcgntn_vw_orgnls_2 = new viewerClass(
-                                                "pttrn_rcgntn_orgnl_imgs_2",
-                                                "pttrn_rcgntn_fltrd_rslts_scndry.csv");
-
+                                console.log("sngl_img_viewer.js 28-08-2020 08:46");
 
                                 // Poacher Cam Viewer
 
@@ -46,10 +32,24 @@ HTMLWidgets.widget({
                                         }
                                 );
 
+                                let spcs_idntfctns_scndry_img = new viewerClass(
+                                                "spcs_idntfctn_id_rf_2",
+                                                "img_idntfctn_scndry.csv"),
+                                        spcs_idntfctns_prmry_img = new viewerClass(
+                                                "spcs_idntfctn_id_rf_1",
+                                                "img_idntfctn_prmry.csv"),
+                                        pttrn_rcgntn_vw_orgnls_1 = new viewerClass(
+                                                "pttrn_rcgntn_orgnl_imgs_1",
+                                                "pttrn_rcgntn_fltrd_rslts_prmry.csv"),
+                                        pttrn_rcgntn_vw_orgnls_2 = new viewerClass(
+                                                "pttrn_rcgntn_orgnl_imgs_2",
+                                                "pttrn_rcgntn_fltrd_rslts_scndry.csv");
+
+
                                 // Handle extract images buttons
                                 Shiny.addCustomMessageHandler("spcs_idntfctn_extrt_id_button_rf_1",
                                         function (mesg) {
-                                                spcs_idntfctn_extrt_id_button_rf_1
+                                                //spcs_idntfctn_extrt_id_button_rf_1
                                                 spcs_idntfctns_prmry_img.restart();
                                                 spcs_idntfctns_prmry_img.fetchServerData("img_idntfctn_prmry.csv");
                                                 $('#spcs_idntfctn_id_rf_1').css({
