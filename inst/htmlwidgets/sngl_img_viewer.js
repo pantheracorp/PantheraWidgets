@@ -10,9 +10,38 @@ HTMLWidgets.widget({
 
                         renderValue: function (x) {
 
-                                console.log("sngl_img_viewer.js 28-08-2020 08:46");
+                                console.log("sngl_img_viewer.js 28-08-2020 09:14");
 
-                                // Poacher Cam Viewer
+                                let spcs_idntfctns_scndry_img = new viewerClass(
+                                                "spcs_idntfctn_id_rf_2",
+                                                "img_idntfctn_scndry.csv"),
+                                        spcs_idntfctns_prmry_img = new viewerClass(
+                                                "spcs_idntfctn_id_rf_1",
+                                                "img_idntfctn_prmry.csv"),
+                                        pttrn_rcgntn_vw_orgnls_1 = new viewerClass(
+                                                "pttrn_rcgntn_orgnl_imgs_1",
+                                                "pttrn_rcgntn_fltrd_rslts_prmry.csv"),
+                                        pttrn_rcgntn_vw_orgnls_2 = new viewerClass(
+                                                "pttrn_rcgntn_orgnl_imgs_2",
+                                                "pttrn_rcgntn_fltrd_rslts_scndry.csv");
+
+
+                                // Poacher Cam Viewer 
+                                Shiny.addCustomMessageHandler("pchrcm_bttn_",
+                                        function (mesg) {
+                                                let num = parseInt(mesg);
+                                                console.log("num : " + num);
+
+                                                for (let i = 1; i <= num; i++) {
+                                                        console.log("extracted " + i);
+                                                        let id = "pchrcm_alrts_id_" + i;
+                                                        let csvfile = "pchrcm_alrts_" + i + ".csv";
+                                                        let obj = new viewerClass(id, csvfile);
+                                                        obj.restart();
+                                                        obj.fetchServerData(csvfile);
+                                                }
+                                        }
+                                );
 
                                 Shiny.addCustomMessageHandler("pchrcm_alrts_ld_bttn",
                                         function (mesg) {
@@ -28,23 +57,8 @@ HTMLWidgets.widget({
                                                         obj.restart();
                                                         obj.fetchServerData(csvfile);
                                                 }
-
                                         }
                                 );
-
-                                let spcs_idntfctns_scndry_img = new viewerClass(
-                                                "spcs_idntfctn_id_rf_2",
-                                                "img_idntfctn_scndry.csv"),
-                                        spcs_idntfctns_prmry_img = new viewerClass(
-                                                "spcs_idntfctn_id_rf_1",
-                                                "img_idntfctn_prmry.csv"),
-                                        pttrn_rcgntn_vw_orgnls_1 = new viewerClass(
-                                                "pttrn_rcgntn_orgnl_imgs_1",
-                                                "pttrn_rcgntn_fltrd_rslts_prmry.csv"),
-                                        pttrn_rcgntn_vw_orgnls_2 = new viewerClass(
-                                                "pttrn_rcgntn_orgnl_imgs_2",
-                                                "pttrn_rcgntn_fltrd_rslts_scndry.csv");
-
 
                                 // Handle extract images buttons
                                 Shiny.addCustomMessageHandler("spcs_idntfctn_extrt_id_button_rf_1",
