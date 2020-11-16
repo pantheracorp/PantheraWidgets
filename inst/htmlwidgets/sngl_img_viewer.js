@@ -67,9 +67,11 @@ HTMLWidgets.widget({
 
                                 Shiny.addCustomMessageHandler("spcs_idntfctn_extrt_id_button_rf_2",
                                         function (mesg) {
-                                                console.log("spcs_idntfctn_extrt_id_button_rf_2");
+                                                console.log("NEW HANDLER");
+                                                let src = JSON.stringify(mesg);
                                                 spcs_idntfctns_scndry_img.restart();
-                                                spcs_idntfctns_scndry_img.fetchServerData("img_idntfctn_scndry.csv");
+                                                //spcs_idntfctns_scndry_img.fetchServerData("img_idntfctn_scndry.csv");
+                                                spcs_idntfctns_scndry_img.readServerDataTest(src);
                                                 $('#spcs_idntfctn_id_rf_2').css({
                                                         'outline': '0px solid transparent'
                                                 });
