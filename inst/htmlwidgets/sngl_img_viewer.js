@@ -47,8 +47,11 @@ HTMLWidgets.widget({
                                 Shiny.addCustomMessageHandler("spcs_idntfctn_extrt_id_button_rf_1",
                                         function (mesg) {
                                                 //spcs_idntfctn_extrt_id_button_rf_1
+                                                console.log("NEW HANDLER");
+                                                let src = JSON.stringify(msg);
                                                 spcs_idntfctns_prmry_img.restart();
-                                                spcs_idntfctns_prmry_img.fetchServerData("img_idntfctn_prmry.csv");
+                                                //spcs_idntfctns_prmry_img.fetchServerData("img_idntfctn_prmry.csv");
+                                                spcs_idntfctns_prmry_img.readServerDataTest(src);
                                                 $('#spcs_idntfctn_id_rf_1').css({
                                                         'outline': '0px solid transparent'
                                                 });
@@ -64,6 +67,7 @@ HTMLWidgets.widget({
 
                                 Shiny.addCustomMessageHandler("spcs_idntfctn_extrt_id_button_rf_2",
                                         function (mesg) {
+                                                console.log("spcs_idntfctn_extrt_id_button_rf_2");
                                                 spcs_idntfctns_scndry_img.restart();
                                                 spcs_idntfctns_scndry_img.fetchServerData("img_idntfctn_scndry.csv");
                                                 $('#spcs_idntfctn_id_rf_2').css({
@@ -81,7 +85,6 @@ HTMLWidgets.widget({
                                 Shiny.addCustomMessageHandler("spcs_idntfctn_reset_button_rf_1",
                                         function (mesg) {
                                                 spcs_idntfctns_prmry_img.reset();
-
                                         }
                                 );
                                 Shiny.addCustomMessageHandler("spcs_idntfctn_reset_button_rf_2",

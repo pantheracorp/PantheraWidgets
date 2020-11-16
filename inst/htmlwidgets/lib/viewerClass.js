@@ -20,8 +20,6 @@ class viewerClass {
   }
 
   processImgSrc(arry) {
-    //alert('processImgSrc : ' + this.moduleId);
-    //console.log('processImgSrc');
     let tempArray = [];
     arry.forEach(function (item) {
       let src = ((item.trim()).replace(/['"]+/g, '')).replace(/(\r\n|\n|\r)/gm, "");
@@ -35,7 +33,8 @@ class viewerClass {
 
     console.log('displayImage');
     //console.log(this.result.length);
-
+    console.log("-------------displayImage-----------");
+    console.log(this.result[0]);
     if (this.imgexist(this.result[0]) == false) {
       console.log('img does not exist');
       this.result[0] = this.errorImg;
@@ -49,15 +48,16 @@ class viewerClass {
     }
     if (this.moduleId === 'pttrn_rcgntn_orgnl_imgs_1') {
       //console.log('case pttrn_rcgntn_orgnl_imgs_1');
+      console.log("orig 1 - " + this.result[0]);
       setCanvas(this.moduleId, this.result[0]);
     }
     if (this.moduleId === 'pttrn_rcgntn_orgnl_imgs_2') {
       //console.log('case pttrn_rcgntn_orgnl_imgs_2');
+      console.log("orig 2 - " + this.result[0]);
       setCanvas(this.moduleId, this.result[0]);
     }
 
     // PoaccherCam Images
-
     if ((this.moduleId).includes("pchrcm_alrts_id_")) {
       console.log("case poachercams : " + this.moduleId);
       console.log("image name : " + this.result[0]);
@@ -66,16 +66,14 @@ class viewerClass {
       //setCanvas(this.moduleId, src);
       setCanvas(this.moduleId, this.result[0]);
     }
-
     this.sendDataToShinny();
-
+    console.log("-------------End displayImage-----------");
   }
 
   restart() {
     this.result.length = 0;
     this.currentIndex = 0;
   }
-
 
   readServerData(response) {
 
@@ -88,7 +86,6 @@ class viewerClass {
       console.log("response : " + response);
       respArray = response.split("\n");
       respArray.shift();
-
 
       if (respArray[respArray.length - 1] == "") {
         //console.log('pop');
@@ -110,8 +107,47 @@ class viewerClass {
       console.log(this.moduleId + 'Total Imgs : ' + (this.result.length));
       //console.log(this.result)
       this.displayImage();
-
     }
+  }
+
+  readServerDataTest(response) {
+
+    console.log("-------------readServerDataTest---------------");
+    console.log(response);
+    let respArray = [];
+    if (response === null) {
+      console.log(" Error in reading your images.Please check if all requirements are provided.");
+    } else {
+      console.log("response : " + response);
+      respArray = response.split(",");
+      console.log("First : " + respArray[0]);
+      console.log("Last : " + respArray[1]);
+      // respArray.shift();
+
+      // if (respArray[respArray.length - 1] == "") {
+      //   respArray.pop();
+      // }
+
+      for (let i = 0; i < respArray.length; i++) {
+        //respArray[i].replace(',','');
+        // let src = respArray[i].substring(respArray[i].indexOf('/'), respArray[i].lastIndexOf('/')) + '/' + respArray[i].substring(0, respArray[i].indexOf('/'));
+        let src = ((respArray[i].trim()).replace(/[\[\]'"]+/g, '')).replace(/(\r\n|\n|\r)/gm, "");
+        //src.replace(',','');
+        //console.log(src);
+        //console.log(src.replace(',', ''));
+        //this.result.push(src.replace(',', ''));
+        this.result.push(src);
+      }
+      //console.log("respArray[0] : " + respArray[0]);
+      // respArray[0] = respArray[respArray.length - 1] + respArray[0];
+      // respArray.splice(respArray.length - 1, 1);
+      // this.result =  this.processImgSrc(respArray);
+      console.log(this.moduleId + 'Total Imgs : ' + (this.result.length));
+      //console.log(this.result)
+      this.displayImage();
+    }
+
+    console.log("-------------End readServerDataTest---------------");
   }
 
   reset() {
@@ -127,7 +163,6 @@ class viewerClass {
   next() {
     console.log('next : ' + this.moduleId + 'indx ' + this.currentIndex);
 
-
     if (this.currentIndex == (this.result).length - 1) {} else {
       if (this.imgexist(this.result[this.currentIndex + 1]) == false) {
         this.result[this.currentIndex + 1] = this.errorImg;
@@ -142,18 +177,15 @@ class viewerClass {
 
   prev() {
     //console.log('prev ' + this.moduleId + 'indx ' + this.currentIndex);
-
     if (this.currentIndex == 0) {} else {
       $('#' + this.moduleId + ' img').attr('src', this.result[this.currentIndex - 1]);
       this.currentIndex--;
       //console.log('img : ' + this.result[this.currentIndex]);
       this.sendDataToShinny();
     }
-
   }
 
   imgexist(image_url) {
-
     let xmlhttp = new XMLHttpRequest();
     xmlhttp.open("GET", image_url, false);
     xmlhttp.send();
@@ -161,13 +193,10 @@ class viewerClass {
       return true;
     }
     return false;
-
   }
 
   sendDataToShinny() {
-
     if (this.moduleId == "spcs_idntfctn_id_rf_1" || this.moduleId == "spcs_idntfctn_id_rf_2") {
-
       let src = this.result[this.currentIndex];
       let imgname = src.substring(src.lastIndexOf("/") + 1, src.length);
 

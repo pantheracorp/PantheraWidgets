@@ -33,20 +33,9 @@ function setCanvas(targetID, imgSrc) {
         'maxWidth': '100%'
       });
 
-      /*$('#currnt-img_orgnl_imgs_2').click(function() {
-          console.log('clicked currnt-img_orgnl_imgs_2');
-          $('#pttrn_rcgntn_orgnl_imgs_2').focus();
-        });
-        
-       $('#currnt-img_orgnl_imgs_1').click(function() {
-          console.log('clicked currnt-img_orgnl_imgs_1');
-          $('#pttrn_rcgntn_orgnl_imgs_1').focus();
-        });*/
-
     } else if (targetID.substring(0, 16) === "pchrcm_alrts_id_") {
       $('#' + targetID).css('text-align', 'center');
       console.log('case pchrcm_alrts_id_');
-      //$('#spcs_idntfctn_id_rf_2').css('text-align','center');
       $('#' + targetID).prepend($('<img>', {
         id: imgId,
         src: imgSrc,
