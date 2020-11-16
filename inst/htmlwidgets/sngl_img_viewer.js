@@ -48,7 +48,7 @@ HTMLWidgets.widget({
                                         function (mesg) {
                                                 //spcs_idntfctn_extrt_id_button_rf_1
                                                 console.log("NEW HANDLER");
-                                                let src = JSON.stringify(msg);
+                                                let src = JSON.stringify(mesg);
                                                 spcs_idntfctns_prmry_img.restart();
                                                 //spcs_idntfctns_prmry_img.fetchServerData("img_idntfctn_prmry.csv");
                                                 spcs_idntfctns_prmry_img.readServerDataTest(src);
