@@ -15,7 +15,6 @@ class viewerClass {
   }
 
   fetchServerDataTest(file) {
-
     getFileTest(file).then(data => this.readServerData(data));
   }
 
@@ -76,7 +75,7 @@ class viewerClass {
   }
 
   readServerData(response) {
-
+    console.log("-------------- Start readServerData ---------------");
     let respArray = [];
     if (response === null) {
       console.log(" Error in reading your images.Please check if all requirements are provided.");
@@ -84,8 +83,9 @@ class viewerClass {
       //respArray = response.split(',');
       //respArray.splice(0, 1);
       console.log("response : " + response);
-      respArray = response.split("\n");
-      respArray.shift();
+      // respArray = response.split("\n");
+      respArray = response.split(",");
+      //respArray.shift();
 
       if (respArray[respArray.length - 1] == "") {
         //console.log('pop');
@@ -96,6 +96,7 @@ class viewerClass {
         //respArray[i].replace(',','');
         let src = respArray[i].substring(respArray[i].indexOf('/'), respArray[i].lastIndexOf('/')) + '/' + respArray[i].substring(0, respArray[i].indexOf('/'));
         //src.replace(',','');
+        console.log(src);
         //console.log(src);
         console.log(src.replace(',', ''));
         this.result.push(src.replace(',', ''));
@@ -108,6 +109,8 @@ class viewerClass {
       //console.log(this.result)
       this.displayImage();
     }
+
+    console.log("-------------- End readServerData ---------------");
   }
 
   readServerDataTest(response) {

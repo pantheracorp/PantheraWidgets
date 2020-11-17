@@ -123,13 +123,14 @@ HTMLWidgets.widget({
                                 Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_dsply_button",
                                         function (mesg) {
                                                 pttrn_rcgntn_vw_orgnls_1.restart();
-                                                let tmp = split(";");
+                                                let src = JSON.stringify(mesg);
+                                                let tmp = src.split(";");
                                                 console.log("--------pttrn_rcgntn_orgnl_imgs_dsply_button---------");
                                                 console.log(tmp[0]);
                                                 console.log(tmp[1]);
                                                 console.log("--------pttrn_rcgntn_orgnl_imgs_dsply_button---------");
 
-                                                pttrn_rcgntn_vw_orgnls_1.fetchServerData("pttrn_rcgntn_fltrd_rslts_prmry.csv");
+                                                pttrn_rcgntn_vw_orgnls_1.fetchServerData("pttrn_rcgntn_fltrd_rslts_prmry.csv ");
                                                 $('#pttrn_rcgntn_orgnl_imgs_1').attr('tabindex', '0');
                                                 $('#pttrn_rcgntn_orgnl_imgs_1').css({
                                                         'outline': '0px solid transparent'
