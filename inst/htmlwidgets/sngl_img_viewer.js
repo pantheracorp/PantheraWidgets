@@ -122,15 +122,18 @@ HTMLWidgets.widget({
                                 // original imgs vwers
                                 Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_dsply_button",
                                         function (mesg) {
+
+                                                console.log("start pttrn_rcgntn_orgnl_imgs_dsply_button handler");
                                                 pttrn_rcgntn_vw_orgnls_1.restart();
                                                 let src = JSON.stringify(mesg);
+                                                console.log("src -> " + src);
                                                 let tmp = src.split(";");
-                                                console.log("--------pttrn_rcgntn_orgnl_imgs_dsply_button---------");
-                                                console.log(tmp[0]);
-                                                console.log(tmp[1]);
-                                                console.log("--------pttrn_rcgntn_orgnl_imgs_dsply_button---------");
 
-                                                pttrn_rcgntn_vw_orgnls_1.fetchServerData("pttrn_rcgntn_fltrd_rslts_prmry.csv ");
+                                                console.log("temp 0 -> " + tmp[0]);
+                                                console.log("temp 1 -> " + tmp[1]);
+
+                                                pttrn_rcgntn_vw_orgnls_1.readServerData(tmp[0]);
+                                                //pttrn_rcgntn_vw_orgnls_1.fetchServerData("pttrn_rcgntn_fltrd_rslts_prmry.csv ");
                                                 $('#pttrn_rcgntn_orgnl_imgs_1').attr('tabindex', '0');
                                                 $('#pttrn_rcgntn_orgnl_imgs_1').css({
                                                         'outline': '0px solid transparent'
@@ -138,7 +141,8 @@ HTMLWidgets.widget({
                                                 $('#pttrn_rcgntn_orgnl_imgs_1').focus();
 
                                                 pttrn_rcgntn_vw_orgnls_2.restart();
-                                                pttrn_rcgntn_vw_orgnls_2.fetchServerData("pttrn_rcgntn_fltrd_rslts_scndry.csv");
+                                                pttrn_rcgntn_vw_orgnls_1.readServerData(tmp[1]);
+                                                //pttrn_rcgntn_vw_orgnls_2.fetchServerData("pttrn_rcgntn_fltrd_rslts_scndry.csv");
                                                 $('#pttrn_rcgntn_orgnl_imgs_2').attr('tabindex', '0');
                                                 $('#pttrn_rcgntn_orgnl_imgs_2').css({
                                                         'outline': '0px solid transparent'
@@ -154,6 +158,8 @@ HTMLWidgets.widget({
                                                         //console.log('clicked pttrn_rcgntn_orgnl_imgs_1');
                                                         $('#pttrn_rcgntn_orgnl_imgs_1').focus();
                                                 });
+
+                                                console.log("end pttrn_rcgntn_orgnl_imgs_dsply_button handler");
                                         }
                                 );
 
