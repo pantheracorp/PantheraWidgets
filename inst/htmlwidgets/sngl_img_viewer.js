@@ -125,9 +125,9 @@ HTMLWidgets.widget({
 
                                                 console.log("start pttrn_rcgntn_orgnl_imgs_dsply_button handler");
                                                 pttrn_rcgntn_vw_orgnls_1.restart();
-                                                let src = JSON.stringify(mesg);
-                                                console.log("src -> " + src);
-                                                let tmp = src.split(";");
+                                                //let src = JSON.stringify(mesg);
+                                                console.log("mesg -> " + mesg);
+                                                let tmp = mesg.split(";");
 
                                                 console.log("temp 0 -> " + tmp[0]);
                                                 console.log("temp 1 -> " + tmp[1]);
