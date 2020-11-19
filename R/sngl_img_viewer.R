@@ -17,7 +17,7 @@
 #' height = 0),
 #'
 #' @export
-sngl_img_viewer <- function(fwidth = NULL, height = NULL, elementId = NULL) {
+sngl_img_viewer <- function(elementId = NULL,width = NULL, height = NULL) {
 
   # forward options using x
   x = list(
