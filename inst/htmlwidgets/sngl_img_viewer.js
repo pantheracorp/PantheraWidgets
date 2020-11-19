@@ -162,7 +162,7 @@ HTMLWidgets.widget({
                                 );
 
 
-                                Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_dsply_button",
+                                Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_rst_button",
                                         function (mesg) {
 
                                                 pttrn_rcgntn_vw_orgnls_1.reset();
