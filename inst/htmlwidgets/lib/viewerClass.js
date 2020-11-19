@@ -8,7 +8,6 @@ class viewerClass {
   }
 
   fetchServerData(file) {
-    console.log("fetchServerData");
     getFile(file).then(data => this.readServerData(data));
   }
 
@@ -74,12 +73,10 @@ class viewerClass {
       }
 
       for (let i = 0; i < respArray.length; i++) {
-
         let src = respArray[i].substring(respArray[i].indexOf('/'), respArray[i].lastIndexOf('/')) + '/' + respArray[i].substring(0, respArray[i].indexOf('/'));
         console.log(src.replace(',', ''));
         this.result.push(src.replace(',', ''));
       }
-      console.log(this.moduleId + 'Total Imgs : ' + (this.result.length));
       this.displayImage();
     }
 
