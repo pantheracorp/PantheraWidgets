@@ -115,8 +115,8 @@ class viewerClass {
 
   readServerDataTest(response) {
 
-    console.log("-------------readServerDataTest---------------");
-    console.log(response);
+    console.log("------------- readServerDataTest ---------------");
+    console.log("response : " + response);
     let respArray = [];
     if (response === null) {
       console.log(" Error in reading your images.Please check if all requirements are provided.");

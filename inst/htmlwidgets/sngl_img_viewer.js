@@ -119,7 +119,49 @@ HTMLWidgets.widget({
                                         }
                                 );
 
+
+
                                 // original imgs vwers
+
+                                Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_prmry_imgs_dsply_bttn",
+                                        function (mesg) {
+                                                console.log("start prmry pttrn_rcgntn_vw_orgnls_button handler");
+                                                let src = JSON.stringify(mesg);
+                                                pttrn_rcgntn_vw_orgnls_1.restart();
+                                                pttrn_rcgntn_vw_orgnls_1.readServerDataTest(src);
+
+                                                $('#pttrn_rcgntn_orgnl_imgs_1').attr('tabindex', '0');
+                                                $('#pttrn_rcgntn_orgnl_imgs_1').css({
+                                                        'outline': '0px solid transparent'
+                                                });
+                                                $('#pttrn_rcgntn_orgnl_imgs_1').focus();
+
+                                                $('#currnt-img_orgnl_imgs_1').click(function () {
+                                                        $('#pttrn_rcgntn_orgnl_imgs_1').focus();
+                                                });
+                                        }
+                                );
+
+                                Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_scndry_imgs_dsply_bttn",
+                                        function (mesg) {
+                                                console.log("start sec pttrn_rcgntn_vw_orgnls_button handler");
+                                                let src = JSON.stringify(mesg);
+                                                pttrn_rcgntn_vw_orgnls_2.restart();
+                                                pttrn_rcgntn_vw_orgnls_2.readServerDataTest(src);
+
+                                                $('#pttrn_rcgntn_orgnl_imgs_2').attr('tabindex', '0');
+                                                $('#pttrn_rcgntn_orgnl_imgs_2').css({
+                                                        'outline': '0px solid transparent'
+                                                });
+                                                $('#pttrn_rcgntn_orgnl_imgs_2').focus();
+
+                                                $('#currnt-img_orgnl_imgs_2').click(function () {
+                                                        $('#pttrn_rcgntn_orgnl_imgs_1').focus();
+                                                });
+                                        }
+                                );
+
+
                                 Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_dsply_button",
                                         function (mesg) {
 
