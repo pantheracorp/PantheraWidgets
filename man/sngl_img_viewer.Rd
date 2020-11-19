@@ -4,15 +4,15 @@
 \alias{sngl_img_viewer}
 \title{Single Image Viewer}
 \usage{
-sngl_img_viewer(filename, width = NULL, height = NULL, elementId = NULL)
+sngl_img_viewer(fwidth = NULL, height = NULL, elementId = NULL)
 }
 \arguments{
-\item{width, height}{Should be set to 0. The targeted element width and height
-will be used instead.}
-
 \item{elementId}{Use an explicit element ID where the viewer will be
 displayed.This can be the ID of a div element on your
 page.}
+
+\item{width, height}{Should be set to 0. The targeted element width and height
+will be used instead.}
 }
 \description{
 Renders a single image viewer

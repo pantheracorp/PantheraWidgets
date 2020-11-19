@@ -17,11 +17,10 @@
 #' height = 0),
 #'
 #' @export
-sngl_img_viewer <- function(filename, width = NULL, height = NULL, elementId = NULL) {
+sngl_img_viewer <- function(fwidth = NULL, height = NULL, elementId = NULL) {
 
   # forward options using x
   x = list(
-    filepath = filename,
     width = width,
     height = height,
     targetId = elementId
