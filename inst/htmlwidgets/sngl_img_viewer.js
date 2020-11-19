@@ -9,27 +9,20 @@ HTMLWidgets.widget({
                 return {
 
                         renderValue: function (x) {
-
-
                                 let spcs_idntfctns_scndry_img = new viewerClass(
-                                                "spcs_idntfctn_id_rf_2",
-                                                "img_idntfctn_scndry.csv"),
+                                                "spcs_idntfctn_id_rf_2"),
                                         spcs_idntfctns_prmry_img = new viewerClass(
-                                                "spcs_idntfctn_id_rf_1",
-                                                "img_idntfctn_prmry.csv"),
+                                                "spcs_idntfctn_id_rf_1"),
                                         pttrn_rcgntn_vw_orgnls_1 = new viewerClass(
-                                                "pttrn_rcgntn_orgnl_imgs_1",
-                                                "pttrn_rcgntn_fltrd_rslts_prmry.csv"),
+                                                "pttrn_rcgntn_orgnl_imgs_1"),
                                         pttrn_rcgntn_vw_orgnls_2 = new viewerClass(
-                                                "pttrn_rcgntn_orgnl_imgs_2",
-                                                "pttrn_rcgntn_fltrd_rslts_scndry.csv");
+                                                "pttrn_rcgntn_orgnl_imgs_2");
 
 
                                 // Poacher Cam Viewer pchrcm_alrts_ld_bttn
                                 Shiny.addCustomMessageHandler("pchrcm_alrts_ld_bttn",
                                         function (mesg) {
                                                 let num = parseInt(mesg);
-                                                console.log("num : " + num);
 
                                                 for (let i = 1; i <= num; i++) {
                                                         console.log("extracted " + i);
@@ -45,10 +38,8 @@ HTMLWidgets.widget({
                                 // Handle extract images buttons
                                 Shiny.addCustomMessageHandler("spcs_idntfctn_extrt_id_button_rf_1",
                                         function (mesg) {
-                                                //spcs_idntfctn_extrt_id_button_rf_1
                                                 let src = JSON.stringify(mesg);
                                                 spcs_idntfctns_prmry_img.restart();
-                                                //spcs_idntfctns_prmry_img.fetchServerData("img_idntfctn_prmry.csv");
                                                 spcs_idntfctns_prmry_img.readServerDataTest(src);
                                                 $('#spcs_idntfctn_id_rf_1').css({
                                                         'outline': '0px solid transparent'
@@ -57,7 +48,6 @@ HTMLWidgets.widget({
                                                 $('#spcs_idntfctn_id_rf_1').focus();
 
                                                 $('#currnt-img_id_rf_1').click(function () {
-                                                        //console.log('clicked currnt-img_id_rf_1');
                                                         $('#spcs_idntfctn_id_rf_1').focus();
                                                 });
                                         }
@@ -161,47 +151,8 @@ HTMLWidgets.widget({
 
                                 Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_rst_button",
                                         function (mesg) {
-
                                                 pttrn_rcgntn_vw_orgnls_1.reset();
                                                 pttrn_rcgntn_vw_orgnls_2.reset();
-
-                                                /*console.log("start pttrn_rcgntn_orgnl_imgs_dsply_button handler");
-                                                pttrn_rcgntn_vw_orgnls_1.restart();
-                                                //let src = JSON.stringify(mesg);
-                                                console.log("mesg -> " + mesg);
-                                                let tmp = mesg.split(";");
-
-                                                console.log("temp 0 -> " + tmp[0]);
-                                                console.log("temp 1 -> " + tmp[1]);
-
-                                                pttrn_rcgntn_vw_orgnls_1.readServerData(tmp[0]);
-                                                //pttrn_rcgntn_vw_orgnls_1.fetchServerData("pttrn_rcgntn_fltrd_rslts_prmry.csv ");
-                                                $('#pttrn_rcgntn_orgnl_imgs_1').attr('tabindex', '0');
-                                                $('#pttrn_rcgntn_orgnl_imgs_1').css({
-                                                        'outline': '0px solid transparent'
-                                                });
-                                                $('#pttrn_rcgntn_orgnl_imgs_1').focus();
-
-                                                pttrn_rcgntn_vw_orgnls_2.restart();
-                                                pttrn_rcgntn_vw_orgnls_1.readServerData(tmp[1]);
-                                                //pttrn_rcgntn_vw_orgnls_2.fetchServerData("pttrn_rcgntn_fltrd_rslts_scndry.csv");
-                                                $('#pttrn_rcgntn_orgnl_imgs_2').attr('tabindex', '0');
-                                                $('#pttrn_rcgntn_orgnl_imgs_2').css({
-                                                        'outline': '0px solid transparent'
-                                                });
-                                                $('#pttrn_rcgntn_orgnl_imgs_2').focus();
-
-                                                $('#currnt-img_orgnl_imgs_2').click(function () {
-                                                        //console.log('clicked pttrn_rcgntn_orgnl_imgs_2');
-                                                        $('#pttrn_rcgntn_orgnl_imgs_1').focus();
-                                                });
-
-                                                $('#currnt-img_orgnl_imgs_1').click(function () {
-                                                        //console.log('clicked pttrn_rcgntn_orgnl_imgs_1');
-                                                        $('#pttrn_rcgntn_orgnl_imgs_1').focus();
-                                                });
-
-                                                console.log("end pttrn_rcgntn_orgnl_imgs_dsply_button handler");*/
                                         }
                                 );
 

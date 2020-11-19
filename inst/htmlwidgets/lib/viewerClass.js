@@ -1,13 +1,11 @@
 class viewerClass {
 
-  constructor(moduleId, csvfile) {
-    this.csvfile = csvfile;
+  constructor(moduleId) {
     this.moduleId = moduleId;
     this.currentIndex = 0;
     this.result = [];
     this.errorImg = '/srv/shiny-server/www/PantheraIDS_image_not_found_2.jpg';
   }
-  // fetchServerData
 
   fetchServerData(file) {
     console.log("fetchServerData");
@@ -30,10 +28,6 @@ class viewerClass {
 
   displayImage() {
 
-    console.log('displayImage');
-    //console.log(this.result.length);
-    console.log("-------------displayImage-----------");
-    console.log(this.result[0]);
     if (this.imgexist(this.result[0]) == false) {
       console.log('img does not exist');
       this.result[0] = this.errorImg;
@@ -46,27 +40,18 @@ class viewerClass {
       setCanvas(this.moduleId, this.result[0]);
     }
     if (this.moduleId === 'pttrn_rcgntn_orgnl_imgs_1') {
-      //console.log('case pttrn_rcgntn_orgnl_imgs_1');
-      console.log("orig 1 - " + this.result[0]);
       setCanvas(this.moduleId, this.result[0]);
     }
     if (this.moduleId === 'pttrn_rcgntn_orgnl_imgs_2') {
-      //console.log('case pttrn_rcgntn_orgnl_imgs_2');
-      console.log("orig 2 - " + this.result[0]);
       setCanvas(this.moduleId, this.result[0]);
     }
 
     // PoaccherCam Images
     if ((this.moduleId).includes("pchrcm_alrts_id_")) {
-      console.log("case poachercams : " + this.moduleId);
-      console.log("image name : " + this.result[0]);
-      //let src = (this.result[0]).substring((this.result[0]).lastIndexOf("/") + 1, (this.result[0]).length);
-      //console.log("src : " + src);
-      //setCanvas(this.moduleId, src);
       setCanvas(this.moduleId, this.result[0]);
     }
     this.sendDataToShinny();
-    console.log("-------------End displayImage-----------");
+
   }
 
   restart() {
@@ -75,87 +60,62 @@ class viewerClass {
   }
 
   readServerData(response) {
-    console.log("-------------- Start readServerData ---------------");
+
     let respArray = [];
     if (response === null) {
       console.log(" Error in reading your images.Please check if all requirements are provided.");
     } else {
-      //respArray = response.split(',');
-      //respArray.splice(0, 1);
-      console.log("response : " + response);
-      // respArray = response.split("\n");
+
       respArray = response.split(",");
-      //respArray.shift();
 
       if (respArray[respArray.length - 1] == "") {
-        //console.log('pop');
+
         respArray.pop();
       }
 
       for (let i = 0; i < respArray.length; i++) {
-        //respArray[i].replace(',','');
+
         let src = respArray[i].substring(respArray[i].indexOf('/'), respArray[i].lastIndexOf('/')) + '/' + respArray[i].substring(0, respArray[i].indexOf('/'));
-        //src.replace(',','');
-        console.log(src);
-        //console.log(src);
         console.log(src.replace(',', ''));
         this.result.push(src.replace(',', ''));
       }
-      //console.log("respArray[0] : " + respArray[0]);
-      // respArray[0] = respArray[respArray.length - 1] + respArray[0];
-      // respArray.splice(respArray.length - 1, 1);
-      // this.result =  this.processImgSrc(respArray);
       console.log(this.moduleId + 'Total Imgs : ' + (this.result.length));
-      //console.log(this.result)
       this.displayImage();
     }
 
-    console.log("-------------- End readServerData ---------------");
   }
 
   readServerDataTest(response) {
 
-    console.log("------------- readServerDataTest ---------------");
     let respArray = [];
     if (response === null) {
       console.log(" Error in reading your images.Please check if all requirements are provided.");
     } else {
-      console.log("response : " + response);
       respArray = response.split(",");
-      console.log("First : " + respArray[0]);
-      console.log("Last : " + respArray[1]);
-
       for (let i = 0; i < respArray.length; i++) {
 
         let src = ((respArray[i].trim()).replace(/[\[\]'"]+/g, '')).replace(/(\r\n|\n|\r)/gm, "");
         this.result.push(src);
       }
-      console.log(this.moduleId + 'Total Imgs : ' + (this.result.length));
       this.displayImage();
     }
 
-    console.log("-------------End readServerDataTest---------------");
   }
 
   reset() {
-    console.log('reset ' + this.moduleId + 'indx ' + this.currentIndex);
     this.currentIndex = 0;
-    console.log('img : ' + this.result[this.currentIndex]);
     this.sendDataToShinny();
     $('#' + this.moduleId + ' img').attr('src', this.result[this.currentIndex]);
 
   }
 
   next() {
-    console.log('next : ' + this.moduleId + 'indx ' + this.currentIndex);
-
     if (this.currentIndex == (this.result).length - 1) {} else {
       if (this.imgexist(this.result[this.currentIndex + 1]) == false) {
         this.result[this.currentIndex + 1] = this.errorImg;
       }
       $('#' + this.moduleId + ' img').attr('src', this.result[this.currentIndex + 1]);
       this.currentIndex++;
-      console.log('img : ' + this.result[this.currentIndex]);
       this.sendDataToShinny();
     }
 
@@ -165,7 +125,6 @@ class viewerClass {
     if (this.currentIndex == 0) {} else {
       $('#' + this.moduleId + ' img').attr('src', this.result[this.currentIndex - 1]);
       this.currentIndex--;
-      console.log('img : ' + this.result[this.currentIndex]);
       this.sendDataToShinny();
     }
   }
