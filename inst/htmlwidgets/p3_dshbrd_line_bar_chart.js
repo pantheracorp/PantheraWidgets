@@ -6,7 +6,19 @@ HTMLWidgets.widget({
 
    // initialization
   initialize: function(el, width, height) {
-      return{replace: false, width: width, height: height};
+
+          let prnt = document.getElementById("dshbrd_line_bar");
+          prnt.style.textAlign = "center";
+          prnt.style.paddingTop = "20px";
+          prnt.style.paddingBottom = "20px";
+          let elChild =  document.createElement("h4");
+          elChild.innerText = "PantheraIDS Active Logins Line Bar Chart";
+          prnt.insertBefore(elChild, prnt.firstChild);
+
+      return{
+        replace: false, width: width, height: height
+
+      };
   },
 
     renderValue: function(el, x, instance) {
@@ -18,7 +30,11 @@ HTMLWidgets.widget({
       instance.Data = Data;
 
       var chart = c3.generate({
+
         bindto: '#' + el.id,
+        title: {
+          text: Data.title
+        },
         data: {
           x : Data.data.x,
           columns:
@@ -46,11 +62,14 @@ HTMLWidgets.widget({
         transition: {
           duration: Data.transition
         },
-        size:
-        {height: Data.height}
+        size: {
+          height: Data.height
+
+        }
       });
 
       instance.chart = chart;
+
     //}
 
     // Store chart instance in the div for later manipulation
@@ -66,4 +85,6 @@ HTMLWidgets.widget({
   }
 
 
+
 });
+
