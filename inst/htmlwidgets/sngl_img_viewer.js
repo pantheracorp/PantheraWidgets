@@ -22,16 +22,19 @@ HTMLWidgets.widget({
                                 // Poacher Cam Viewer pchrcm_alrts_ld_bttn
                                 Shiny.addCustomMessageHandler("pchrcm_alrts_ld_bttn",
                                         function (mesg) {
-                                                let num = parseInt(mesg);
-
-                                                for (let i = 1; i <= num; i++) {
+                                                console.log("start pchrcm_alrts_ld_bttn");
+                                                //let num = parseInt(mesg);
+                                                let obj = JSON.stringify(mesg);
+                                                console.log(obj);
+                                                /*for (let i = 1; i <= num; i++) {
                                                         console.log("extracted " + i);
                                                         let id = "pchrcm_alrts_id_" + i;
                                                         let csvfile = "pchrcm_alrts_" + i + ".csv";
                                                         let obj = new viewerClass(id, csvfile);
                                                         obj.restart();
                                                         obj.fetchServerData(csvfile);
-                                                }
+                                                }*/
+                                                console.log("end pchrcm_alrts_ld_bttn");
                                         }
                                 );
 
@@ -55,7 +58,6 @@ HTMLWidgets.widget({
 
                                 Shiny.addCustomMessageHandler("spcs_idntfctn_extrt_id_button_rf_2",
                                         function (mesg) {
-                                                console.log("NEW HANDLER");
                                                 let src = JSON.stringify(mesg);
                                                 spcs_idntfctns_scndry_img.restart();
                                                 spcs_idntfctns_scndry_img.readServerDataTest(src);
