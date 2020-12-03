@@ -4,7 +4,7 @@
 \alias{sngl_img_viewer}
 \title{Single Image Viewer}
 \usage{
-sngl_img_viewer(fwidth = NULL, height = NULL, elementId = NULL)
+sngl_img_viewer(elementId = NULL, width = NULL, height = NULL)
 }
 \arguments{
 \item{elementId}{Use an explicit element ID where the viewer will be
