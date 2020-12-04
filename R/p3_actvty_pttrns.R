@@ -89,7 +89,7 @@ p3_actvty_pttrns <- function(dataset, colors = NULL,show_points=FALSE,
 
   if(is.null(labels_pos))
   {
-    labels_pos <- list(xs="outer-right",ys="outer-bottom")
+    labels_pos <- list(xpos="outer-right",ypos="outer-bottom")
   }
   # forward options using x
   x = list(

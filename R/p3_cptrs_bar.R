@@ -58,25 +58,6 @@ p3_cptrs_bar <- function(dataset,colors,show_values=TRUE,plot_type='bar',
                          axis_rotate=TRUE,show_y2=FALSE,zoom=TRUE,
                          subchart=FALSE,width=NULL,height=NULL,elementId=NULL) {
 
-  message("start p3_cptrs_bar")
-  message(
-    paste0("x label ",axis_labels$x_axis)
-  )
-
-  message(
-    paste0("y label ",axis_labels$y_axis)
-  )
-
-  message(
-    paste0("x labels_pos ",labels_pos$xs)
-  )
-
-  message(
-    paste0("y labels_pos ",labels_pos$ys)
-  )
-
-  message("end p3_cptrs_bar")
-
   if(is.null(axis_labels))
   {
     axis_labels <- list(x_axis="x",y_axis="y")
