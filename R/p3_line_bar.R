@@ -46,6 +46,25 @@ p3_line_bar <- function(dataset, colors=NULL, axis_labels=NULL,labels_pos=NULL,
                         show_y2 = TRUE,subChart=TRUE,zoom=TRUE, width=NULL,
                          height=NULL,elementId = NULL) {
 
+  message("start p3_line_bar")
+  message(
+    paste0("x label ",axis_labels$x_axis)
+  )
+
+  message(
+    paste0("y label ",axis_labels$y_axis)
+  )
+
+  message(
+    paste0("x labels_pos ",labels_pos$xs)
+  )
+
+  message(
+    paste0("y labels_pos ",labels_pos$ys)
+  )
+
+  message("end p3_line_bar")
+
   if(is.null(colors))
   {
     colors <- list()
@@ -60,6 +79,8 @@ p3_line_bar <- function(dataset, colors=NULL, axis_labels=NULL,labels_pos=NULL,
   {
     labels_pos <- list(xs="outer-right",ys="outer-bottom")
   }
+
+
 
   # forward options using x
   x = list(

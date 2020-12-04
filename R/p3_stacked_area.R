@@ -49,6 +49,24 @@ p3_stacked_area <- function(dataset, colors=NULL,show_points=FALSE,axis_labels=N
                             labels_pos=NULL,subchart=TRUE,zoom=TRUE,width=NULL,
                             height=NULL,elementId=NULL) {
 
+  message("start p3_stacked_area")
+  message(
+    paste0("x label ",axis_labels$x_axis)
+  )
+
+  message(
+    paste0("y label ",axis_labels$y_axis)
+  )
+
+  message(
+    paste0("x labels_pos ",labels_pos$xs)
+  )
+
+  message(
+    paste0("y labels_pos ",labels_pos$ys)
+  )
+
+  message("end p3_stacked_area")
 
   if(is.null(colors))
   {
