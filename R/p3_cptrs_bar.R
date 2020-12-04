@@ -12,6 +12,14 @@
 #'                     Defaults to TRUE.
 #' @param plot_type Character value specifying the chart type for the plot
 #'                  e.g bar , line etc. Defaults to bar chart.
+#' @param axis_labels   Named list of characters defining the prefered chart axis
+#'                      labels.
+#' @param labels_pos    Named list of characters defining the prefered position
+#'                      of the axis labels  e.g for x-axis ( inner-center,
+#'                      inner-left,outer-right, outer-center, outer-left,
+#'                      inner-right [default] ) and y-axis ( inner-middle,
+#'                      inner-bottom, outer-top, outer-middle, outer-bottom,
+#'                      inner-top [default] ).
 #' @param axis_rotate Boolean value to determine axis rotation. Default is set
 #'                    to False.
 #' @param show_y2 Boolean value to include a second y-axis. Default is set
@@ -37,23 +45,36 @@
 #'                          Captures=c(20, 180, 240, 100, 190,213,45,189,67,1))
 #' colors <- list(data1="orange",data2="green",data3="red")
 #' p3_cptrs_bar(dataset = dataset , colors = colors)
-#' p3_cptrs_bar(dataset,colors,plot_type='line',axis_rotate=FALSE)
+#' axis_labels <- list(x_axis="species",y_axis="frequency")
+#' labels_pos <- list(xpos="outer-center",ypos="outer-middle")
+#' p3_cptrs_bar(dataset,colors,plot_type='line',axis_labels,labels_pos,axis_rotate=FALSE)
 #' p3_cptrs_bar(dataset,colors,axis_rotate=TRUE)
 #'
 #' @import htmlwidgets
 #'
 #' @export
 p3_cptrs_bar <- function(dataset,colors,show_values=TRUE,plot_type='bar',
+                         axis_labels=NULL,labels_pos=NULL,
                          axis_rotate=TRUE,show_y2=FALSE,zoom=TRUE,
                          subchart=FALSE,width=NULL,height=NULL,elementId=NULL) {
 
+  if(is.null(axis_labels))
+  {
+    axis_labels <- list(x_axis="x",y_axis="y")
+  }
 
+  if(is.null(labels_pos))
+  {
+    labels_pos <- list(xs="outer-right",ys="outer-bottom")
+  }
   # forward options using x
   x = list(
     dataset  = dataset,
     colors   = colors,
     show_values = show_values,
     plot_type = plot_type,
+    axis_labels = axis_labels,
+    labels_pos = labels_pos,
     axis_rotate = axis_rotate,
     show_y2 = show_y2,
     zoom = zoom,
