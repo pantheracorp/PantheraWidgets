@@ -1,121 +1,145 @@
 HTMLWidgets.widget({
 
-  name: 'p3_cptrs_bar',
+	name: 'p3_cptrs_bar',
 
-  type: 'output',
+	type: 'output',
 
-  factory: function(el, width, height) {
+	factory: function (el, width, height) {
 
-    // create an empty chart
-    var chart = null;
+		// create an empty chart
+		var chart = null;
 
-    return {
+		return {
 
-      renderValue: function(x) {
+			renderValue: function (x) {
 
-        // if the chart does not exist, create it via c3.generate
-        if(chart===null){
 
-            keys = _.keys(x.dataset);
-            //console.log(x.plot_type);
-            //console.log("subChart: " + x.subChart);
-            // console.log("show_y2: " + x.show_y2);
+				console.log(el + " p3_stacked_area");
+				console.log("x label : " + Object.values(x.axis_labels)[0]);
+				console.log("y label : " + Object.values(x.axis_labels)[1]);
 
-          	chart = c3.generate({
+				console.log("x position : " + Object.values(x.labels_pos)[0]);
+				console.log("y position : " + Object.values(x.labels_pos)[1]);
 
-          	  // specify the container element we want the chart to render in
-          		bindto: el,
-          		data: {
+				// if the chart does not exist, create it via c3.generate
+				if (chart === null) {
 
-          		  // intialize with an empty array
-          			json: [],
-          			keys: {
-          			      // use Species for x-axis
-          			      x: "Species",
-              			  // use the remaining data for y-values
-              				value: keys,
-          			},
-          			type: x.plot_type,
-          			order: null,
-          			labels: x.show_values
+					let keys = _.keys(x.dataset);
+					//console.log(x.plot_type);
+					//console.log("subChart: " + x.subChart);
+					// console.log("show_y2: " + x.show_y2);
 
-        		  },
-        		  zoom: {
-        		    enabled: x.zoom
-        		  },
-        		  subchart: {
-        		    show : x.subchart,
-        		    onbrush: debounce(function (domain) {Shiny.onInputChange(el.id, domain)},250)
-        		  },
-        		  legend: {
-        		    show: false
-        		  },
-          		axis: {
-          		  rotated: x.axis_rotate,
+					chart = c3.generate({
 
-          			x: {
-          			  //  x axis as timeseries
-          				type: "category",
-          				tick: {
-          				  multiline: false,
-          				  centered: true
-          				}
+						// specify the container element we want the chart to render in
+						bindto: el,
+						data: {
 
-          			},
+							// intialize with an empty array
+							json: [],
+							keys: {
+								// use Species for x-axis
+								x: "Species",
+								// use the remaining data for y-values
+								value: keys,
+							},
+							type: x.plot_type,
+							order: null,
+							labels: x.show_values
 
-          			y: {
-          			  label: 'Number of photographic captures'
-          			},
+						},
+						zoom: {
+							enabled: x.zoom
+						},
+						subchart: {
+							show: x.subchart,
+							onbrush: debounce(function (domain) {
+								Shiny.onInputChange(el.id, domain)
+							}, 250)
+						},
+						legend: {
+							show: false
+						},
+						axis: {
+							rotated: x.axis_rotate,
 
-          			y2: {
-          			  // we want a second y-axis
-          				show: x.show_y2
-          			}
-          		}
+							x: {
+								//  x axis as timeseries
+								type: "category",
+								label: {
+									text: Object.values(x.axis_labels)[0],
+									position: Object.values(x.labels_pos)[0]
+								},
+								tick: {
+									multiline: false,
+									centered: true
+								}
 
-          		// display a subchart - this will be used for brushing in a later stage
-          	//	subchart: {
-          	//		show: false,
-            //    onbrush: debounce(function (domain) {Shiny.onInputChange(el.id, domain)},250)
-          	//	}
+							},
 
-          	});
-        }
+							y: {
+								label: {
+									text: Object.values(x.axis_labels)[1],
+									position: Object.values(x.labels_pos)[1]
+								},
+							},
 
-        // at this stage the chart always exists
-        // get difference in keys
-        var old_keys = _.keys(chart.x());
-        var new_keys = _.keys(x.dataset);
-        var diff     = _.difference(old_keys,new_keys);
+							/* y: {
+								label: 'Number of photographic captures'
+							}, */
 
-        // update the data and colors
-        chart.load({
-          json  : x.dataset,
-          colors: x.colors,
-          subchart: x.subchart,
+							y2: {
+								// we want a second y-axis
+								show: x.show_y2
+							}
+						}
 
-          // unload data that we don't need anymore
-          unload: diff
-        });
-      },
+						// display a subchart - this will be used for brushing in a later stage
+						//	subchart: {
+						//		show: false,
+						//    onbrush: debounce(function (domain) {Shiny.onInputChange(el.id, domain)},250)
+						//	}
 
-      // this part will be called each time we resize the containing div element
-      resize: function(el, width, height, instance) {
+					});
+				}
 
-      },
+				// at this stage the chart always exists
+				// get difference in keys
+				var old_keys = _.keys(chart.x());
+				var new_keys = _.keys(x.dataset);
+				var diff = _.difference(old_keys, new_keys);
 
-      getChart: function(){
-        return chart;
-      }
-    };
-  }
+				// update the data and colors
+				chart.load({
+					json: x.dataset,
+					colors: x.colors,
+					axis_labels: x.axis_labels,
+					labels_pos: x.labels_pos,
+					subchart: x.subchart,
+
+					// unload data that we don't need anymore
+					unload: diff
+				});
+			},
+
+			// this part will be called each time we resize the containing div element
+			resize: function (el, width, height, instance) {
+
+			},
+
+			getChart: function () {
+				return chart;
+			}
+		};
+	}
 });
 
 function debounce(func, wait, immediate) {
 	var timeout;
-	return function() {
-		var context = this, args = arguments;
-		var later = function() {
+	return function () {
+		var context = this,
+			args = arguments;
+		var later = function () {
 			timeout = null;
 			if (!immediate) func.apply(context, args);
 		};

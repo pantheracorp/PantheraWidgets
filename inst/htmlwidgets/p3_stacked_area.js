@@ -13,6 +13,12 @@ HTMLWidgets.widget({
 
       renderValue: function(x) {
 
+        console.log(el + " p3_stacked_area");
+        console.log("x label : " + Object.values(x.axis_labels)[0]);
+        console.log("y label : " + Object.values(x.axis_labels)[1]);
+
+        console.log("x position : " + Object.values(x.labels_pos)[0]);
+        console.log("y position : " + Object.values(x.labels_pos)[1]);
         // if the chart does not exist, create it via c3.generate
         if(chart===null){
 
