@@ -16,7 +16,11 @@ HTMLWidgets.widget({
                                         pttrn_rcgntn_vw_orgnls_1 = new viewerClass(
                                                 "pttrn_rcgntn_orgnl_imgs_1"),
                                         pttrn_rcgntn_vw_orgnls_2 = new viewerClass(
-                                                "pttrn_rcgntn_orgnl_imgs_2");
+                                                "pttrn_rcgntn_orgnl_imgs_2"),
+
+                                        // pttrn_rcgntn_orgnl_img_prmry assgn_indvdl_nms_grp
+                                        pttrn_rcgntn_assgn_indvdl_nms_img = new viewerClass(
+                                                "pttrn_rcgntn_orgnl_prmry_img");
 
 
                                 // Poacher Cam Viewer pchrcm_alrts_ld_bttn
@@ -178,6 +182,28 @@ HTMLWidgets.widget({
                                                 pttrn_rcgntn_vw_orgnls_2.next();
                                         }
                                 );
+
+                                // 
+                                Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_img_prmry",
+                                        function (mesg) {
+                                                console.log("start prmry pttrn_rcgntn_orgnl_img_prmry handler");
+                                                let src = JSON.stringify(mesg);
+                                                pttrn_rcgntn_assgn_indvdl_nms_img.restart();
+                                                pttrn_rcgntn_assgn_indvdl_nms_img.readServerDataTest(src);
+
+                                                /*$('#pttrn_rcgntn_orgnl_prmry_img').attr('tabindex', '0');
+                                                $('#pttrn_rcgntn_orgnl_prmry_img').css({
+                                                        'outline': '0px solid transparent'
+                                                });
+                                                $('#pttrn_rcgntn_orgnl_prmry_img').focus();
+
+                                                $('#currnt-img_orgnl_imgs_1').click(function () {
+                                                        $('#pttrn_rcgntn_orgnl_prmry_img').focus();
+                                                });*/
+                                        }
+                                );
+
+
                         },
 
                         resize: function (width, height) {}
