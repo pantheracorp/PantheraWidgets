@@ -88,10 +88,12 @@ class viewerClass {
     if (response === null) {
       console.log(" Error in reading your images.Please check if all requirements are provided.");
     } else {
+      console.log("Response -> " + response);
       respArray = response.split(",");
       for (let i = 0; i < respArray.length; i++) {
 
         let src = ((respArray[i].trim()).replace(/[\[\]'"]+/g, '')).replace(/(\r\n|\n|\r)/gm, "");
+        console.log("src -> " + src);
         this.result.push(src);
       }
       this.displayImage();

@@ -188,7 +188,7 @@ HTMLWidgets.widget({
                                 Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_img_prmry",
                                         function (mesg) {
                                                 //console.log("start prmry pttrn_rcgntn_orgnl_img_prmry handler");
-                                                alert("pttrn_rcgntn_orgnl_img_prmry");
+                                                console.log("pttrn_rcgntn_orgnl_img_prmry");
                                                 let src = JSON.stringify(mesg);
                                                 pttrn_rcgntn_assgn_indvdl_nms_img.restart();
                                                 pttrn_rcgntn_assgn_indvdl_nms_img.readServerDataTest(src);
