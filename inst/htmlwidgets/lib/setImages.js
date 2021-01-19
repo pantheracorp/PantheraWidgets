@@ -47,6 +47,24 @@ function setCanvas(targetID, imgSrc) {
         'maxWidth': '100%',
         'max-height': '100%'
       });
+    } else if (targetID === 'pttrn_rcgntn_orgnl_prmry_img') {
+
+      $('#' + targetID).css('text-align', 'center');
+      $('#' + targetID).prepend($('<img>', {
+        id: imgId,
+        src: imgSrc,
+        alt: 'camtrap',
+        width: '100%',
+        height: 'auto'
+      }));
+      $('#' + imgId).css({
+        'maxHeight': '500px',
+        'maxWidth': '100%'
+      });
+      $('#currnt-img_rgnl_prmry_img').click(function () {
+        $('#pttrn_rcgntn_orgnl_prmry_img').focus();
+      });
+
     } else {
       $('#' + targetID).css('text-align', 'center');
       $('#' + targetID).prepend($('<img>', {
