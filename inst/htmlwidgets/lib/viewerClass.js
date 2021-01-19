@@ -49,6 +49,14 @@ class viewerClass {
     if ((this.moduleId).includes("pchrcm_alrts_id_")) {
       setCanvas(this.moduleId, this.result[0]);
     }
+
+
+    // pttrn_rcgntn_orgnl_prmry_img
+    if ((this.moduleId === 'pttrn_rcgntn_orgnl_prmry_img')) {
+      setCanvas(this.moduleId, this.result[0]);
+    }
+
+
     this.sendDataToShinny();
 
   }
