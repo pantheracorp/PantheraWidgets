@@ -1,4 +1,4 @@
-    console.log('12-06-2020 16:23');
+    console.log('19-01-2021 14:35');
     console.log('viewerHelper.js');
 
     // maps vwrs contl bttns
@@ -17,8 +17,13 @@
         ];
       }
       if (id === 'spcs_idntfctn_id_rf_1') {
-        return ['spcs_idntfctn_prev_button_rf_1', ];
+        return ['spcs_idntfctn_prev_button_rf_1',
+          'spcs_idntfctn_reset_button_rf_1',
+          'spcs_idntfctn_next_button_rf_1'
+        ];
       }
+
+      //if()
     }
 
 

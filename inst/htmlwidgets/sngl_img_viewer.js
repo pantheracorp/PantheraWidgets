@@ -193,15 +193,15 @@ HTMLWidgets.widget({
                                                 pttrn_rcgntn_assgn_indvdl_nms_img.restart();
                                                 pttrn_rcgntn_assgn_indvdl_nms_img.readServerDataTest(src);
 
-                                                /*$('#pttrn_rcgntn_orgnl_prmry_img').attr('tabindex', '0');
+                                                $('#pttrn_rcgntn_orgnl_prmry_img').attr('tabindex', '0');
                                                 $('#pttrn_rcgntn_orgnl_prmry_img').css({
                                                         'outline': '0px solid transparent'
                                                 });
                                                 $('#pttrn_rcgntn_orgnl_prmry_img').focus();
 
-                                                $('#currnt-img_orgnl_imgs_1').click(function () {
+                                                $('#currnt-img_rgnl_prmry_img').click(function () {
                                                         $('#pttrn_rcgntn_orgnl_prmry_img').focus();
-                                                });*/
+                                                });
                                         }
                                 );
 

@@ -156,6 +156,10 @@ class viewerClass {
       if (this.moduleId == "spcs_idntfctn_id_rf_2") {
         Shiny.setInputValue("spcs_idntfctn_id_rf_2_curr_img", imgname);
       }
+
+      if (this.moduleId == "pttrn_rcgntn_orgnl_prmry_img") {
+        //Shiny.setInputValue("spcs_idntfctn_id_rf_2_curr_img", imgname);
+      }
     }
   }
 
