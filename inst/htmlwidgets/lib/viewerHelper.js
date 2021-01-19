@@ -10,12 +10,14 @@
           'pttrn_rcgntn_orgnl_imgs_next_button'
         ];
       }
+
       if (id === 'spcs_idntfctn_id_rf_2') {
         return ['spcs_idntfctn_prev_button_rf_2',
           'spcs_idntfctn_reset_button_rf_2',
           'spcs_idntfctn_next_button_rf_2'
         ];
       }
+
       if (id === 'spcs_idntfctn_id_rf_1') {
         return ['spcs_idntfctn_prev_button_rf_1',
           'spcs_idntfctn_reset_button_rf_1',
@@ -23,7 +25,12 @@
         ];
       }
 
-      //if()
+      if (id === 'pttrn_rcgntn_orgnl_prmry_img') {
+        return ['pttrn_rcgntn_orgnl_prmry_img_prev',
+          'pttrn_rcgntn_orgnl_prmry_img_reset',
+          'pttrn_rcgntn_orgnl_prmry_img_next'
+        ];
+      }
     }
 
 
