@@ -56,7 +56,6 @@ class viewerClass {
       setCanvas(this.moduleId, this.result[0]);
     }
 
-
     this.sendDataToShinny();
 
   }

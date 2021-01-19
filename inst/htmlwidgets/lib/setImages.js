@@ -1,4 +1,6 @@
 function setCanvas(targetID, imgSrc) {
+
+  console.log("setCanvas -> " + "targetID -> " + targetID + "imgSrc -> " + imgSrc);
   let imgId = '';
 
   if (targetID === 'pttrn_rcgntn_orgnl_imgs_1' || targetID === 'pttrn_rcgntn_orgnl_imgs_2') {
@@ -6,6 +8,8 @@ function setCanvas(targetID, imgSrc) {
   } else {
     imgId = 'currnt-img_' + targetID.substring(14, targetID.length);
   }
+
+  console.log("imgId -> " + imgId);
 
   // the target div already exist
   if ($('#' + targetID + ' img').length) {
