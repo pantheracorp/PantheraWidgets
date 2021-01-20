@@ -146,7 +146,10 @@ class viewerClass {
   }
 
   sendDataToShinny() {
-    console.log("sendDataToShinny");
+    console.log("sendDataToShinny -> " + this.moduleId);
+    console.log(this.moduleId == "pttrn_rcgntn_orgnl_prmry_img");
+    console.log(this.moduleId === "pttrn_rcgntn_orgnl_prmry_img");
+
     if (this.moduleId == "spcs_idntfctn_id_rf_1" || this.moduleId == "spcs_idntfctn_id_rf_2") {
       let src = this.result[this.currentIndex];
       let imgname = src.substring(src.lastIndexOf("/") + 1, src.length);
