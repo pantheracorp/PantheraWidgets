@@ -147,15 +147,10 @@ class viewerClass {
 
   sendDataToShinny() {
 
-    console.log("sendDataToShinny -> " + this.moduleId);
-    console.log(this.moduleId == "pttrn_rcgntn_orgnl_prmry_img");
-    console.log(this.moduleId === "pttrn_rcgntn_orgnl_prmry_img");
-
     let src = this.result[this.currentIndex];
     let imgname = src.substring(src.lastIndexOf("/") + 1, src.length);
 
     if (this.moduleId == "pttrn_rcgntn_orgnl_prmry_img") {
-      console.log("case -> pttrn_rcgntn_orgnl_prmry_img");
       Shiny.setInputValue("pttrn_rcgntn_orgnl_prmry_curr_img", imgname);
     }
 

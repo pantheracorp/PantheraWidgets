@@ -49,7 +49,7 @@ HTMLWidgets.widget({
         // Handle extract images buttons
         Shiny.addCustomMessageHandler("spcs_idntfctn_extrt_id_button_rf_1",
           function (mesg) {
-            console.log("spcs_idntfctn_extrt_id_button_rf_1 19/01/2021");
+            //console.log("spcs_idntfctn_extrt_id_button_rf_1 19/01/2021");
             let src = JSON.stringify(mesg);
             spcs_idntfctns_prmry_img.restart();
             spcs_idntfctns_prmry_img.readServerDataTest(src);
@@ -139,7 +139,7 @@ HTMLWidgets.widget({
         // original imgs vwrs
         Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_prmry_imgs_dsply_bttn",
           function (mesg) {
-            console.log("start prmry pttrn_rcgntn_vw_orgnls_button handler");
+            //console.log("start prmry pttrn_rcgntn_vw_orgnls_button handler");
             let src = JSON.stringify(mesg);
             pttrn_rcgntn_vw_orgnls_1.restart();
             pttrn_rcgntn_vw_orgnls_1.readServerDataTest(src);
@@ -158,7 +158,7 @@ HTMLWidgets.widget({
 
         Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_scndry_imgs_dsply_bttn",
           function (mesg) {
-            console.log("start sec pttrn_rcgntn_vw_orgnls_button handler");
+            //console.log("start sec pttrn_rcgntn_vw_orgnls_button handler");
             let src = JSON.stringify(mesg);
             pttrn_rcgntn_vw_orgnls_2.restart();
             pttrn_rcgntn_vw_orgnls_2.readServerDataTest(src);
@@ -208,7 +208,7 @@ HTMLWidgets.widget({
         Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_img_prmry",
           function (mesg) {
             //console.log("start prmry pttrn_rcgntn_orgnl_img_prmry handler");
-            console.log("pttrn_rcgntn_orgnl_img_prmry");
+            //console.log("pttrn_rcgntn_orgnl_img_prmry");
             let src = JSON.stringify(mesg);
 
             pttrn_rcgntn_assgn_indvdl_nms_img.restart();

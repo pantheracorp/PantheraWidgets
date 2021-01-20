@@ -1,9 +1,9 @@
-    console.log('20-01-2021 07:51');
-    console.log('viewerHelper.js');
+    console.log('20-01-2021 08:43');
+    //console.log('viewerHelper.js');
 
     // maps vwrs contl bttns
     function mapBttn(id) {
-      console.log('mapBttn : ' + id);
+      // console.log('mapBttn : ' + id);
       if (id === 'pttrn_rcgntn_orgnl_imgs_2' || id === 'pttrn_rcgntn_orgnl_imgs_1') {
         return ['pttrn_rcgntn_orgnl_imgs_prev_button',
           'pttrn_rcgntn_orgnl_imgs_dsply_button',
@@ -40,7 +40,7 @@
       console.log(cntlids[0] + ' rst ' + cntlids[1] + ' nxt ' + cntlids[2]);
       switch (event.keyCode) {
         case 37:
-          $('#' + cntlids[0]).trigger("click"); // .trigger( "click" );
+          $('#' + cntlids[0]).trigger("click");
           console.log('keyControls case left arrow');
           break;
         case 39:
