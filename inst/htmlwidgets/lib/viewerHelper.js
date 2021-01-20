@@ -1,4 +1,4 @@
-    console.log('19-01-2021 14:35');
+    console.log('20-01-2021 07:51');
     console.log('viewerHelper.js');
 
     // maps vwrs contl bttns
