@@ -25,11 +25,15 @@ HTMLWidgets.widget({
           pttrn_rcgntn_assgn_indvdl_nms_img = new viewerClass(
             "pttrn_rcgntn_orgnl_prmry_img");
 
+        // pchrcm_alrts = new viewerClass(
+        //   "pttrn_rcgntn_orgnl_prmry_img");
+
         console.log("sngl_img_viewer 20/01/2021");
 
         // Poacher Cam Viewer pchrcm_alrts_ld_bttn
         Shiny.addCustomMessageHandler("pchrcm_alrts_ld_bttn",
           function (mesg) {
+            console.log("pchrcm_alrts_ld_bttn handler");
             console.log("start pchrcm_alrts_ld_bttn");
             //let num = parseInt(mesg);
             let obj = JSON.stringify(mesg);
