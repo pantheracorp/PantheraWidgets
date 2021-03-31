@@ -28,7 +28,7 @@ HTMLWidgets.widget({
         // pchrcm_alrts = new viewerClass(
         //   "pttrn_rcgntn_orgnl_prmry_img");
 
-        console.log("sngl_img_viewer 30/03/2021");
+        console.log("sngl_img_viewer 31/03/2021");
 
         // Poacher Cam Viewer pchrcm_alrts_ld_bttn
         Shiny.addCustomMessageHandler("pchrcm_alrts_ld_bttn",
