@@ -36,7 +36,7 @@ HTMLWidgets.widget({
             console.log("pchrcm_alrts_ld_bttn handler");
             console.log("start pchrcm_alrts_ld_bttn");
 
-            let img_arry = mesg.img_src;
+            let img_arry = mesg;
             console.log(img_arry);
 
             for (let i = 0; i < img_arry.length; i++) {
