@@ -44,7 +44,7 @@ HTMLWidgets.widget({
               let id_num = "pchrcm_alrts_id_".concat(++i);
               let obj_nm = new viewerClass(id_num);
               obj_nm.restart();
-              obj_nm.result.push(mesg[i]);
+              obj_nm.result.push(mesg[i - 1]);
               obj_nm.displayImage();
             }
 
