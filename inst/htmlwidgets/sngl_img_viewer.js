@@ -42,7 +42,7 @@ HTMLWidgets.widget({
             for (let i = 0; i < mesg.length; i++) {
 
               let obj_nm = new viewerClass(
-                "pchrcm_alrts_id_" + i + 1);
+                "pchrcm_alrts_id_" + ++i);
               obj_nm.restart();
               obj_nm.result.push(mesg[i]);
               obj_nm.displayImage();
