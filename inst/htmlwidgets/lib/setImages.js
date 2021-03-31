@@ -1,3 +1,7 @@
+const {
+  cornflowerblue
+} = require("color-name");
+
 function setCanvas(targetID, imgSrc) {
 
   console.log("setCanvas -> " + "targetID -> " + targetID + "imgSrc -> " + imgSrc);
@@ -35,6 +39,8 @@ function setCanvas(targetID, imgSrc) {
     } else if (targetID.substring(0, 16) === "pchrcm_alrts_id_") {
       $('#' + targetID).css('text-align', 'center');
       console.log('case pchrcm_alrts_id_');
+      console.log("targetID -> " + targetID);
+      console.log("src -> " + imgSrc);
       $('#' + targetID).prepend($('<img>', {
         id: imgId,
         src: imgSrc,
