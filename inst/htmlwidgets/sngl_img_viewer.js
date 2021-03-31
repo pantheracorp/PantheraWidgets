@@ -35,17 +35,18 @@ HTMLWidgets.widget({
           function (mesg) {
             console.log("pchrcm_alrts_ld_bttn handler");
             console.log("start pchrcm_alrts_ld_bttn");
-            //let num = parseInt(mesg);
-            //let obj = JSON.stringify(mesg);
-            console.log(mesg);
 
-            for (let i = 0; i < mesg.length; i++) {
+            let img_arry = mesg.img_src;
+            console.log(img_arry);
+
+            for (let i = 0; i < img_arry.length; i++) {
 
               let id_num = "pchrcm_alrts_id_".concat(++i);
               let obj_nm = new viewerClass(id_num);
               obj_nm.restart();
-              obj_nm.result.push(mesg[i - 1]);
+              obj_nm.result.push(img_arry[i - 1]);
               obj_nm.displayImage();
+
             }
 
             /* let prchr_alrts = new viewerClass(
