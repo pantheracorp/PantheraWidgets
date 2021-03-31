@@ -1,7 +1,3 @@
-const {
-  cornflowerblue
-} = require("color-name");
-
 HTMLWidgets.widget({
 
   name: 'sngl_img_viewer',
@@ -32,7 +28,7 @@ HTMLWidgets.widget({
         // pchrcm_alrts = new viewerClass(
         //   "pttrn_rcgntn_orgnl_prmry_img");
 
-        console.log("sngl_img_viewer 31/03/2021");
+        console.log("sngl_img_viewer 31/03/2021 08:17");
 
         // Poacher Cam Viewer pchrcm_alrts_ld_bttn
         Shiny.addCustomMessageHandler("pchrcm_alrts_ld_bttn",
@@ -44,10 +40,9 @@ HTMLWidgets.widget({
             console.log(mesg);
 
             for (let i = 0; i < mesg.length; i++) {
-              console.log.log("id i+1 ", i + 1);
-              console.log.log("id ++i ", ++i);
-              let obj_nm = new viewerClass(
-                "pchrcm_alrts_id_" + ++i);
+
+              let id_num = "pchrcm_alrts_id_".concat(++i);
+              let obj_nm = new viewerClass(id_num);
               obj_nm.restart();
               obj_nm.result.push(mesg[i]);
               obj_nm.displayImage();
