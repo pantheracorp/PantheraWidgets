@@ -1,3 +1,7 @@
+const {
+  cornflowerblue
+} = require("color-name");
+
 HTMLWidgets.widget({
 
   name: 'sngl_img_viewer',
@@ -40,7 +44,8 @@ HTMLWidgets.widget({
             console.log(mesg);
 
             for (let i = 0; i < mesg.length; i++) {
-
+              console.log.log("id i+1 ", i + 1);
+              console.log.log("id ++i ", ++i);
               let obj_nm = new viewerClass(
                 "pchrcm_alrts_id_" + ++i);
               obj_nm.restart();
