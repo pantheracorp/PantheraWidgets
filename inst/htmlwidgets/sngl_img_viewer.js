@@ -39,20 +39,29 @@ HTMLWidgets.widget({
             //let obj = JSON.stringify(mesg);
             console.log(mesg);
 
-            let prchr_alrts = new viewerClass(
-              "pchrcm_alrts_id_1");
+            for (let i = 0; i < mesg.length; i++) {
 
-            let src = JSON.stringify(mesg);
-            prchr_alrts.restart();
-            prchr_alrts.readServerDataTest(src);
-            /*for (let i = 1; i <= num; i++) {
-                    console.log("extracted " + i);
-                    let id = "pchrcm_alrts_id_" + i;
-                    let csvfile = "pchrcm_alrts_" + i + ".csv";
-                    let obj = new viewerClass(id, csvfile);
-                    obj.restart();
-                    obj.fetchServerData(csvfile);
-            }*/
+              let obj_nm = new viewerClass(
+                "pchrcm_alrts_id_" + i);
+              obj_nm.restart();
+              obj_nm.result.push(mesg[i]);
+              obj_nm.displayImage();
+            }
+
+            /* let prchr_alrts = new viewerClass(
+               "pchrcm_alrts_id_1");
+
+             let src = JSON.stringify(mesg);
+             prchr_alrts.restart();
+             prchr_alrts.readServerDataTest(src);
+             for (let i = 1; i <= num; i++) {
+                     console.log("extracted " + i);
+                     let id = "pchrcm_alrts_id_" + i;
+                     let csvfile = "pchrcm_alrts_" + i + ".csv";
+                     let obj = new viewerClass(id, csvfile);
+                     obj.restart();
+                     obj.fetchServerData(csvfile);
+             }*/
             console.log("end pchrcm_alrts_ld_bttn");
           }
         );

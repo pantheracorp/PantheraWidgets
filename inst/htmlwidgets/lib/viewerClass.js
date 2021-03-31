@@ -27,6 +27,7 @@ class viewerClass {
 
   displayImage() {
 
+    console.log("displayImage -> " + this.result[0]);
     if (this.imgexist(this.result[0]) == false) {
       console.log('img does not exist');
       this.result[0] = this.errorImg;
