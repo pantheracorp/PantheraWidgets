@@ -10,6 +10,8 @@ HTMLWidgets.widget({
 
       renderValue: function (x) {
 
+        console.log("sngl_img_viewer 01/03/2021 06:25");
+
         let spcs_idntfctns_scndry_img = new viewerClass(
             "spcs_idntfctn_id_rf_2"),
 
@@ -28,45 +30,53 @@ HTMLWidgets.widget({
         // pchrcm_alrts = new viewerClass(
         //   "pttrn_rcgntn_orgnl_prmry_img");
 
-        console.log("sngl_img_viewer 31/03/2021 11:30");
+        if ((x.targetId).includes("pchrcm_alrts_id_")) {
+          console.log('Includes pchrcm_alrts_id_')
+          console.log(x.targetId);
+          console.log(x.src);
+          setCanvas(x.targetId, x.src)
+        }
+
+
+
 
         // Poacher Cam Viewer pchrcm_alrts_ld_bttn
-        Shiny.addCustomMessageHandler("pchrcm_alrts_ld_bttn",
-          function (mesg) {
-            console.log("pchrcm_alrts_ld_bttn handler");
-            console.log("start pchrcm_alrts_ld_bttn");
+        // Shiny.addCustomMessageHandler("pchrcm_alrts_ld_bttn",
+        //   function (mesg) {
+        //     console.log("pchrcm_alrts_ld_bttn handler");
+        //     console.log("start pchrcm_alrts_ld_bttn");
 
-            let img_arry = mesg;
-            console.log(img_arry);
+        //     let img_arry = mesg;
+        //     console.log(img_arry);
 
-            for (let i = 0; i < img_arry.length; i++) {
+        //     for (let i = 0; i < img_arry.length; i++) {
 
-              let j = i;
-              let id_num = "pchrcm_alrts_id_".concat(j + 1);
-              let obj_nm = new viewerClass(id_num);
-              obj_nm.restart();
-              obj_nm.result.push(img_arry[i]);
-              obj_nm.displayImage();
+        //       let j = i;
+        //       let id_num = "pchrcm_alrts_id_".concat(j + 1);
+        //       let obj_nm = new viewerClass(id_num);
+        //       obj_nm.restart();
+        //       obj_nm.result.push(img_arry[i]);
+        //       obj_nm.displayImage();
 
-            }
+        //     }
 
-            /* let prchr_alrts = new viewerClass(
-               "pchrcm_alrts_id_1");
+        //     /* let prchr_alrts = new viewerClass(
+        //        "pchrcm_alrts_id_1");
 
-             let src = JSON.stringify(mesg);
-             prchr_alrts.restart();
-             prchr_alrts.readServerDataTest(src);
-             for (let i = 1; i <= num; i++) {
-                     console.log("extracted " + i);
-                     let id = "pchrcm_alrts_id_" + i;
-                     let csvfile = "pchrcm_alrts_" + i + ".csv";
-                     let obj = new viewerClass(id, csvfile);
-                     obj.restart();
-                     obj.fetchServerData(csvfile);
-             }*/
-            console.log("end pchrcm_alrts_ld_bttn");
-          }
-        );
+        //      let src = JSON.stringify(mesg);
+        //      prchr_alrts.restart();
+        //      prchr_alrts.readServerDataTest(src);
+        //      for (let i = 1; i <= num; i++) {
+        //              console.log("extracted " + i);
+        //              let id = "pchrcm_alrts_id_" + i;
+        //              let csvfile = "pchrcm_alrts_" + i + ".csv";
+        //              let obj = new viewerClass(id, csvfile);
+        //              obj.restart();
+        //              obj.fetchServerData(csvfile);
+        //      }*/
+        //     console.log("end pchrcm_alrts_ld_bttn");
+        //   }
+        // );
 
         // Handle extract images buttons
         Shiny.addCustomMessageHandler("spcs_idntfctn_extrt_id_button_rf_1",

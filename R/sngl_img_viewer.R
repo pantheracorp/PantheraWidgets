@@ -17,13 +17,14 @@
 #' height = 0),
 #'
 #' @export
-sngl_img_viewer <- function(elementId = NULL,width = NULL, height = NULL) {
+sngl_img_viewer <- function(elementId = NULL,width = NULL, height = NULL,src = NULL) {
 
   # forward options using x
   x = list(
     width = width,
     height = height,
-    targetId = elementId
+    targetId = elementId,
+    src = src
   )
 
   # create widget
