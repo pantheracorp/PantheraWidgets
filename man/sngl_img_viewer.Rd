@@ -4,7 +4,7 @@
 \alias{sngl_img_viewer}
 \title{Single Image Viewer}
 \usage{
-sngl_img_viewer(elementId = NULL, width = NULL, height = NULL)
+sngl_img_viewer(elementId = NULL, width = NULL, height = NULL, src = NULL)
 }
 \arguments{
 \item{elementId}{Use an explicit element ID where the viewer will be
@@ -13,6 +13,8 @@ page.}
 
 \item{width, height}{Should be set to 0. The targeted element width and height
 will be used instead.}
+
+\item{src}{Image source string}
 }
 \description{
 Renders a single image viewer

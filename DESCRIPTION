@@ -1,6 +1,6 @@
 Package: PantheraWidgets
 Title: PantheraWidgets
-Version: 1.7.2
+Version: 1.7.3
 Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
 Description: Set of graphical chart plots (widgets) developed based on c3.js library and htmlwidgets.
 Depends: R (>= 3.2.0)

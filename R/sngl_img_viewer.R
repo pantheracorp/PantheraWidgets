@@ -6,6 +6,7 @@
 #' @param elementId 	  Use an explicit element ID where the viewer will be
 #'                      displayed.This can be the ID of a div element on your
 #'                      page.
+#' @param src           Image source string 
 #' @import htmlwidgets
 #'
 #' @example
