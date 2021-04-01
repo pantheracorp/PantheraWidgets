@@ -10,7 +10,7 @@ HTMLWidgets.widget({
 
       renderValue: function (x) {
 
-        console.log("sngl_img_viewer 01/03/2021 06:25");
+        console.log("sngl_img_viewer 01/04/2021 06:25");
 
         let spcs_idntfctns_scndry_img = new viewerClass(
             "spcs_idntfctn_id_rf_2"),
@@ -27,13 +27,8 @@ HTMLWidgets.widget({
           pttrn_rcgntn_assgn_indvdl_nms_img = new viewerClass(
             "pttrn_rcgntn_orgnl_prmry_img");
 
-        // pchrcm_alrts = new viewerClass(
-        //   "pttrn_rcgntn_orgnl_prmry_img");
 
         if ((x.targetId).includes("pchrcm_alrts_id_")) {
-          console.log('Includes pchrcm_alrts_id_')
-          console.log(x.targetId);
-          console.log(x.src);
           setCanvas(x.targetId, x.src)
         }
 
@@ -81,7 +76,6 @@ HTMLWidgets.widget({
         // Handle extract images buttons
         Shiny.addCustomMessageHandler("spcs_idntfctn_extrt_id_button_rf_1",
           function (mesg) {
-            //console.log("spcs_idntfctn_extrt_id_button_rf_1 19/01/2021");
             let src = JSON.stringify(mesg);
             spcs_idntfctns_prmry_img.restart();
             spcs_idntfctns_prmry_img.readServerDataTest(src);
@@ -171,7 +165,6 @@ HTMLWidgets.widget({
         // original imgs vwrs
         Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_prmry_imgs_dsply_bttn",
           function (mesg) {
-            //console.log("start prmry pttrn_rcgntn_vw_orgnls_button handler");
             let src = JSON.stringify(mesg);
             pttrn_rcgntn_vw_orgnls_1.restart();
             pttrn_rcgntn_vw_orgnls_1.readServerDataTest(src);
@@ -190,7 +183,6 @@ HTMLWidgets.widget({
 
         Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_scndry_imgs_dsply_bttn",
           function (mesg) {
-            //console.log("start sec pttrn_rcgntn_vw_orgnls_button handler");
             let src = JSON.stringify(mesg);
             pttrn_rcgntn_vw_orgnls_2.restart();
             pttrn_rcgntn_vw_orgnls_2.readServerDataTest(src);
@@ -239,8 +231,7 @@ HTMLWidgets.widget({
         // 
         Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_img_prmry",
           function (mesg) {
-            //console.log("start prmry pttrn_rcgntn_orgnl_img_prmry handler");
-            //console.log("pttrn_rcgntn_orgnl_img_prmry");
+
             let src = JSON.stringify(mesg);
 
             pttrn_rcgntn_assgn_indvdl_nms_img.restart();
