@@ -31,6 +31,77 @@
           'pttrn_rcgntn_orgnl_prmry_img_next'
         ];
       }
+
+      if (id === 'img_vwr_pnl_1') {
+        return ['img_vwr_pnl_1_prev',
+          'img_vwr_pnl_1_reset',
+          'img_vwr_pnl_1_next'
+        ];
+      }
+
+      if (id === 'img_vwr_pnl_2') {
+        return ['img_vwr_pnl_2_prev',
+          'img_vwr_pnl_2_reset',
+          'img_vwr_pnl_2_next'
+        ];
+      }
+
+      if (id === 'img_vwr_pnl_3') {
+        return ['img_vwr_pnl_3_prev',
+          'img_vwr_pnl_3_reset',
+          'img_vwr_pnl_3_next'
+        ];
+      }
+
+      if (id === 'img_vwr_pnl_4') {
+        return ['img_vwr_pnl_4_prev',
+          'img_vwr_pnl_4_reset',
+          'img_vwr_pnl_4_next'
+        ];
+      }
+
+      if (id === 'img_vwr_pnl_5') {
+        return ['img_vwr_pnl_5_prev',
+          'img_vwr_pnl_5_reset',
+          'img_vwr_pnl_5_next'
+        ];
+      }
+
+      if (id === 'img_vwr_pnl_6') {
+        return ['img_vwr_pnl_6_prev',
+          'img_vwr_pnl_6_reset',
+          'img_vwr_pnl_6_next'
+        ];
+      }
+
+      if (id === 'img_vwr_pnl_7') {
+        return ['img_vwr_pnl_7_prev',
+          'img_vwr_pnl_7_reset',
+          'img_vwr_pnl_7_next'
+        ];
+      }
+
+      if (id === 'img_vwr_pnl_8') {
+        return ['img_vwr_pnl_8_prev',
+          'img_vwr_pnl_8_reset',
+          'img_vwr_pnl_8_next'
+        ];
+      }
+
+      if (id === 'img_vwr_pnl_9') {
+        return ['img_vwr_pnl_9_prev',
+          'img_vwr_pnl_9_reset',
+          'img_vwr_pnl_9_next'
+        ];
+      }
+
+      if (id === 'img_vwr_pnl_10') {
+        return ['img_vwr_pnl_10_prev',
+          'img_vwr_pnl_10_reset',
+          'img_vwr_pnl_10_next'
+        ];
+      }
+
     }
 
 

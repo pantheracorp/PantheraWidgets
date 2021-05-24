@@ -27,6 +27,35 @@ HTMLWidgets.widget({
           pttrn_rcgntn_assgn_indvdl_nms_img = new viewerClass(
             "pttrn_rcgntn_orgnl_prmry_img");
 
+          img_vwr_pnl_1_nms_img = new viewerClass(
+            "img_vwr_pnl_1_img");
+
+          img_vwr_pnl_2_nms_img = new viewerClass(
+            "img_vwr_pnl_2_img");
+
+          img_vwr_pnl_3_nms_img = new viewerClass(
+            "img_vwr_pnl_3_img");
+
+          img_vwr_pnl_4_nms_img = new viewerClass(
+            "img_vwr_pnl_4_img");
+
+          img_vwr_pnl_5_nms_img = new viewerClass(
+            "img_vwr_pnl_5_img");
+
+          img_vwr_pnl_6_nms_img = new viewerClass(
+            "img_vwr_pnl_6_img");
+
+          img_vwr_pnl_7_nms_img = new viewerClass(
+            "img_vwr_pnl_7_img");
+
+          img_vwr_pnl_8_nms_img = new viewerClass(
+            "img_vwr_pnl_8_img");
+
+          img_vwr_pnl_9_nms_img = new viewerClass(
+            "img_vwr_pnl_9_img");
+
+          img_vwr_pnl_10_nms_img = new viewerClass(
+            "img_vwr_pnl_10_img");
 
         if ((x.targetId).includes("pchrcm_alrts_id_")) {
           setCanvas(x.targetId, x.src)
@@ -162,6 +191,207 @@ HTMLWidgets.widget({
           }
         );
 
+
+
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_1_prev",
+          function (mesg) {
+            img_vwr_pnl_1.prev();
+          }
+        );
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_1_reset",
+          function (mesg) {
+            img_vwr_pnl_1.reset();
+          }
+        );
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_1_next",
+          function (mesg) {
+            img_vwr_pnl_1.next();
+          }
+        );
+
+        // -----------------------------------------------------
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_2_prev",
+          function (mesg) {
+            img_vwr_pnl_2.prev();
+          }
+        );
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_2_reset",
+          function (mesg) {
+            img_vwr_pnl_2.reset();
+          }
+        );
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_2_next",
+          function (mesg) {
+            img_vwr_pnl_2.next();
+          }
+        );
+
+        // -----------------------------------------------------
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_3_prev",
+          function (mesg) {
+            img_vwr_pnl_3.prev();
+          }
+        );
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_3_reset",
+          function (mesg) {
+            img_vwr_pnl_3.reset();
+          }
+        );
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_3_next",
+          function (mesg) {
+            img_vwr_pnl_3.next();
+          }
+        );
+
+        // -----------------------------------------------------
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_4_prev",
+          function (mesg) {
+            img_vwr_pnl_4.prev();
+          }
+        );
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_4_reset",
+          function (mesg) {
+            img_vwr_pnl_4.reset();
+          }
+        );
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_4_next",
+          function (mesg) {
+            img_vwr_pnl_4.next();
+          }
+        );
+
+        // -----------------------------------------------------
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_5_prev",
+          function (mesg) {
+            img_vwr_pnl_5.prev();
+          }
+        );
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_5_reset",
+          function (mesg) {
+            img_vwr_pnl_5.reset();
+          }
+        );
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_5_next",
+          function (mesg) {
+            img_vwr_pnl_5.next();
+          }
+        );
+
+        // -----------------------------------------------------
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_6_prev",
+          function (mesg) {
+            img_vwr_pnl_6.prev();
+          }
+        );
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_6_reset",
+          function (mesg) {
+            img_vwr_pnl_6.reset();
+          }
+        );
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_6_next",
+          function (mesg) {
+            img_vwr_pnl_6.next();
+          }
+        );
+
+        // -----------------------------------------------------
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_7_prev",
+          function (mesg) {
+            img_vwr_pnl_7.prev();
+          }
+        );
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_7_reset",
+          function (mesg) {
+            img_vwr_pnl_7.reset();
+          }
+        );
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_7_next",
+          function (mesg) {
+            img_vwr_pnl_7.next();
+          }
+        );
+
+        // -----------------------------------------------------
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_8_prev",
+          function (mesg) {
+            img_vwr_pnl_8.prev();
+          }
+        );
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_8_reset",
+          function (mesg) {
+            img_vwr_pnl_8.reset();
+          }
+        );
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_8_next",
+          function (mesg) {
+            img_vwr_pnl_8.next();
+          }
+        );
+
+        // -----------------------------------------------------
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_9_prev",
+          function (mesg) {
+            img_vwr_pnl_9.prev();
+          }
+        );
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_9_reset",
+          function (mesg) {
+            img_vwr_pnl_9.reset();
+          }
+        );
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_9_next",
+          function (mesg) {
+            img_vwr_pnl_9.next();
+          }
+        );
+
+        // -----------------------------------------------------
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_10_prev",
+          function (mesg) {
+            img_vwr_pnl_10.prev();
+          }
+        );
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_10_reset",
+          function (mesg) {
+            img_vwr_pnl_10.reset();
+          }
+        );
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_10_next",
+          function (mesg) {
+            img_vwr_pnl_10.next();
+          }
+        );
+
         // original imgs vwrs
         Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_prmry_imgs_dsply_bttn",
           function (mesg) {
@@ -194,7 +424,7 @@ HTMLWidgets.widget({
 
             $('#pttrn_rcgntn_orgnl_imgs_2').focus();
             $('#currnt-img_orgnl_imgs_2').click(function () {
-              $('#pttrn_rcgntn_orgnl_imgs_1').focus();
+              $('#pttrn_rcgntn_orgnl_imgs_2').focus();
             });
           }
         );
@@ -228,7 +458,7 @@ HTMLWidgets.widget({
           }
         );
 
-        // 
+        //
         Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_img_prmry",
           function (mesg) {
 
@@ -248,6 +478,187 @@ HTMLWidgets.widget({
             });
           }
         );
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_1_dsply_bttn",
+          function (mesg) {
+            let src = JSON.stringify(mesg);
+            img_vwr_pnl_1_nms_img.restart();
+            img_vwr_pnl_1_nms_img.readServerDataTest(src);
+
+            $('#img_vwr_pnl_1_img').attr('tabindex', '0');
+            $('#img_vwr_pnl_1_img').css({
+              'outline': '0px solid transparent'
+            });
+
+            $('#img_vwr_pnl_1_img').focus();
+            $('#currnt-img_vwr_pnl_1').click(function () {
+              $('#img_vwr_pnl_1_img').focus();
+            });
+          }
+        );
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_2_dsply_bttn",
+          function (mesg) {
+            let src = JSON.stringify(mesg);
+            img_vwr_pnl_2_nms_img.restart();
+            img_vwr_pnl_2_nms_img.readServerDataTest(src);
+
+            $('#img_vwr_pnl_2_img').attr('tabindex', '0');
+            $('#img_vwr_pnl_2_img').css({
+              'outline': '0px solid transparent'
+            });
+
+            $('#img_vwr_pnl_2_img').focus();
+            $('#currnt-img_vwr_pnl_2').click(function () {
+              $('#img_vwr_pnl_2_img').focus();
+            });
+          }
+        );
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_3_dsply_bttn",
+          function (mesg) {
+            let src = JSON.stringify(mesg);
+            img_vwr_pnl_3_nms_img.restart();
+            img_vwr_pnl_3_nms_img.readServerDataTest(src);
+
+            $('#img_vwr_pnl_3_img').attr('tabindex', '0');
+            $('#img_vwr_pnl_3_img').css({
+              'outline': '0px solid transparent'
+            });
+
+            $('#img_vwr_pnl_3_img').focus();
+            $('#currnt-img_vwr_pnl_3').click(function () {
+              $('#img_vwr_pnl_3_img').focus();
+            });
+          }
+        );
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_4_dsply_bttn",
+          function (mesg) {
+            let src = JSON.stringify(mesg);
+            img_vwr_pnl_4_nms_img.restart();
+            img_vwr_pnl_4_nms_img.readServerDataTest(src);
+
+            $('#img_vwr_pnl_4_img').attr('tabindex', '0');
+            $('#img_vwr_pnl_4_img').css({
+              'outline': '0px solid transparent'
+            });
+
+            $('#img_vwr_pnl_4_img').focus();
+            $('#currnt-img_vwr_pnl_4').click(function () {
+              $('#img_vwr_pnl_4_img').focus();
+            });
+          }
+        );
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_5_dsply_bttn",
+          function (mesg) {
+            let src = JSON.stringify(mesg);
+            img_vwr_pnl_5_nms_img.restart();
+            img_vwr_pnl_5_nms_img.readServerDataTest(src);
+
+            $('#img_vwr_pnl_5_img').attr('tabindex', '0');
+            $('#img_vwr_pnl_5_img').css({
+              'outline': '0px solid transparent'
+            });
+
+            $('#img_vwr_pnl_5_img').focus();
+            $('#currnt-img_vwr_pnl_5').click(function () {
+              $('#img_vwr_pnl_5_img').focus();
+            });
+          }
+        );
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_6_dsply_bttn",
+          function (mesg) {
+            let src = JSON.stringify(mesg);
+            img_vwr_pnl_6_nms_img.restart();
+            img_vwr_pnl_6_nms_img.readServerDataTest(src);
+
+            $('#img_vwr_pnl_6_img').attr('tabindex', '0');
+            $('#img_vwr_pnl_6_img').css({
+              'outline': '0px solid transparent'
+            });
+
+            $('#img_vwr_pnl_6_img').focus();
+            $('#currnt-img_vwr_pnl_6').click(function () {
+              $('#img_vwr_pnl_6_img').focus();
+            });
+          }
+        );
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_7_dsply_bttn",
+          function (mesg) {
+            let src = JSON.stringify(mesg);
+            img_vwr_pnl_7_nms_img.restart();
+            img_vwr_pnl_7_nms_img.readServerDataTest(src);
+
+            $('#img_vwr_pnl_7_img').attr('tabindex', '0');
+            $('#img_vwr_pnl_7_img').css({
+              'outline': '0px solid transparent'
+            });
+
+            $('#img_vwr_pnl_7_img').focus();
+            $('#currnt-img_vwr_pnl_7').click(function () {
+              $('#img_vwr_pnl_7_img').focus();
+            });
+          }
+        );
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_8_dsply_bttn",
+          function (mesg) {
+            let src = JSON.stringify(mesg);
+            img_vwr_pnl_8_nms_img.restart();
+            img_vwr_pnl_8_nms_img.readServerDataTest(src);
+
+            $('#img_vwr_pnl_8_img').attr('tabindex', '0');
+            $('#img_vwr_pnl_8_img').css({
+              'outline': '0px solid transparent'
+            });
+
+            $('#img_vwr_pnl_8_img').focus();
+            $('#currnt-img_vwr_pnl_8').click(function () {
+              $('#img_vwr_pnl_8_img').focus();
+            });
+          }
+        );
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_9_dsply_bttn",
+          function (mesg) {
+            let src = JSON.stringify(mesg);
+            img_vwr_pnl_9_nms_img.restart();
+            img_vwr_pnl_9_nms_img.readServerDataTest(src);
+
+            $('#img_vwr_pnl_9_img').attr('tabindex', '0');
+            $('#img_vwr_pnl_9_img').css({
+              'outline': '0px solid transparent'
+            });
+
+            $('#img_vwr_pnl_9_img').focus();
+            $('#currnt-img_vwr_pnl_9').click(function () {
+              $('#img_vwr_pnl_9_img').focus();
+            });
+          }
+        );
+
+        Shiny.addCustomMessageHandler("img_vwr_pnl_10_dsply_bttn",
+          function (mesg) {
+            let src = JSON.stringify(mesg);
+            img_vwr_pnl_10_nms_img.restart();
+            img_vwr_pnl_10_nms_img.readServerDataTest(src);
+
+            $('#img_vwr_pnl_10_img').attr('tabindex', '0');
+            $('#img_vwr_pnl_10_img').css({
+              'outline': '0px solid transparent'
+            });
+
+            $('#img_vwr_pnl_10_img').focus();
+            $('#currnt-img_vwr_pnl_10').click(function () {
+              $('#img_vwr_pnl_10_img').focus();
+            });
+          }
+        );
+
       },
 
       resize: function (width, height) {}

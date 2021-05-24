@@ -57,6 +57,46 @@ class viewerClass {
       setCanvas(this.moduleId, this.result[0]);
     }
 
+    if ((this.moduleId === 'img_vwr_pnl_1')) {
+      setCanvas(this.moduleId, this.result[0]);
+    }
+
+    if ((this.moduleId === 'img_vwr_pnl_2')) {
+      setCanvas(this.moduleId, this.result[0]);
+    }
+
+    if ((this.moduleId === 'img_vwr_pnl_3')) {
+      setCanvas(this.moduleId, this.result[0]);
+    }
+
+    if ((this.moduleId === 'img_vwr_pnl_4')) {
+      setCanvas(this.moduleId, this.result[0]);
+    }
+
+    if ((this.moduleId === 'img_vwr_pnl_5')) {
+      setCanvas(this.moduleId, this.result[0]);
+    }
+
+    if ((this.moduleId === 'img_vwr_pnl_6')) {
+      setCanvas(this.moduleId, this.result[0]);
+    }
+
+    if ((this.moduleId === 'img_vwr_pnl_7')) {
+      setCanvas(this.moduleId, this.result[0]);
+    }
+
+    if ((this.moduleId === 'img_vwr_pnl_8')) {
+      setCanvas(this.moduleId, this.result[0]);
+    }
+
+    if ((this.moduleId === 'img_vwr_pnl_9')) {
+      setCanvas(this.moduleId, this.result[0]);
+    }
+
+    if ((this.moduleId === 'img_vwr_pnl_10')) {
+      setCanvas(this.moduleId, this.result[0]);
+    }
+
     this.sendDataToShinny();
 
   }
@@ -163,6 +203,46 @@ class viewerClass {
       if (this.moduleId == "spcs_idntfctn_id_rf_2") {
         Shiny.setInputValue("spcs_idntfctn_id_rf_2_curr_img", imgname);
       }
+    }
+
+    if (this.moduleId == "img_vwr_pnl_1") {
+      Shiny.setInputValue("img_vwr_pnl_1_curr_img", imgname);
+    }
+
+    if (this.moduleId == "img_vwr_pnl_2") {
+      Shiny.setInputValue("img_vwr_pnl_2_curr_img", imgname);
+    }
+
+    if (this.moduleId == "img_vwr_pnl_3") {
+      Shiny.setInputValue("img_vwr_pnl_3_curr_img", imgname);
+    }
+
+    if (this.moduleId == "img_vwr_pnl_4") {
+      Shiny.setInputValue("img_vwr_pnl_4_curr_img", imgname);
+    }
+
+    if (this.moduleId == "img_vwr_pnl_5") {
+      Shiny.setInputValue("img_vwr_pnl_5_curr_img", imgname);
+    }
+
+    if (this.moduleId == "img_vwr_pnl_6") {
+      Shiny.setInputValue("img_vwr_pnl_6_curr_img", imgname);
+    }
+
+    if (this.moduleId == "img_vwr_pnl_7") {
+      Shiny.setInputValue("img_vwr_pnl_7_curr_img", imgname);
+    }
+
+    if (this.moduleId == "img_vwr_pnl_8") {
+      Shiny.setInputValue("img_vwr_pnl_8_curr_img", imgname);
+    }
+
+    if (this.moduleId == "img_vwr_pnl_9") {
+      Shiny.setInputValue("img_vwr_pnl_9_curr_img", imgname);
+    }
+
+    if (this.moduleId == "img_vwr_pnl_10") {
+      Shiny.setInputValue("img_vwr_pnl_10_curr_img", imgname);
     }
 
   }
