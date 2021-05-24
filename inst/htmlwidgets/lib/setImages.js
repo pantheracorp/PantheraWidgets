@@ -62,7 +62,7 @@ function setCanvas(targetID, imgSrc) {
       $('#' + targetID).prepend($('<img>', {
         id: imgId,
         src: imgSrc,
-        alt: 'camtrap',
+        alt: 'Image not displayed',
         width: '100%',
         height: 'auto'
       }));
