@@ -485,14 +485,14 @@ HTMLWidgets.widget({
             img_vwr_pnl_1_nms_img.restart();
             img_vwr_pnl_1_nms_img.readServerDataTest(src);
 
-            $('#img_vwr_pnl_1_img').attr('tabindex', '0');
-            $('#img_vwr_pnl_1_img').css({
+            $('#img_vwr_pnl_1').attr('tabindex', '0');
+            $('#img_vwr_pnl_1').css({
               'outline': '0px solid transparent'
             });
 
-            $('#img_vwr_pnl_1_img').focus();
+            $('#img_vwr_pnl_1').focus();
             $('#currnt-img_vwr_pnl_1').click(function () {
-              $('#img_vwr_pnl_1_img').focus();
+              $('#img_vwr_pnl_1').focus();
             });
           }
         );
