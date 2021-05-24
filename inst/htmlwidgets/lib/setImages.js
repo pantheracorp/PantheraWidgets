@@ -8,16 +8,16 @@ function setCanvas(targetID, imgSrc) {
   let imgId = '';
 
   let img_vwr_id_pnl_arry = [
-    'img_vwr_pnl_1_img',
-    'img_vwr_pnl_2_img',
-    'img_vwr_pnl_3_img',
-    'img_vwr_pnl_4_img',
-    'img_vwr_pnl_5_img',
-    'img_vwr_pnl_6_img',
-    'img_vwr_pnl_7_img',
-    'img_vwr_pnl_8_img',
-    'img_vwr_pnl_9_img',
-    'img_vwr_pnl_10_img']
+    'img_vwr_pnl_1',
+    'img_vwr_pnl_2',
+    'img_vwr_pnl_3',
+    'img_vwr_pnl_4',
+    'img_vwr_pnl_5',
+    'img_vwr_pnl_6',
+    'img_vwr_pnl_7',
+    'img_vwr_pnl_8',
+    'img_vwr_pnl_9',
+    'img_vwr_pnl_10']
 
   if (targetID === 'pttrn_rcgntn_orgnl_imgs_1' || targetID === 'pttrn_rcgntn_orgnl_imgs_2') {
 
