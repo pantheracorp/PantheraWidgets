@@ -196,19 +196,19 @@ HTMLWidgets.widget({
 
         Shiny.addCustomMessageHandler("img_vwr_pnl_1_prev",
           function (mesg) {
-            img_vwr_pnl_1.prev();
+            img_vwr_pnl_1_nms_img.prev();
           }
         );
 
         Shiny.addCustomMessageHandler("img_vwr_pnl_1_reset",
           function (mesg) {
-            img_vwr_pnl_1.reset();
+            img_vwr_pnl_1_nms_img.reset();
           }
         );
 
         Shiny.addCustomMessageHandler("img_vwr_pnl_1_next",
           function (mesg) {
-            img_vwr_pnl_1.next();
+            img_vwr_pnl_1_nms_img.next();
           }
         );
 
@@ -216,19 +216,19 @@ HTMLWidgets.widget({
 
         Shiny.addCustomMessageHandler("img_vwr_pnl_2_prev",
           function (mesg) {
-            img_vwr_pnl_2.prev();
+            img_vwr_pnl_2_nms_img.prev();
           }
         );
 
         Shiny.addCustomMessageHandler("img_vwr_pnl_2_reset",
           function (mesg) {
-            img_vwr_pnl_2.reset();
+            img_vwr_pnl_2_nms_img.reset();
           }
         );
 
         Shiny.addCustomMessageHandler("img_vwr_pnl_2_next",
           function (mesg) {
-            img_vwr_pnl_2.next();
+            img_vwr_pnl_2_nms_img.next();
           }
         );
 
@@ -236,19 +236,19 @@ HTMLWidgets.widget({
 
         Shiny.addCustomMessageHandler("img_vwr_pnl_3_prev",
           function (mesg) {
-            img_vwr_pnl_3.prev();
+            img_vwr_pnl_3_nms_img.prev();
           }
         );
 
         Shiny.addCustomMessageHandler("img_vwr_pnl_3_reset",
           function (mesg) {
-            img_vwr_pnl_3.reset();
+            img_vwr_pnl_3_nms_img.reset();
           }
         );
 
         Shiny.addCustomMessageHandler("img_vwr_pnl_3_next",
           function (mesg) {
-            img_vwr_pnl_3.next();
+            img_vwr_pnl_3_nms_img.next();
           }
         );
 
@@ -256,19 +256,19 @@ HTMLWidgets.widget({
 
         Shiny.addCustomMessageHandler("img_vwr_pnl_4_prev",
           function (mesg) {
-            img_vwr_pnl_4.prev();
+            img_vwr_pnl_4_nms_img.prev();
           }
         );
 
         Shiny.addCustomMessageHandler("img_vwr_pnl_4_reset",
           function (mesg) {
-            img_vwr_pnl_4.reset();
+            img_vwr_pnl_4_nms_img.reset();
           }
         );
 
         Shiny.addCustomMessageHandler("img_vwr_pnl_4_next",
           function (mesg) {
-            img_vwr_pnl_4.next();
+            img_vwr_pnl_4_nms_img.next();
           }
         );
 
@@ -276,19 +276,19 @@ HTMLWidgets.widget({
 
         Shiny.addCustomMessageHandler("img_vwr_pnl_5_prev",
           function (mesg) {
-            img_vwr_pnl_5.prev();
+            img_vwr_pnl_5_nms_img.prev();
           }
         );
 
         Shiny.addCustomMessageHandler("img_vwr_pnl_5_reset",
           function (mesg) {
-            img_vwr_pnl_5.reset();
+            img_vwr_pnl_5_nms_img.reset();
           }
         );
 
         Shiny.addCustomMessageHandler("img_vwr_pnl_5_next",
           function (mesg) {
-            img_vwr_pnl_5.next();
+            img_vwr_pnl_5_nms_img.next();
           }
         );
 
@@ -296,19 +296,19 @@ HTMLWidgets.widget({
 
         Shiny.addCustomMessageHandler("img_vwr_pnl_6_prev",
           function (mesg) {
-            img_vwr_pnl_6.prev();
+            img_vwr_pnl_6_nms_img.prev();
           }
         );
 
         Shiny.addCustomMessageHandler("img_vwr_pnl_6_reset",
           function (mesg) {
-            img_vwr_pnl_6.reset();
+            img_vwr_pnl_6_nms_img.reset();
           }
         );
 
         Shiny.addCustomMessageHandler("img_vwr_pnl_6_next",
           function (mesg) {
-            img_vwr_pnl_6.next();
+            img_vwr_pnl_6_nms_img.next();
           }
         );
 
@@ -316,19 +316,19 @@ HTMLWidgets.widget({
 
         Shiny.addCustomMessageHandler("img_vwr_pnl_7_prev",
           function (mesg) {
-            img_vwr_pnl_7.prev();
+            img_vwr_pnl_7_nms_img.prev();
           }
         );
 
         Shiny.addCustomMessageHandler("img_vwr_pnl_7_reset",
           function (mesg) {
-            img_vwr_pnl_7.reset();
+            img_vwr_pnl_7_nms_img.reset();
           }
         );
 
         Shiny.addCustomMessageHandler("img_vwr_pnl_7_next",
           function (mesg) {
-            img_vwr_pnl_7.next();
+            img_vwr_pnl_7_nms_img.next();
           }
         );
 
@@ -336,19 +336,19 @@ HTMLWidgets.widget({
 
         Shiny.addCustomMessageHandler("img_vwr_pnl_8_prev",
           function (mesg) {
-            img_vwr_pnl_8.prev();
+            img_vwr_pnl_8_nms_img.prev();
           }
         );
 
         Shiny.addCustomMessageHandler("img_vwr_pnl_8_reset",
           function (mesg) {
-            img_vwr_pnl_8.reset();
+            img_vwr_pnl_8_nms_img.reset();
           }
         );
 
         Shiny.addCustomMessageHandler("img_vwr_pnl_8_next",
           function (mesg) {
-            img_vwr_pnl_8.next();
+            img_vwr_pnl_8_nms_img.next();
           }
         );
 
@@ -356,19 +356,19 @@ HTMLWidgets.widget({
 
         Shiny.addCustomMessageHandler("img_vwr_pnl_9_prev",
           function (mesg) {
-            img_vwr_pnl_9.prev();
+            img_vwr_pnl_9_nms_img.prev();
           }
         );
 
         Shiny.addCustomMessageHandler("img_vwr_pnl_9_reset",
           function (mesg) {
-            img_vwr_pnl_9.reset();
+            img_vwr_pnl_9_nms_img.reset();
           }
         );
 
         Shiny.addCustomMessageHandler("img_vwr_pnl_9_next",
           function (mesg) {
-            img_vwr_pnl_9.next();
+            img_vwr_pnl_9_nms_img.next();
           }
         );
 
@@ -376,19 +376,19 @@ HTMLWidgets.widget({
 
         Shiny.addCustomMessageHandler("img_vwr_pnl_10_prev",
           function (mesg) {
-            img_vwr_pnl_10.prev();
+            img_vwr_pnl_10_nms_img.prev();
           }
         );
 
         Shiny.addCustomMessageHandler("img_vwr_pnl_10_reset",
           function (mesg) {
-            img_vwr_pnl_10.reset();
+            img_vwr_pnl_10_nms_img.reset();
           }
         );
 
         Shiny.addCustomMessageHandler("img_vwr_pnl_10_next",
           function (mesg) {
-            img_vwr_pnl_10.next();
+            img_vwr_pnl_10_nms_img.next();
           }
         );
 
