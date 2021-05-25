@@ -67,8 +67,8 @@ function setCanvas(targetID, imgSrc) {
         height: 'auto'
       }));
       $('#' + imgId).css({
-        'object-fit': 'cover',
         'maxHeight': '100%',
+        'object-fit': 'cover',
         'maxWidth': '100%'
       });
 
