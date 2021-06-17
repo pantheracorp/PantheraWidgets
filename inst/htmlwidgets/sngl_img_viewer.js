@@ -10,7 +10,7 @@ HTMLWidgets.widget({
 
       renderValue: function (x) {
 
-        console.log("sngl_img_viewer 01/04/2021 06:25");
+        console.log("sngl_img_viewer 17/06/2021 15:16");
 
         let spcs_idntfctns_scndry_img = new viewerClass(
             "spcs_idntfctn_id_rf_2"),
@@ -25,53 +25,15 @@ HTMLWidgets.widget({
             "pttrn_rcgntn_orgnl_imgs_2"),
 
           pttrn_rcgntn_assgn_indvdl_nms_img = new viewerClass(
-            "pttrn_rcgntn_orgnl_prmry_img");
+            "pttrn_rcgntn_orgnl_prmry_img"),
+
+          orgnl_prmry_img_grp = new viewerClass(
+            "pttrn_rcgntn_orgnl_prmry_img_grp");
 
 
         if ((x.targetId).includes("pchrcm_alrts_id_")) {
           setCanvas(x.targetId, x.src)
         }
-
-
-
-
-        // Poacher Cam Viewer pchrcm_alrts_ld_bttn
-        // Shiny.addCustomMessageHandler("pchrcm_alrts_ld_bttn",
-        //   function (mesg) {
-        //     console.log("pchrcm_alrts_ld_bttn handler");
-        //     console.log("start pchrcm_alrts_ld_bttn");
-
-        //     let img_arry = mesg;
-        //     console.log(img_arry);
-
-        //     for (let i = 0; i < img_arry.length; i++) {
-
-        //       let j = i;
-        //       let id_num = "pchrcm_alrts_id_".concat(j + 1);
-        //       let obj_nm = new viewerClass(id_num);
-        //       obj_nm.restart();
-        //       obj_nm.result.push(img_arry[i]);
-        //       obj_nm.displayImage();
-
-        //     }
-
-        //     /* let prchr_alrts = new viewerClass(
-        //        "pchrcm_alrts_id_1");
-
-        //      let src = JSON.stringify(mesg);
-        //      prchr_alrts.restart();
-        //      prchr_alrts.readServerDataTest(src);
-        //      for (let i = 1; i <= num; i++) {
-        //              console.log("extracted " + i);
-        //              let id = "pchrcm_alrts_id_" + i;
-        //              let csvfile = "pchrcm_alrts_" + i + ".csv";
-        //              let obj = new viewerClass(id, csvfile);
-        //              obj.restart();
-        //              obj.fetchServerData(csvfile);
-        //      }*/
-        //     console.log("end pchrcm_alrts_ld_bttn");
-        //   }
-        // );
 
         // Handle extract images buttons
         Shiny.addCustomMessageHandler("spcs_idntfctn_extrt_id_button_rf_1",
@@ -228,7 +190,6 @@ HTMLWidgets.widget({
           }
         );
 
-        // 
         Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_img_prmry",
           function (mesg) {
 
@@ -245,6 +206,26 @@ HTMLWidgets.widget({
             $('#pttrn_rcgntn_orgnl_prmry_img').focus();
             $('#currnt-img_rgnl_prmry_img').click(function () {
               $('#pttrn_rcgntn_orgnl_prmry_img').focus();
+            });
+          }
+        );
+
+        Shiny.addCustomMessageHandler("spcs_idntfctn_pttrn_rcgntn_splt_grp_button",
+          function (mesg) {
+
+            let src = JSON.stringify(mesg);
+
+            orgnl_prmry_img_grp.restart();
+            orgnl_prmry_img_grp.readServerDataTest(src);
+
+            $('#spcs_idntfctn_pttrn_rcgntn_splt_grp_button').attr('tabindex', '0');
+            $('#spcs_idntfctn_pttrn_rcgntn_splt_grp_button').css({
+              'outline': '0px solid transparent'
+            });
+
+            $('#spcs_idntfctn_pttrn_rcgntn_splt_grp_button').focus();
+            $('#currnt-img_rgnl_prmry_img').click(function () {
+              $('#spcs_idntfctn_pttrn_rcgntn_splt_grp_button').focus();
             });
           }
         );

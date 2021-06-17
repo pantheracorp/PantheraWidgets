@@ -71,6 +71,24 @@ function setCanvas(targetID, imgSrc) {
         $('#pttrn_rcgntn_orgnl_prmry_img').focus();
       });
 
+    } else if (targetID === "spcs_idntfctn_pttrn_rcgntn_splt_grp_button") {
+
+      $('#' + targetID).css('text-align', 'center');
+      $('#' + targetID).prepend($('<img>', {
+        id: imgId,
+        src: imgSrc,
+        alt: 'camtrap',
+        width: '100%',
+        height: 'auto'
+      }));
+      $('#' + imgId).css({
+        'maxHeight': '500px',
+        'maxWidth': '100%'
+      });
+      $('#pttrn_rcgntn_orgnl_prmry_img_grp').click(function () {
+        $('#pttrn_rcgntn_orgnl_prmry_img_grp').focus();
+      });
+
     } else {
       $('#' + targetID).css('text-align', 'center');
       $('#' + targetID).prepend($('<img>', {
