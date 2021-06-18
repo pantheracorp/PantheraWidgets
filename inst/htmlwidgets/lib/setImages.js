@@ -78,12 +78,12 @@ function setCanvas(targetID, imgSrc) {
         id: imgId,
         src: imgSrc,
         alt: 'camtrap',
-        width: '98%',
+        width: '100%',
         height: 'auto'
       }));
       $('#' + imgId).css({
         'object-fit': 'cover',
-        'maxWidth': '98%',
+        'maxWidth': '100%',
         'max-height': '100%'
       });
       $('#currnt-img_rgnl_prmry_img_grp').click(function () {

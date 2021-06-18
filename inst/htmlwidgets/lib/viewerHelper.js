@@ -1,5 +1,4 @@
-    console.log('20-01-2021 08:43');
-    //console.log('viewerHelper.js');
+    console.log('18-06-2021 07:49');
 
     // maps vwrs contl bttns
     function mapBttn(id) {
