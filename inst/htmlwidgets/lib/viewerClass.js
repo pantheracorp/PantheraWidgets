@@ -154,7 +154,9 @@ class viewerClass {
     let imgname = src.substring(src.lastIndexOf("/") + 1, src.length);
 
     if (this.moduleId == "pttrn_rcgntn_orgnl_prmry_img") {
+
       Shiny.setInputValue("pttrn_rcgntn_orgnl_prmry_curr_img", imgname);
+
     }
 
     if (this.moduleId == "spcs_idntfctn_id_rf_1" || this.moduleId == "spcs_idntfctn_id_rf_2") {
@@ -165,6 +167,12 @@ class viewerClass {
       if (this.moduleId == "spcs_idntfctn_id_rf_2") {
         Shiny.setInputValue("spcs_idntfctn_id_rf_2_curr_img", imgname);
       }
+    }
+
+    if (this.moduleId == "pttrn_rcgntn_orgnl_prmry_img_grp") {
+
+      Shiny.setInputValue("pttrn_rcgntn_splt_grp_curr_img", imgname);
+
     }
 
   }
