@@ -71,7 +71,7 @@ function setCanvas(targetID, imgSrc) {
         $('#pttrn_rcgntn_orgnl_prmry_img').focus();
       });
 
-    } else if (targetID === "spcs_idntfctn_pttrn_rcgntn_splt_grp_button") {
+    } else if (targetID === "pttrn_rcgntn_orgnl_prmry_img_grp") {
 
       $('#' + targetID).css('text-align', 'center');
       $('#' + targetID).prepend($('<img>', {
@@ -86,7 +86,7 @@ function setCanvas(targetID, imgSrc) {
         'maxWidth': '100%',
         'max-height': '100%'
       });
-      $('#pttrn_rcgntn_orgnl_prmry_img_grp').click(function () {
+      $('#currnt-img_rgnl_prmry_img_grp').click(function () {
         $('#pttrn_rcgntn_orgnl_prmry_img_grp').focus();
       });
 
