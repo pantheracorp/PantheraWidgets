@@ -3,7 +3,7 @@
 
     // maps vwrs contl bttns
     function mapBttn(id) {
-      // console.log('mapBttn : ' + id);
+      console.log('mapBttn : ' + id);
       if (id === 'pttrn_rcgntn_orgnl_imgs_2' || id === 'pttrn_rcgntn_orgnl_imgs_1') {
         return ['pttrn_rcgntn_orgnl_imgs_prev_button',
           'pttrn_rcgntn_orgnl_imgs_dsply_button',
@@ -29,6 +29,13 @@
         return ['pttrn_rcgntn_orgnl_prmry_img_prev',
           'pttrn_rcgntn_orgnl_prmry_img_reset',
           'pttrn_rcgntn_orgnl_prmry_img_next'
+        ];
+      }
+
+      if (id === 'pttrn_rcgntn_orgnl_prmry_img_grp') {
+        return ['orgnl_prmry_img_grp_prev_button',
+          'orgnl_prmry_img_grp_reset_button',
+          'orgnl_prmry_img_grp_next_button'
         ];
       }
     }

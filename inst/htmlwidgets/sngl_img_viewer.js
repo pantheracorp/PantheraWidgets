@@ -224,7 +224,7 @@ HTMLWidgets.widget({
             });
 
             $('#spcs_idntfctn_pttrn_rcgntn_splt_grp_button').focus();
-            $('#currnt-img_rgnl_prmry_img').click(function () {
+            $('#currnt-img_rgnl_prmry_img_grp').click(function () {
               $('#spcs_idntfctn_pttrn_rcgntn_splt_grp_button').focus();
             });
           }
