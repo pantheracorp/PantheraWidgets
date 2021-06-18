@@ -35,28 +35,24 @@
 
 
     function keyControls(event) {
-      console.log('keyControls');
       let cntlids = mapBttn(event.target.id);
       console.log(cntlids[0] + ' rst ' + cntlids[1] + ' nxt ' + cntlids[2]);
       switch (event.keyCode) {
         case 37:
           $('#' + cntlids[0]).trigger("click");
-          console.log('keyControls case left arrow');
           break;
         case 39:
           $('#' + cntlids[2]).trigger("click");
-          console.log('keyControls case right arrow');
           break;
         case 82:
           $('#' + cntlids[1]).trigger("click");
-          console.log('keyControls case r key');
           break;
       }
 
     }
 
     async function getFile(filename) {
-      console.log("getFile(filename)");
+      //console.log("getFile(filename)");
       let response = await fetch(filename, {
         cache: "no-cache"
       });

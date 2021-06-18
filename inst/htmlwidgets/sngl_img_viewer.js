@@ -229,6 +229,19 @@ HTMLWidgets.widget({
             });
           }
         );
+
+        Shiny.addCustomMessageHandler("orgnl_prmry_img_grp_prev_button",
+          function (mesg) {
+            orgnl_prmry_img_grp.prev();
+          }
+        );
+
+        Shiny.addCustomMessageHandler("orgnl_prmry_img_grp_next_button",
+          function (mesg) {
+            orgnl_prmry_img_grp.next();
+          }
+        );
+
       },
 
       resize: function (width, height) {}

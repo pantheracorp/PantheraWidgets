@@ -27,7 +27,7 @@ class viewerClass {
 
   displayImage() {
 
-    console.log("displayImage -> " + this.result[0]);
+    //console.log("displayImage -> " + this.result[0]);
     if (this.imgexist(this.result[0]) == false) {
       console.log('img does not exist');
       this.result[0] = this.errorImg;
@@ -84,7 +84,7 @@ class viewerClass {
 
       for (let i = 0; i < respArray.length; i++) {
         let src = respArray[i].substring(respArray[i].indexOf('/'), respArray[i].lastIndexOf('/')) + '/' + respArray[i].substring(0, respArray[i].indexOf('/'));
-        console.log(src.replace(',', ''));
+        //console.log(src.replace(',', ''));
         this.result.push(src.replace(',', ''));
       }
       this.displayImage();
@@ -98,12 +98,12 @@ class viewerClass {
     if (response === null) {
       console.log(" Error in reading your images.Please check if all requirements are provided.");
     } else {
-      console.log("Response -> " + response);
+      //console.log("Response -> " + response);
       respArray = response.split(",");
       for (let i = 0; i < respArray.length; i++) {
 
         let src = ((respArray[i].trim()).replace(/[\[\]'"]+/g, '')).replace(/(\r\n|\n|\r)/gm, "");
-        console.log("src -> " + src);
+        //console.log("src -> " + src);
         this.result.push(src);
       }
       this.displayImage();
@@ -170,7 +170,7 @@ class viewerClass {
   }
 
   resetHandlers(msg) {
-    console.log('resetHandlers');
+    //console.log('resetHandlers');
     if (msg === 'noImages') {
       Shiny.setInputValue('no_srv_imgs', null);
     } else {
