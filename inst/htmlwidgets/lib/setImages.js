@@ -82,8 +82,9 @@ function setCanvas(targetID, imgSrc) {
         height: 'auto'
       }));
       $('#' + imgId).css({
-        'maxHeight': '500px',
-        'maxWidth': '100%'
+        'object-fit': 'cover',
+        'maxWidth': '100%',
+        'max-height': '100%'
       });
       $('#pttrn_rcgntn_orgnl_prmry_img_grp').click(function () {
         $('#pttrn_rcgntn_orgnl_prmry_img_grp').focus();

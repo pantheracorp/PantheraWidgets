@@ -4,7 +4,7 @@ class viewerClass {
     this.moduleId = moduleId;
     this.currentIndex = 0;
     this.result = [];
-    this.errorImg = '/srv/shiny-server/www/PantheraIDS_image_not_found_2.jpg';
+    this.errorImg = '/srv/shiny-server/www/Missing_Image.JPG';
   }
 
   fetchServerData(file) {
