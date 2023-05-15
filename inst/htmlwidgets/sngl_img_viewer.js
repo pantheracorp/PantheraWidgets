@@ -171,8 +171,21 @@ HTMLWidgets.widget({
 
         Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_prev_button",
           function (mesg) {
-            pttrn_rcgntn_vw_orgnls_1.prev();
-            pttrn_rcgntn_vw_orgnls_2.prev();
+
+            let option = $('#spcs_idntfctn_pttrn_rcgntn_indvdl_fltr').val();
+
+            if(option.toLowerCase().includes(".jpg")){
+
+              pttrn_rcgntn_vw_orgnls_2.prev();
+              
+            } else {
+
+              pttrn_rcgntn_vw_orgnls_2.prev();
+              pttrn_rcgntn_vw_orgnls_1.prev();
+
+            }
+            
+      
           }
         );
 
@@ -185,8 +198,20 @@ HTMLWidgets.widget({
 
         Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_next_buttonn",
           function (mesg) {
-            pttrn_rcgntn_vw_orgnls_1.next();
-            pttrn_rcgntn_vw_orgnls_2.next();
+
+            let option = $('#spcs_idntfctn_pttrn_rcgntn_indvdl_fltr').val();
+
+            if(option.toLowerCase().includes(".jpg")){
+              
+              pttrn_rcgntn_vw_orgnls_2.next();
+
+            } else {
+
+              pttrn_rcgntn_vw_orgnls_1.next();
+              pttrn_rcgntn_vw_orgnls_2.next();
+
+            }
+
           }
         );
 
