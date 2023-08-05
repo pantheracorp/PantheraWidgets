@@ -17,6 +17,12 @@ HTMLWidgets.widget({
 
           spcs_idntfctns_prmry_img = new viewerClass(
             "spcs_idntfctn_id_rf_1"),
+          
+          indvdl_prfls_rght_img = new viewerClass(
+          "indvdl_prfls_id_rght"),
+          
+          indvdl_prfls_lft_img = new viewerClass(
+            "indvdl_prfls_id_lft"),
 
           pttrn_rcgntn_vw_orgnls_1 = new viewerClass(
             "pttrn_rcgntn_orgnl_imgs_1"),
@@ -36,6 +42,42 @@ HTMLWidgets.widget({
         }
 
         // Handle extract images buttons
+        Shiny.addCustomMessageHandler("indvdl_prfls_rght",
+          function (mesg) {
+            let src = JSON.stringify(mesg);
+            indvdl_prfls_rght_img.restart();
+            indvdl_prfls_rght_img.readServerDataTest(src);
+
+            $('#indvdl_prfls_id_rght').css({
+              'outline': '0px solid transparent'
+            });
+
+            $('#indvdl_prfls_id_rght').attr('tabindex', '0');
+            $('#indvdl_prfls_id_rght').focus();
+            $('#currnt-img_prfls_rght').click(function () {
+              $('#indvdl_prfls_id_rght').focus();
+            });
+          }
+        );
+
+        Shiny.addCustomMessageHandler("indvdl_prfls_rght",
+          function (mesg) {
+            let src = JSON.stringify(mesg);
+            indvdl_prfls_lft_img.restart();
+            indvdl_prfls_lft_img.readServerDataTest(src);
+
+            $('#indvdl_prfls_id_lft').css({
+              'outline': '0px solid transparent'
+            });
+
+            $('#indvdl_prfls_id_lft').attr('tabindex', '0');
+            $('#indvdl_prfls_id_lft').focus();
+            $('#currnt-img_prfls_lft').click(function () {
+              $('#indvdl_prfls_id_lft').focus();
+            });
+          }
+        );
+
         Shiny.addCustomMessageHandler("spcs_idntfctn_extrt_id_button_rf_1",
           function (mesg) {
             let src = JSON.stringify(mesg);
@@ -82,6 +124,18 @@ HTMLWidgets.widget({
           }
         );
 
+        Shiny.addCustomMessageHandler("indvdl_prfls_reset_button_rght",
+          function (mesg) {
+            indvdl_prfls_rght_img.reset();
+          }
+        );
+
+        Shiny.addCustomMessageHandler("indvdl_prfls_reset_button_lft",
+          function (mesg) {
+            indvdl_prfls_lft_img.reset();
+          }
+        );
+
         Shiny.addCustomMessageHandler("spcs_idntfctn_prev_button_rf_1",
           function (mesg) {
             spcs_idntfctns_prmry_img.prev();
@@ -91,6 +145,18 @@ HTMLWidgets.widget({
         Shiny.addCustomMessageHandler("spcs_idntfctn_prev_button_rf_2",
           function (mesg) {
             spcs_idntfctns_scndry_img.prev();
+          }
+        );
+
+        Shiny.addCustomMessageHandler("indvdl_prfls_prev_button_lft",
+          function (mesg) {
+            indvdl_prfls_lft_img.prev();
+          }
+        );
+
+        Shiny.addCustomMessageHandler("indvdl_prfls_prev_button_rght",
+          function (mesg) {
+            indvdl_prfls_rght_img.prev();
           }
         );
 
@@ -105,6 +171,18 @@ HTMLWidgets.widget({
             spcs_idntfctns_scndry_img.next();
           }
         );
+
+        Shiny.addCustomMessageHandler("indvdl_prfls_next_button_rght",
+          function (mesg) {
+            indvdl_prfls_rght_img.next();
+          }
+        );
+
+        Shiny.addCustomMessageHandler("indvdl_prfls_next_button_lft",
+        function (mesg) {
+          indvdl_prfls_lft_img.next();
+        }
+      );
 
         Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_prmry_img_prev",
           function (mesg) {

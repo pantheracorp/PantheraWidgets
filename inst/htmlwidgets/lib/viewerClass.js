@@ -32,6 +32,15 @@ class viewerClass {
       console.log('img does not exist');
       this.result[0] = this.errorImg;
     }
+
+    if (this.moduleId === "indvdl_prfls_id_rght") {
+
+      setCanvas(this.moduleId, this.result[0]);
+    }
+    if (this.moduleId === "indvdl_prfls_id_lft") {
+      setCanvas(this.moduleId, this.result[0]);
+    }
+
     if (this.moduleId === "spcs_idntfctn_id_rf_1") {
 
       setCanvas(this.moduleId, this.result[0]);
@@ -39,6 +48,7 @@ class viewerClass {
     if (this.moduleId === "spcs_idntfctn_id_rf_2") {
       setCanvas(this.moduleId, this.result[0]);
     }
+
     if (this.moduleId === 'pttrn_rcgntn_orgnl_imgs_1') {
       setCanvas(this.moduleId, this.result[0]);
     }
@@ -166,6 +176,16 @@ class viewerClass {
       }
       if (this.moduleId == "spcs_idntfctn_id_rf_2") {
         Shiny.setInputValue("spcs_idntfctn_id_rf_2_curr_img", imgname);
+      }
+    }
+
+    if (this.moduleId == "indvdl_prfls_id_rght" || this.moduleId == "indvdl_prfls_id_lft") {
+
+      if (this.moduleId == "indvdl_prfls_id_rght") {
+        Shiny.setInputValue("indvdl_prfls_rght_curr_img", imgname);
+      }
+      if (this.moduleId == "indvdl_prfls_id_lft") {
+        Shiny.setInputValue("indvdl_prfls_lft_curr_img", imgname);
       }
     }
 
