@@ -113,7 +113,7 @@ class viewerClass {
       for (let i = 0; i < respArray.length; i++) {
 
         let src = ((respArray[i].trim()).replace(/[\[\]'"]+/g, '')).replace(/(\r\n|\n|\r)/gm, "");
-        //console.log("src -> " + src);
+        console.log("src -> " + src);
         this.result.push(src);
       }
       this.displayImage();

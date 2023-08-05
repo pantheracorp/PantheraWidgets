@@ -10,7 +10,7 @@ HTMLWidgets.widget({
 
       renderValue: function (x) {
 
-        console.log("sngl_img_viewer 17/06/2021 15:16");
+        console.log("sngl_img_viewer 05/08/2023 22:50");
 
         let spcs_idntfctns_scndry_img = new viewerClass(
             "spcs_idntfctn_id_rf_2"),
@@ -45,6 +45,11 @@ HTMLWidgets.widget({
         Shiny.addCustomMessageHandler("indvdl_prfls_rght",
           function (mesg) {
             let src = JSON.stringify(mesg);
+
+            MessageChannel(
+              "Hanlder indvdl_prfls_rght -> " + src
+            ); 
+
             indvdl_prfls_rght_img.restart();
             indvdl_prfls_rght_img.readServerDataTest(src);
 
@@ -60,9 +65,14 @@ HTMLWidgets.widget({
           }
         );
 
-        Shiny.addCustomMessageHandler("indvdl_prfls_rght",
+        Shiny.addCustomMessageHandler("indvdl_prfls_lft",
           function (mesg) {
             let src = JSON.stringify(mesg);
+
+            MessageChannel(
+              "Hanlder indvdl_prfls_lft -> " + src
+            ); 
+
             indvdl_prfls_lft_img.restart();
             indvdl_prfls_lft_img.readServerDataTest(src);
 
