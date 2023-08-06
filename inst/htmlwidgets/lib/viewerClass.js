@@ -27,6 +27,9 @@ class viewerClass {
 
   displayImage() {
 
+    console.log("In displayImage func");
+    console.log(this.moduleId);
+
     //console.log("displayImage -> " + this.result[0]);
     if (this.imgexist(this.result[0]) == false) {
       console.log('img does not exist');

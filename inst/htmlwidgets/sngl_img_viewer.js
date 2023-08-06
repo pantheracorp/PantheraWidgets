@@ -46,7 +46,7 @@ HTMLWidgets.widget({
           function (mesg) {
             let src = JSON.stringify(mesg);
 
-            MessageChannel(
+            console.log(
               "Hanlder indvdl_prfls_rght -> " + src
             ); 
 
@@ -69,7 +69,7 @@ HTMLWidgets.widget({
           function (mesg) {
             let src = JSON.stringify(mesg);
 
-            MessageChannel(
+            console.log(
               "Hanlder indvdl_prfls_lft -> " + src
             ); 
 
