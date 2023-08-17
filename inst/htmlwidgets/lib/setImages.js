@@ -9,7 +9,7 @@ function setCanvas(targetID, imgSrc) {
 
   if (targetID === 'pttrn_rcgntn_orgnl_imgs_1' || targetID === 'pttrn_rcgntn_orgnl_imgs_2') {
     imgId = 'currnt-img_' + targetID.substring(13, targetID.length);
-  } else if(targetID === 'indvdl_prfls_id_rght' || targetID === 'indvdl_prfls_id_lft') {
+  } else if( ['indvdl_prfls_id_rght', 'indvdl_prfls_id_lft', 'indvdl_prfls_id_orig'].includes(targetID)) {
     imgId = 'currnt-img_prfls' + targetID.substring(15, targetID.length);
   } else {
     imgId = 'currnt-img_' + targetID.substring(14, targetID.length);
@@ -92,7 +92,7 @@ function setCanvas(targetID, imgSrc) {
         $('#pttrn_rcgntn_orgnl_prmry_img_grp').focus();
       });
 
-    } else if(["indvdl_prfls_id_rght","indvdl_prfls_id_lft"].includes(targetID)) {
+    } else if(["indvdl_prfls_id_rght","indvdl_prfls_id_lft", "indvdl_prfls_id_orig"].includes(targetID)) {
 
       $('#' + targetID).css('text-align', 'center');
       $('#' + targetID).prepend($('<img>', {
@@ -106,6 +106,7 @@ function setCanvas(targetID, imgSrc) {
         'maxHeight': '500px',
         'maxWidth': '100%'
       });
+
       $('#currnt-img_id_rf_rght').click(function () {
         $('#indvdl_prfls_id_rght').focus();
       });
@@ -114,7 +115,12 @@ function setCanvas(targetID, imgSrc) {
         $('#indvdl_prfls_id_lft').focus();
       });
 
+      $('#currnt-img_id_rf_orig').click(function () {
+        $('#indvdl_prfls_id_orig').focus();
+      });
+
     } else {
+      
       $('#' + targetID).css('text-align', 'center');
       $('#' + targetID).prepend($('<img>', {
         id: imgId,

@@ -27,7 +27,7 @@ class viewerClass {
 
   displayImage() {
 
-    console.log("In displayImage func");
+    console.log("In displayImage func new");
     console.log(this.moduleId);
 
     //console.log("displayImage -> " + this.result[0]);
@@ -41,6 +41,9 @@ class viewerClass {
       setCanvas(this.moduleId, this.result[0]);
     }
     if (this.moduleId === "indvdl_prfls_id_lft") {
+      setCanvas(this.moduleId, this.result[0]);
+    }
+    if (this.moduleId === "indvdl_prfls_id_orig") {
       setCanvas(this.moduleId, this.result[0]);
     }
 
@@ -97,7 +100,7 @@ class viewerClass {
 
       for (let i = 0; i < respArray.length; i++) {
         let src = respArray[i].substring(respArray[i].indexOf('/'), respArray[i].lastIndexOf('/')) + '/' + respArray[i].substring(0, respArray[i].indexOf('/'));
-        //console.log(src.replace(',', ''));
+       
         this.result.push(src.replace(',', ''));
       }
       this.displayImage();
@@ -111,7 +114,7 @@ class viewerClass {
     if (response === null) {
       console.log(" Error in reading your images.Please check if all requirements are provided.");
     } else {
-      //console.log("Response -> " + response);
+      
       respArray = response.split(",");
       for (let i = 0; i < respArray.length; i++) {
 
@@ -182,13 +185,16 @@ class viewerClass {
       }
     }
 
-    if (this.moduleId == "indvdl_prfls_id_rght" || this.moduleId == "indvdl_prfls_id_lft") {
+    if (["indvdl_prfls_id_rght","indvdl_prfls_id_lft", "indvdl_prfls_id_orig"].includes(this.moduleId)) {
 
       if (this.moduleId == "indvdl_prfls_id_rght") {
         Shiny.setInputValue("indvdl_prfls_rght_curr_img", imgname);
       }
       if (this.moduleId == "indvdl_prfls_id_lft") {
         Shiny.setInputValue("indvdl_prfls_lft_curr_img", imgname);
+      }
+      if (this.moduleId == "indvdl_prfls_id_orig") {
+        Shiny.setInputValue("indvdl_prfls_orig_curr_img", imgname);
       }
     }
 
@@ -201,7 +207,7 @@ class viewerClass {
   }
 
   resetHandlers(msg) {
-    //console.log('resetHandlers');
+   
     if (msg === 'noImages') {
       Shiny.setInputValue('no_srv_imgs', null);
     } else {

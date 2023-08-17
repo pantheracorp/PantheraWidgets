@@ -1,4 +1,4 @@
-    console.log('06-08-2023 15:32');
+    console.log('17-08-2023 13:20');
 
     // maps vwrs contl bttns
     function mapBttn(id) {
@@ -58,7 +58,7 @@
     }
 
     async function getFile(filename) {
-      //console.log("getFile(filename)");
+      
       let response = await fetch(filename, {
         cache: "no-cache"
       });

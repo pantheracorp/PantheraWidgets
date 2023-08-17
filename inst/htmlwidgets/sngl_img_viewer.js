@@ -10,7 +10,7 @@ HTMLWidgets.widget({
 
       renderValue: function (x) {
 
-        console.log("sngl_img_viewer 06/08/2023 22:50");
+        console.log("sngl_img_viewer 17/08/2023 13:37");
 
         let spcs_idntfctns_scndry_img = new viewerClass(
             "spcs_idntfctn_id_rf_2"),
@@ -23,6 +23,9 @@ HTMLWidgets.widget({
           
           indvdl_prfls_lft_img = new viewerClass(
             "indvdl_prfls_id_lft"),
+
+          indvdl_prfls_orig_img = new viewerClass(
+            "indvdl_prfls_id_orig"),
 
           pttrn_rcgntn_vw_orgnls_1 = new viewerClass(
             "pttrn_rcgntn_orgnl_imgs_1"),
@@ -88,6 +91,29 @@ HTMLWidgets.widget({
           }
         );
 
+        Shiny.addCustomMessageHandler("indvdl_prfls_orig",
+          function (mesg) {
+            let src = JSON.stringify(mesg);
+
+            console.log(
+              "Hanlder indvdl_prfls_orig -> " + src
+            ); 
+
+            indvdl_prfls_orig_img.restart();
+            indvdl_prfls_orig_img.readServerDataTest(src);
+
+            $('#indvdl_prfls_id_orig').css({
+              'outline': '0px solid transparent'
+            });
+
+            $('#indvdl_prfls_id_orig').attr('tabindex', '0');
+            $('#indvdl_prfls_id_orig').focus();
+            $('#currnt-img_prfls_orig').click(function () {
+              $('#indvdl_prfls_id_orig').focus();
+            });
+          }
+        );
+
         Shiny.addCustomMessageHandler("spcs_idntfctn_extrt_id_button_rf_1",
           function (mesg) {
             let src = JSON.stringify(mesg);
@@ -146,6 +172,12 @@ HTMLWidgets.widget({
           }
         );
 
+        Shiny.addCustomMessageHandler("indvdl_prfls_reset_button_orig",
+          function (mesg) {
+            indvdl_prfls_orig_img.reset();
+          }
+        );
+
         Shiny.addCustomMessageHandler("spcs_idntfctn_prev_button_rf_1",
           function (mesg) {
             spcs_idntfctns_prmry_img.prev();
@@ -170,27 +202,39 @@ HTMLWidgets.widget({
           }
         );
 
-        Shiny.addCustomMessageHandler("spcs_idntfctn_next_button_rf_1",
-          function (mesg) {
-            spcs_idntfctns_prmry_img.next();
-          }
-        );
+      Shiny.addCustomMessageHandler("indvdl_prfls_prev_button_orig",
+        function (mesg) {
+          indvdl_prfls_orig_img.prev();
+        }
+      );
 
-        Shiny.addCustomMessageHandler("spcs_idntfctn_next_button_rf_2",
-          function (mesg) {
-            spcs_idntfctns_scndry_img.next();
-          }
-        );
+      Shiny.addCustomMessageHandler("spcs_idntfctn_next_button_rf_1",
+        function (mesg) {
+          spcs_idntfctns_prmry_img.next();
+        }
+      );
 
-        Shiny.addCustomMessageHandler("indvdl_prfls_next_button_rght",
-          function (mesg) {
-            indvdl_prfls_rght_img.next();
-          }
-        );
+      Shiny.addCustomMessageHandler("spcs_idntfctn_next_button_rf_2",
+        function (mesg) {
+          spcs_idntfctns_scndry_img.next();
+        }
+      );
 
-        Shiny.addCustomMessageHandler("indvdl_prfls_next_button_lft",
+      Shiny.addCustomMessageHandler("indvdl_prfls_next_button_rght",
+        function (mesg) {
+          indvdl_prfls_rght_img.next();
+        }
+      );
+
+      Shiny.addCustomMessageHandler("indvdl_prfls_next_button_lft",
         function (mesg) {
           indvdl_prfls_lft_img.next();
+        }
+      );
+
+      Shiny.addCustomMessageHandler("indvdl_prfls_next_button_orig",
+        function (mesg) {
+          indvdl_prfls_orig_img.next();
         }
       );
 
