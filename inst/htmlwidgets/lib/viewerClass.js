@@ -199,9 +199,7 @@ class viewerClass {
     }
 
     if (this.moduleId == "pttrn_rcgntn_orgnl_prmry_img_grp") {
-
       Shiny.setInputValue("pttrn_rcgntn_splt_grp_curr_img", imgname);
-
     }
 
   }

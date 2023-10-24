@@ -304,7 +304,14 @@ HTMLWidgets.widget({
         Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_prev_button",
           function (mesg) {
 
-            let option = $('#spcs_idntfctn_pttrn_rcgntn_indvdl_fltr').val();
+            src = $('#spcs_idntfctn_pttrn_rcgntn_dtbs_src_tblt').val();
+            let option = '';
+
+            if(src == 'From server'){
+              option = $('#spcs_idntfctn_pttrn_rcgntn_srvr_indvdl_fltr').val();
+            } else {
+              option = $('#spcs_idntfctn_pttrn_rcgntn_indvdl_fltr').val();
+            }
 
             if(option.toLowerCase().includes(".jpg")){
 
@@ -331,7 +338,14 @@ HTMLWidgets.widget({
         Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_next_buttonn",
           function (mesg) {
 
-            let option = $('#spcs_idntfctn_pttrn_rcgntn_indvdl_fltr').val();
+            src = $('#spcs_idntfctn_pttrn_rcgntn_dtbs_src_tblt').val();
+            let option = '';
+
+            if(src == 'From server'){
+              option = $('#spcs_idntfctn_pttrn_rcgntn_srvr_indvdl_fltr').val();
+            } else {
+              option = $('#spcs_idntfctn_pttrn_rcgntn_indvdl_fltr').val();
+            }
 
             if(option.toLowerCase().includes(".jpg")){
               
