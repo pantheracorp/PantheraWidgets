@@ -10,7 +10,7 @@ HTMLWidgets.widget({
 
       renderValue: function (x) {
 
-        console.log("sngl_img_viewer 17/08/2023 13:37");
+        console.log("sngl_img_viewer 24/10/2023 14:19");
 
         let spcs_idntfctns_scndry_img = new viewerClass(
             "spcs_idntfctn_id_rf_2"),
@@ -337,6 +337,8 @@ HTMLWidgets.widget({
 
         Shiny.addCustomMessageHandler("pttrn_rcgntn_orgnl_imgs_next_buttonn",
           function (mesg) {
+
+            console.log('New Changes identified .....');
 
             src = $('#spcs_idntfctn_pttrn_rcgntn_dtbs_src_tblt').val();
             let option = '';
