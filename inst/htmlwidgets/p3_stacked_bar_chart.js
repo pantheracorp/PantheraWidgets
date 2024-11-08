@@ -12,7 +12,14 @@ HTMLWidgets.widget({
     return {
 
       renderValue: function(x) {
-        console.log(x.x_categories);
+        console.log("Categories before update:", x.x_categories);
+
+        // Convert x-axis categories to strings to enforce categorical treatment
+        x.x_categories = x.x_categories.map(String);
+
+        // Log categories to verify consistency
+        console.log("Updated Categories:", x.x_categories);
+
         keys = _.keys(x.dataset);
 
         if(chart === null)
@@ -45,11 +52,11 @@ HTMLWidgets.widget({
                            label: {
                              text: x.axis_labels.x_axis,
                              position : Object.values(x.labels_pos)[0]
-                           },
-                       tick: {
-                              fit: false,
-                              format: d3.format('.2f')
                            }
+                           /*, tick: {
+                              fit: false,
+                             format: d3.format('.2f')
+                           }*/
                        },
                        y: {
                           label: {
@@ -81,6 +88,7 @@ HTMLWidgets.widget({
           axis_labels : x.axis_labels,
           labels_pos : x.labels_pos,
           axis_rotate : x.axis_rotate,
+          categories: x.x_categories,
           // unload data that we don't need anymore
           unload: diff
         });
