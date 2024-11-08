@@ -45,11 +45,11 @@ HTMLWidgets.widget({
                            label: {
                              text: x.axis_labels.x_axis,
                              position : Object.values(x.labels_pos)[0]
+                           },
+                       tick: {
+                              fit: false,
+                              format: d3.format('.2f')
                            }
-                           /*,tick: {
-                               fit: false,
-                               format: d3.format('.2f')
-                           }*/
                        },
                        y: {
                           label: {
