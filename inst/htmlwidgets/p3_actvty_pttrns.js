@@ -55,34 +55,34 @@ HTMLWidgets.widget({
                   show: x.show_points
                 }
             });
-      }
+        }
 
-      // at this stage the chart always exists
-      // get difference in keys
-      var old_keys = _.keys(chart.x());
-      var new_keys = _.keys(x.dataset);
-      var diff     = _.difference(old_keys,new_keys);
+        // at this stage the chart always exists
+        // get difference in keys
+        var old_keys = _.keys(chart.x());
+        var new_keys = _.keys(x.dataset);
+        var diff     = _.difference(old_keys,new_keys);
 
-      //chart.groups([x.groups]);
+        //chart.groups([x.groups]);
 
-      // update the data
-      chart.load({
-        json  : x.dataset,
-        colors: x.colors,
-        show_points : x.show_points,
-        categories : x.categories,
-        axis_regions: x.axis_regions,
-        axis_labels : x.axis_labels,
-        labels_pos : x.labels_pos,
-        axis_rotate: x.axis_rotate,
-        subchart : x.subchart,
-        zoom : x.zoom,
-        // remove data we no longer need (if any)
-        unload: diff,
-        // set types
-        types : x.types
-      });
-    },
+        // update the data
+        chart.load({
+          json  : x.dataset,
+          colors: x.colors,
+          show_points : x.show_points,
+          categories : x.categories,
+          axis_regions: x.axis_regions,
+          axis_labels : x.axis_labels,
+          labels_pos : x.labels_pos,
+          axis_rotate: x.axis_rotate,
+          subchart : x.subchart,
+          zoom : x.zoom,
+          // remove data we no longer need (if any)
+          unload: diff,
+          // set types
+          types : x.types
+        });
+      },
 
     // this part will be called each time we resize the containing div element
     resize: function(el, width, height, instance) {
