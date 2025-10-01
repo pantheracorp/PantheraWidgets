@@ -65,6 +65,8 @@ HTMLWidgets.widget({
 
         //chart.groups([x.groups]);
 
+        console.log("it's picking up the new changes")
+
         // update the data
         chart.load({
           json  : x.dataset,
