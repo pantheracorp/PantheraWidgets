@@ -64,6 +64,22 @@ HTMLWidgets.widget({
         var diff     = _.difference(old_keys,new_keys);
 
         //chart.groups([x.groups]);
+        console.log('----------First-------------')
+        console.log(old_keys);
+        console.log(new_keys);
+        console.log(diff);
+        console.log('-----------------------')
+
+        console.log('----------Second-------------')
+        console.log(x.dataset);
+        console.log(x.colors);
+        console.log(x.show_points);
+        console.log(x.categories);
+        console.log(x.axis_regions);
+        console.log(x.axis_labels);
+        console.log(x.labels_pos);
+        console.log(x.axis_rotate);
+        console.log('-----------------------')
 
         console.log("it's picking up the new changes")
 
