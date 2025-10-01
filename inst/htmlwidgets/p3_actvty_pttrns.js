@@ -63,6 +63,8 @@ HTMLWidgets.widget({
         var new_keys = _.keys(x.dataset);
         var diff     = _.difference(old_keys,new_keys);
 
+        console.log("it's picking up the new changes 14:47")
+
         //chart.groups([x.groups]);
         console.log('----------First-------------')
         console.log(old_keys);
@@ -81,7 +83,7 @@ HTMLWidgets.widget({
         console.log(x.axis_rotate);
         console.log('-----------------------')
 
-        console.log("it's picking up the new changes")
+       
 
         // update the data
         chart.load({
